@@ -1,0 +1,19 @@
+{
+	"keywords" : [
+		"slothsoft",
+		"farah"
+	],
+	"autoload" : {
+		"files" : [
+			"farah/config.php"
+		]
+	},
+	"name" : "slothsoft/test.slothsoft.net",
+	"type" : "project",
+	"description" : "test.slothsoft.net",
+	"license" : "GPL",
+	"require" : {
+		"php" : ">=7.0",
+		"slothsoft/slothsoft" : "dev-master"
+	}
+}

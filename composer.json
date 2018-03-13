@@ -1,4 +1,8 @@
 {
+	"name" : "slothsoft/test.slothsoft.net",
+	"type" : "project",
+	"description" : "test.slothsoft.net",
+	"license" : "GPL",
 	"keywords" : [
 		"slothsoft",
 		"farah"
@@ -8,12 +12,38 @@
 			"farah/config.php"
 		]
 	},
-	"name" : "slothsoft/test.slothsoft.net",
-	"type" : "project",
-	"description" : "test.slothsoft.net",
-	"license" : "GPL",
 	"require" : {
 		"php" : ">=7.0",
-		"slothsoft/slothsoft" : "dev-master"
+		"slothsoft/slothsoft" : "*"
+	},
+	"require-dev" : {
+		"slothsoft/amber" : "dev-master",
+		"slothsoft/chat" : "dev-master",
+		"slothsoft/comics" : "dev-master",
+		"slothsoft/core" : "dev-master",
+		"slothsoft/cron" : "dev-master",
+		"slothsoft/daniel" : "dev-master",
+		"slothsoft/dbms" : "dev-master",
+		"slothsoft/dev" : "dev-master",
+		"slothsoft/dragonage" : "dev-master",
+		"slothsoft/extensions" : "dev-master",
+		"slothsoft/farah" : "dev-master",
+		"slothsoft/fireemblem" : "dev-master",
+		"slothsoft/lang" : "dev-master",
+		"slothsoft/minecraft" : "dev-master",
+		"slothsoft/mtg" : "dev-master",
+		"slothsoft/pokemon" : "dev-master",
+		"slothsoft/pt" : "dev-master",
+		"slothsoft/savegame" : "dev-master",
+		"slothsoft/schema" : "dev-master",
+		"slothsoft/slothsoft" : "dev-master",
+		"slothsoft/sse" : "dev-master",
+		"slothsoft/talesof" : "dev-master",
+		"slothsoft/tetris" : "dev-master",
+		"slothsoft/therapy" : "dev-master",
+		"slothsoft/twitter" : "dev-master",
+		"slothsoft/w3c" : "dev-master",
+		"slothsoft/webrtc" : "dev-master",
+		"slothsoft/whatthehell" : "dev-master"
 	}
 }

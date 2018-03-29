@@ -14,7 +14,10 @@
 	},
 	"require" : {
 		"php" : ">=7.0",
-		"slothsoft/slothsoft" : "*"
+		"slothsoft/slothsoft" : "*",
+		"slothsoft/core" : "*",
+		"slothsoft/farah" : "*",
+		"slothsoft/mtg" : "*"
 	},
 	"require-dev" : {
 		"slothsoft/amber" : "dev-master",
@@ -23,17 +26,14 @@
 		"slothsoft/core" : "dev-master",
 		"slothsoft/cron" : "dev-master",
 		"slothsoft/daniel" : "dev-master",
-		"slothsoft/dbms" : "dev-master",
 		"slothsoft/dev" : "dev-master",
 		"slothsoft/dragonage" : "dev-master",
-		"slothsoft/extensions" : "dev-master",
 		"slothsoft/farah" : "dev-master",
 		"slothsoft/fireemblem" : "dev-master",
 		"slothsoft/lang" : "dev-master",
 		"slothsoft/minecraft" : "dev-master",
 		"slothsoft/mtg" : "dev-master",
 		"slothsoft/pokemon" : "dev-master",
-		"slothsoft/pt" : "dev-master",
 		"slothsoft/savegame" : "dev-master",
 		"slothsoft/schema" : "dev-master",
 		"slothsoft/slothsoft" : "dev-master",

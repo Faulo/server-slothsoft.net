@@ -3,7 +3,6 @@
 	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-core"/>
 	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-farah"/>
 	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-mtg"/>
-	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-slothsoft"/>
 	<buildpathentry kind="src" path="farah">
 		<attributes>
 			<attribute name="composer" value="source"/>

@@ -1,21 +1,22 @@
 {
-    "name": "slothsoft\/test.slothsoft.net",
+    "name": "slothsoft\/slothsoft.net",
     "type": "project",
-    "description": "test.slothsoft.net",
+    "description": "slothsoft.net",
     "license": "GPL",
     "keywords": [
         "slothsoft",
         "farah-server"
     ],
     "autoload": {
-        "files": [],
-        "psr-0": []
-    },
+		"files" : [
+			"farah/config.php"
+		]
+	},
     "require": {
         "php": ">=7.0",
         "slothsoft\/core": "*",
         "slothsoft\/farah": "*",
-        "slothsoft\/mtg": "*"
+        "slothsoft\/slothsoft": "*"
     },
     "require-dev": {
         "phpunit\/phpunit": ">=6.0",

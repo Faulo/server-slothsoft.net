@@ -4,11 +4,6 @@
 	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-farah"/>
 	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-slothsoft"/>
 	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
-	<buildpathentry kind="src" path="farah">
-		<attributes>
-			<attribute name="composer" value="source"/>
-		</attributes>
-	</buildpathentry>
 	<buildpathentry kind="src" path="tests">
 		<attributes>
 			<attribute name="composer" value="source"/>

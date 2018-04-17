@@ -15,7 +15,6 @@
     "require": {
         "php": ">=7.0",
         "slothsoft/core": "dev-master",
-        "slothsoft/dev": "dev-master",
         "slothsoft/farah": "dev-master",
         "slothsoft/slothsoft": "dev-master"
     },

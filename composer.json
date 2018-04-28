@@ -1,32 +1,32 @@
 {
-	"name" : "slothsoft/slothsoft.net",
-	"type" : "project",
-	"description" : "slothsoft.net",
-	"license" : "GPL",
-	"keywords" : [
-		"farah-server",
-		"slothsoft"
-	],
-	"autoload" : {
-		"files" : [
-			"config.php"
-		]
-	},
-	"require" : {
-		"php" : ">=7.0",
-		"slothsoft/core" : "dev-master",
-		"slothsoft/farah" : "dev-master",
-		"slothsoft/slothsoft" : "dev-master"
-	},
-	"require-dev" : {
-		"phpunit/phpunit" : ">=6.5"
-	},
-	"autoload-dev" : {
-		"classmap" : [
-			"tests/"
-		]
-	},
-	"classmap-authoritative" : true,
-	"minimum-stability" : "dev",
-	"prefer-stable" : true
+    "name": "slothsoft/slothsoft.net",
+    "type": "project",
+    "description": "slothsoft.net",
+    "license": "GPL",
+    "keywords": [
+        "farah-server",
+        "slothsoft"
+    ],
+    "autoload": {
+        "files": [
+            "config.php"
+        ]
+    },
+    "require": {
+        "php": ">=7.0",
+        "slothsoft/core": "dev-master",
+        "slothsoft/farah": "dev-master",
+        "slothsoft/slothsoft": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=6.5"
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "classmap-authoritative": true,
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

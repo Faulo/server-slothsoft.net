@@ -1,0 +1,441 @@
+.Grammar td {
+	padding: 2px 4px !important;
+	font-size: 1.1em;
+	white-space: nowrap;
+}
+.Grammar th {
+	min-width: 3em;
+}
+.Translator rt,.Translator rp {
+	font-size: 0.75em;
+}
+.Translator textarea, .Content table {
+	margin: 8px 0px;
+}
+.Translator .translatorForm label {
+	white-space: nowrap;
+}
+.Translator textarea {
+	width: 100%;
+	height: 2em;
+}
+.Translator button[name] {
+	padding: 0.25em 0.5em;
+}
+
+.testAnswer *[data-correct] {
+	vertical-align: middle;
+}
+.testAnswer *[data-correct] > * {
+	height: 100%;
+	font-size: 0.7em;
+}
+.testAnswer *[data-correct="0"] {
+	width: 50%;
+}
+
+table[data-template="kana-table"] {
+	table-layout: fixed;
+	background-color: rgba(200, 255, 150, 0.5);
+	margin-left: auto;
+	margin-right: auto;
+}
+*[data-template="kana-table"] tbody td {
+	font-size: larger;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+*[data-template="kana-table"] td:nth-child(3n + 2) {
+	padding-left: 8px;
+	text-align: right;
+}
+*[data-template="kana-table"] td:nth-child(3n + 3) {
+	padding: 4px;
+	text-align: center;
+}
+*[data-template="kana-table"] td:nth-child(3n + 1) {
+	padding-right: 8px;
+	text-align: left;
+}
+.translatorForm {
+	background-color: rgba(255, 255, 255, 0.6);
+}
+.translatorForm .input {
+	background-color: rgba(255, 255, 200, 0.5);
+}
+.translatorForm .output {
+	background-color: rgba(200, 255, 255, 0.5);
+}
+table.translatorForm td {
+	padding: 0px;
+	text-align: center;
+}
+table.vocabularyList td.myTime {
+	width: 4em;
+}
+table.vocabularyList {
+	table-layout: fixed;
+}
+table.vocabularyList th.strokeColumn {
+	width: 10em;
+}
+table.vocabularyList th.vocabColumn {
+	width: 25em;
+}
+table.translatorForm ul {
+	margin: 0px;
+	padding: 0px;
+}
+.word-complete {
+	display: table;
+	width: 100%;
+	margin: -2px 0px;
+}
+.word-complete > * {
+	display: table-cell;
+	text-align: center;
+}
+.word-complete > *.audioPlayer {
+	width: 2em;
+	min-width: 2em;
+}
+.word-complete > *.audioPlayer:last-child {
+	text-align: right !important;
+}
+.audioPlayer {
+	padding: 0px;
+	vertical-align: middle;
+}
+button.audioPlayer, object.audioPlayer:lang(ja), audio[controls].audioPlayer {
+	width: 2em;
+	height: 2em;
+	border-radius: 2px;
+	display: inline-block;
+}
+button.audioPlayer[data-playing] {
+	border-style: inset;
+}
+object.audioPlayer:lang(ja) {
+	border: 1px solid silver;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+table.translatorForm dt .audioPlayer {
+}
+table.translatorForm .english td, table.translatorForm .strokeOrder td {
+	text-align: left;
+	vertical-align: top;
+}
+table.translatorForm .english dl {
+	margin: 0px;
+}
+table.translatorForm .strokeOrder ul {
+	list-style-type: none;
+	text-align: left;
+	padding: 0px;
+}
+button.strokeOrder {
+	background-color: rgba(255, 255, 255, 0.6);
+	border-color: rgba(192, 192, 192, 0.7);
+	display: block;
+	min-width: 100%;
+	width: auto;
+}
+button.strokeOrder[data-clicked] {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+button.strokeOrder[data-clicked] {
+	font-size: 8em;
+	padding: 0px;
+	font-family: myKanjiStroke;
+}
+table.translatorForm .english .word-complete > * {
+	text-align: left;
+}
+table.translatorForm .english dd {
+	margin-left: 2em;
+	margin-bottom: 4px;
+}
+table.translatorForm .english dd .meaning-tags {
+	font-size: smaller;
+	font-style: italic;
+}
+.Translator label {
+	display: block;
+	text-align: left;
+}
+.Translator fieldset {
+	width: 300px;
+	margin-left: 32px;
+}
+.Translator fieldset table {
+
+}
+.Translator caption {
+	font-size: larger;
+}
+.kanaStrokeOrder {
+	font-family: myKanjiStroke;
+}
+
+*[data-parity = "0"] {
+	background-color: rgba(200, 200, 255, 0.5);;
+}
+*[data-parity = "1"] {
+	background-color: rgba(200, 255, 200, 0.5);;
+}
+.kanaTest input[type="text"] {
+	font-size: 3em;
+	display: block;
+	width: 100%;
+}
+.kanaTest ul {
+	list-style-type: none;
+}
+.kanaTest .results td {
+	text-align: center;
+	font-size: 1.8em;
+}
+.newVocable label {
+	display: table-cell;
+	white-space: normal !important;
+}
+.newVocable input {
+	min-width: 72px;
+	display: block;
+}
+*[data-correct] {
+	min-width: 1em;
+}
+*[data-correct = "0"] {
+	background-color: rgba(255, 0, 0, 0.5);
+}
+*[data-correct = "0"]:lang(en) {
+	text-decoration: line-through;
+}
+*[data-correct = "1"] {
+	background-color: rgba(0, 255, 0, 0.5);
+}
+*[data-vocab-correct = "0"] .input {
+	background-color: rgba(255, 0, 0, 0.5);
+}
+*[data-vocab-correct = "1"] .input {
+	background-color: rgba(0, 255, 0, 0.5);
+}
+
+
+.testDates > div {
+	overflow: auto;
+	background-color: #eee;
+	border: 2px ridge #629923;
+	border-radius: 0.25em;
+	display: inline-block;
+	vertical-align: top;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+
+.vocab-table {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	text-align: center;
+}
+.vocab-table > *, .vocab-table > label {
+	display: table-cell;
+	height: 100%;
+}
+
+.vocabBox label {
+	border: 2px ridge rgba(255, 255, 0, 0.9);
+}
+.vocabBox label:active {
+	border-style: groove;
+}
+
+.vocabBox {
+	margin: 8px 0;
+	border: 3px ridge rgba(255, 255, 255, 0.5);
+	padding: 0 !important;
+}
+.vocabBox h3 {
+	margin: 0;
+	padding-left: 0.5em;
+	font-weight: normal;
+}
+/* Höhenangaben */
+.vocabBox > h3 {
+	line-height: 40px;
+}
+.vocabBox > .translatorForm {
+	height: 468px;
+}
+.vocabBox > .translatorForm > * {
+	height: 100%;
+	width: 50%;
+	vertical-align: top;
+}
+.vocabBox .vocabMeaning {
+	height: 112px;
+	line-height: 1.3em;
+}
+.vocabBox .vocabMeaning .vocab-table > * {
+	height: 112px;
+	vertical-align: middle;
+}
+.vocabBox .vocabReading {
+	height: 162px;
+}
+.vocabBox .vocabSpelling {
+	height: 32px;
+	line-height: 32px;
+}
+.vocabBox .vocabSpelling > * {
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+	background-color: rgba(255, 255, 255, 0.75);
+	margin: 0 8px;
+}
+.vocabBox .vocabTranslation {
+	min-height: 78px;
+	max-height: 78px;
+	height: 78px;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.vocabBox .input {
+	font-size: 1.5em;
+}
+.vocabBox .vocabName:lang(ja) {
+	font-size: 1.5em;
+}
+.vocabBox .vocabSpelling, .vocabBox .vocabReading {
+	font-size: 0.8em;
+}
+[data-vocab-test="kanji"] .vocabName:lang(ja) {
+	font-size: 2em;
+}
+[data-vocab-test="kanji"] .vocabStroke:lang(ja) {
+	font-size: 4em;
+}
+
+.vocabBox label > .vocab-table {
+	height: 100%;
+}
+.vocabBox label > .vocab-table > * {
+	text-align: left;
+	white-space: normal;
+	vertical-align: middle;
+}
+.vocabBox label > .vocab-table > *:first-child {
+	width: 2em;
+	text-align: center;
+}
+.vocabBox button {
+	line-height: 1em;
+	overflow: hidden;
+	box-sizing: border-box;
+	padding: 0;
+}
+.vocabBox button[disabled] {
+	background-color: rgba(195, 0, 0, 0.9);
+}
+
+.vocabName.sans {
+	font-family: myKanjiSansSerif, sans-serif;
+}
+.vocabName.serif {
+	font-family: myKanjiSerif, serif;
+}
+
+/*
+[data-vocab-test="kanji"] .output .vocabReading, [data-vocab-test="kanji"] .output .vocabSpelling,
+[data-vocab-test="kanji"] .output  .vocabName.serif, [data-vocab-test="kanji"] .output .vocabStroke {
+	display: none;
+}
+[data-vocab-test="kanji"] div.audioPlayer {
+	display: none;
+}
+*/
+input[data-vocab-question] {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.vocabBox .vocabStroke {
+	width: 140px;
+	/*height: 140px;*/
+	padding: 0px;
+}
+.vocabBox div.audioPlayer {
+	width: 2em;
+	min-width: 2em;
+}
+.vocabBox .vocabReading {
+	text-align: center;
+	display: block;
+	overflow: hidden;
+	/*background-color: rgba(0, 127, 127, 0.1);*/
+}
+.vocabBox .vocabReading > * {
+	display: inline-block;
+	margin: 1px;
+	padding: 0 0.5em;
+	line-height: 1.5em;
+}
+.vocabBox .vocabReading > *:nth-child(even) {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+.vocabBox .vocabReading > *:nth-child(odd) {
+	background-color: rgba(200, 200, 200, 0.3);
+}
+.vocabTest fieldset {
+	margin-bottom: 1em;
+	padding: 0;
+	text-align: center;
+}
+.vocabTest fieldset > legend {
+	margin: 0 0.5em;
+}
+.vocabTest label {
+	display: inline-block;
+	margin: 0 0.25em 1em 0.25em;
+}
+.vocabTest label > * {
+	display: block;
+	text-align: center;
+	margin: auto;
+}
+.vocabTest label > input {
+	padding: 0.25em;
+}
+.vocabTest label > img {
+	height: 128px;
+}
+
+
+@media handheld, all and (max-width: 950px) {
+	article.about, .vocabName.serif, .vocabStroke {
+		display: none !important;
+	}
+	body {
+		
+	}
+	button {
+		font-size: 1em;
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	.log-short {
+		font-size: 0.75em;
+	}
+	.vocabBox {
+		margin: 1em auto 0 auto;
+	}
+	.Translator label > span {
+		height: 2.5em;
+	}
+}
+

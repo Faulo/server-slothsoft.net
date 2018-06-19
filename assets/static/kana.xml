@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+<kana c="-" v="-" latin=" " skip="">
+	<hiragana name="　"/>
+	<katakana name="　"/>
+</kana>
+<kana c="-" v="-" latin="." skip="">
+	<hiragana name="。"/>
+	<katakana name="。"/>
+</kana>
+<kana c="-" v="-" latin="!" skip="">
+	<hiragana name="！"/>
+	<katakana name="！"/>
+</kana>
+<kana c="-" v="-" latin="?" skip="">
+	<hiragana name="？"/>
+	<katakana name="？"/>
+</kana>
+<kana c="-" v="-" latin="," skip="">
+	<hiragana name="、"/>
+	<katakana name="、"/>
+</kana>
+<kana c="-" v="-" latin="(" skip="">
+	<hiragana name="（"/>
+	<katakana name="（"/>
+</kana>
+<kana c="-" v="-" latin=")" skip="">
+	<hiragana name="）"/>
+	<katakana name="）"/>
+</kana>
+<kana c="-" v="-" latin="[" skip="">
+	<hiragana name="｢"/>
+	<katakana name="｢"/>
+</kana>
+<kana c="-" v="-" latin="]" skip="">
+	<hiragana name="｣"/>
+	<katakana name="｣"/>
+</kana>
+<kana c="-" v="-" latin="&lt;" skip="">
+	<hiragana name="〔"/>
+	<katakana name="〔"/>
+</kana>
+<kana c="-" v="-" latin="&gt;" skip="">
+	<hiragana name="〕"/>
+	<katakana name="〕"/>
+</kana>
+
+
+<kana c="-" v="-" latin="~" skip="">
+	<hiragana name="ー"/>
+	<katakana name="ー"/>
+</kana>
+<kana c="-" v="-" latin="-" skip="">
+	<hiragana name="ー"/>
+	<katakana name="ー"/>
+</kana>
+<kana c="k" v="-" latin="k" skip="">
+	<hiragana name="っ"/>
+	<katakana name="ッ"/>
+</kana>
+<kana c="t" v="-" latin="t" skip="">
+	<hiragana name="っ"/>
+	<katakana name="ッ"/>
+</kana>
+<kana c="s" v="-" latin="s" skip="">
+	<hiragana name="っ"/>
+	<katakana name="ッ"/>
+</kana>
+<kana c="p" v="-" latin="p" skip="">
+	<hiragana name="っ"/>
+	<katakana name="ッ"/>
+</kana>
+<kana c="r" v="-" latin="r" skip="">
+	<hiragana name="っ"/>
+	<katakana name="ッ"/>
+</kana>
+<kana c="d" v="-" latin="d" skip="">
+	<hiragana name="っ"/>
+	<katakana name="ッ"/>
+</kana>
+
+<kana c="-" v="a" latin="a">
+	<hiragana name="あ"/>
+	<katakana name="ア"/>
+</kana>
+<kana c="-" v="i" latin="i">
+	<hiragana name="い"/>
+	<katakana name="イ"/>
+</kana>
+<kana c="-" v="u" latin="u">
+	<hiragana name="う"/>
+	<katakana name="ウ"/>
+</kana>
+<kana c="-" v="e" latin="e">
+	<hiragana name="え"/>
+	<katakana name="エ"/>
+</kana>
+<kana c="-" v="o" latin="o">
+	<hiragana name="お"/>
+	<katakana name="オ"/>
+</kana>
+<kana c="k" v="a" latin="ka">
+	<hiragana name="か"/>
+	<katakana name="カ"/>
+</kana>
+<kana c="k" v="i" latin="ki">
+	<hiragana name="き"/>
+	<katakana name="キ"/>
+</kana>
+<kana c="k" v="u" latin="ku">
+	<hiragana name="く"/>
+	<katakana name="ク"/>
+</kana>
+<kana c="k" v="e" latin="ke">
+	<hiragana name="け"/>
+	<katakana name="ケ"/>
+</kana>
+<kana c="k" v="o" latin="ko">
+	<hiragana name="こ"/>
+	<katakana name="コ"/>
+</kana>
+<kana c="k" v="ya" latin="kya">
+	<hiragana name="きゃ"/>
+	<katakana name="キャ"/>
+</kana>
+<kana c="k" v="yu" latin="kyu">
+	<hiragana name="きゅ"/>
+	<katakana name="キュ"/>
+</kana>
+<kana c="k" v="yo" latin="kyo">
+	<hiragana name="きょ"/>
+	<katakana name="キョ"/>
+</kana>
+<kana c="s" v="a" latin="sa">
+	<hiragana name="さ"/>
+	<katakana name="サ"/>
+</kana>
+<kana c="sh" v="i" latin="shi">
+	<hiragana name="し"/>
+	<katakana name="シ"/>
+</kana>
+<kana c="s" v="u" latin="su">
+	<hiragana name="す"/>
+	<katakana name="ス"/>
+</kana>
+<kana c="s" v="e" latin="se">
+	<hiragana name="せ"/>
+	<katakana name="セ"/>
+</kana>
+<kana c="s" v="o" latin="so">
+	<hiragana name="そ"/>
+	<katakana name="ソ"/>
+</kana>
+<kana c="sh" v="ya" latin="sha">
+	<hiragana name="しゃ"/>
+	<katakana name="シャ"/>
+</kana>
+<kana c="sh" v="yu" latin="shu">
+	<hiragana name="しゅ"/>
+	<katakana name="シュ"/>
+</kana>
+<kana c="sh" v="yo" latin="sho">
+	<hiragana name="しょ"/>
+	<katakana name="ショ"/>
+</kana>
+<kana c="t" v="a" latin="ta">
+	<hiragana name="た"/>
+	<katakana name="タ"/>
+</kana>
+<kana c="ch" v="i" latin="chi">
+	<hiragana name="ち"/>
+	<katakana name="チ"/>
+</kana>
+<kana c="ts" v="u" latin="tsu">
+	<hiragana name="つ"/>
+	<katakana name="ツ"/>
+</kana>
+<kana c="t" v="e" latin="te">
+	<hiragana name="て"/>
+	<katakana name="テ"/>
+</kana>
+<kana c="t" v="o" latin="to">
+	<hiragana name="と"/>
+	<katakana name="ト"/>
+</kana>
+<kana c="ch" v="ya" latin="cha">
+	<hiragana name="ちゃ"/>
+	<katakana name="チャ"/>
+</kana>
+<kana c="ch" v="yu" latin="chu">
+	<hiragana name="ちゅ"/>
+	<katakana name="チュ"/>
+</kana>
+<kana c="ch" v="yo" latin="cho">
+	<hiragana name="ちょ"/>
+	<katakana name="チョ"/>
+</kana>
+<kana c="n" v="a" latin="na">
+	<hiragana name="な"/>
+	<katakana name="ナ"/>
+</kana>
+<kana c="n" v="i" latin="ni">
+	<hiragana name="に"/>
+	<katakana name="ニ"/>
+</kana>
+<kana c="n" v="u" latin="nu">
+	<hiragana name="ぬ"/>
+	<katakana name="ヌ"/>
+</kana>
+<kana c="n" v="e" latin="ne">
+	<hiragana name="ね"/>
+	<katakana name="ネ"/>
+</kana>
+<kana c="n" v="o" latin="no">
+	<hiragana name="の"/>
+	<katakana name="ノ"/>
+</kana>
+<kana c="n" v="ya" latin="nya">
+	<hiragana name="にゃ"/>
+	<katakana name="ニャ"/>
+</kana>
+<kana c="n" v="yu" latin="nyu">
+	<hiragana name="にゅ"/>
+	<katakana name="ニュ"/>
+</kana>
+<kana c="n" v="yo" latin="nyo">
+	<hiragana name="にょ"/>
+	<katakana name="ニョ"/>
+</kana>
+<kana c="h" v="a" latin="ha">
+	<hiragana name="は"/>
+	<katakana name="ハ"/>
+</kana>
+<kana c="h" v="i" latin="hi">
+	<hiragana name="ひ"/>
+	<katakana name="ヒ"/>
+</kana>
+<kana c="f" v="u" latin="fu">
+	<hiragana name="ふ"/>
+	<katakana name="フ"/>
+</kana>
+<kana c="h" v="e" latin="he">
+	<hiragana name="へ"/>
+	<katakana name="ヘ"/>
+</kana>
+<kana c="h" v="o" latin="ho">
+	<hiragana name="ほ"/>
+	<katakana name="ホ"/>
+</kana>
+<kana c="h" v="ya" latin="hya">
+	<hiragana name="ひゃ"/>
+	<katakana name="ヒャ"/>
+</kana>
+<kana c="h" v="yu" latin="hyu">
+	<hiragana name="ひゅ"/>
+	<katakana name="ヒュ"/>
+</kana>
+<kana c="h" v="yo" latin="hyo">
+	<hiragana name="ひょ"/>
+	<katakana name="ヒョ"/>
+</kana>
+<kana c="m" v="a" latin="ma">
+	<hiragana name="ま"/>
+	<katakana name="マ"/>
+</kana>
+<kana c="m" v="i" latin="mi">
+	<hiragana name="み"/>
+	<katakana name="ミ"/>
+</kana>
+<kana c="m" v="u" latin="mu">
+	<hiragana name="む"/>
+	<katakana name="ム"/>
+</kana>
+<kana c="m" v="e" latin="me">
+	<hiragana name="め"/>
+	<katakana name="メ"/>
+</kana>
+<kana c="m" v="o" latin="mo">
+	<hiragana name="も"/>
+	<katakana name="モ"/>
+</kana>
+<kana c="m" v="ya" latin="mya">
+	<hiragana name="みゃ"/>
+	<katakana name="ミャ"/>
+</kana>
+<kana c="m" v="yu" latin="myu">
+	<hiragana name="みゅ"/>
+	<katakana name="ミュ"/>
+</kana>
+<kana c="m" v="yo" latin="myo">
+	<hiragana name="みょ"/>
+	<katakana name="ミョ"/>
+</kana>
+<kana c="y" v="a" latin="ya">
+	<hiragana name="や"/>
+	<katakana name="ヤ"/>
+</kana>
+<kana c="y" v="u" latin="yu">
+	<hiragana name="ゆ"/>
+	<katakana name="ユ"/>
+</kana>
+<kana c="y" v="o" latin="yo">
+	<hiragana name="よ"/>
+	<katakana name="ヨ"/>
+</kana>
+<kana c="r" v="a" latin="ra">
+	<hiragana name="ら"/>
+	<katakana name="ラ"/>
+</kana>
+<kana c="r" v="i" latin="ri">
+	<hiragana name="り"/>
+	<katakana name="リ"/>
+</kana>
+<kana c="r" v="u" latin="ru">
+	<hiragana name="る"/>
+	<katakana name="ル"/>
+</kana>
+<kana c="r" v="e" latin="re">
+	<hiragana name="れ"/>
+	<katakana name="レ"/>
+</kana>
+<kana c="r" v="o" latin="ro">
+	<hiragana name="ろ"/>
+	<katakana name="ロ"/>
+</kana>
+<kana c="r" v="ya" latin="rya">
+	<hiragana name="りゃ"/>
+	<katakana name="リャ"/>
+</kana>
+<kana c="r" v="yu" latin="ryu">
+	<hiragana name="りゅ"/>
+	<katakana name="リュ"/>
+</kana>
+<kana c="r" v="yo" latin="ryo">
+	<hiragana name="りょ"/>
+	<katakana name="リョ"/>
+</kana>
+<kana c="w" v="a" latin="wa">
+	<hiragana name="わ"/>
+	<katakana name="ワ"/>
+</kana>
+<kana c="w" v="i" latin="wi">
+	<hiragana name="ゐ"/>
+	<katakana name="ウィ"/>
+	<katakana name="ヰ"/>
+</kana>
+<kana c="w" v="e" latin="we">
+	<hiragana name="ゑ"/>
+	<katakana name="ウェ"/>
+	<katakana name="ヱ"/>
+</kana>
+<kana c="w" v="o" latin="wo">
+	<hiragana name="を"/>
+	<katakana name="ウォ"/>
+	<katakana name="ヲ"/>
+</kana>
+<kana c="n" v="-" latin="n">
+	<hiragana name="ん"/>
+	<katakana name="ン"/>
+</kana>
+<kana c="g" v="a" latin="ga">
+	<hiragana name="が"/>
+	<katakana name="ガ"/>
+</kana>
+<kana c="g" v="i" latin="gi">
+	<hiragana name="ぎ"/>
+	<katakana name="ギ"/>
+</kana>
+<kana c="g" v="u" latin="gu">
+	<hiragana name="ぐ"/>
+	<katakana name="グ"/>
+</kana>
+<kana c="g" v="e" latin="ge">
+	<hiragana name="げ"/>
+	<katakana name="ゲ"/>
+</kana>
+<kana c="g" v="o" latin="go">
+	<hiragana name="ご"/>
+	<katakana name="ゴ"/>
+</kana>
+<kana c="g" v="ya" latin="gya">
+	<hiragana name="ぎゃ"/>
+	<katakana name="ギャ"/>
+</kana>
+<kana c="g" v="yu" latin="gyu">
+	<hiragana name="ぎゅ"/>
+	<katakana name="ギュ"/>
+</kana>
+<kana c="g" v="yo" latin="gyo">
+	<hiragana name="ぎょ"/>
+	<katakana name="ギョ"/>
+</kana>
+<kana c="z" v="a" latin="za">
+	<hiragana name="ざ"/>
+	<katakana name="ザ"/>
+</kana>
+<kana c="j" v="i" latin="ji">
+	<hiragana name="じ"/>
+	<katakana name="ジ"/>
+	<hiragana name="ぢ"/>
+	<katakana name="ヂ"/>
+</kana>
+<kana c="z" v="u" latin="zu">
+	<hiragana name="ず"/>
+	<katakana name="ズ"/>
+	<hiragana name="づ"/>
+	<katakana name="ヅ"/>
+</kana>
+<kana c="z" v="e" latin="ze">
+	<hiragana name="ぜ"/>
+	<katakana name="ゼ"/>
+</kana>
+<kana c="z" v="o" latin="zo">
+	<hiragana name="ぞ"/>
+	<katakana name="ゾ"/>
+</kana>
+<kana c="j" v="ya" latin="ja">
+	<hiragana name="じゃ"/>
+	<katakana name="ジャ"/>
+</kana>
+<kana c="j" v="yu" latin="ju">
+	<hiragana name="じゅ"/>
+	<katakana name="ジュ"/>
+</kana>
+<kana c="j" v="yo" latin="jo">
+	<hiragana name="じょ"/>
+	<katakana name="ジョ"/>
+</kana>
+<kana c="d" v="a" latin="da">
+	<hiragana name="だ"/>
+	<katakana name="ダ"/>
+</kana>
+<kana c="d" v="e" latin="de">
+	<hiragana name="で"/>
+	<katakana name="デ"/>
+</kana>
+<kana c="d" v="o" latin="do">
+	<hiragana name="ど"/>
+	<katakana name="ド"/>
+</kana>
+<kana c="b" v="a" latin="ba">
+	<hiragana name="ば"/>
+	<katakana name="バ"/>
+</kana>
+<kana c="b" v="i" latin="bi">
+	<hiragana name="び"/>
+	<katakana name="ビ"/>
+</kana>
+<kana c="b" v="u" latin="bu">
+	<hiragana name="ぶ"/>
+	<katakana name="ブ"/>
+</kana>
+<kana c="b" v="e" latin="be">
+	<hiragana name="べ"/>
+	<katakana name="ベ"/>
+</kana>
+<kana c="b" v="o" latin="bo">
+	<hiragana name="ぼ"/>
+	<katakana name="ボ"/>
+</kana>
+<kana c="b" v="ya" latin="bya">
+	<hiragana name="びゃ"/>
+	<katakana name="ビャ"/>
+</kana>
+<kana c="b" v="yu" latin="byu">
+	<hiragana name="びゅ"/>
+	<katakana name="ビュ"/>
+</kana>
+<kana c="b" v="yo" latin="byo">
+	<hiragana name="びょ"/>
+	<katakana name="ビョ"/>
+</kana>
+<kana c="p" v="a" latin="pa">
+	<hiragana name="ぱ"/>
+	<katakana name="パ"/>
+</kana>
+<kana c="p" v="i" latin="pi">
+	<hiragana name="ぴ"/>
+	<katakana name="ピ"/>
+</kana>
+<kana c="p" v="u" latin="pu">
+	<hiragana name="ぷ"/>
+	<katakana name="プ"/>
+</kana>
+<kana c="p" v="e" latin="pe">
+	<hiragana name="ぺ"/>
+	<katakana name="ペ"/>
+</kana>
+<kana c="p" v="o" latin="po">
+	<hiragana name="ぽ"/>
+	<katakana name="ポ"/>
+</kana>
+<kana c="p" v="ya" latin="pya">
+	<hiragana name="ぴゃ"/>
+	<katakana name="ピャ"/>
+</kana>
+<kana c="p" v="yu" latin="pyu">
+	<hiragana name="ぴゅ"/>
+	<katakana name="ピュ"/>
+</kana>
+<kana c="p" v="yo" latin="pyo">
+	<hiragana name="ぴょ"/>
+	<katakana name="ピョ"/>
+</kana>
+<kana c="y" v="e" latin="ye">
+	<katakana name="イェ"/>
+</kana>
+<kana c="v" v="a" latin="va">
+	<katakana name="ヴァ"/>
+</kana>
+<kana c="v" v="i" latin="vi">
+	<katakana name="ヴィ"/>
+</kana>
+<kana c="v" v="u" latin="vu">
+	<katakana name="ヴ"/>
+</kana>
+<kana c="v" v="e" latin="ve">
+	<katakana name="ヴェ"/>
+</kana>
+<kana c="v" v="o" latin="vo">
+	<katakana name="ヴォ"/>
+</kana>
+<kana c="s" v="i" latin="si">
+	<katakana name="スィ"/>
+</kana>
+<kana c="z" v="i" latin="zi">
+	<katakana name="ズィ"/>
+</kana>
+<kana c="sh" v="e" latin="she">
+	<katakana name="シェ"/>
+</kana>
+<kana c="j" v="e" latin="je">
+	<katakana name="ジェ"/>
+</kana>
+<kana c="ch" v="e" latin="che">
+	<katakana name="チェ"/>
+</kana>
+<kana c="t" v="i" latin="ti">
+	<katakana name="ティ"/>
+</kana>
+<kana c="t" v="u" latin="tu">
+	<katakana name="トゥ"/>
+</kana>
+<kana c="d" v="i" latin="di">
+	<katakana name="ディ"/>
+</kana>
+<kana c="d" v="u" latin="du">
+	<katakana name="ドゥ"/>
+</kana>
+<kana c="ts" v="a" latin="tsa">
+	<katakana name="ツァ"/>
+</kana>
+<kana c="ts" v="i" latin="tsi">
+	<katakana name="ツィ"/>
+</kana>
+<kana c="ts" v="e" latin="tse">
+	<katakana name="ツェ"/>
+</kana>
+<kana c="ts" v="o" latin="tso">
+	<katakana name="ツォ"/>
+</kana>
+<kana c="f" v="a" latin="fa">
+	<katakana name="ファ"/>
+</kana>
+<kana c="f" v="i" latin="fi">
+	<katakana name="フィ"/>
+</kana>
+<kana c="f" v="e" latin="fe">
+	<katakana name="フェ"/>
+</kana>
+<kana c="f" v="o" latin="fo">
+	<katakana name="フォ"/>
+</kana>
+<kana c="f" v="yu" latin="fyu">
+	<katakana name="フュ"/>
+</kana>
+<kana c="hy" v="e" latin="hye">
+	<hiragana name="ひぇ"/>
+	<katakana name="ヒェ"/>
+</kana>
+
+</data>

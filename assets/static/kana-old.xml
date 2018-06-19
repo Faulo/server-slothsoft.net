@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<row>
+		<kana name="あ" latin="a"/>
+		<kana name="い" latin="i"/>
+		<kana name="う" latin="u"/>
+		<kana name="え" latin="e"/>
+		<kana name="お" latin="o"/>
+	</row>
+	<row>
+		<kana name="か" latin="ka"/>
+		<kana name="き" latin="ki"/>
+		<kana name="く" latin="ku"/>
+		<kana name="け" latin="ke"/>
+		<kana name="こ" latin="ko"/>
+	</row>
+	<row>
+		<kana name="さ" latin="sa"/>
+		<kana name="し" latin="shi"/>
+		<kana name="す" latin="su"/>
+		<kana name="せ" latin="se"/>
+		<kana name="そ" latin="so"/>
+	</row>
+	<row>
+		<kana name="た" latin="ta"/>
+		<kana name="ち" latin="chi"/>
+		<kana name="つ" latin="tsu"/>
+		<kana name="て" latin="te"/>
+		<kana name="と" latin="to"/>
+	</row>
+	<row>
+		<kana name="な" latin="na"/>
+		<kana name="に" latin="ni"/>
+		<kana name="ぬ" latin="nu"/>
+		<kana name="ね" latin="ne"/>
+		<kana name="の" latin="no"/>
+	</row>
+	<row>
+		<kana name="は" latin="ha"/>
+		<kana name="ひ" latin="hi"/>
+		<kana name="ふ" latin="fu"/>
+		<kana name="へ" latin="he"/>
+		<kana name="ほ" latin="ho"/>
+	</row>
+	<row>
+		<kana name="ま" latin="ma"/>
+		<kana name="み" latin="mi"/>
+		<kana name="む" latin="mu"/>
+		<kana name="め" latin="me"/>
+		<kana name="も" latin="mo"/>
+	</row>
+	<row>
+		<kana name="や" latin="ya"/>
+		<kana name="" latin=""/>
+		<kana name="ゆ" latin="yu"/>
+		<kana name="" latin=""/>
+		<kana name="よ" latin="yo"/>
+	</row>
+	<row>
+		<kana name="ら" latin="ra"/>
+		<kana name="り" latin="ri"/>
+		<kana name="る" latin="ru"/>
+		<kana name="れ" latin="re"/>
+		<kana name="ろ" latin="ro"/>
+	</row>
+	<row>
+		<kana name="わ" latin="wa"/>
+		<kana name="ゐ" latin="wi"/>
+		<kana name="" latin=""/>
+		<kana name="ゑ" latin="we"/>
+		<kana name="を" latin="wo"/>
+	</row>
+	<row>
+		<kana name="が" latin="ga"/>
+		<kana name="ぎ" latin="gi"/>
+		<kana name="ぐ" latin="gu"/>
+		<kana name="げ" latin="ge"/>
+		<kana name="ご" latin="go"/>
+	</row>
+	<row>
+		<kana name="ぎゃ" latin="gya"/>
+		<kana name="" latin=""/>
+		<kana name="ぎゅ" latin="gyu"/>
+		<kana name="" latin=""/>
+		<kana name="ぎょ" latin="gyo"/>
+	</row>
+	<row>
+		<kana name="ざ" latin="za"/>
+		<kana name="じ" latin="ji"/>
+		<kana name="ず" latin="zu"/>
+		<kana name="ぜ" latin="ze"/>
+		<kana name="ぞ" latin="zo"/>
+	</row>
+	<row>
+		<kana name="じゃ" latin="ja"/>
+		<kana name="" latin=""/>
+		<kana name="じゅ" latin="ju"/>
+		<kana name="" latin=""/>
+		<kana name="じょ" latin="jo"/>
+	</row>
+	<row>
+		<kana name="だ" latin="da"/>
+		<kana name="ぢ" latin="ji"/>
+		<kana name="づ" latin="zu"/>
+		<kana name="で" latin="de"/>
+		<kana name="ど" latin="do"/>
+	</row>
+	<row>
+		<kana name="ぢゃ" latin="ja"/>
+		<kana name="" latin=""/>
+		<kana name="ぢゅ" latin="ju"/>
+		<kana name="" latin=""/>
+		<kana name="ぢょ" latin="jo"/>
+	</row>
+	<row>
+		<kana name="ば" latin="ba"/>
+		<kana name="び" latin="bi"/>
+		<kana name="ぶ" latin="bu"/>
+		<kana name="べ" latin="be"/>
+		<kana name="ぼ" latin="bo"/>
+	</row>
+	<row>
+		<kana name="びゃ" latin="bya"/>
+		<kana name="" latin=""/>
+		<kana name="びゅ" latin="byu"/>
+		<kana name="" latin=""/>
+		<kana name="びょ" latin="byo"/>
+	</row>
+	<row>
+		<kana name="ぱ" latin="pa"/>
+		<kana name="ぴ" latin="pi"/>
+		<kana name="ぷ" latin="pu"/>
+		<kana name="ぺ" latin="pe"/>
+		<kana name="ぽ" latin="po"/>
+	</row>
+	<row>
+		<kana name="ぴゃ" latin="pya"/>
+		<kana name="" latin=""/>
+		<kana name="ぴゅ" latin="pyu"/>
+		<kana name="" latin=""/>
+		<kana name="ぴょ" latin="pyo"/>
+	</row>
+	<row>
+		<kana name="きゃ" latin="kya"/>
+		<kana name="" latin=""/>
+		<kana name="きゅ" latin="kyu"/>
+		<kana name="" latin=""/>
+		<kana name="きょ" latin="kyo"/>
+	</row>
+	<row>
+		<kana name="しゃ" latin="sha"/>
+		<kana name="" latin=""/>
+		<kana name="しゅ" latin="shu"/>
+		<kana name="" latin=""/>
+		<kana name="しょ" latin="sho"/>
+	</row>
+	<row>
+		<kana name="ちゃ" latin="cha"/>
+		<kana name="" latin=""/>
+		<kana name="ちゅ" latin="chu"/>
+		<kana name="" latin=""/>
+		<kana name="ちょ" latin="cho"/>
+	</row>
+	<row>
+		<kana name="にゃ" latin="nya"/>
+		<kana name="にゅ" latin="nyu"/>
+		<kana name="にょ" latin="nyo"/>
+	</row>
+	<row>
+		<kana name="ひゃ" latin="hya"/>
+		<kana name="" latin=""/>
+		<kana name="ひゅ" latin="hyu"/>
+		<kana name="" latin=""/>
+		<kana name="ひょ" latin="hyo"/>
+	</row>
+	<row>
+		<kana name="みゃ" latin="mya"/>
+		<kana name="" latin=""/>
+		<kana name="みゅ" latin="myu"/>
+		<kana name="" latin=""/>
+		<kana name="みょ" latin="myo"/>
+	</row>
+	<row>
+		<kana name="りゃ" latin="rya"/>
+		<kana name="" latin=""/>
+		<kana name="りゅ" latin="ryu"/>
+		<kana name="" latin=""/>
+		<kana name="りょ" latin="ryo"/>
+	</row>
+	<row>
+		<kana name="ん" latin="n"/>
+		<kana name="ー" latin="~"/>
+		<kana name="'" latin="'"/>
+		<kana name="" latin=""/>
+		<kana name="" latin=""/>
+		<kana name="" latin=""/>
+	</row>
+</data>

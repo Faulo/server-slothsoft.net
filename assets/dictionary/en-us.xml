@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+
+	<p key="Startseite">Home</p>
+	<p key="Minecraft">Minecraft</p>
+	<p key="slothsoft.net">Slothsoft</p>
+	<p key="Slothsoft">Slothsoft</p>
+	<p key="Shoutbox">Shoutbox</p>
+	<p key="News">News</p>
+	<p key="Karten">Maps</p>
+	<p key="2D Normal">2D Normal</p>
+	<p key="3D Normal">3D Normal</p>
+	<p key="2D Cave">2D Cave</p>
+	<p key="3D Cave">3D Cave</p>
+	<p key="Tectonicus">Tectonicus</p>
+	<p key="Map">World Map</p>
+	<p key="MapCrafter (current)">Current (MapCrafter)</p>
+	<p key="Overviewer (2014)">2014 (Overviewer)</p>
+	<p key="Tectonicus (2013)">2013 (Tectonicus)</p>
+	<p key="Tectonicus (2012)">2012 (Tectonicus)</p>
+	<p key="Tectonicus (2011)">2011 (Tectonicus)</p>
+	<p key="Server-Informationen">Server Information</p>
+	<p key="Regeln">Rules</p>
+	<p key="Einkaufszentrum">Mall</p>
+	<p key="Werkstatt">Workshop</p>
+	<p key="Spieler">Players</p>
+	<p key="Bildchen">Pictures</p>
+	<p key="Tales of Eternia">Tales of Eternia</p>
+	<p key="Craymel Editor">Craymel Editor</p>
+	<p key="Melnics Test">Melnics Learning Program</p>
+	<p key="Ambermoon">Ambermoon</p>
+	<p key="EditorHelp">Editor FAQs</p>
+	<p key="SavegameEditor">Savegame Editor</p>
+	<p key="Japanese">Japanese</p>
+	<p key="Hepburn Romanization">Hepburn Romanization</p>
+	<p key="Translator">Japanese ➟ English Translator</p>
+	<p key="Kana Test">Kana Learning Program</p>
+	<p key="Entwicklerbereich">Dev Area</p>
+	<p key="PC Übersicht">PC Overview</p>
+	<p key="Impressum">Imprint</p>
+
+	<p key="frontpage/introduction/title">
+		This is the homepage of the Indie Game Development Studio
+		<small>not yet officially</small>
+		known as
+		<em>Slothsoft</em>
+		.
+	</p>
+	<p key="frontpage/introduction">
+		<p>
+			<em>Welcome.</em>
+		</p>
+		<p>This place is our personal sandbox for honing our skills at
+			software development and trying out new stuff.</p>
+		<p>What you'll find here will be mostly related to games we love and
+			games we created.</p>
+		<p>At the moment, that would be:</p>
+		<dl>
+			<dt>
+				<a href="/Minecraft/">Minecraft</a>
+			</dt>
+			<dd>
+				<p>
+					We have an open Minecraft server running 24/7 at
+					<code>slothsoft.net</code>
+					, feel free to drop by.
+				</p>
+				<p>The pages here are supposed to help our loyal players in their
+					daily struggle for survival.</p>
+			</dd>
+			<dt>
+				<a href="/Tales/CraymelEditor/">Tales of</a>
+			</dt>
+			<dd>
+				<p>
+					Sometimes, when playing an awesome game, we wind up developing some kind of
+					tool for more efficient gameplay.
+					When they're good enough, they might end up somewhere here.
+				</p>
+			</dd>
+			<dt>
+				<a href="/WhatTheHell/">What The Hell</a>
+			</dt>
+			<dd>
+				<p>
+					Of all the things we've created, this one resembles a game the most.
+					It's kind of a co-op "Scribblenauts meets Tabu".
+				</p>
+			</dd>
+		</dl>
+		<p>
+			All pages here
+			<em>should</em>
+			be available in English and German.
+			Whenever we create a new page we choose the language based on our mood at the
+			time, and afterwards we choose wether to translate it based on our
+			mood at
+			<em>that</em>
+			time.
+		</p>
+	</p>
+	<p key="frontpage/staff/title">This part of Slothsoft consists of these people:</p>
+	<p key="frontpage/staff">
+		<dl>
+			<dt>
+				<a href="/AboutUs/#Daniel">Daniel Schulz</a>
+			</dt>
+			<dd>The programmer.</dd>
+		</dl>
+		<p>
+			We also have a
+			<em>sister</em>
+			branch over at
+			<a href="http://slothsoft.de" rel="external">slothsoft.de</a>
+			.
+		</p>
+	</p>
+	<p key="What The Hell">What The Hell</p>
+	<p key="Game">Game</p>
+	<p key="About us">About us</p>
+	<p key="Statistic">Statistic</p>
+	<p key="Server-Log">Server-Log</p>
+	<p key="ExperienceChart">Experience Chart</p>
+	<p key="Tales of Graces">Tales of Graces</p>
+	<p key="Magic Carta List">Magic Carta List</p>
+	<p key="language:de-de">Deutsch</p>
+	<p key="language:en-us">English</p>
+	<p key="Last system message:">Last system message:</p>
+	<p key="Currently online:">Currently online:</p>
+	<p key="About">About</p>
+	<p key="This editor allows you to find useful Craymel Configurations by showing all available Greater Craymels and spells, and which craymel mage they would end up with.">This editor allows you to find useful Craymel Configurations by
+		showing all available Greater Craymels and spells, and which craymel
+		mage they would end up with.</p>
+	<p key="Instructions">Instructions</p>
+	<p key="Click on a Greater Craymels name to have him switch to the other craymel mage. The list will update accordingly.">Click on a Greater Craymel's name to have him switch to the other
+		craymel mage. The list will update accordingly.</p>
+	<p key="Credits">Credits</p>
+	<p key="(code)">(code)</p>
+	<p key="(design)">(design)</p>
+	<p key="(awesome craymel guide)">(awesome craymel guide)</p>
+	<p key="Craymel Mages">Craymel Mages</p>
+	<p key="Spells">Spells</p>
+	<p key="players/title">players/title</p>
+	<p key="players/level">
+		<p>players/level</p>
+	</p>
+	<p key="players/laston">players/laston</p>
+	<p key="Fire Emblem">Fire Emblem</p>
+	<p key="(awesome stat guide)">
+		<a href="http://www.gamefaqs.com/ds/943695-fire-emblem-shadow-dragon/faqs/54527">(awesome stat guide)</a>
+	</p>
+	<p key="(awesome wiki)">
+		<a href="http://fireemblem.wikia.com/wiki/Fire_Emblem_Wikia">(awesome wiki)</a>
+	</p>
+	<p key="Shadow Dragon">Shadow Dragon</p>
+	<p key="Path of Radiance">Path of Radiance</p>
+	<p key="Blazing Sword">Blazing Sword</p>
+	<p key="The Sacred Stones">The Sacred Stones</p>
+	<p key="Awakening">Awakening</p>
+	<p key="Radiant Dawn">Radiant Dawn</p>
+	<p key="2013">2013</p>
+	<p key="2012">2012</p>
+	<p key="2011">2011</p>
+	<p key="2010">2010</p>
+	<p key="month/01">January</p>
+	<p key="month/02">February</p>
+	<p key="month/03">March</p>
+	<p key="month/04">April</p>
+	<p key="month/05">May</p>
+	<p key="month/06">June</p>
+	<p key="month/07">July</p>
+	<p key="month/08">August</p>
+	<p key="month/09">September</p>
+	<p key="month/10">October</p>
+	<p key="month/11">November</p>
+	<p key="month/12">December</p>
+	<p key="JLPT">JLPT</p>
+	<p key="N5">N5</p>
+	<p key="N4">N4</p>
+	<p key="Vocabulary List">Vocabulary List</p>
+	<p key="N3">N3</p>
+	<p key="N2">N2</p>
+	<p key="N1">N1</p>
+	<p key="Vocabulary Test">Vocabulary Test</p>
+	<p key="Faulo">Faulo</p>
+	<p key="Personal Studies">Personal Studies</p>
+	<p key="Japanese Language Proficiency Test">Japanese Language Proficiency Test</p>
+	<p key="Unicode Mapper">Unicode Mapper</p>
+	<p key="Unicode Text Transformation">Unicode Text Transformation</p>
+	<p key="Unicode Text Converter">Unicode Text Converter</p>
+	<p key="Online IDs">
+		<h3>Online IDs</h3>
+	</p>
+	<p key="About Me">
+		<h3>About Me</h3>
+	</p>
+	<p key="Julia">Julia</p>
+	<p key="Dani">Dani</p>
+	<p key="Daniel">Daniel</p>
+	<p key="Audio">Audio</p>
+	<p key="Stroke Order">Stroke Order</p>
+	<p key="[dont know]"> [don't know]</p>
+	<p key="lang/"/>
+	<p key="lang/ja-jp">Japanese</p>
+	<p key="lang/de-de">German</p>
+	<p key="lang/en-us">English</p>
+	<p key="Mobile Pages">Mobile Pages</p>
+	<p key="Vocab Test">Vocab Test</p>
+	<p key="English-German">English ➟ German</p>
+	<p key="German-English">German ➟ English</p>
+	<p key="Japanese-German">Japanese ➟ German</p>
+	<p key="German-Japanese">German ➟ Japanese</p>
+	<p key="Japanese-English">Japanese ➟ English</p>
+	<p key="Japanese-English-Plus">Japanese ➟ English Plus</p>
+	<p key="Japanese-German-Plus">Japanese ➟ German Plus</p>
+	<p key="English-Japanese">English ➟ Japanese</p>
+	<p key="English-German-Plus">English ➟ German Plus</p>
+	<p key="German-English-Plus">German ➟ English Plus</p>
+	<p key="German-Japanese-Plus">German ➟ Japanese Plus</p>
+	<p key="English-Japanese-Plus">English ➟ Japanese Plus</p>
+	<p key="Kanji Test Japanese-English">Kanji Test Japanese-English</p>
+	<p key="Kanji Test English-Japanese">Kanji Test English-Japanese</p>
+	<p key="Vocab Test Japanese-German">Vocab Test Japanese-German</p>
+	<p key="Vocab Test German-Japanese">Vocab Test German-Japanese</p>
+	<p key="Kanji List">Kanji List</p>
+	<p key="Kanji Test">Kanji Test</p>
+	<p key="vocab/ja/rubyplugin">
+		If your browser is Firefox and can't render the
+		<ruby>
+			振り仮名
+			<rp> （</rp>
+			<rt>furigana</rt>
+			<rp>） </rp>
+		</ruby>
+		properly,
+		<a href="https://addons.mozilla.org/de/firefox/addon/html-ruby/" rel="external">there's a plugin</a>
+		for that.
+	</p>
+	<p key="vocab/kanji/test">
+		A memorization test that asks you to translate
+		<abbr title="the exact number of questions is √(total number of kanji in the list) :3">a number of</abbr>
+		kanji from the accompanying
+		<a href="../../KanjiList/">list</a>
+		. /o/
+	</p>
+	<p key="vocab/kanji/readings">
+		All
+		<em>kun</em>
+		and
+		<em>on</em>
+		readings for kanji from the
+		<a href="../VocabularyList/">Vocabulary List</a>
+		. /o/
+	</p>
+	<p key="vocab/kanji/audio">
+		Audio samples are courtesy of
+		<a href="http://nihongo.monash.edu/cgi-bin/wwwjdic" rel="external">WWWJDIC</a>
+		.
+	</p>
+	<p key="vocab/kanji/stroke">
+		Stroke order thanks to
+		<a href="https://sites.google.com/site/nihilistorguk/" rel="external">nihilistorguk</a>
+		.
+	</p>
+	<p key="vocab/ja/test">
+		A vocab test that asks you to translate
+		<abbr title="the exact number of questions is 10% of the vocab :3">a number of</abbr>
+		Japanese words from
+		<a href="../../VocabularyList/">the vocab list</a>
+		, which are given as kana, kanji and audio sample, if possible.
+	</p>
+	<p key="vocab/slothsoft/list">A vocabulary list created and maintained by a member of
+		Slothsoft.</p>
+
+
+	<p key="Heartbeat For All">Heartbeat For All</p>
+	<p key="Shoutboxes">Shoutboxes</p>
+	<p key="chat/list">
+		<h2>About</h2>
+		<p>As you can see, nothing much evers happens with these shoutboxes,
+			so here's all of them at once for easy checking of new messages. /o/</p>
+		<p>Any kind of feedback is welcome here - questions, suggestions,
+			complaints, whatever you want to share. :&gt;</p>
+	</p>
+	<p key="Chat">Chat</p>
+	<p key="Shoutbox List">Active Shoutboxes</p>
+	<p key=""/>
+	<p key="Claudia Osthof">Claudia Osthof</p>
+	<p key="Portfolio">Portfolio</p>
+	<p key="Grammar">Grammar</p>
+	<p key="Rekka No Ken">Rekka No Ken</p>
+	<p key="MelnicsTranslator">Melnics Translator</p>
+	<p key="Finnish">Finnish</p>
+	<p key="lang/fi-fi">Finnish</p>
+	<p key="Awakening - Relationships">Awakening - Relationships</p>
+	<p key="Characters">Characters</p>
+	<p key="Relationships">Relationships</p>
+	<p key="2014">2014</p>
+	<p key="Add Word">Add Word</p>
+	<p key="vocab/type/v5b">
+		五段
+		<br/>
+		～ぶ
+	</p>
+	<p key="vocab/type/v5k">
+		五段
+		<br/>
+		～く
+	</p>
+	<p key="vocab/type/v5m">
+		五段
+		<br/>
+		～む
+	</p>
+	<p key="vocab/type/v5r">
+		五段
+		<br/>
+		～る
+	</p>
+	<p key="vocab/type/v5s">
+		五段
+		<br/>
+		～す
+	</p>
+	<p key="vocab/type/v5t">
+		五段
+		<br/>
+		～つ
+	</p>
+	<p key="vocab/type/v5g">
+		五段
+		<br/>
+		～ぐ
+	</p>
+	<p key="vocab/type/v5u">
+		五段
+		<br/>
+		～う
+	</p>
+	<p key="vocab/type/v5n">
+		五段
+		<br/>
+		～ぬ
+	</p>
+	<p key="vocab/type/v1">一段</p>
+	<p key="vocab/type/vs">?</p>
+	<p key="vocab/form/dictionary">
+		Dictionary Form
+		<br/>
+	</p>
+	<p key="vocab/form/te">
+		"te" Form
+		<br/>
+		～て
+	</p>
+	<p key="vocab/form/negative">
+		Negative
+		<br/>
+		～ない
+	</p>
+	<p key="vocab/form/perfective">
+		Perfective
+		<br/>
+		～た
+	</p>
+	<p key="vocab/form/polite">
+		Polite Form
+		<br/>
+		～ます
+	</p>
+	<p key="vocab/form/potential">
+		Potential
+		<br/>
+		～える
+	</p>
+	<p key="vocab/form/volitional">
+		Volitional
+		<br/>
+		～おう
+	</p>
+	<p key="vocab/form/passive">
+		Passive
+		<br/>
+		～あれる
+	</p>
+	<p key="vocab/form/causative">
+		Causative
+		<br/>
+		～あせる
+	</p>
+	<p key="vocab/form/imperative">
+		Imperative
+		<br/>
+		～え
+	</p>
+	<p key="vocab/form/conditional">
+		Conditional
+		<br/>
+		～ら
+	</p>
+	<p key="vocab/form/polite-negative">
+		Polite Negative
+		<br/>
+		～ません
+	</p>
+	<p key="vocab/form/polite-volitional">
+		Polite Volitional
+		<br/>
+		～ましょう
+	</p>
+	<p key="Missing Sloth">Missing Sloth</p>
+	<p key="1970">1970</p>
+	<p key="VideoChatThing">Video Chat Thing</p>
+	<p key="MelnicsTable">Melnics Alphabet (print version)</p>
+	<p key="daniel-schulz.slothsoft.net">daniel-schulz.slothsoft.net</p>
+	<p key="Tetris">Tetris</p>
+	<p key="Tetris/headline">Tetris/headline</p>
+	<p key="Tetris/content">Tetris/content</p>
+	<p key="Tales">Tales</p>
+	<p key="MagicCarta">MagicCarta</p>
+	<p key="MagicCartaWiki">MagicCartaWiki</p>
+	<p key="backend.slothsoft.net">backend.slothsoft.net</p>
+	<p key="Colors">Colors</p>
+	<p key="2015">2015</p>
+	<p key="Fates">Fates</p>
+	<p key="DragonAge">DragonAge</p>
+	<p key="InquisitionCombos">InquisitionCombos</p>
+	<p key="dev.slothsoft.net">dev.slothsoft.net</p>
+	<p key="MTG">MTG</p>
+	<p key="Prereleases">Prereleases</p>
+	<p key="Search">Search</p>
+	<p key="Events">Events</p>
+	<p key="Archetypes">Archetypes</p>
+	<p key="Joana">Joana</p>
+	<p key="KTK">KTK</p>
+	<p key="Minna">Minna</p>
+	<p key="Steffi">Steffi</p>
+	<p key="Temp">Temp</p>
+	<p key="Daniel-KTK">Daniel-KTK</p>
+	<p key="Daniel-Origins">Daniel-Origins</p>
+	<p key="Clace">Clace</p>
+	<p key="Booster">Booster</p>
+	<p key="Daniel-BFZ">Daniel-BFZ</p>
+	<p key="Daniel-ORI">Daniel-ORI</p>
+	<p key="MapCrafter (2015)">MapCrafter (2015)</p>
+	<p key="Current (MapCrafter)">Current (MapCrafter)</p>
+	<p key="2015 (MapCrafter)">2015 (MapCrafter)</p>
+	<p key="2014 (Overviewer)">2014 (Overviewer)</p>
+	<p key="2013 (Tectonicus)">2013 (Tectonicus)</p>
+	<p key="2012 (Tectonicus)">2012 (Tectonicus)</p>
+	<p key="2011 (Tectonicus)">2011 (Tectonicus)</p>
+	<p key="2016">2016</p>
+	<p key="Daniel-OGW">Daniel-OGW</p>
+	<p key="Paul">Paul</p>
+	<p key="Daniel-SOI">Daniel-SOI</p>
+	<p key="Daniel-EMN">Daniel-EMN</p>
+	<p key="mtg.slothsoft.net">mtg.slothsoft.net</p>
+	<p key="Reviews">Reviews</p>
+	<p key="Daniel-Limited">Daniel-Limited</p>
+	<p key="LinkHeroes">Tales of Link Heroes</p>
+	<p key="2017">2017</p>
+	<p key="The Blazing Blade">The Blazing Blade</p>
+	<p key="Tokens">Tokens</p>
+	<p key="Martina">Martina</p>
+	<p key="twitter.slothsoft.net">twitter.slothsoft.net</p>
+	<p key="ItemList">Item List</p>
+	<p key="GameEditor">GameEditor</p>
+	<p key="PortraitList">Portrait List</p>
+	<p key="LinkPulls">Tales of Link Summoning Simulator</p>
+	<p key="GamedataEditor">GamedataEditor</p>
+<p key="Thalion-v1.05-DE">v1.05 / German (original version)</p>
+<p key="ClassList">Classes</p>
+<p key="PCList">Player Characters</p>
+<p key="NPCList">NPCs</p>
+<p key="MonsterList">Monsterlist</p>
+<p key="Thalion-v1.06-DE">v1.06 / German (Slothsoft Patch)</p>
+<p key="Maps2D">Buildings</p>
+<p key="Maps3D">Towns &amp; Dungeons</p>
+<p key="WorldKire">The Forest Moon</p>
+<p key="WorldmapMorag">The Desert Moon</p>
+<p key="WorldmapLyramion">Lyramion</p>
+<p key="GameData">Game Data</p>
+<p key="Downloads">Downloads</p>
+</html>

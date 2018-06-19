@@ -1,0 +1,8 @@
+{
+"Serif":		["Andalus", "BernhardModernBT-Bold", "GentiumBookBasic", "Austin", "Constantia", "IskoolaPota", "MongolianBaiti", "Gabriola"],
+"Sans":			["SouvenirITCbyBT-Light", "BitstreamVeraSans-Roman", "Calibri", "Candara", "Ebrima", "EurostileRegular", "UrsulaLight"],
+"Monospace":	["FangSong", "MiriamFixed", "Consolas", "KaiTi"],
+"Uppercase":	["CopperplateGothicBT-Bold", "CharlesworthBold", "BankGothicBT-Medium", "CreativeBlockBBBold", "Lithograph-Bold", "HotMustardBTN"],
+"Italic":		["BernhardModernBT-BoldItalic", "SouvenirITCbyBT-LightItalic", "Constantia-Italic", "Vijaya"],
+"Special":		["FuturaBlackBT-Regular", "GoudyHandtooledBT-Regular", "LCD2Normal", "SegoePrint", "Slavkappen", "StarlinerBTN"]
+}

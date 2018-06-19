@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<staff>
+	<name>Daniel</name>
+	
+	<link name="Portfolio" 		href="http://daniel-schulz.slothsoft.net/">
+		<note xml:lang="en-us">provisional portfolio</note>
+	</link>
+	<link name="Twitter" 		href="https://twitter.com/FauloLio">
+		<note xml:lang="de-de">ein bisschen Liveblogging über Medien die ich konsumiere</note>
+		<note xml:lang="en-us">some liveblogging about media I consume</note>
+	</link>
+	<link name="Tumblr" 		href="http://slothsoft.tumblr.com/">
+		<note xml:lang="de-de">hauptsächlich zusammenhangslose... Reden</note>
+		<note xml:lang="en-us">mostly random soapboxing</note>
+	</link>
+	<link name="Backloggery" 	href="http://backloggery.com/Faulo">
+		<note xml:lang="de-de">meine Lieblingsspiele~</note>
+		<note xml:lang="en-us">my favorite games~</note>
+	</link>
+	<link name="DeviantArt" 	href="http://faulolio.deviantart.com/">
+		<note xml:lang="de-de">leer, aber wahrscheinlich der einfachste Weg mich zu kontaktieren</note>
+		<note xml:lang="en-us">empty, but probably the easiest way to contact me</note>
+	</link>
+	<link name="Steam" 	href="http://steamcommunity.com/id/FauloLio/">
+		<note xml:lang="de-de">bin nicht mehr so ein lebendiger PC-Spieler...</note>
+		<note xml:lang="en-us">not as vivid a PC gamer as I once was...</note>
+	</link>
+	
+	
+	<bio xml:lang="de-de">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<p>Hi!</p>
+			<p>Ich bin ein Software-Ingenieur aus Dresden.
+			Ich bin zur Zeit in Web-Entwicklung beschäftigt,
+			aber lerne in meiner Freizeit Game Design um zukünfigt Videospiele zu entwickeln.</p>
+			<p>
+			So ziemlich alles auf dieser Webseite ist von mir programmiert.
+			</p>
+		</div>
+	</bio>
+	
+	<bio xml:lang="en-us">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<p>Hi!</p>
+			<p>
+			I'm a software engineer from Dresden, Germany.
+			My current job is in web development, 
+			but I'm studying game design on the side to start working as a videogame developer at some future point.
+			</p>
+			<p>
+			Mostly everything you'll find on this website was programmed by me.
+			</p>
+		</div>
+	</bio>
+</staff>

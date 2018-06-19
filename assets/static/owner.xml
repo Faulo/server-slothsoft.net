@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<address
+	firstName	= "Daniel"
+	lastName	= "Schulz"
+	
+	street		= "Maulbeerenstraße 5"
+	zipcode		= "01169"
+	city		= "Dresden"
+	country		= "Deutschland"
+	
+	phone		= "+49 0351 25656378"
+	email		= "info.slothsoft@gmail.com"
+	/>

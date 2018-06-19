@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<grammar>
+	<conjugation>
+		<exceptionList type="v5r">
+脂ぎる びびる 契る 散る どじる 愚痴る 入る 走る 放る 穿る 迸る いびる 弄る 熱る 炒る 入る 要る 限る 齧る 呪る 霧る 切る きしる 軋る 抉る 括る 抉る 参る 混じる 滅入る 見縊る 漲る 捥る 捩る 毟る 詰る 捩じる 握る 躙る 罵る 陥る 思い入る 思い切る せびる 知る 謗る 捩る 滾る 魂消る 迸る とちる 弥次る 野次る 過る 捩る 横切る
+焦る 嘲る 駄弁る 彫る 選る 啁る 耽る 臥せる 侍る 謙る 減る 捻る 翻る 火照る 反る 返る 返る 帰る 還る 孵る 陰る 駆ける 蹴る くねる 覆る 練る のめる 滑る 阿る 競る 挵る 喋る 茂る 湿気る そべる 滑る 猛る 照る 抓める 抓る うねる 蘇る
+		</exceptionList>
+		<exceptionList type="vs">
+だ  である 御座る 来る 為る
+		</exceptionList>
+		<exception base="だ">
+			<word form="te" name="だって"/>
+			<word form="negative" name="じゃない"/>
+			<word form="perfective" name="だった"/>
+			<word form="volitional" name="だろう" note=""/>
+			<word form="passive" name="" note=""/>
+			<word form="causative" name="" note=""/>
+			<word form="potential" name="" note=""/>
+			<word form="imperative" name="であれ" note=""/>
+			<word form="conditional" name="" note=""/>
+			<word form="polite" name="です"/>
+			<word form="polite-volitional" name="でしょう"/>
+			
+		</exception>
+		<exception base="である">
+			<word form="te" name="であって"/>
+			<word form="negative" name="ではない"/>
+			<word form="perfective" name="であった"/>
+			<word form="volitional" name="" note=""/>
+			<word form="passive" name="" note=""/>
+			<word form="causative" name="" note=""/>
+			<word form="potential" name="" note=""/>
+			<word form="imperative" name="" note=""/>
+			<word form="conditional" name="" note=""/>
+			<word form="polite" name="であります"/>
+		</exception>
+		<exception base="御座る">
+			<word form="te" name=""/>
+			<word form="negative" name=""/>
+			<word form="perfective" name=""/>
+			<word form="volitional" name="" note=""/>
+			<word form="passive" name="" note=""/>
+			<word form="causative" name="" note=""/>
+			<word form="potential" name="" note=""/>
+			<word form="imperative" name="" note=""/>
+			<word form="conditional" name="" note=""/>
+			<word form="polite" name="で御座います" note="でございます"/>
+		</exception>
+		<exception base="為る">
+			<word form="te" name="して"/>
+			<word form="negative" name="しない"/>
+			<word form="perfective" name="した"/>
+			<word form="volitional" name="しよう"/>
+			<word form="passive" name="される" note=""/>
+			<word form="causative" name="させる" note=""/>
+			<word form="potential" name="できる"/>
+			<word form="imperative" name="しろ" note=""/>
+			<word form="conditional" name="すれば" note=""/>
+			<word form="polite" name="します"/>
+		</exception>
+		<exception base="来る">
+			<word form="te" name="来て" note="きて"/>
+			<word form="negative" name="来ない" note="こない"/>
+			<word form="perfective" name="来た" note="きた"/>
+			<word form="volitional" name="来よう" note="こよう"/>
+			<word form="passive" name="来られる" note="こられる"/>
+			<word form="causative" name="来させる" note="こさせる"/>
+			<word form="potential" name="来られる" note="こられる"/>
+			<word form="imperative" name="来い" note="こい"/>
+			<word form="conditional" name="来れば" note="くれば"/>
+			<word form="polite" name="来ます" note="きます"/>
+		</exception>
+		<exception base="在">
+			<word form="negative" name="ない"/>
+		</exception>
+		<exception base="行">
+			<word form="te" name="行って" note="いって"/>
+			<word form="perfective" name="行った" note="いった"/>
+		</exception>
+		
+		<typeList>
+			<type name="v5u" suffix="う"/>
+			<type name="v5t" suffix="つ"/>
+			<type name="v5r" suffix="る"/>
+			<type name="v5k" suffix="く"/>
+			<type name="v5g" suffix="ぐ"/>
+			<type name="v5b" suffix="ぶ"/>
+			<type name="v5m" suffix="む"/>
+			<type name="v5n" suffix="ぬ"/>
+			<type name="v5s" suffix="す"/>
+			<type name="v1" suffix="いる"/>
+			<type name="v1" suffix="える"/>
+		</typeList>
+		<form name="dictionary">
+			<suffix type="v5u" name="う"/>
+			<suffix type="v5t" name="つ"/>
+			<suffix type="v5r" name="る"/>
+			<suffix type="v5k" name="く"/>
+			<suffix type="v5g" name="ぐ"/>
+			<suffix type="v5b" name="ぶ"/>
+			<suffix type="v5m" name="む"/>
+			<suffix type="v5n" name="ぬ"/>
+			<suffix type="v5s" name="す"/>
+			<suffix type="v1" name="る"/>
+			<suffix type="vs" name=""/>
+		</form>
+		<form name="te">
+			<suffix type="v5u" name="って"/>
+			<suffix type="v5t" name="って"/>
+			<suffix type="v5r" name="って"/>
+			<suffix type="v5k" name="いて"/>
+			<suffix type="v5g" name="いで"/>
+			<suffix type="v5b" name="んで"/>
+			<suffix type="v5m" name="んで"/>
+			<suffix type="v5n" name="んで"/>
+			<suffix type="v5s" name="して"/>
+			<suffix type="v1" name="て"/>
+		</form>
+		<form name="negative">
+			<suffix type="v5u" name="わない"/>
+			<suffix type="v5t" name="たない"/>
+			<suffix type="v5r" name="らない"/>
+			<suffix type="v5k" name="かない"/>
+			<suffix type="v5g" name="がない"/>
+			<suffix type="v5b" name="ばない"/>
+			<suffix type="v5m" name="まない"/>
+			<suffix type="v5n" name="なない"/>
+			<suffix type="v5s" name="さない"/>
+			<suffix type="v1" name="ない"/>
+		</form>
+		<form name="perfective">
+			<suffix type="v5u" name="った"/>
+			<suffix type="v5t" name="った"/>
+			<suffix type="v5r" name="った"/>
+			<suffix type="v5k" name="いた"/>
+			<suffix type="v5g" name="いだ"/>
+			<suffix type="v5b" name="んだ"/>
+			<suffix type="v5m" name="んだ"/>
+			<suffix type="v5n" name="んだ"/>
+			<suffix type="v5s" name="した"/>
+			<suffix type="v1" name="た"/>
+		</form>
+		<form name="volitional">
+			<suffix type="v5u" name="おう"/>
+			<suffix type="v5t" name="とう"/>
+			<suffix type="v5r" name="ろう"/>
+			<suffix type="v5k" name="こう"/>
+			<suffix type="v5g" name="ごう"/>
+			<suffix type="v5b" name="ぼう"/>
+			<suffix type="v5m" name="もう"/>
+			<suffix type="v5n" name="のう"/>
+			<suffix type="v5s" name="そう"/>
+			<suffix type="v1" name="よう"/>
+		</form>
+		<form name="passive">
+			<suffix type="v5u" name="われる"/>
+			<suffix type="v5t" name="たれる"/>
+			<suffix type="v5r" name="られる"/>
+			<suffix type="v5k" name="かれる"/>
+			<suffix type="v5g" name="がれる"/>
+			<suffix type="v5b" name="ばれる"/>
+			<suffix type="v5m" name="まれる"/>
+			<suffix type="v5n" name="なれる"/>
+			<suffix type="v5s" name="される"/>
+			<suffix type="v1" name="られる"/>
+		</form>
+		<form name="causative">
+			<suffix type="v5u" name="わせる"/>
+			<suffix type="v5t" name="たせる"/>
+			<suffix type="v5r" name="らせる"/>
+			<suffix type="v5k" name="かせる"/>
+			<suffix type="v5g" name="がせる"/>
+			<suffix type="v5b" name="ばせる"/>
+			<suffix type="v5m" name="ませる"/>
+			<suffix type="v5n" name="なせる"/>
+			<suffix type="v5s" name="させる"/>
+			<suffix type="v1" name="させる"/>
+		</form>
+		<form name="potential">
+			<suffix type="v5u" name="える"/>
+			<suffix type="v5t" name="てる"/>
+			<suffix type="v5r" name="れる"/>
+			<suffix type="v5k" name="ける"/>
+			<suffix type="v5g" name="げる"/>
+			<suffix type="v5b" name="べる"/>
+			<suffix type="v5m" name="める"/>
+			<suffix type="v5n" name="ねる"/>
+			<suffix type="v5s" name="せる"/>
+			<suffix type="v1" name="られる"/>
+		</form>
+		<form name="imperative">
+			<suffix type="v5u" name="え"/>
+			<suffix type="v5t" name="て"/>
+			<suffix type="v5r" name="れ"/>
+			<suffix type="v5k" name="け"/>
+			<suffix type="v5g" name="げ"/>
+			<suffix type="v5b" name="べ"/>
+			<suffix type="v5m" name="め"/>
+			<suffix type="v5n" name="ね"/>
+			<suffix type="v5s" name="せ"/>
+			<suffix type="v1" name="ろ"/>
+		</form>
+		<form name="conditional">
+			<suffix type="v5u" name="ったら"/>
+			<suffix type="v5t" name="ったら"/>
+			<suffix type="v5r" name="ったら"/>
+			<suffix type="v5k" name="いたら"/>
+			<suffix type="v5g" name="いだら"/>
+			<suffix type="v5b" name="んだら"/>
+			<suffix type="v5m" name="んだら"/>
+			<suffix type="v5n" name="んだら"/>
+			<suffix type="v5s" name="したら"/>
+			<suffix type="v1" name="たら"/>
+		</form>
+		<form name="polite">
+			<suffix type="v5u" name="います"/>
+			<suffix type="v5t" name="ちます"/>
+			<suffix type="v5r" name="ります"/>
+			<suffix type="v5k" name="きます"/>
+			<suffix type="v5g" name="ぎます"/>
+			<suffix type="v5b" name="びます"/>
+			<suffix type="v5m" name="みます"/>
+			<suffix type="v5n" name="にます"/>
+			<suffix type="v5s" name="します"/>
+			<suffix type="v1" name="ます"/>
+		</form>
+		<form name="polite-negative">ましょう
+			<suffix type="v5u" name="いません"/>
+			<suffix type="v5t" name="ちません"/>
+			<suffix type="v5r" name="りません"/>
+			<suffix type="v5k" name="きません"/>
+			<suffix type="v5g" name="ぎません"/>
+			<suffix type="v5b" name="びません"/>
+			<suffix type="v5m" name="みません"/>
+			<suffix type="v5n" name="にません"/>
+			<suffix type="v5s" name="しません"/>
+			<suffix type="v1" name="ません"/>
+		</form>
+		<form name="polite-volitional">
+			<suffix type="v5u" name="いましょう"/>
+			<suffix type="v5t" name="ちましょう"/>
+			<suffix type="v5r" name="りましょう"/>
+			<suffix type="v5k" name="きましょう"/>
+			<suffix type="v5g" name="ぎましょう"/>
+			<suffix type="v5b" name="びましょう"/>
+			<suffix type="v5m" name="みましょう"/>
+			<suffix type="v5n" name="にましょう"/>
+			<suffix type="v5s" name="しましょう"/>
+			<suffix type="v1" name="ましょう"/>
+		</form>
+	</conjugation>
+</grammar>

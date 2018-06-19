@@ -1,0 +1,24 @@
+@media handheld, all and (max-width: 950px) {
+	article.about, .vocabName.serif, .vocabStroke {
+		display: none !important;
+	}
+	body {
+		font-size: 1.4em;
+	}
+	button {
+		font-size: 1em;
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	.log-short {
+		font-size: 0.75em;
+	}
+	.vocabBox {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.Translator label > span {
+		height: 2.5em;
+	}
+}

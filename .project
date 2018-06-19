@@ -5,7 +5,6 @@
 	<projects>
 		<project>slothsoft-core</project>
 		<project>slothsoft-farah</project>
-		<project>slothsoft-slothsoft</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

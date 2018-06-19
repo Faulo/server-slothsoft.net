@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<verbList xml:lang="ja-jp">
+	<!--
+	<verbGroup base-kanji="">
+		<verb>
+			<translation xml:lang="de-de"></translation>
+			<form aspect="imperfective" polarity="+" name-kanji="" 		name-kana=""/>
+			<form aspect="imperfective" polarity="-" name-kanji="" 		name-kana=""/>
+			<form aspect="perfective" 	polarity="+" name-kanji="" 		name-kana=""/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de"> [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="" 		name-kana=""/>
+			<form aspect="imperfective" polarity="-" name-kanji="" 		name-kana=""/>
+			<form aspect="perfective" 	polarity="+" name-kanji="" 		name-kana=""/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+	</verbGroup>
+	有居為
+	-->
+	<verbGroup base-kanji="">
+		<verb kanji="">
+			<translation xml:lang="de-de">sein</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="" name-kana="だ"/>
+			<form aspect="imperfective" polarity="-" name-kanji="" name-kana="ではない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="" name-kana="だった"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" name-kana=""/>
+		</verb>
+		<verb kanji="">
+			<translation xml:lang="de-de">sein [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="" name-kana="です"/>
+			<form aspect="imperfective" polarity="-" name-kanji="" name-kana="ではありません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="" name-kana="でした"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" name-kana="ではありませんでした"/>
+		</verb>
+		<!--
+		<verb kanji="">
+			<translation xml:lang="de-de">sein [superhöflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="" name-kana="である"/>
+			<form aspect="imperfective" polarity="-" name-kanji="" name-kana="でない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="" name-kana=""/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" name-kana=""/>
+		</verb>
+		-->
+	</verbGroup>
+	<verbGroup base-kanji="為">
+		<verb>
+			<translation xml:lang="de-de">tun; machen</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="" 		name-kana="する"/>
+			<form aspect="imperfective" polarity="-" name-kanji="" 		name-kana="しない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="" 		name-kana="した"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">tun; machen [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="" 		name-kana="します"/>
+			<form aspect="imperfective" polarity="-" name-kanji="" 		name-kana="しません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="" 		name-kana="しました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana="しませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="在">
+		<verb>
+			<translation xml:lang="de-de">sich befinden (für Lebloses)</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="" 		name-kana="ある"/>
+			<form aspect="imperfective" polarity="-" name-kanji="" 		name-kana="ない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="" 		name-kana="あった"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">sich befinden (für Lebloses) [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="在ります" 		name-kana="あります"/>
+			<form aspect="imperfective" polarity="-" name-kanji="在りません" 		name-kana="ありません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="在りました" 		name-kana="ありました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="在りませんでした" 		name-kana="ありませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="居">
+		<verb>
+			<translation xml:lang="de-de">sich befinden (für Lebewesen)</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="居る" 		name-kana="いる"/>
+			<form aspect="imperfective" polarity="-" name-kanji="居ない" 		name-kana="いない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="居た" 		name-kana="いた"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">sich befinden (für Lebewesen) [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="居ます" 		name-kana="います"/>
+			<form aspect="imperfective" polarity="-" name-kanji="居ません" 		name-kana="いません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="居ました" 		name-kana="いました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="居ませんでした" 		name-kana="いませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="行">
+		<verb>
+			<translation xml:lang="de-de">gehen</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="行く" 			name-kana="いく"/>
+			<form aspect="imperfective" polarity="-" name-kanji="行かない" 		name-kana="いかない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="行った" 		name-kana="いった"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="行かなかった" 	name-kana="いかなかった"/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">gehen [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="行きます" 		name-kana="いきます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="行きません" 		name-kana="いきません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="行きました" 		name-kana="いきました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="行きませんでした" name-kana="いきませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="見">
+		<verb>
+			<translation xml:lang="de-de">sehen</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="見る" 		name-kana="みる"/>
+			<form aspect="imperfective" polarity="-" name-kanji="見ない" 		name-kana="みない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="見た" 		name-kana="みた"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">sehen [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="見ます" 		name-kana="みます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="見ません" 		name-kana="みません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="見ました" 		name-kana="みました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="見ませんでした" 		name-kana="みませんでした"/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">zeigen</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="見せる" 		name-kana="みせる"/>
+			<form aspect="imperfective" polarity="-" name-kanji="見せない" 		name-kana="みせない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="見せた" 		name-kana="みせた"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">zeigen [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="見せます" 		name-kana="みせます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="見せません" 		name-kana="みせません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="見せました" 		name-kana="みせました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="見せませんでした" 		name-kana="みせませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="帰">
+		<verb>
+			<translation xml:lang="de-de">zurückkehren; zurückkommen</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="帰る" 		name-kana="かえる"/>
+			<form aspect="imperfective" polarity="-" name-kanji="帰らない" 		name-kana="かえらない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="帰った" 		name-kana="かえった"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">zurückkehren; zurückkommen [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="帰ります" 		name-kana="かえります"/>
+			<form aspect="imperfective" polarity="-" name-kanji="帰りません" 		name-kana="かえりません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="帰りました" 		name-kana="かえりました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="帰りませんでした" 		name-kana="かえりませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="来">
+		<verb>
+			<translation xml:lang="de-de">kommen</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="来る" 		name-kana="くる"/>
+			<form aspect="imperfective" polarity="-" name-kanji="来ない" 		name-kana="こない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="来た" 		name-kana="きた"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">kommen [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="来ます" 		name-kana="きます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="来ません" 		name-kana="きません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="来ました" 		name-kana="きました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="来ませんでした" 		name-kana="きませんでした"/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">kommen [superhöflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="" 		name-kana="いらっしゃる"/>
+			<form aspect="imperfective" polarity="-" name-kanji="" 		name-kana="いらっしゃら"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="" 		name-kana="いらっしゃった"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">kommen [super DUPER höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="" 		name-kana="いらっしゃいます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="" 		name-kana="いらっしゃいません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="" 		name-kana="いらっしゃいました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana="いらっしゃいませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="入">
+		<verb>
+			<translation xml:lang="de-de">hereinkommen</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="入る" 		name-kana="はいる"/>
+			<form aspect="imperfective" polarity="-" name-kanji="入らない" 		name-kana="はいらない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="入った" 		name-kana="はいった"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">hereinkommen [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="入ります" 		name-kana="はいります"/>
+			<form aspect="imperfective" polarity="-" name-kanji="入りません" 		name-kana="はいりません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="入りました" 		name-kana="はいりました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="入りませんでした" 		name-kana="はいりませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="掛">
+		<verb>
+			<translation xml:lang="de-de">sich setzen</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="掛ける" 		name-kana="かける"/>
+			<form aspect="imperfective" polarity="-" name-kanji="掛けない" 		name-kana="かけない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="掛けた" 		name-kana="かけた"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">sich setzen [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="掛けます" 		name-kana="かけます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="掛けません" 		name-kana="かけません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="掛けました" 		name-kana="かけました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="掛けませんでした" 		name-kana="かけませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="買">
+		<verb>
+			<translation xml:lang="de-de">kaufen</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="買う" 		name-kana="かう"/>
+			<form aspect="imperfective" polarity="-" name-kanji="買わない" 		name-kana="かわない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="買った" 		name-kana="かった"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">kaufen [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="買います" 		name-kana="かいます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="買いません" 		name-kana="かいません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="買いました" 		name-kana="かいました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="買いませんでした" 		name-kana="かいませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="売">
+		<verb>
+			<translation xml:lang="de-de">verkaufen</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="売る" 		name-kana="うる"/>
+			<form aspect="imperfective" polarity="-" name-kanji="売らない" 		name-kana="うらない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="売った" 		name-kana="うった"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">verkaufen [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="売ります" 		name-kana="うります"/>
+			<form aspect="imperfective" polarity="-" name-kanji="売りません" 		name-kana="うりません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="売りました" 		name-kana="うりました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="売りませんでした" 		name-kana="うりませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="読">
+		<verb>
+			<translation xml:lang="de-de">lesen</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="読む" 		name-kana="よむ"/>
+			<form aspect="imperfective" polarity="-" name-kanji="読まない" 		name-kana="よまない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="読んだ" 		name-kana="よんだ"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">lesen [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="読みます" 		name-kana="よみます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="読みません" 		name-kana="よみません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="読みました" 		name-kana="よみました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="読みませんでした" 		name-kana="よみませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="分">
+		<verb>
+			<translation xml:lang="de-de">verstehen; begreifen; kennen; finden</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="分かる" 		name-kana="わかる"/>
+			<form aspect="imperfective" polarity="-" name-kanji="分からない" 		name-kana="わからない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="分かった" 		name-kana="わかった"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de">verstehen; begreifen; kennen; finden [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="分かります" 		name-kana="わかります"/>
+			<form aspect="imperfective" polarity="-" name-kanji="分かりません" 		name-kana="わかりません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="分かりました" 		name-kana="わかりました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="分かりませんでした" 		name-kana="わかりませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="食">
+		<verb>
+			<translation xml:lang="de-de"></translation>
+			<form aspect="imperfective" polarity="+" name-kanji="食べる" 		name-kana="たべる"/>
+			<form aspect="imperfective" polarity="-" name-kanji="食べない" 		name-kana="たべない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="食べた" 		name-kana="たべた"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de"> [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="食べます" 		name-kana="たべます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="食べません" 		name-kana="たべません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="食べました" 		name-kana="たべました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="食べませんでした" 		name-kana="たべませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="飲">
+		<verb>
+			<translation xml:lang="de-de"></translation>
+			<form aspect="imperfective" polarity="+" name-kanji="飲む" 		name-kana="のむ"/>
+			<form aspect="imperfective" polarity="-" name-kanji="飲まない" 		name-kana="のまない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="飲んだ" 		name-kana="のんだ"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de"> [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="飲みます" 		name-kana="のみます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="飲みません" 		name-kana="のみません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="飲みました" 		name-kana="のみました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="飲みませんでした" 		name-kana="のみませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="聞">
+		<verb>
+			<translation xml:lang="de-de"></translation>
+			<form aspect="imperfective" polarity="+" name-kanji="聞く" 		name-kana="きく"/>
+			<form aspect="imperfective" polarity="-" name-kanji="聞かない" 		name-kana="きかない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="聞いた" 		name-kana="きいた"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de"> [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="聞きます" 		name-kana="ききます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="聞きません" 		name-kana="ききません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="聞きました" 		name-kana="ききました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="聞きませんでした" 		name-kana="ききませんでした"/>
+		</verb>
+	</verbGroup>
+	
+	<verbGroup base-kanji="会">
+		<verb>
+			<translation xml:lang="de-de"></translation>
+			<form aspect="imperfective" polarity="+" name-kanji="会う" 		name-kana="あう"/>
+			<form aspect="imperfective" polarity="-" name-kanji="会わない" 		name-kana="あわない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="会った" 		name-kana="あった"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de"> [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="会います" 		name-kana="あいます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="会いません" 		name-kana="あいません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="会いました" 		name-kana="あいました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="会いませんでした" 		name-kana="あいませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="書">
+		<verb>
+			<translation xml:lang="de-de"></translation>
+			<form aspect="imperfective" polarity="+" name-kanji="書く" 		name-kana="かく"/>
+			<form aspect="imperfective" polarity="-" name-kanji="書かない" 		name-kana="かかない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="書いた" 		name-kana="かいた"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de"> [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="書きます" 		name-kana="かきます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="書きません" 		name-kana="かきません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="書きました" 		name-kana="かきました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="書きませんでした" 		name-kana="かきませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="教">
+		<verb>
+			<translation xml:lang="de-de"></translation>
+			<form aspect="imperfective" polarity="+" name-kanji="教える" 		name-kana="おしえる"/>
+			<form aspect="imperfective" polarity="-" name-kanji="教えない" 		name-kana="おしえない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="教えた" 		name-kana="おしえた"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de"> [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="教えます" 		name-kana="おしえます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="教えません" 		name-kana="おしえません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="教えました" 		name-kana="おしえました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="教えませんでした" 		name-kana="おしえませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="違">
+		<verb>
+			<translation xml:lang="de-de"></translation>
+			<form aspect="imperfective" polarity="+" name-kanji="違う" 		name-kana="ちがう"/>
+			<form aspect="imperfective" polarity="-" name-kanji="違わない" 		name-kana="ちがわない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="違った" 		name-kana="ちがった"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de"> [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="違います" 		name-kana="ちがいます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="違いません" 		name-kana="ちがいません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="違いました" 		name-kana="ちがいました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="違いませんでした" 		name-kana="ちがいませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="待">
+		<verb>
+			<translation xml:lang="de-de"></translation>
+			<form aspect="imperfective" polarity="+" name-kanji="待つ" 		name-kana="まつ"/>
+			<form aspect="imperfective" polarity="-" name-kanji="待たない" 		name-kana="またない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="待った" 		name-kana="まった"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de"> [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="待ちます" 		name-kana="まちます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="待ちません" 		name-kana="まちません"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="待ちました" 		name-kana="まちました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="待ちませんでした" 		name-kana="まちませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="上">
+		<verb>
+			<translation xml:lang="de-de"></translation>
+			<form aspect="imperfective" polarity="+" name-kanji="上げる" 		name-kana="あげる"/>
+			<form aspect="imperfective" polarity="-" name-kanji="上げない" 		name-kana="あげない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="上げた" 		name-kana="あげた"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de"> [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="上げます" 		name-kana="あげます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="上げません" 		name-kana="あげませｎ"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="上げました" 		name-kana="あげました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="上げませんでした" 		name-kana="あげませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="呉">
+		<verb>
+			<translation xml:lang="de-de"></translation>
+			<form aspect="imperfective" polarity="+" name-kanji="呉れる" 		name-kana="くれる"/>
+			<form aspect="imperfective" polarity="-" name-kanji="呉れない" 		name-kana="くれない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="呉れた" 		name-kana="くれた"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de"> [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="呉れます" 		name-kana="くれます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="呉れません" 		name-kana="くれませｎ"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="呉れました" 		name-kana="くれました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="呉れませんでした" 		name-kana="くれませんでした"/>
+		</verb>
+	</verbGroup>
+	<verbGroup base-kanji="貰">
+		<verb>
+			<translation xml:lang="de-de"></translation>
+			<form aspect="imperfective" polarity="+" name-kanji="貰う" 		name-kana="もらう"/>
+			<form aspect="imperfective" polarity="-" name-kanji="貰わない" 		name-kana="もらわない"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="貰った" 		name-kana="もらった"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="" 		name-kana=""/>
+		</verb>
+		<verb>
+			<translation xml:lang="de-de"> [höflich]</translation>
+			<form aspect="imperfective" polarity="+" name-kanji="貰います" 		name-kana="もらいます"/>
+			<form aspect="imperfective" polarity="-" name-kanji="貰いません" 		name-kana="もらいませｎ"/>
+			<form aspect="perfective" 	polarity="+" name-kanji="貰いました" 		name-kana="もらいました"/>
+			<form aspect="perfective" 	polarity="-" name-kanji="貰いませんでした" 		name-kana="もらいませんでした"/>
+		</verb>
+	</verbGroup>
+</verbList>

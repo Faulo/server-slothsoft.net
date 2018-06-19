@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unicode>
+	<font name="serif">
+		<pattern name="%s"/>
+	</font>
+	<font name="serif-bold">
+		<pattern name="MATHEMATICAL BOLD %s"/>
+		<pattern name="MATHEMATICAL BOLD DIGIT %3$s"/>
+		<exception source="!" target="HEAVY EXCLAMATION MARK SYMBOL"/>
+		<exception source="?" target="BLACK QUESTION MARK ORNAMENT"/>
+	</font>
+	<font name="serif-italic">
+		<pattern name="MATHEMATICAL ITALIC %s"/>
+		<exception source="h" target="PLANCK CONSTANT"/>
+		<pattern name="DIGIT %3$s"/>
+	</font>
+	<font name="serif-bold-italic">
+		<pattern name="MATHEMATICAL BOLD ITALIC %s"/>
+		<pattern name="MATHEMATICAL BOLD DIGIT %3$s"/>
+		<exception source="!" target="HEAVY EXCLAMATION MARK SYMBOL"/>
+		<exception source="?" target="BLACK QUESTION MARK ORNAMENT"/>
+	</font>
+	<font name="sans">
+		<pattern name="MATHEMATICAL SANS-SERIF %s"/>
+		<pattern name="DIGIT %3$s"/>
+	</font>
+	<font name="sans-bold">
+		<pattern name="MATHEMATICAL SANS-SERIF BOLD %s"/>
+		<pattern name="MATHEMATICAL BOLD DIGIT %3$s"/>
+		<exception source="!" target="HEAVY EXCLAMATION MARK SYMBOL"/>
+		<exception source="?" target="BLACK QUESTION MARK ORNAMENT"/>
+	</font>
+	<font name="sans-italic">
+		<pattern name="MATHEMATICAL SANS-SERIF ITALIC %s"/>
+		<pattern name="DIGIT %3$s"/>
+	</font>
+	<font name="sans-bold-italic">
+		<pattern name="MATHEMATICAL SANS-SERIF BOLD ITALIC %s"/>
+		<pattern name="MATHEMATICAL BOLD DIGIT %3$s"/>
+		<exception source="!" target="HEAVY EXCLAMATION MARK SYMBOL"/>
+		<exception source="?" target="BLACK QUESTION MARK ORNAMENT"/>
+	</font>
+	<font name="script">
+		<pattern name="MATHEMATICAL SCRIPT %s"/>
+		<pattern name="SCRIPT %s"/>
+		<pattern name="DIGIT %3$s"/>
+	</font>
+	<font name="script-bold">
+		<pattern name="MATHEMATICAL BOLD SCRIPT %s"/>
+		<pattern name="MATHEMATICAL BOLD DIGIT %3$s"/>
+		<exception source="!" target="HEAVY EXCLAMATION MARK SYMBOL"/>
+		<exception source="?" target="BLACK QUESTION MARK ORNAMENT"/>
+	</font>
+	<font name="fraktur">
+		<pattern name="MATHEMATICAL FRAKTUR %s"/>
+		<pattern name="BLACK-LETTER %s"/>
+		<pattern name="DIGIT %3$s"/>
+	</font>
+	<font name="fraktur-bold">
+		<pattern name="MATHEMATICAL BOLD FRAKTUR %s"/>
+		<pattern name="MATHEMATICAL BOLD DIGIT %3$s"/>
+		<exception source="!" target="HEAVY EXCLAMATION MARK SYMBOL"/>
+		<exception source="?" target="BLACK QUESTION MARK ORNAMENT"/>
+	</font>
+	<font name="monospace">
+		<pattern name="MATHEMATICAL MONOSPACE %s"/>
+		<pattern name="FULLWIDTH %s"/>
+	</font>
+	<font name="fullwidth">
+		<pattern name="FULLWIDTH %s"/>
+	</font>
+	<font name="doublestruck">
+		<pattern name="MATHEMATICAL DOUBLE-STRUCK %s"/>
+		<pattern name="DOUBLE-STRUCK %s"/>
+		<pattern name="WHITE %s ORNAMENT"/>
+	</font>
+	<font name="capitalized">
+		<pattern name="%2$s CAPITAL %3$s"/>
+		<pattern name="CAPITAL %3$s"/>
+		<pattern name="DIGIT %3$s"/>
+		<pattern name="SMALL %1$s"/>
+		<exception source="q" target="SMALL Q"/>
+		<exception source="x" target="SMALL X"/>
+		
+	</font>
+	<!--
+	<font name="upsidedown">
+		<pattern name="%2$s TURNED %3$s"/>
+	</font>
+	-->
+	<font name="circled">
+		<pattern name="CIRCLED %s"/>
+	</font>
+	<!--
+	<font name="circled-negative">
+		<pattern name="NEGATIVE CIRCLED %s"/>
+		<pattern name="DINGBAT NEGATIVE CIRCLED %s"/>
+	</font>
+	-->
+	<font name="parenthesized">
+		<pattern name="PARENTHESIZED %s"/>
+		<exception source="0" target="NEGATIVE CIRCLED DIGIT ZERO"/>
+	</font>
+	<font name="underlined-single">
+		<pattern name="%s"/>
+	</font>
+	<font name="underlined-double">
+		<pattern name="%s"/>
+	</font>
+	<font name="strikethrough-single">
+		<pattern name="%s"/>
+	</font>
+	<font name="crosshatch">
+		<pattern name="%s"/>
+	</font>
+</unicode>

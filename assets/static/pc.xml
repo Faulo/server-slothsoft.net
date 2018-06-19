@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="PC.xsl"?>
+<root>
+	<!--
+	<data name="Danis Laptop">
+		<part
+			type="Laptop"
+			href="http://www.samsung.com/de/consumer/notebooks-displays/notebook-computers/professional/NP400B5B-H01DE-spec"
+			name="Samsung 400B5B-H01"
+			tdp="65"
+			price="800" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2783516_-400b5b-h01-samsung.html"
+			>
+			<properties
+				cpu="i5 2410M" chipset="Intel HM65" gpu="QUADRO NVS4200M" memory="4 GB" bonus="UMTS 2xUSB3 NumBlock"
+				/>
+		</part>
+		<part
+			type="Mainboard" 
+			href="http://ark.intel.com/products/chipsets/52774"
+			name="Intel HM65"
+			tdp="3"
+			price="0"
+			>
+			<properties
+				socket="-" ram="DDR3-1333" form="25mm x 25mm"
+				/>
+		</part>
+		<part
+			type="CPU"
+			href="http://ark.intel.com/products/52224"
+			name="Intel Core i5 2410M"
+			tdp="35"
+			price="0">
+			<properties
+				frequency="2.3 GHz" cores="2"
+				/>
+		</part>	
+		<part
+			type="GPU"
+			href="http://www.nvidia.de/object/nvidia_nvs_techspecs_de.html"
+			name="NVidia Quadro NVS 4200M"
+			tdp="0"
+			price="0"
+			>
+			<properties
+				frequency="810 MHz" memory="1 GB"
+				/>
+		</part>
+		
+	</data>
+	-->
+	<data name="Server"  final-price="588.96">
+		<part
+			type="Mainboard" 
+			href="http://ark.intel.com/products/53558/Intel-Server-Board-S1200BTS"
+			name="S1200BTS"
+			tdp="5"
+			price="152.55" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2725800_-server-board-s1200bts-intel.html"
+			>
+			<properties
+				socket="LGA 1155" ram="DDR3-1333" form="Micro-ATX"
+				/>
+		</part>
+		<part
+			type="CPU"
+			href="http://ark.intel.com/products/52272"
+			name="Intel E3-1235"
+			tdp="95"
+			price="200" price-uri="http://www1.idealo.de/preisvergleich/OffersOfProduct/2617810_-xeon-e3-1235-3-2-ghz-box-sockel-1155-32nm-bx80623e31235-intel.html"
+			>
+			<properties
+				frequency="3.2 GHz" cores="4" cache-l2="4×256 KB" cache-l3="8 MB" bus="DMI"
+				/>
+		</part>	
+		<part
+			type="RAM"
+			href="http://www.kingston.com/dataSheets/KVR1333D3E9S_4GI.pdf"
+			name="KVR1333D3E9S_4GI"
+			price="32" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2680056_-valueram-4gb-ddr3-pc3-10600-cl9-kvr1333d3e9s-4gi-kingston.html"
+			tdp="2"
+			>
+			<properties
+				size="1x 4 GB"
+				type="PC3-10600 ECC"
+				frequency="1333 MHz"
+				/>
+		</part>
+		<part
+			type="GPU"
+			href="http://www.siliconmotion.com/A3.2_Partnumber_Detail.php?sn=11"
+			name="Silicon Motion SM712"
+			tdp="0"
+			price="0"
+			>
+			<properties
+				frequency="135 MHz" memory="4 MB"
+				/>
+		</part>
+		<part
+			type="GPU"
+			href="http://www.zotac.com/index.php?page=shop.product_details&amp;flypage=flypage_images-SRW.tpl-VGA&amp;product_id=366&amp;category_id=147&amp;option=com_virtuemart&amp;Itemid=100262&amp;lang=de"
+			name="Zotac GeForce GT 218"
+			tdp="20"
+			price="50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/3081245_-geforce-gt-218-512mb-ddr3-zotac.html"
+			>
+			<properties
+				frequency="900 MHz" memory="512 MB"
+				/>
+		</part>
+		<part
+			type="HDD"
+			href="http://www.seagate.com/docs/pdf/datasheet/disc/ds_barracuda_lp.pdf"
+			name="Seagate Barracuda LP"
+			price="50"
+			tdp="4"
+			>
+			<properties
+				size="1000 GB"
+				/>
+		</part>
+		<part
+			type="Chassis"
+			
+			name="LC-Power PRO-907S"
+			tdp="1"
+			price="30" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/395066_-pro-907-silber-lc-power.html"
+			>
+			<properties
+				size="Midi Tower"
+				psu="-"
+				/>
+		</part>
+		<part
+			type="PSU"
+			href="http://www.be-quiet.net/be-quiet.net/index.php?StoryID=17&amp;ProductID=45"
+			name="be quiet! Pure Power L7"
+			tdp="1"
+			price="35"
+			price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1820670_-pure-power-l7-350w-be-quiet.html"
+			>
+			<properties
+				power="350 W"
+				/>
+		</part>
+	</data>
+	
+	<data name="Danis PC" final-price="727.05">
+		<part
+			type="Mainboard" 
+			href="http://www.asus.com/Motherboards/Intel_Socket_1155/P8Z68V_LE/#specifications"
+			name="Asus P8Z68-V LE"
+			tdp="10"
+			price="100" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2924276_-p8z68-v-le-asus.html"
+			>
+			<properties
+				socket="LGA 1155" ram="DDR3-2200" sata="6 Gb/s" form="ATX"
+				/>
+		</part>
+		<part
+			type="CPU"
+			href="http://ark.intel.com/products/52213/Intel-Core-i7-2600-Processor-%288M-Cache-3_40-GHz%29"
+			name="Intel Core i7 2600"
+			tdp="95"
+			price="243.50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2594240_-core-i7-2600-box-sockel-1155-32nm-bx80623i72600-intel.html"
+			>
+			<properties
+				frequency="3.40 GHz" cores="4" cache-l2="4×256 KB" cache-l3="8 MB" bus="DMI" multiplier="34"
+				/>
+		</part>
+		<part
+			type="RAM"
+			href="http://www.teamgroup.com.tw/filterable_product/tabs_detail/data/en/9/500/zfKsFi.html"
+			name="Team Elite"
+			price="32" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2366488_-elite-8gb-kit-ddr3-pc3-10600-cl9-ted38192m1333hc9dc-team.html"
+			tdp="2"
+			>
+			<properties
+				size="2x 4 GB"
+				type="PC3-10600"
+				frequency="1333 MHz"
+				/>
+		</part>
+		<part
+			type="GPU"
+			href="http://www.asus.com/Graphics_Cards/NVIDIA_Series/ENGTX550_Ti_DCDI1GD5//#specifications"
+			name="Asus GeForce GTX 550 Ti"
+			price="100" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2942778_-geforce-gtx-550-ti-asus.html"
+			tdp="116"
+			>
+			<properties
+				frequency="900 MHz"
+				memory="1.0 GB"
+				/>
+		</part>
+		<part
+			type="Audio"
+			href="http://www.realtek.com.tw/products/productsView.aspx?Langid=1&amp;PNid=24&amp;PFid=28&amp;Level=5&amp;Conn=4&amp;ProdID=284"
+			name="Realtek ALC892"
+			price="0"
+			tdp="1"
+			><properties
+				channels="7.1"
+				/>
+		</part>
+		<part
+			type="HDD"
+			href="http://www.ocztechnology.com/ocz-vertex-3-sata-iii-2-5-ssd.html"
+			name="OCZ Vertex 3"
+			price="150" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2677791_-vertex-3-120gb-2-5-sata-iii-mlc-ocz.html"
+			tdp="1"
+			>
+			<properties
+				size="120 GB"
+				/>
+		</part>
+		<part
+			type="HDD"
+			href="http://www.wdc.com/wdproducts/library/SpecSheet/ENG/2879-701229.pdf"
+			name="Western Digital WD20EARX"
+			price="50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2721597_-caviar-green-sata-iii-2tb-western-digital.html"
+			tdp="4"
+			>
+			<properties
+				size="2000 GB"
+				/>
+		</part>
+		<part
+			type="PSU"
+			href="http://www.xilence.net/produkte/netzteile/gaming-series/product/241977.html"
+			name="Xilence XP600"
+			tdp="1"
+			price="59.99"
+			price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1998545_-gaming-rev3-600w-xilence.html"
+			>
+			<properties
+				power="600 W"
+				/>
+		</part>
+		<part
+			type="Keyboard"
+			href="http://www.cherry.de/cid/corded_keyboards_eVolution_STREAM_XT_Corded_MultiMedia_Keyboard.htm?rdeLocaleAttr=en&amp;cpssessionid=SID-E22F34DC-3111A397&amp;WT.mc_id="
+			name="Cherry Stream XT"
+			tdp="1"
+			price="15" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1402650_-evolution-stream-xt-corded-multimedia-keyboard-de-cherry.html"
+			/>
+		<part
+			type="Mouse"
+			name="Trust KerbStone"
+			tdp="1"
+			price="15" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2484287_-kerbstone-laser-mouse-trust.html"
+			/>
+	</data>
+	<data name="Steffis PC" final-price="629.69">
+		<part
+			type="Mainboard" 
+			href="http://www.asus.com/Motherboards/Intel_Socket_1155/P8Z68V_LE/#specifications"
+			name="Asus P8Z68-V LE"
+			tdp="10"
+			price="100" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2924276_-p8z68-v-le-asus.html"
+			>
+			<properties
+				socket="LGA 1155" ram="DDR3-2200" sata="6 Gb/s" form="ATX"
+				/>
+		</part>
+		<part
+			type="CPU"
+			href="http://ark.intel.com/products/52213/Intel-Core-i7-2600-Processor-%288M-Cache-3_40-GHz%29"
+			name="Intel Core i7 2600"
+			tdp="95"
+			price="243.50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2594240_-core-i7-2600-box-sockel-1155-32nm-bx80623i72600-intel.html"
+			>
+			<properties
+				frequency="3.40 GHz" cores="4" cache-l2="4×256 KB" cache-l3="8 MB" bus="DMI" multiplier="34"
+				/>
+		</part>
+		<part
+			type="RAM"
+			href="http://www.teamgroup.com.tw/filterable_product/tabs_detail/data/en/9/500/zfKsFi.html"
+			name="Team Elite"
+			price="32" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2366488_-elite-8gb-kit-ddr3-pc3-10600-cl9-ted38192m1333hc9dc-team.html"
+			tdp="2"
+			>
+			<properties
+				size="2x 4 GB"
+				type="PC3-10600"
+				frequency="1333 MHz"
+				/>
+		</part>
+		<part
+			type="GPU"
+			href="http://www.asus.com/Graphics_Cards/NVIDIA_Series/ENGTX550_Ti_DCDI1GD5//#specifications"
+			name="Asus GeForce GTX 550 Ti"
+			price="100" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2942778_-geforce-gtx-550-ti-asus.html"
+			tdp="116"
+			>
+			<properties
+				frequency="900 MHz"
+				memory="1.0 GB"
+				/>
+		</part>
+		<part
+			type="Audio"
+			href="http://www.realtek.com.tw/products/productsView.aspx?Langid=1&amp;PNid=24&amp;PFid=28&amp;Level=5&amp;Conn=4&amp;ProdID=284"
+			name="Realtek ALC892"
+			price="0"
+			tdp="1"
+			><properties
+				channels="7.1"
+				/>
+		</part>
+		<part
+			type="PSU"
+			href="http://www.bequiet.com/de/powersupply/249"
+			name="be quiet! PURE POWER L8"
+			tdp="1"
+			price="59.99"
+			price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2944440_-pure-power-l8-cm-530w-be-quiet.html"
+			>
+			<properties
+				power="530 W"
+				/>
+		</part>
+		<part
+			type="Chassis"
+			
+			name="MS-Tech CA-0280 Longhorn"
+			tdp="1"
+			price="30" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/3194697_-ca-0280-longhorn-ms-tech.html"
+			>
+			<properties
+				size="Midi Tower"
+				psu="-"
+				/>
+		</part>
+		<part
+			type="Keyboard"
+			href="http://www.cherry.de/cid/corded_keyboards_eVolution_STREAM_XT_Corded_MultiMedia_Keyboard.htm?rdeLocaleAttr=en&amp;cpssessionid=SID-E22F34DC-3111A397&amp;WT.mc_id="
+			name="Cherry Stream XT"
+			tdp="1"
+			price="15" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1402650_-evolution-stream-xt-corded-multimedia-keyboard-de-cherry.html"
+			/>
+	</data>
+	<data name="Julias PC">
+		<part
+			type="Mainboard" 
+			href="http://msi.com/product/mb/H61M-P25--B3-.html#?div=Detail"
+			name="MSI H61M-P25"
+			tdp="5"
+			price="40"
+			>
+			<properties
+				socket="LGA 1155" ram="DDR3-2200" sata="3 Gb/s" form="Micro-ATX"
+				/>
+		</part>
+		<part
+			type="CPU"
+			href="http://ark.intel.com/products/53426/Intel-Core-i3-2120-Processor-%283M-Cache-3_30-GHz%29"
+			name="Intel Core i3 2120"
+			tdp="65"
+			price="100" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2311304_-core-i3-2120-box-sockel-1155-32nm-bxc80623i32120-intel.html"
+			>
+			<properties
+				frequency="3.30 GHz" cores="2" cache-l2="4×256 KB" cache-l3="8 MB" bus="DMI" multiplier="34"
+				/>
+		</part>
+		<part
+			type="RAM"
+			href="http://www.teamgroup.com.tw/filterable_product/tabs_detail/data/en/9/500/zfKsFi.html"
+			name="Team Elite"
+			price="32" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2366488_-elite-8gb-kit-ddr3-pc3-10600-cl9-ted38192m1333hc9dc-team.html"
+			tdp="2"
+			>
+			<properties
+				size="2x 4 GB"
+				type="PC3-10600"
+				frequency="1333 MHz"
+				/>
+		</part>
+		<part
+			type="GPU"
+			href="http://www.zotac.com/index.php?page=shop.product_details&amp;flypage=flypage_images-SRW.tpl-VGA&amp;product_id=373&amp;category_id=139&amp;option=com_virtuemart&amp;Itemid=100257&amp;lang=de"
+			name="ZOTAC GeForce GT 520 Synergy"
+			price="40" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2942722_-geforce-gt-520-synergy-2048mb-ddr3-zotac.html"
+			tdp="30"
+			>
+			<properties
+				frequency="900 MHz"
+				memory="2.0 GB"
+				/>
+		</part>
+		
+		<part
+			type="HDD"
+			name="Hitachi H3IK5003272SE"
+			price="50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2252406_-deskstar-retail-kit-500gb-h3ik5003272se-hitachi.html"
+			tdp="4"
+			>
+			<properties
+				size="500 GB"
+				/>
+		</part>
+		
+		<part
+			type="DVD Burner"
+			name="Lite-On IHAS122"
+			tdp="1"
+			price="15" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1260332_-ihas122-lite-on.html"
+			/>
+		<part
+			type="Chassis"
+			
+			name="HKC 4670GD"
+			tdp="1"
+			price="30" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2146141_-4670gd-schwarz-hkc.html"
+			>
+			<properties
+				size="Midi Tower"
+				psu="480 W"
+				/>
+		</part>
+		<part
+			type="Keyboard &amp; Mouse"
+			href="http://www.a4tech.com/product.asp?cid=2&amp;scid=36&amp;id=117"
+			name="A4Tech KBS-6135"
+			tdp="1"
+			price="15" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/366144_-kbs-6135-kindertastatur-a4tech.html"
+			/>
+		<part
+			type="Webcam"
+			href="http://www.logitech.com/en-us/435/6303?WT.z_sp=Image"
+			name="Logitech B500"
+			tdp="1"
+			price="20" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1985640_-b500-logitech.html"
+			/>
+		<part
+			type="Monitor"
+			href="http://www.philips.de/c-p/196V4LAB2_00/lcd-monitor-mit-led-hintergrundbeleuchtung"
+			name="Philips 196V4LAB2"
+			tdp="14"
+			price="60"
+			/>
+	</data>
+	<data name="Muttis PC" final-price="210.00">
+		<part
+			type="Barebone"
+			href="http://www.asus.de/Barebone_PC/S_Series_7L/S1AT5NM10E/#specifications"
+			name="Asus S1-AT5NM10E"
+			tdp="2"
+			price="0"
+			>
+		</part>
+		<part
+			type="CPU"
+			href="http://ark.intel.com/products/49490"
+			name="Intel Atom D525"
+			tdp="13"
+			price="0"
+			>
+			<properties
+				frequency="1.80 GHz" cores="2" cache-l2="4×256 KB" cache-l3="0 MB" bus="DMI" multiplier="?"
+				/>
+		</part>
+		<part
+			type="RAM"
+			name="RAM"
+			price="0"
+			tdp="2"
+			>
+			<properties
+				size="2x 2 GB"
+				type="PC3-10600"
+				frequency="800 MHz"
+				/>
+		</part>
+		<part
+			type="GPU"
+			href="http://www.nvidia.com/object/picoatom_specifications.html"
+			name="NVidia ION II GT218"
+			price="0"
+			tdp="8"
+			>
+			<properties
+				frequency="? MHz"
+				memory="512 MB"
+				/>
+		</part>
+		<part
+			type="Webcam"
+			href="http://www.logitech.com/en-us/435/6303?WT.z_sp=Image"
+			name="Logitech B500"
+			tdp="1"
+			price="20" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1985640_-b500-logitech.html"
+			/>
+	</data>
+	
+	<data name="Claudys PC" final-price="0">
+		<part
+			type="Mainboard" 
+			href="https://www.asus.com/Motherboards/B85MG/specifications/"
+			name="Asus B85M-G (C2)"
+			tdp="10"
+			price="60" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/4012295_-b85m-g-c2-asus.html"
+			>
+			<properties
+				socket="LGA 1150" ram="DDR3-1600" sata="6 Gb/s" form="Micro-ATX"
+				/>
+		</part>
+		<part
+			type="CPU"
+			href="http://ark.intel.com/products/75043/Intel-Core-i5-4570-Processor-6M-Cache-up-to-3_60-GHz"
+			name="Intel Core i5-4570"
+			tdp="84"
+			price="160" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/3698774_-core-i5-4570-intel.html"
+			>
+			<properties
+				frequency="3.2 GHz" cores="4" cache-l2="-" cache-l3="6 MB" bus="" multiplier=""
+				/>
+		</part>
+		<part
+			type="RAM"
+			href="http://www.crucial.com/usa/en/memory-ballistix-sport-xt"
+			name="Crucial Ballistix Sport XT"
+			price="56" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/4004375_-ballistix-sport-xt-8gb-kit-ddr3-pc3-12800-cl9-bls2c4g3d169ds3ceu-crucial.html"
+			tdp="2"
+			>
+			<properties
+				size="2x 4 GB"
+				type="PC3-12800"
+				frequency="1600 MHz"
+				/>
+		</part>
+		<part
+			type="GPU"
+			href="http://www.notebookcheck.com/Intel-HD-Graphics-4600.86100.0.html"
+			name="Intel HD Graphics 4600"
+			price="0"
+			tdp="1"
+			>
+			<properties
+				frequency="1150 MHz"
+				memory="0 GB"
+				/>
+		</part>
+		<part
+			type="Audio"
+			href="http://www.realtek.cz/realtek-download.php?realtek=ALC887&amp;system=5"
+			name="Realtek ALC887-VD2"
+			price="0"
+			tdp="1"
+			><properties
+				channels="7.1"
+				/>
+		</part>
+		<part
+			type="HDD"
+			
+			name="Seagate DiamondMax"
+			price="0"
+			tdp="4"
+			>
+			<properties
+				size="250 GB"
+				/>
+		</part>
+		<part
+			type="HDD"
+			href="http://www.hitachigst.com/internal-drives/desktop/deskstar/deskstar-7k2000"
+			name="Hitachi Deskstar 7K2000"
+			price="0"
+			tdp="4"
+			>
+			<properties
+				size="1000 GB"
+				/>
+		</part>		
+		<part
+			type="Chassis"
+			href="http://brain.pan.e-merchant.com/5/5/09668255/l_09668255.jpg"
+			name="Advance BigBox 6910CR"
+			tdp="1"
+			price="0" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2578491_-bigbox-6910cr-schwarz-advance.html" price-skip=""
+			>
+			<properties
+				size="Midi Tower"
+				psu="480 W"
+				/>
+		</part>
+	</data>
+	<data name="Ramsch" final-price="500">
+		<part
+			type="Mainboard" 
+			href="http://www.ecs.com.tw/ECSWebSite/Product/Product_Detail.aspx?DetailID=1081&amp;CategoryID=1&amp;DetailName=Feature&amp;MenuID=16&amp;LanID=9"
+			name="ECS G31T-M7"
+			tdp="10"
+			price="75" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1369529E0J2_-g31t-m7-elitegroup-ecs.html"
+			>
+			<properties
+				socket="LGA 775" ram="DDR2-800" sata="3 Gb/s" form="ATX"
+				/>
+		</part>
+		<part
+			type="CPU"
+			href="http://ark.intel.com/products/36547"
+			name="Intel Core 2 Quad Q8200"
+			tdp="95"
+			price="200" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1062751_-core-2-quad-q8200-box-sockel-775-45nm-bx80580q8200-intel.html"
+			>
+			<properties
+				frequency="2.33 GHz" cores="4" cache-l2="2×2048 KB" cache-l3="-" bus="" multiplier="7"
+				/>
+		</part>
+		<part
+			type="RAM"
+			
+			name="COS Memory AG"
+			price="0"
+			tdp="2"
+			>
+			<properties
+				size="2x 2 GB"
+				type="PC2-5300"
+				frequency="333 MHz"
+				/>
+		</part>
+		<part
+			type="GPU"
+			href="http://www.nvidia.de/object/geforce_9800gt_de.html"
+			name="GeForce 9800 GT"
+			price="100" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2170679_-geforce-9800-gt-1024mb-sddr3-point-of-view.html"
+			tdp="125"
+			>
+			<properties
+				frequency="600 MHz"
+				memory="0.5 GB"
+				/>
+		</part>
+		<part
+			type="Audio"
+			href="http://www.via.com.tw/en/products/audio/codecs/vt1708b/"
+			name="VIA VT1708B"
+			price="0"
+			tdp="1"
+			><properties
+				channels="7.1"
+				/>
+		</part>
+	</data>
+	
+	<data name="Unter Beobachtung">			
+		<!--
+		<part
+			type="GPU"
+			href="http://www.zotac.com/index.php?page=shop.product_details&amp;flypage=flypage_images-SRW.tpl-VGA&amp;product_id=399&amp;category_id=139&amp;option=com_virtuemart&amp;Itemid=100257&amp;lang=de"
+			name="Zotac GeForce GT 520"
+			tdp="30"
+			price="50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/3008248_-geforce-gt-520-512mb-ddr3-pcie-x1-zotac.html"
+			>
+			<properties
+				frequency="900 MHz" memory="512 MB"
+				/>
+		</part>
+		
+		<part
+			type="Laptop"
+			href="http://www.fujitsu.com/de/products/computing/pc/notebooks-tablets/advanced/lifebook-e781/"
+			name="Fujitsu LIFEBOOK E781"
+			tdp="65"
+			price="850" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/3017865_-lifebook-e781-fujitsu.html"
+			>
+			<properties
+				cpu="i5 2520M" chipset="Intel QM67" gpu="HD 3000" memory="4 GB" bonus="UMTS USB3 NumBlock"
+				/>
+		</part>
+		<part
+			type="Laptop"
+			href="http://de.computers.toshiba-europe.com/innovation/product/Tecra-R850-1FC/1123419/"
+			name="Toshiba Tecra R850-1FC"
+			tdp="65"
+			price="900" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/3304523_-tecra-r850-1fc-pt524e-03600d-toshiba.html"
+			>
+			<properties
+				cpu="i5 2450M" chipset="Intel HM65" gpu="HD 3000" memory="4 GB" bonus="UMTS USB3 NumBlock"
+				/>
+		</part>
+		<part
+			type="Laptop"
+			href="http://ie.asus.com/Commercial_Notebooks/B53_Series/B53E/#specifications"
+			name="Asus Pro B53E-SO125X"
+			tdp="65"
+			price="800" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/3039542_-pro-b53e-so125x-asus.html"
+			>
+			<properties
+				cpu="i5 2430M" chipset="Intel HM65" gpu="HD 3000" memory="4 GB" bonus="UMTS USB3 NumBlock"
+				/>
+		</part>
+		<part
+			type="Laptop"
+			href="http://www.acer.de/ac/de/DE/content/model/LX.V4J03.035"
+			name="Acer TravelMate 8573-2434G50Mnkk"
+			tdp="65"
+			price="800" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/3037599_-travelmate-8573-2434g50mnkk-lx-v4j03-035-acer.html"
+			>
+			<properties
+				cpu="i5 2430M" chipset="Intel HM65"  gpu="HD 3000" memory="4 GB" bonus="UMTS USB3 NumBlock"
+				/>
+		</part>
+		-->
+		
+	<!--
+		<part
+			type="Multiding"
+			href="http://www.canon.de/For_Home/Product_Finder/Multifunctionals/Inkjet/PIXMA_MG2150/index.aspx?specs=1"
+			name="Canon PIXMA MG 2150"
+			price="500" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2925970_-pixma-mg2150-canon.html"
+			tdp="11"
+			>
+			<properties
+				scan-type="CIS"
+				scan-resolution="1200 dpi"
+				/>
+		</part>
+		
+		<part
+			type="Multiding"
+			href="http://www.canon.de/For_Home/Product_Finder/Multifunctionals/Inkjet/PIXMA_MG8150/index.aspx?specs=1"
+			name="Canon PIXMA MG 8150"
+			price="200" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2366669_-pixma-mg8150-canon.html"
+			tdp="24"
+			>
+			<properties
+				scan-type="CCD"
+				scan-resolution="4800 dpi"
+				/>
+		</part>
+		<part
+			type="Multiding"
+			href="http://www.canon.de/For_Home/Product_Finder/Multifunctionals/Inkjet/PIXMA_MP750/index.aspx?specs=1"
+			name="Canon PIXMA MP 750"
+			price="260" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/147688.html"
+			tdp="45"
+			>
+			<properties
+				scan-type="CCD"
+				scan-resolution="2400 dpi"
+				/>
+		</part>
+		
+		<part
+			type="Scanner"
+			
+			name="Epson Perfection V33"
+			price="70" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2386599_-perfection-v33-epson.html"
+			tdp="0"
+			>
+			<properties
+				scan-type="CCD"
+				scan-resolution="4800 dpi"
+				/>
+		</part>
+		<part
+			type="Scanner"
+			
+			name="Epson Perfection V330 Photo"
+			price="75" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2386618_-perfection-v330-photo-epson.html"
+			tdp="0"
+			>
+			<properties
+				scan-type="CCD"
+				scan-resolution="4800 dpi"
+				/>
+		</part>
+		<part
+			type="Scanner"
+			
+			name="Canon CanoScan 9000F"
+			price="190" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2241110_-canoscan-9000f-canon.html"
+			tdp="0"
+			>
+			<properties
+				scan-type="CCD"
+				scan-resolution="9600 dpi"
+				/>
+		</part>
+		<part
+			type="Scanner"
+			
+			name="Hewlett-Packard HP ScanJet 4070"
+			price="50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/269500E0J2.html"
+			tdp="0"
+			>
+			<properties
+				scan-type="CIS"
+				scan-resolution="2400 dpi"
+				/>
+		</part>
+		<part
+			type="Scanner"
+			
+			name="Canon CanoScan LiDE 110"
+			price="60" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2367879_-canoscan-lide-110-canon.html"
+			tdp="0"
+			>
+			<properties
+				scan-type="CIS"
+				scan-resolution="2400 dpi"
+				/>
+		</part>
+	-->	
+		<part
+			type="HDD"
+			href="http://www.wdc.com/wdproducts/library/SpecSheet/ENG/2879-701229.pdf"
+			name="Western Digital WD20EARX"
+			price="50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2721597_-caviar-green-sata-iii-2tb-western-digital.html"
+			tdp="4"
+			>
+			<properties
+				size="2000 GB"
+				/>
+		</part>
+	</data>
+	
+	<!--
+	<data name="Steffs PC" final-price="0">
+		<part
+			type="Mainboard" 
+			href="http://www.msi.com/product/mb/P67A-C45-B3-.html"
+			name="MSI P67A-C45 (B3)"
+			tdp="10"
+			price="100" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2567363_-p67a-c45-msi.html"
+			>
+			<properties
+				socket="LGA 1155" ram="DDR3-2200" sata="3 Gb/s" form="ATX"
+				/>
+		</part>
+		<part
+			type="CPU"
+			href="http://ark.intel.com/products/52209/Intel-Core-i5-2500-Processor-%286M-Cache-3_30-GHz%29"
+			name="Intel Core i5 2500"
+			tdp="95"
+			price="243.50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2590193_-core-i5-2500-box-sockel-1155-32nm-bx80623i52500-intel.html"
+			>
+			<properties
+				frequency="3.30 GHz" cores="4" cache-l2="4×256 KB" cache-l3="8 MB" bus="DMI" multiplier="34"
+				/>
+		</part>
+		<part
+			type="RAM"
+			
+			name="Corsair"
+			price="32" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2540724_-vengeance-8gb-kit-ddr3-pc3-12800-cl9-cmz8gx3m2a1600c9-corsair.html"
+			tdp="2"
+			>
+			<properties
+				size="2x 4 GB"
+				type="PC3-10600"
+				frequency="1333 MHz"
+				/>
+		</part>
+		<part
+			type="GPU"
+			href="http://www.asus.com/Graphics_Cards/NVIDIA_Series/ENGTX550_Ti_DCDI1GD5//#specifications"
+			name="Asus GeForce GTX 550 Ti"
+			price="100" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2942778_-geforce-gtx-550-ti-asus.html"
+			tdp="116"
+			>
+			<properties
+				frequency="900 MHz"
+				memory="1.0 GB"
+				/>
+		</part>
+		<part
+			type="HDD"
+			
+			name="Samsung SpinPoint F3"
+			price="0" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1813609_-spinpoint-f3-1tb-hd103sj-samsung.html"
+			tdp="4"
+			>
+			<properties
+				size="1000 GB"
+				/>
+		</part>		
+		<part
+			type="Disk Drive"
+			
+			name="LG BH10LS30"
+			tdp="1"
+			price="59.99" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2074499_-bh10ls30-lg.html"
+			>
+			<properties
+				/>
+		</part>
+		<part
+			type="Chassis"
+			href="http://www.cyberport.de/pc-und-zubehoer/komponenten/gehaeuse/gehaeuse-midi-tower/2A01-53Z/cooltek-ct-k2-revision-c-midi-tower-schwarz-silber-o-nt-.html"
+			name="Cooltek CT K2 Revision C"
+			tdp="1"
+			price="30.90"
+			>
+			<properties
+				size="ATX Tower"
+				psu="-"
+				/>
+		</part>
+		<part
+			type="PSU"
+			
+			name="LC Power LC6550"
+			tdp="1"
+			price="30" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/270507.html"
+			>
+			<properties
+				power="550 W"
+				/>
+		</part>
+		
+		
+		<part
+			type="Operating System"
+			name="Microsoft Windows 7 Home Premium 64Bit"
+			tdp="0"
+			price="70" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1861220_-windows-7-home-premium-64bit-oem-de-microsoft.html"
+			>
+		</part>
+	</data>	
+	-->
+</root>

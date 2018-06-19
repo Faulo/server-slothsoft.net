@@ -1,0 +1,246 @@
+body > * > main {
+	padding: 0;
+}
+body > * > header {
+	min-width: 0 !important;
+	max-width: none !important;
+	width: auto !important;
+	padding: 1em;
+}
+header {
+	text-align: left;
+}
+hgroup {
+	font-size: larger;
+}
+hgroup > * {
+	margin: 0;
+}
+details a {
+	display: block;
+	text-decoration: none;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+table > * {
+	border: 2px outset silver;
+	table-layout: fixed;
+}
+tbody > tr > th {
+	text-align: left;
+}
+tr > * {
+	padding: 2px 8px;
+}
+.table {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+.table > * {
+	display: table-row;
+}
+.table > * > * {
+	display: table-cell;
+	padding: 0;
+}
+.table > * > span {
+	width: 1.5em;
+	text-align: center;
+}
+.table > * > samp {
+	width: 8em;
+	text-align: right;
+}
+.table > * > time {
+	width: 10em;
+	text-align: center;
+}
+.table a {
+	display: block;
+}
+.number {
+	text-align: right;
+	white-space: nowrap;
+}
+nav {
+	 overflow: auto;
+}
+nav li li li {
+	display: inline-block;
+	padding: 0px 4px;
+	font-size: smaller;
+}
+html.videoRoot, html.videoRoot > body {
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	margin: 0px;
+	display: block;
+}
+html.videoRoot > body {
+	height: 100vh;
+}
+html.videoRoot > body > * {
+	display: inline-block;
+	vertical-align: top;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.videoContainer {
+	width: 75%;
+}
+.videoHeader {
+	width: 25%;
+	/*padding: 1em;*/
+	font-size: 10px;
+}
+.videoHeader > * {
+	height: 100%;
+	/*
+	border-radius: 10px;
+	opacity: 0.8;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+	*/
+}
+.videoHeader > * {
+	padding: 0;
+}
+.videoHeader a {
+	display: block;
+	margin: auto;
+	padding: 0.25em;
+}
+.videoHeader a:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+.videoHeader hgroup > * {
+	font-size: 14px;
+	text-align: center;
+	font-weight: normal;
+}
+.videoContainer {
+	padding: 0px;
+	text-align: center;
+}
+.videoContainer > * {
+	padding: 0px;
+}
+video {
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	margin: auto;
+	background: black;
+}
+section.upload {
+	float: right;
+}
+*[data-chat-id="shoutbox"] {
+	color: black;
+}
+section.unison {
+	display: table;
+	width: 100%;
+}
+section.unison > * {
+	display: table-cell  !important;
+	padding: 0px;
+	vertical-align: top;
+}
+section.unison > *:last-child {
+	width: 400px;
+}
+section.unison *[data-chat-id="shoutbox"] {
+	border: none;
+	margin: 0px;
+	background-color: transparent;
+}
+section.unison ul {
+	height: 500px !important;
+}
+section.unison button {
+	width: 32px;
+}
+section.unison select, section.unison select * {
+	max-width: 360px;
+}
+section.unison option, section.unison optgroup {
+	font-size: smaller;
+}
+section.unison optgroup[disabled] {
+	/*display: none;*/
+}
+*[data-archive-unison] nav {
+	display: table;
+}
+*[data-archive-unison] nav > * {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+*[data-depth = "0"] {
+	padding-left:   0px;
+}
+*[data-depth = "1"] {
+	padding-left:  24px;
+}
+*[data-depth = "2"] {
+	padding-left:  48px;
+}
+*[data-depth = "3"] {
+	padding-left:  72px;
+}
+*[data-depth = "4"] {
+	padding-left:  96px;
+}
+*[data-depth = "5"] {
+	padding-left: 120px;
+}
+*[data-depth = "6"] {
+	padding-left: 144px;
+}
+*[data-depth = "7"] {
+	padding-left: 168px;
+}
+*[data-depth = "8"] {
+	padding-left: 192px;
+}
+
+.hentai .list > div > a,
+.hentai .list > div > a > img {
+	display: inline-block;
+	vertical-align: top;
+}
+.hentai .list > div > a {
+	width: 25%;
+}
+.hentai .list > div > a > img {
+	width: 100%;
+}
+.hentai h2 {
+	padding: 0;
+}
+.hentai h2 > input, .hentai h2 > textarea {
+	width: 100%;
+	display: block;
+	line-height: 2em;
+	font-size: 0.9rem;
+	border-width: 1px;
+	box-sizing: border-box;
+}
+.hentai .pages > * {
+	padding: 0.25em 0.25em;
+	display: inline-block;
+}
+.hentai .pages > *.active {
+	color: inherit;
+	font-weight: bold;
+	text-decoration: none;
+}

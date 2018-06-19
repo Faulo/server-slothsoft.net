@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data wiki-uri="http://fireemblem.wikia.com/wiki/">
+	<stat name="Level"/>
+	<stat name="HP"/>
+	<stat name="Strength"/>
+	<stat name="Magic"/>
+	<stat name="Skill"/>
+	<stat name="Speed"/>
+	<stat name="Luck"/>
+	<stat name="Defense"/>
+	<stat name="Resistance"/>
+	
+	<game key="bs" name="The Blazing Blade" wiki="Fire_Emblem:_The_Blazing_Blade" alternate="FE7,Blazing Sword">
+		<credit author="Rick52" href="http://www.gamefaqs.com/gba/468480-fire-emblem/faqs/29563" name="awesome stat guide"/>
+		<credit author="Muff" href="http://www.gamefaqs.com/gba/468480-fire-emblem/faqs/26803" name="awesome support conversations guide"/>
+		<credit author="The Fire Emblem Wiki" href="http://fireemblem.wikia.com/wiki/Fire_Emblem_Wikia" name="awesome wiki"/>
+		<description>
+These values are the growth chance per level. No startings stats. The game doesn't separate Strength and Magic, as only one is ever applicable for a unit.
+		</description>
+		<mapping>
+		Lyndis/Lyn
+		Rebecca/Rebecca_(Rekka_no_Ken)
+		Raven/Raven_(character)
+		Karla/Karla_(Rekka_no_Ken)
+		Hawkeye/Hawkeye_(character)
+		Garcia/Garcia_(The_Sacred_Stones)
+		Ross/Ross_(The_Sacred_Stones)
+		Lance/Lance_(character)
+		Yunno/Juno
+		Ashtol/Astore
+		Fil/Fir
+		</mapping>
+		<filter>Lyndis Eliwood Hector Kent Sain Florina Wil Dorcas Serra Erk Rath Matthew Nils Lucius Wallace Marcus Lowen Rebecca Bartre Oswin Guy Merlinus Priscilla Raven Canas Dart Fiora Legault Ninian Isadora Heath Hawkeye Geitz Pent Louise Karel Harken Farina Nino Jaffar Vaida Karla Renault Athos</filter>
+		<support type=":">
+			Eliwood: Fiora 0/2 * Harken 25/3 * Hector 72/3 * Lowen 20/2 * Lyndis 10/2 * Marcus 25/2 * Ninian 0/5 * Hector: Eliwood 72/3 * Farina 0/1 * Florina 5/2 * Lyndis 0/3 * Matthew 20/3 * Oswin 20/2 * Serra 15/1 * Lyndis: Eliwood 10/2 * Florina 76/4 * Hector 0/3 * Kent 20/3 * Rath 15/4 * Wallace 15/2 * Wil 15/3 * Sain: Fiora 0/2 * Kent 30/3 * Isadora 0/1 * Louise 0/1 * Priscilla 0/2 * Rebecca 0/2 * Serra 0/2 * Matthew: Hector 20/3 * Guy 10/3 * Jaffar 0/1 * Legault 0/2 * Oswin 5/2 * Serra 5/1 * Serra: Erk 2/1 * Florina 0/1 * Hector 15/1 * Lucius 0/2 * Matthew 5/1 * Oswin 10/1 * Sain 0/2 * Guy: Karel 5/3 * Louise 0/1 * Matthew 10/3 * Priscilla 0/2 * Rath 0/4 * Priscilla: Erk 15/3 * Guy 0/2 * Heath 0/2 * Lucius 5/2 * Oswin 0/2 * Raven 20/3 * Sain 0/2 * Rebecca: Dart 35/3 * Louise 0/3 * Lowen 5/2 * Nino 0/3 * Raven 0/2 * Sain 0/2 * Wil 30/3 * Kent: Farina 0/1 * Fiora 0/3 * Heath 0/2 * Lyndis 20/3 * Sain 30/3 * Wallace 15/2 * Lowen: Eliwood 20/2 * Harken 15/3 * Isadora 10/3 * Marcus 20/3 * Rebecca 5/2 * Dorcas: Bartre 15/3 * Farina 0/1 * Geitz 0/3 * Oswin 0/2 * Vaida 0/2 * Bartre: Canas 0/2 * Dorcas 15/3 * Karla 5/4 * Raven 0/1 * Renault 0/1 * Raven: Bartre 0/1 * Lucius 30/3 * Priscilla 20/3 * Rebecca 0/2 * Wil 0/1 * Florina: Farina 35/3 * Fiora 35/4 * Hector 5/2 * Lyndis 76/4 * Ninian 0/4 * Nino 0/2 * Serra 0/1 * Fiora: Eliwood 0/2 * Farina 30/3 * Florina 35/4 * Geitz 0/1 * Kent 0/3 * Pent 10/2 * Sain 0/2 * Rath: Guy 0/4 * Lyndis 15/4 * Wil 0/2 * Erk: Louise 20/2 * Nino 0/3 * Pent 25/3 * Priscilla 15/3 * Serra 2/1 * Lucius: Karel 0/1 * Priscilla 5/2 * Raven 30/3 * Renault 0/2 * Serra 0/2 * Canas: Bartre 0/2 * Nino 0/3 * Pent 0/3 * Renault 0/2 * Vaida 0/2 * Wil: Dart 20/3 * Lyndis 15/3 * Rath 0/2 * Raven 0/1 * Rebecca 30/3 * Wallace 0/2 * Merlinus: Marcus 0/2 * Nino 0/2 * Vaida 0/1 * Oswin: Dorcas 0/2 * Hector 20/2 * Matthew 5/2 * Priscilla 0/2 * Serra 10/1 * Marcus: Eliwood 25/2 * Harken 20/2 * Isadora 15/3 * Lowen 20/3 * Merlinus 0/2 * Dart: Farina 0/2 * Geitz 0/2 * Karel 0/2 * Rebecca 35/3 * Wil 20/3 * Legault: Heath 0/2 * Isadora 0/1 * Jaffar 5/1 * Matthew 0/2 * Nino 0/2 * Isadora: Geitz 0/2 * Harken 40/4 * Legault 0/1 * Lowen 10/3 * Marcus 15/3 * Renault 0/1 * Sain 0/1 * Heath: Kent 0/2 * Legault 0/2 * Louise 0/1 * Priscilla 0/2 * Vaida 0/2 * Hawkeye: Louise 20/3 * Ninian 0/3 * Pent 20/3 * Geitz: Dart 0/2 * Dorcas 0/3 * Fiora 0/1 * Isadora 0/2 * Karel 0/2 * Wallace: Kent 15/2 * Lyndis 15/2 * Renault 0/2 * Vaida 0/2 * Wil 0/2 * Pent: Canas 0/3 * Erk 25/3 * Fiora 10/2 * Hawkeye 20/3 * Louise 241/0 * Louise: Erk 20/2 * Guy 0/1 * Hawkeye 20/3 * Heath 0/1 * Pent 241/0 * Rebecca 0/3 * Sain 0/1 * Karel: Dart 0/2 * Geitz 0/2 * Guy 5/3 * Karla 25/3 * Lucius 0/1 * Harken: Eliwood 25/3 * Isadora 40/4 * Lowen 15/3 * Marcus 20/2 * Vaida 0/1 * Nino: Canas 0/3 * Erk 0/3 * Florina 0/2 * Jaffar 25/3 * Legault 0/2 * Merlinus 0/2 * Rebecca 0/3 * Jaffar: Legault 5/1 * Matthew 0/1 * Nino 25/3 * Vaida: Canas 0/2 * Dorcas 0/2 * Harken 0/1 * Heath 0/2 * Karla 0/2 * Merlinus 0/1 * Wallace 0/2 * Renault: Bartre 0/1 * Canas 0/2 * Isadora 0/1 * Lucius 0/2 * Wallace 0/2 * Farina: Dart 0/2 * Dorcas 0/1 * Fiora 30/3 * Florina 35/3 * Hector 0/1 * Karla 0/2 * Kent 0/1 * Karla: Bartre 5/4 * Farina 0/2 * Karel 25/2 * Vaida 0/2 * Ninian: Eliwood 0/5 * Florina 0/4 * Hawkeye 0/3 * Athos 0 Nils 0
+		</support>
+	</game>
+	<game key="ss" name="The Sacred Stones" wiki="Fire_Emblem:_The_Sacred_Stones" alternate="Sacred Stones,FE8">
+		<credit author="Rick52" href="http://www.gamefaqs.com/gba/921183-fire-emblem-the-sacred-stones/faqs/29563" name="awesome stat guide"/>
+		<credit author="Littledgn" href="http://www.gamefaqs.com/gba/921183-fire-emblem-the-sacred-stones/faqs/36963" name="awesome support conversations guide"/>
+		<credit author="The Fire Emblem Wiki" href="http://fireemblem.wikia.com/wiki/Fire_Emblem_Wikia" name="awesome wiki"/>
+		
+		<description>
+These values are the growth chance per level. No startings stats. The game doesn't separate Strength and Magic, as only one is ever applicable for a unit.
+		</description>
+		<mapping>
+		Garcia/Garcia_(The_Sacred_Stones)
+		L'Arachel/L'Arachel
+		Ross/Ross_(The_Sacred_Stones)
+		Rebecca/Rebecca_(Rekka_no_Ken)
+		Raven/Raven_(character)
+		Karla/Karla_(Rekka_no_Ken)
+		Hawkeye/Hawkeye_(character)
+		Lance/Lance_(character)
+		Yunno/Juno
+		Ashtol/Astore
+		Fil/Fir
+		</mapping>
+		<filter>Eirika Seth Franz Gilliam Vanessa Moulder Innes Tethys Duessel Ross Garcia Colm Ewan Knoll Neimi Artur Lute Natasha Joshua Ephraim Forde Kyle Tana Amelia Gerik Marisa L'Arachel Dozla Saleh Cormag Rennac Myrrh Syrene </filter>
+		<support type="/">Eirika/Ephraim [1111] Eirika/Seth [1112] Eirika/Saleh [1113] Eirika/L'Arachel [1114] Eirika/Tana [1115] Eirika/Innes [1116] Eirika/Forde [1117] Seth/Franz [1118] Seth/Garcia [1119] Seth/Natasha [2111] Seth/Cormag [2112] Gilliam/Garcia [2113] Gilliam/Franz [2114] Gilliam/Syrene [2115] Gilliam/Moulder [2116] Gilliam/Neimi [2117] Franz/Forde [2118] Franz/Amelia [2119] Franz/Natasha [3111] Moulder/Vanessa [3112] Moulder/Colm [3113] Moulder/Syrene [3115] Vanessa/Syrene [3116] Vanessa/Lute [3117] Vanessa/Forde [3118] Vanessa/Innes [3119] Ross/Garcia [4111] Ross/Lute [4112] Ross/Amelia [4113] Ross/Ewan [4114] Ross/Gerik [4115] Neimi/Colm [4116] Neimi/Garcia [4117] Neimi/Amelia [4118] Neimi/Artur [4119] Colm/Marisa [5111] Colm/Rennac [5112] Colm/Kyle [5113] Garcia/Dozla [5114] Innes/Gerik [5115] Innes/Tana [5116] Innes/Joshua [5117] Innes/L'Arachel [5118] Lute/Artur [5119] Lute/Knoll [6111] Lute/Kyle [6112] Natasha/Joshua [6113] Natasha/Knoll [6114] Natasha/Cormag [6115] Cormag/Duessel [6116] Cormag/Tana [6117] Cormag/Artur [6118] Ephraim/Kyle [6119] Ephraim/Forde [7111] Ephraim/Myrrh [7112] Ephraim/L'Arachel[7113] Ephraim/Duessel [7114] Ephraim/Tana [7115] Forde/Kyle [7116] Kyle/Syrene [7117] Amelia/Duessel [7118] Amelia/Ewan [7119] Artur/Tethys [8111] Artur/Joshua [8112] Gerik/Tethys [8113] Gerik/Marisa [8114] Gerik/Saleh [8115] Gerik/Joshua [8116] Tethys/Ewan [8117] Tethys/Marisa [8118] Tethys/Rennac [8119] Marisa/Tana [9111] Marisa/Joshua [9112] Saleh/Myrrh [9113] Saleh/Ewan [9114] Ewan/Dozla [9115] L'Arachel/Dozla [9116] L'Arachel/Rennac [9117] L'Arachel/Joshua [9118] Dozla/Myrrh [9119] Dozla/Rennac [2211] Duessel/Knoll [2212] Tana/Syrene [2213]</support>
+	</game>
+	<game key="por" name="Path of Radiance" wiki="Fire_Emblem:_Path_of_Radiance" alternate="FE9,Radiant Dawn">
+		<description>
+These values are the growth chance per level. Startings stats would've been awesome, but alas, I couldn't find them in a neat and orderly table during the 5 minutes I spent looking for them. :'D
+		</description>
+		
+		<credit author="Hyoushitsu" href="http://www.gamefaqs.com/gamecube/920189-fire-emblem-path-of-radiance/faqs/39883" name="awesome stat guide"/>
+		<credit author="Flux_Blade" href="http://www.gamefaqs.com/gamecube/920189-fire-emblem-path-of-radiance/faqs/47709" name="awesome support conversations guide"/>
+		<credit author="The Fire Emblem Wiki" href="http://fireemblem.wikia.com/wiki/Fire_Emblem_Wikia" name="awesome wiki"/>
+		<mapping>
+		Largo/Largo_(Path_of_Radiance)
+		</mapping>
+		<support type="/">
+		Ike/Titania Ike/Oscar Ike/Soren Ike/Lethe Ike/Reyson Ike/Ranulf Ike/Elincia Titania/Ike Titania/Boyd Titania/Rhys Titania/Mist Oscar/Ike Oscar/Kieran Oscar/Tanith Oscar/Janaff Boyd/Titania Boyd/Mist Boyd/Brom Boyd/Ulki Rhys/Titania Rhys/Mia Rhys/Rolf Rhys/Kieran Rhys/Ulki Shinon/Gatrie Shinon/Rolf Shinon/Janaff Gatrie/Shinon Gatrie/Ilyana Gatrie/Marcia Gatrie/Astrid Soren/Ike Soren/Stefan Mia/Rhys Mia/Ilyana Mia/Largo Ilyana/Gatrie Ilyana/Mia Ilyana/Mordecai Ilyana/Zihark Ilyana/Lucia Mist/Titania Mist/Boyd Mist/Rolf Mist/Mordecai Mist/Jill Rolf/Rhys Rolf/Shinon Rolf/Mist Rolf/Marcia Rolf/Tauroneo Marcia/Gatrie Marcia/Rolf Marcia/Kieran Marcia/Tanith Lethe/Ike Lethe/Jill Lethe/Muarim Lethe/Ranulf Mordecai/Ilyana Mordecai/Mist Mordecai/Stefan Mordecai/Ulki Mordecai/Ranulf Volke/Bastian Kieran/Oscar Kieran/Rhys Kieran/Marcia Brom/Boyd Brom/Nephenee Brom/Zihark Nephenee/Brom Nephenee/Devdan Nephenee/Calill Zihark/Ilyana Zihark/Brom Zihark/Muarim Sothe/Astrid Sothe/Tormod Jill/Mist Jill/Lethe Jill/Haar Astrid/Gatrie Astrid/Sothe Astrid/Makalov Makalov/Astrid Makalov/Haar Makalov/Bastian Stefan/Soren Stefan/Mordecai Tormod/Sothe Tormod/Devdan Tormod/Reyson Tormod/Calill Muarim/Lethe Muarim/Zihark Muarim/Largo Devdan/Nephenee Devdan/Tormod Devdan/Largo Tanith/Oscar Tanith/Marcia Tanith/Reyson Reyson/Ike Reyson/Tormod Reyson/Tanith Ulki/Boyd Ulki/Rhys Ulki/Mordecai Janaff/Oscar Janaff/Shinon Janaff/Lucia Calill/Nephenee Calill/Tormod Calill/Geoffrey Tauroneo/Rolf Tauroneo/Largo Ranulf/Ike Ranulf/Lethe Ranulf/Mordecai Haar/Jill Haar/Makalov Lucia/Ilyana Lucia/Janaff Lucia/Bastian Bastian/Volke Bastian/Makalov Bastian/Lucia Geoffrey/Calill Geoffrey/Elincia Largo/Mia Largo/Muarim Largo/Devdan Largo/Tauroneo Elincia/Ike Elincia/Geoffrey
+		</support>
+		<filter>Ike Soren Titania Rhys Shinon Gatrie Rolf Mist Astrid Makalov Marcia Boyd Oscar Kieran Nephenee Brom Sothe Nasir Volke Ena Tormod Lethe Muarim Janaff Ulki Devdan Stefan Mia Zihark Lucia Geoffrey Bastian Elincia Jill Haar Ilyana Tanith Reyson Largo Mordecai Calill Tauroneo Tibarn Naesala Ranulf Giffca </filter>
+	</game>
+	<game key="rd" name="Radiant Dawn" wiki="Fire_Emblem:_Radiant_Dawn" alternate="">
+		<description>
+		Couldn't find stats for these, so just pretty pictures for now. :3
+		</description>
+		<credit author="The Fire Emblem Wiki" href="http://fireemblem.wikia.com/wiki/Fire_Emblem_Wikia" name="awesome wiki"/>
+		<mapping>
+		Black+Knight/Black_Knight_(character)
+		</mapping>
+	</game>
+	<game key="sd" name="Shadow Dragon" wiki="Fire_Emblem:_Shadow_Dragon" alternate="FE11,FE12">
+		<description>
+The stats given are the character-specific base stats and their base growth chance per level. To calculate the actual values, the (not here presented) class-specific stats and growth chances need to be added.
+		</description>
+		<credit author="Juigi" href="http://www.gamefaqs.com/ds/943695-fire-emblem-shadow-dragon/faqs/54527" name="awesome stat guide"/>
+		<credit author="The Fire Emblem Wiki" href="http://fireemblem.wikia.com/wiki/Fire_Emblem_Wikia" name="awesome wiki"/>
+		<filter>Marth Frey Cain Abel Jagen Gordin Draug Norne Shiida Wrys Ogma Barst Bord Cord Castor Darros Julian Lena Nabarl Merric Matthis Hardin Wolf Sedgar Roshea Vyland Wendell Rickard Athena Bantu Caesar Radd Roger Jeorge Maria Minerva Linde Jake Midia Dolph Macellan Tomas Boah Horace Beck Astram Palla Catria Arran Samson Xane Etzel Est Tiki Lorenz Ymir Elice Nagi Gotoh</filter>
+		<mapping>
+		Freyr/Frey
+		Kain/Cain
+		Jeigan/Jagen
+		Gordon/Gordin
+		Doga/Draug
+		Riff/Wrys
+		Oguma/Ogma
+		Saji/Bord
+		Maji/Cord
+		Kashim/Castor
+		Daros/Darros
+		Rena/Lena
+		Navarre/Nabarl
+		Matis/Matthis
+		Zagaro/Sedgar
+		Roshe/Roshea
+		Wendel/Wendell
+		Ricard/Rickard
+		Boa/Boah
+		Horus/Horace
+		Paola/Palla
+		Katua/Catria
+		Chainy/Xane
+		Lawrence/Lorenz
+		Hymir/Ymir
+		Gato/Gotoh
+		Barts/Barst
+		Thomas/Tomas
+		Sheeda/Shiida
+		Medea/Midia
+		Norn/Norne
+		Maric/Merric
+		Birak/Vyland
+		Wolf/Wolf_(Ankoku_Ryū_to_Hikari_no_Tsurugi)
+		Banut/Bantu
+		Raddy/Radd
+		Roger/Roger_(Ankoku_Ryu_to_Hikari_no_Tsurugi)
+		George/Jeorge
+		Linda/Linde
+		Tomth/Dolph
+		Michelan/Macellan
+		Astoria/Astram
+		Aran/Arran
+		Alice/Elice
+		Samson/Samson_(Shadow_Dragon_and_the_Blade_of_Light)
+		</mapping>
+	</game>
+	<game key="aw" name="Awakening" wiki="Fire_Emblem:_Awakening" alternate="FE13,Kakusei,Shin Monshō no Nazo">
+		<description>
+		Couldn't find stats for these, so just pretty pictures for now. :3
+		</description>
+		<credit author="The Fire Emblem Wiki" href="http://fireemblem.wikia.com/wiki/Fire_Emblem_Wikia" name="awesome wiki"/>
+		<credit author="StreetPasWantr" href="http://www.gamefaqs.com/3ds/643003-fire-emblem-awakening/faqs/66313" name="awesome Support Guide"/>
+		
+		<mapping>
+			Avatar/Avatar_(Awakening)
+			Morgan/Morgan_(Awakening)
+		</mapping>
+		<support type="/">
+			Avatar/Chrom Avatar/Lissa Avatar/Frederick Avatar/Sully Avatar/Virion Avatar/Stahl Avatar/Vaike Avatar/Miriel Avatar/Kellam Avatar/Donnel Avatar/Lon'qu Avatar/Ricken Avatar/Maribelle Avatar/Panne Avatar/Gaius Avatar/Cordelia Avatar/Gregor Avatar/Nowi Avatar/Libra Avatar/Tharja Avatar/Olivia Avatar/Cherche Avatar/Henry Avatar/Lucina Avatar/Owain Avatar/Inigo Avatar/Brady Avatar/Kjelle Avatar/Cynthia Avatar/Severa Avatar/Gerome Avatar/Yarne Avatar/Laurent Avatar/Noire Avatar/Nah Avatar/Anna Avatar/Say'ri Avatar/Tiki Avatar/Basilio Avatar/Flavia Avatar/Gangrel Avatar/Walhart Avatar/Emmeryn Avatar/Yen'fay Avatar/Aversa Avatar/Priam Chrom/Avatar Chrom/Sully Chrom/Sumia Chrom/Maribelle Chrom/Olivia Lissa/Avatar Lissa/Frederick Lissa/Virion Lissa/Stahl Lissa/Vaike Lissa/Kellam Lissa/Donnel Lissa/Lon'qu Lissa/Ricken Lissa/Gaius Lissa/Gregor Lissa/Libra Lissa/Henry Frederick/Avatar Frederick/Lissa Frederick/Sully Frederick/Miriel Frederick/Sumia Frederick/Maribelle Frederick/Panne Frederick/Cordelia Frederick/Nowi Frederick/Tharja Frederick/Olivia Frederick/Cherche Sully/Avatar Sully/Chrom Sully/Frederick Sully/Virion Sully/Stahl Sully/Vaike Sully/Kellam Sully/Donnel Sully/Lon'qu Sully/Ricken Sully/Gaius Sully/Gregor Sully/Libra Sully/Henry Virion/Avatar Virion/Lissa Virion/Sully Virion/Miriel Virion/Maribelle Virion/Panne Virion/Cordelia Virion/Nowi Virion/Tharja Virion/Olivia Virion/Cherche Stahl/Avatar Stahl/Lissa Stahl/Sully Stahl/Miriel Stahl/Maribelle Stahl/Panne Stahl/Cordelia Stahl/Nowi Stahl/Tharja Stahl/Olivia Stahl/Cherche Vaike/Avatar Vaike/Lissa Vaike/Sully Vaike/Miriel Vaike/Maribelle Vaike/Panne Vaike/Cordelia Vaike/Nowi Vaike/Tharja Vaike/Olivia Vaike/Cherche Miriel/Avatar Miriel/Frederick Miriel/Virion Miriel/Stahl Miriel/Vaike Miriel/Kellam Miriel/Donnel Miriel/Lon'qu Miriel/Ricken Miriel/Gaius Miriel/Gregor Miriel/Libra Miriel/Henry Sumia/Avatar Sumia/Chrom Sumia/Frederick Sumia/Gaius Sumia/Henry Kellam/Avatar Kellam/Lissa Kellam/Sully Kellam/Miriel Kellam/Sumia Kellam/Maribelle Kellam/Panne Kellam/Cordelia Kellam/Nowi Kellam/Tharja Kellam/Olivia Kellam/Cherche Donnel/Avatar Donnel/Lissa Donnel/Sully Donnel/Miriel Donnel/Maribelle Donnel/Panne Donnel/Cordelia Donnel/Nowi Donnel/Tharja Donnel/Olivia Donnel/Cherche Lon'qu/Avatar Lon'qu/Lissa Lon'qu/Sully Lon'qu/Miriel Lon'qu/Maribelle Lon'qu/Panne Lon'qu/Cordelia Lon'qu/Nowi Lon'qu/Tharja Lon'qu/Olivia Lon'qu/Cherche Ricken/Avatar Ricken/Lissa Ricken/Sully Ricken/Miriel Ricken/Maribelle Ricken/Panne Ricken/Cordelia Ricken/Nowi Ricken/Tharja Ricken/Olivia Ricken/Cherche Maribelle/Avatar Maribelle/Frederick Maribelle/Virion Maribelle/Stahl Maribelle/Vaike Maribelle/Kellam Maribelle/Donnel Maribelle/Lon'qu Maribelle/Ricken Maribelle/Gaius Maribelle/Gregor Maribelle/Libra Maribelle/Henry Panne/Avatar Panne/Frederick Panne/Virion Panne/Stahl Panne/Vaike Panne/Kellam Panne/Donnel Panne/Lon'qu Panne/Ricken Panne/Gaius Panne/Gregor Panne/Libra Panne/Henry Gaius/Avatar Gaius/Lissa Gaius/Sully Gaius/Miriel Gaius/Sumia Gaius/Maribelle Gaius/Panne Gaius/Cordelia Gaius/Nowi Gaius/Tharja Gaius/Olivia Gaius/Cherche Cordelia/Avatar Cordelia/Frederick Cordelia/Virion Cordelia/Stahl Cordelia/Vaike Cordelia/Kellam Cordelia/Donnel Cordelia/Lon'qu Cordelia/Ricken Cordelia/Gaius Cordelia/Gregor Cordelia/Libra Cordelia/Henry Gregor/Avatar Gregor/Lissa Gregor/Sully Gregor/Miriel Gregor/Maribelle Gregor/Panne Gregor/Cordelia Gregor/Nowi Gregor/Tharja Gregor/Olivia Gregor/Cherche Nowi/Avatar Nowi/Frederick Nowi/Virion Nowi/Stahl Nowi/Vaike Nowi/Kellam Nowi/Donnel Nowi/Lon'qu Nowi/Ricken Nowi/Gaius Nowi/Gregor Nowi/Libra Nowi/Henry Libra/Avatar Libra/Lissa Libra/Sully Libra/Miriel Libra/Maribelle Libra/Panne Libra/Cordelia Libra/Nowi Libra/Tharja Libra/Olivia Libra/Cherche Tharja/Avatar Tharja/Frederick Tharja/Virion Tharja/Stahl Tharja/Vaike Tharja/Kellam Tharja/Donnel Tharja/Lon'qu Tharja/Ricken Tharja/Gaius Tharja/Gregor Tharja/Libra Tharja/Henry Olivia/Avatar Olivia/Chrom Olivia/Frederick Olivia/Virion Olivia/Stahl Olivia/Vaike Olivia/Kellam Olivia/Donnel Olivia/Lon'qu Olivia/Ricken Olivia/Gaius Olivia/Gregor Olivia/Libra Olivia/Henry Cherche/Avatar Cherche/Frederick Cherche/Virion Cherche/Stahl Cherche/Vaike Cherche/Kellam Cherche/Donnel Cherche/Lon'qu Cherche/Ricken Cherche/Gaius Cherche/Gregor Cherche/Libra Cherche/Henry Henry/Avatar Henry/Lissa Henry/Sully Henry/Miriel Henry/Sumia Henry/Maribelle Henry/Panne Henry/Cordelia Henry/Nowi Henry/Tharja Henry/Olivia Henry/Cherche Lucina/Avatar Lucina/Owain Lucina/Inigo Lucina/Brady Lucina/Gerome Lucina/Yarne Lucina/Laurent Owain/Avatar Owain/Lucina Owain/Kjelle Owain/Cynthia Owain/Severa Owain/Noire Owain/Nah Inigo/Avatar Inigo/Lucina Inigo/Kjelle Inigo/Cynthia Inigo/Severa Inigo/Noire Inigo/Nah Brady/Avatar Brady/Lucina Brady/Kjelle Brady/Cynthia Brady/Severa Brady/Noire Brady/Nah Kjelle/Avatar Kjelle/Owain Kjelle/Inigo Kjelle/Brady Kjelle/Gerome Kjelle/Yarne Kjelle/Laurent Cynthia/Avatar Cynthia/Owain Cynthia/Inigo Cynthia/Brady Cynthia/Gerome Cynthia/Yarne Cynthia/Laurent Severa/Avatar Severa/Owain Severa/Inigo Severa/Brady Severa/Gerome Severa/Yarne Severa/Laurent Gerome/Avatar Gerome/Lucina Gerome/Kjelle Gerome/Cynthia Gerome/Severa Gerome/Noire Gerome/Nah Morgan/Lucina Morgan/Owain Morgan/Inigo Morgan/Brady Morgan/Kjelle Morgan/Cynthia Morgan/Severa Morgan/Gerome Morgan/Yarne Morgan/Noire Morgan/Nah Yarne/Avatar Yarne/Lucina Yarne/Kjelle Yarne/Cynthia Yarne/Severa Yarne/Noire Yarne/Nah Laurent/Avatar Laurent/Lucina Laurent/Kjelle Laurent/Cynthia Laurent/Severa Laurent/Noire Laurent/Nah Noire/Avatar Noire/Owain Noire/Inigo Noire/Brady Noire/Gerome Noire/Yarne Noire/Laurent Nah/Avatar Nah/Owain Nah/Inigo Nah/Brady Nah/Gerome Nah/Yarne Nah/Laurent Anna/Avatar Say'ri/Avatar Tiki/Avatar Basilio/Avatar Flavia/Avatar Gangrel/Avatar Walhart/Avatar Emmeryn/Avatar Yen'fay/Avatar Aversa/Avatar Priam/Avatar
+		</support>
+		<parents>
+			
+		</parents>
+	</game>
+	<game key="if" name="Fates" wiki="Fire_Emblem:_Fates" alternate="FE14">
+		<description>
+		Trying out the new parsing engine...
+		</description>
+		<credit author="The Fire Emblem Wiki" href="http://fireemblem.wikia.com/wiki/Fire_Emblem_Wikia" name="awesome wiki"/>
+		
+		<mapping>
+			Avatar/Avatar_(Fates)
+			Leo/Leo_(Fates)
+			Arthur/Arthur_(Fates)
+			Ignis/Ignis_(Fates)
+			William/William_(Fates)
+			Luna/Severa
+			Lazward/Inigo
+			Odin/Owain
+		</mapping>
+	</game>
+</data>

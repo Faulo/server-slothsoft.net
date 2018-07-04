@@ -46,59 +46,59 @@
 			<xsl:if test="not(@hidden)">
 				<xsl:attribute name="status-public"/>
 			</xsl:if>
-			<sfm:param name="mod" value="{@name}" />
+			<sfm:param name="version" value="{@name}" />
 			<page name="SaveEditor" title="SavegameEditor" ref="pages/{$game}/editor"
 				status-active="" status-public="">
-				<sfm:param name="preset" value="saveEditor" />
+				<sfm:param name="infosetId" value="editor.save" />
 			</page>
 			<page name="GameEditor" title="GameEditor" ref="pages/{$game}/editor"
 				status-active="" >
-				<sfm:param name="preset" value="gameEditor" />
+				<sfm:param name="infosetId" value="editor.game" />
 			</page>
 			<page name="GameData" title="GameData" ref="pages/{$game}/description" status-active="" status-public="">			
 				<page name="ItemList" title="ItemList" ref="pages/{$game}/resource"
 					status-active="" status-public="">
-					<sfm:param name="id" value="items" />
+					<sfm:param name="infosetId" value="lib.items" />
 				</page>
 				<page name="PCList" title="PCList" ref="pages/{$game}/resource"
 					status-active="" status-public="">
-					<sfm:param name="id" value="pcs" />
+					<sfm:param name="infosetId" value="lib.pcs" />
 				</page>
 				<page name="NPCList" title="NPCList" ref="pages/{$game}/resource"
 					status-active="" status-public="">
-					<sfm:param name="id" value="npcs" />
+					<sfm:param name="infosetId" value="lib.npcs" />
 				</page>
 				<page name="MonsterList" title="MonsterList" ref="pages/{$game}/resource"
 					status-active="" status-public="">
-					<sfm:param name="id" value="monsters" />
+					<sfm:param name="infosetId" value="lib.monsters" />
 				</page>
 				<page name="ClassList" title="ClassList" ref="pages/{$game}/resource"
 					status-active="" status-public="">
-					<sfm:param name="id" value="classes" />
+					<sfm:param name="infosetId" value="lib.classes" />
 				</page>
 				<page name="PortraitList" title="PortraitList" ref="pages/{$game}/resource"
 					status-active="" status-public="">
-					<sfm:param name="id" value="portraits" />
+					<sfm:param name="infosetId" value="lib.portraits" />
 				</page>
 				<page name="Maps2D" title="Maps2D" ref="pages/{$game}/resource"
 					status-active="" status-public="">
-					<sfm:param name="id" value="maps.2d" />
+					<sfm:param name="infosetId" value="lib.maps-2d" />
 				</page>
 				<page name="Maps3D" title="Maps3D" ref="pages/{$game}/resource"
 					status-active="" status-public="">
-					<sfm:param name="id" value="maps.3d" />
+					<sfm:param name="infosetId" value="lib.maps-3d" />
 				</page>
 				<page name="WorldmapLyramion" title="WorldmapLyramion" ref="pages/{$game}/resource"
 					status-active="" >
-					<sfm:param name="id" value="worldmap.lyramion" />
+					<sfm:param name="infosetId" value="lib.worldmap-lyramion" />
 				</page>
 				<page name="WorldmapKire" title="WorldKire" ref="pages/{$game}/resource"
 					status-active="" status-public="">
-					<sfm:param name="id" value="worldmap.kire" />
+					<sfm:param name="infosetId" value="lib.worldmap-kire" />
 				</page>
 				<page name="WorldmapMorag" title="WorldmapMorag" ref="pages/{$game}/resource"
 					status-active="" status-public="">
-					<sfm:param name="id" value="worldmap.morag" />
+					<sfm:param name="infosetId" value="lib.worldmap-morag" />
 				</page>
 			</page>
 		</page>

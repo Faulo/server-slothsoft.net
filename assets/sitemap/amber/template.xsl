@@ -101,6 +101,7 @@
 					<sfm:param name="infosetId" value="lib.worldmap-morag" />
 				</page>
 			</page>
+<!-- 			<page name="GameResource" title="GameResource" ref="//slothsoft@amber/game-resources/amberdata" status-active=""/>			 -->
 		</page>
 	</xsl:template>
 </xsl:stylesheet>

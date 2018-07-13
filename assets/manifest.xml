@@ -40,8 +40,12 @@
     
     
     <directory name="static">
-	    <resource name="heartbeat-for-all-zip" path="heartbeat-for-all/HeartbeatForAll.zip" type="application/zip"/>
-	    <resource name="heartbeat-for-all-unity" path="heartbeat-for-all/Web.unity3d" type="application/vnd.unity"/>
+    	<directory name="heartbeat-for-all">
+    		<resource name="screenshot" type="image/png"/>
+		    <resource name="zip" path="HeartbeatForAll.zip" type="application/zip"/>
+		    <resource name="unity" path="HeartbeatForAll.unity3d" type="application/vnd.unity"/>
+		 </directory>
+		 <resource-directory name="one-piece" type="image/png"/>
     
       <resource-directory name="staff-content" path="staff" type="application/xml"/>
       <resource-directory name="staff-images" path="staff" type="image/png"/>
@@ -214,6 +218,19 @@
 		      <import ref="/api/default" name="default"/>
 		      <use-document ref="//minecraft/log-wrapper" name="content"/>
 		    </fragment>
+	    </fragment>
+	    
+	    <fragment name="whatthehell">
+	    	<fragment name="home">
+		      <import ref="/api/default" name="default"/>
+		      <use-document ref="//whatthehell/html/home" name="content"/>
+		    </fragment>
+	    </fragment>
+	    <fragment name="heartbeat-for-all">
+	      <import ref="/api/default" name="default"/>
+	      <fragment name="content" use="document">
+	        <use-template ref="/xsl/heartbeat-for-all" name="heartbeat-for-all"/>
+	      </fragment>
 	    </fragment>
 	 </fragment>
     

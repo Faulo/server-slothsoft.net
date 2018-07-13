@@ -26,12 +26,11 @@
 			<page name="VideoChatThing" ref="vct-home" module="webrtc" title="VideoChatThing" status-active="" status-public="">
 				<page name="Room" ref="vct-room" title="Room" status-active=""/>
 			</page>
-			<page name="WhatTheHell" title="What The Hell" module="whatthehell" ref="faq" status-active="" status-public="">
-				<page name="Game" title="Game" ref="game" status-active="" status-public=""/>
+			<page name="WhatTheHell" title="What The Hell" ref="pages/whatthehell/home" status-active="" status-public="">
+				<page name="Game" title="Game" ref="game" module="whatthehell" status-active="" status-public=""/>
 			</page>
-			<page name="HeartbeatForAll" title="Heartbeat For All" ref="heartbeat-for-all" status-active="" status-public="">
-				<page name="Game" title="Game" ext="/getResource.php/slothsoft/unity/HeartbeatForAll" status-active="" status-public=""/>
-				
+			<page name="HeartbeatForAll" title="Heartbeat For All" ref="pages/heartbeat-for-all" status-active="" status-public="">
+				<page name="Game" title="Game" ref="static/heartbeat-for-all/unity" status-active="" status-public=""/>
 			</page>
 			<page name="UnicodeMapper" title="Unicode Text Converter" ref="unicode-mapper" status-active="" status-public=""/>
 			<page name="Imprint" title="Impressum" ref="imprint" status-active="" status-public=""/>

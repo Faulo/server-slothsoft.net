@@ -446,4 +446,35 @@
 <p key="Download">Download</p>
 <p key="Downloads">Downloads</p>
 <p key="localhost">localhost</p>
+<p key="heartbeat-for-all/home">
+	<h2>8.4 Game Jam Spiel: Heartbeat For All</h2>
+	<p>
+		Dieses Spiel wurde während des Global Game Jam 2013 entwickelt, das Thema war das Geräusch eines klopfenden Herzens.
+	</p>
+	<p>
+		Das Spiel beginnt in einer kargen Landschaft, die bis auf ein paar regungslose Kreaturen komplett leer zu sein scheint.
+		Kommt man diesen allerdings zu Nahe, weckt der Herzschlag der Spielfigur sie auf, woraufhin sie anfangen der Spielfigur
+		nach zu laufen und die Gegend zu erkunden. Für sie ist sie nämlich nicht leer, sondern voller sonderbarer Objekte,
+		die die Spielfigur nun dank ihnen auch sehen kann. Mit jedem Herzschlag werden die so mitgeführten Kreaturen allerdings
+		älter, und irgendwann können sie nicht mehr laufen, und sterben.
+	</p>
+	<p>
+		Das Spiel stellt den Spieler vor die Wahl, allein in einer trostlosen Welt zu existieren, oder friedfertige Kreaturen aus ihrem Schlaf zu
+		erwecken und mit ihnen die Welt zu entdecken - wohl aber mit dem Wissen, dass sie daran sterben werden.
+	</p>
+	<p>
+		<figure>
+			<img src="/getAsset.php/slothsoft@slothsoft.net/static/heartbeat-for-all/screenshot" alt="Screenshot"/>
+			<figcaption>Die Spielfigur hat einen Freund gefunden und erkundet mit ihr die Welt.</figcaption>
+		</figure>
+	</p>
+	<p>Entwickler:</p>
+	<ul>
+		<li>Alexander Röhrscheid (Programmierung)</li>
+		<li>Daniel Schulz (Programmierung)</li>
+		<li>Daniel van Westen (Audio)</li>
+		<li>Claudia Osthof (Art)</li>
+		<li>Denise Sostre (Art)</li>
+	</ul>
+</p>
 </html>

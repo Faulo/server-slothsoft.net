@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildpath>
-	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-amber"/>
-	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-chat"/>
-	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-core"/>
-	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-dragonage"/>
-	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-farah"/>
-	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-minecraft"/>
-	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-sse"/>
-	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-talesof"/>
-	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-whatthehell"/>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
 	<buildpathentry kind="src" path="src">
 		<attributes>
@@ -210,4 +210,4 @@
 			<attribute name="composer" value="vendor"/>
 		</attributes>
 	</buildpathentry>
-</buildpath>
+<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-amber"/><buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-chat"/><buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-core"/><buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-cron"/><buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-dragonage"/><buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-farah"/><buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-minecraft"/><buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-sse"/><buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-talesof"/><buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-whatthehell"/></buildpath>

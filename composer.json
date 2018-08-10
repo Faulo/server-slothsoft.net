@@ -38,8 +38,5 @@
     "scripts": {
         "post-autoload-dump": "Slothsoft\\Core\\ServerEnvironment::cleanCacheDirectory"
     },
-    "classmap-authoritative": true,
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "version": "1.0.0"
+    "classmap-authoritative": true
 }

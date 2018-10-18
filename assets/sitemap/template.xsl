@@ -37,6 +37,8 @@
 			
 			
 			<xsl:apply-templates select="*[@name='downloads']"/>
+			
+			<page name="sitemap" ref="sitemap" status-active=""/>
 		</domain>
 	</xsl:template>
 	

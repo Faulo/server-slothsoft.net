@@ -49,11 +49,41 @@
 			<sfm:param name="version" value="{@name}" />
 			<page name="SaveEditor" title="SavegameEditor" ref="pages/{$game}/editor"
 				status-active="" status-public="">
-				<sfm:param name="infosetId" value="editor.save" />
+				<sfm:param name="infosetId" value="lib.save" />
 			</page>
-			<page name="GameEditor" title="GameEditor" ref="pages/{$game}/editor"
-				status-active="" >
-				<sfm:param name="infosetId" value="editor.game" />
+			<page name="GameEditor" title="GameEditor" ref="pages/{$game}/description" status-active="" status-public="">	
+				<page name="Dictionaries" title="DictionaryEditor" ref="pages/{$game}/editor"
+					status-active="" status-public="">
+					<sfm:param name="infosetId" value="lib.dictionaries" />
+				</page>
+				<page name="Items" title="ItemEditor" ref="pages/{$game}/editor"
+					status-active="" status-public="">
+					<sfm:param name="infosetId" value="lib.items" />
+				</page>
+				<page name="NPCs" title="NPCEditor" ref="pages/{$game}/editor"
+					status-active="" status-public="">
+					<sfm:param name="infosetId" value="lib.npcs" />
+				</page>
+				<page name="MonsterEditor" title="MonsterEditor" ref="pages/{$game}/editor"
+					status-active="" status-public="">
+					<sfm:param name="infosetId" value="lib.monsters" />
+				</page>
+				<page name="Spells" title="SpellEditor" ref="pages/{$game}/editor"
+					status-active="" status-public="">
+					<sfm:param name="infosetId" value="lib.spells" />
+				</page>
+				<page name="Places" title="PlaceEditor" ref="pages/{$game}/editor"
+					status-active="" status-public="">
+					<sfm:param name="infosetId" value="lib.places" />
+				</page>
+				<page name="Maps" title="MapEditor" ref="pages/{$game}/editor"
+					status-active="" status-public="">
+					<sfm:param name="infosetId" value="lib.maps" />
+				</page>
+				<page name="Extra" title="ExtraEditor" ref="pages/{$game}/editor"
+					status-active="" status-public="">
+					<sfm:param name="infosetId" value="lib.extra" />
+				</page>
 			</page>
 			<page name="GameData" title="GameData" ref="pages/{$game}/description" status-active="" status-public="">			
 				<page name="ItemList" title="ItemList" ref="pages/{$game}/resource"

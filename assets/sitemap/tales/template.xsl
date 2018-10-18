@@ -5,21 +5,18 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/*">
 		<sitemap version="1.0">
-			<page name="Tales" title="Tales" module="talesof" ref="tales-home" status-active="" status-public="">
-				<page name="CraymelEditor" title="Craymel Editor" ref="craymelEditor" status-active="" status-public=""/>
-				<page name="MelnicsTable" title="MelnicsTable" ref="melnicsTable" status-active="" status-public=""/>
-				<page name="MelnicsTest" title="Melnics Test" ref="melnicsTest" status-active="" status-public=""/>
-				<page name="MelnicsTranslator" title="MelnicsTranslator" ref="melnicsTranslator" status-active="" status-public=""/>
+			<page name="Tales" title="Tales" ref="/pages/tales/tales-home" status-active="" status-public="">
+				<page name="CraymelEditor" title="Craymel Editor" ref="/pages/tales/craymelEditor" status-active="" status-public=""/>
+				<page name="MelnicsTable" title="MelnicsTable" ref="/pages/tales/melnicsTable" status-active="" status-public=""/>
+				<page name="MelnicsTest" title="Melnics Test" ref="/pages/tales/melnicsTest" status-active="" status-public=""/>
+				<page name="MelnicsTranslator" title="MelnicsTranslator" ref="/pages/tales/melnicsTranslator" status-active="" status-public=""/>
 			
 			
-				<page name="MagicCarta" title="Magic Carta List" ref="carta" status-active="" status-public=""/>
+				<page name="MagicCarta" title="Magic Carta List" ref="/pages/tales/carta-list" status-active="" status-public=""/>
 				
 				<page name="MagicCarta" title="MagicCarta" ref="mc-home" status-active="">
 					<page name="Wiki" title="MagicCartaWiki" ext="Wiki/" status-active="" status-public=""/>
 				</page>
-				
-				<page name="LinkHeroes" title="LinkHeroes" ref="link-heroes" status-active="" status-public=""/>
-				<page name="LinkPulls" title="LinkPulls" ref="link-pulls" status-active="" status-public=""/>
 			</page>
 			
 			

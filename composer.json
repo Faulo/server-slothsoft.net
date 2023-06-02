@@ -25,7 +25,8 @@
         "slothsoft/minecraft": "*",
         "slothsoft/sse": "*",
         "slothsoft/talesof": "*",
-        "slothsoft/whatthehell": "*"
+        "slothsoft/whatthehell": "*",
+        "google/apiclient": "^2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.5"

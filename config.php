@@ -18,4 +18,5 @@ ServerEnvironment::setLogDirectory(__DIR__ . DIRECTORY_SEPARATOR . 'log');
 ServerEnvironment::setDataDirectory(__DIR__ . DIRECTORY_SEPARATOR . 'data');
 
 Kernel::setCurrentSitemap('farah://slothsoft@slothsoft.net/sitemap');
+Kernel::setTrackingEnabled(true);
 Dictionary::setSupportedLanguages('en-us', 'de-de');

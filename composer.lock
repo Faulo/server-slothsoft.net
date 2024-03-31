@@ -2111,16 +2111,16 @@
         },
         {
             "name": "slothsoft/blob",
-            "version": "1.1.0",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-blob.git",
-                "reference": "8e1dcc6815e5e7fb3b9e67f38a8defb74c7b0e1c"
+                "reference": "84ffd31925b41b85c09435f8bddfd07f90b54acf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-blob/zipball/8e1dcc6815e5e7fb3b9e67f38a8defb74c7b0e1c",
-                "reference": "8e1dcc6815e5e7fb3b9e67f38a8defb74c7b0e1c",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-blob/zipball/84ffd31925b41b85c09435f8bddfd07f90b54acf",
+                "reference": "84ffd31925b41b85c09435f8bddfd07f90b54acf",
                 "shasum": ""
             },
             "require": {
@@ -2134,7 +2134,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-develop": "1.0.x-dev"
+                    "dev-develop": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -2163,22 +2163,22 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-blob/issues",
-                "source": "https://github.com/Faulo/slothsoft-blob/tree/1.1.0"
+                "source": "https://github.com/Faulo/slothsoft-blob/tree/1.1.3"
             },
-            "time": "2023-08-28T15:31:08+00:00"
+            "time": "2024-03-31T23:21:23+00:00"
         },
         {
             "name": "slothsoft/chat",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-chat.git",
-                "reference": "b362ea76ddee8f1255531dc76b0c7086be7f3f11"
+                "reference": "94a68f7ed0e3260ea08c05df56a4b511c91f44e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-chat/zipball/b362ea76ddee8f1255531dc76b0c7086be7f3f11",
-                "reference": "b362ea76ddee8f1255531dc76b0c7086be7f3f11",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-chat/zipball/94a68f7ed0e3260ea08c05df56a4b511c91f44e8",
+                "reference": "94a68f7ed0e3260ea08c05df56a4b511c91f44e8",
                 "shasum": ""
             },
             "require": {
@@ -2210,6 +2210,7 @@
                 }
             ],
             "description": "A Farah module that renders a simple shoutbox.",
+            "homepage": "http://farah.slothsoft.net/modules/chat",
             "keywords": [
                 "docs",
                 "farah-module",
@@ -2217,22 +2218,22 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-chat/issues",
-                "source": "https://github.com/Faulo/slothsoft-chat/tree/master"
+                "source": "https://github.com/Faulo/slothsoft-chat/tree/1.0.2"
             },
-            "time": "2018-08-10T13:45:17+00:00"
+            "time": "2024-03-31T23:15:36+00:00"
         },
         {
             "name": "slothsoft/core",
-            "version": "1.11.0",
+            "version": "1.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-core.git",
-                "reference": "65f086f91054cb00753b5ecdce561b39610d85be"
+                "reference": "16624e8ef515fe3f8312ce8976a690e341310f2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-core/zipball/65f086f91054cb00753b5ecdce561b39610d85be",
-                "reference": "65f086f91054cb00753b5ecdce561b39610d85be",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-core/zipball/16624e8ef515fe3f8312ce8976a690e341310f2c",
+                "reference": "16624e8ef515fe3f8312ce8976a690e341310f2c",
                 "shasum": ""
             },
             "require": {
@@ -2257,7 +2258,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-develop": "1.10.x-dev"
+                    "dev-develop": "1.11.x-dev"
                 }
             },
             "autoload": {
@@ -2286,9 +2287,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-core/issues",
-                "source": "https://github.com/Faulo/slothsoft-core/tree/1.11.0"
+                "source": "https://github.com/Faulo/slothsoft-core/tree/1.11.2"
             },
-            "time": "2023-08-28T15:30:02+00:00"
+            "time": "2024-03-31T23:16:08+00:00"
         },
         {
             "name": "slothsoft/cron",
@@ -2345,16 +2346,16 @@
         },
         {
             "name": "slothsoft/dragonage",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-dragonage.git",
-                "reference": "271aa4678601d5f66d4d008e6335e318522e52c8"
+                "reference": "26d08c551b1c36ece679c3b9515fce8635d8ffcd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-dragonage/zipball/271aa4678601d5f66d4d008e6335e318522e52c8",
-                "reference": "271aa4678601d5f66d4d008e6335e318522e52c8",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-dragonage/zipball/26d08c551b1c36ece679c3b9515fce8635d8ffcd",
+                "reference": "26d08c551b1c36ece679c3b9515fce8635d8ffcd",
                 "shasum": ""
             },
             "require": {
@@ -2385,15 +2386,16 @@
                 }
             ],
             "description": "A Farah module that blabla Dragon Age.",
+            "homepage": "http://farah.slothsoft.net/modules/dragonage",
             "keywords": [
                 "farah-module",
                 "slothsoft"
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-dragonage/issues",
-                "source": "https://github.com/Faulo/slothsoft-dragonage/tree/master"
+                "source": "https://github.com/Faulo/slothsoft-dragonage/tree/1.0.2"
             },
-            "time": "2018-08-10T13:45:58+00:00"
+            "time": "2024-03-31T23:16:41+00:00"
         },
         {
             "name": "slothsoft/farah",
@@ -2474,16 +2476,16 @@
         },
         {
             "name": "slothsoft/minecraft",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-minecraft.git",
-                "reference": "f57f2ec07f3ea52160bb291f55b1de14e4122b4d"
+                "reference": "25ce1cf3acd70748551ae37fca2a323eac546a7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-minecraft/zipball/f57f2ec07f3ea52160bb291f55b1de14e4122b4d",
-                "reference": "f57f2ec07f3ea52160bb291f55b1de14e4122b4d",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-minecraft/zipball/25ce1cf3acd70748551ae37fca2a323eac546a7b",
+                "reference": "25ce1cf3acd70748551ae37fca2a323eac546a7b",
                 "shasum": ""
             },
             "require": {
@@ -2515,6 +2517,7 @@
                 }
             ],
             "description": "A Farah module containing the Minecraft section of slothsoft.net.",
+            "homepage": "http://farah.slothsoft.net/modules/minecraft",
             "keywords": [
                 "docs",
                 "farah-module",
@@ -2522,9 +2525,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-minecraft/issues",
-                "source": "https://github.com/Faulo/slothsoft-minecraft/tree/master"
+                "source": "https://github.com/Faulo/slothsoft-minecraft/tree/1.0.2"
             },
-            "time": "2018-08-10T13:46:52+00:00"
+            "time": "2024-03-31T23:17:47+00:00"
         },
         {
             "name": "slothsoft/savegame",
@@ -2591,16 +2594,16 @@
         },
         {
             "name": "slothsoft/sse",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-sse.git",
-                "reference": "833032f73bb37ae96ed848dbdfe16e77f7477512"
+                "reference": "d80ebd7c048764f466480531567c9b0add0a4f35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-sse/zipball/833032f73bb37ae96ed848dbdfe16e77f7477512",
-                "reference": "833032f73bb37ae96ed848dbdfe16e77f7477512",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-sse/zipball/d80ebd7c048764f466480531567c9b0add0a4f35",
+                "reference": "d80ebd7c048764f466480531567c9b0add0a4f35",
                 "shasum": ""
             },
             "require": {
@@ -2632,6 +2635,7 @@
                 }
             ],
             "description": "A Farah module for server-sent events.",
+            "homepage": "http://farah.slothsoft.net/modules/sse",
             "keywords": [
                 "docs",
                 "farah-module",
@@ -2639,22 +2643,22 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-sse/issues",
-                "source": "https://github.com/Faulo/slothsoft-sse/tree/master"
+                "source": "https://github.com/Faulo/slothsoft-sse/tree/1.0.2"
             },
-            "time": "2018-08-10T13:53:21+00:00"
+            "time": "2024-03-31T23:19:11+00:00"
         },
         {
             "name": "slothsoft/talesof",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-talesof.git",
-                "reference": "bb74852265efa44b2a508cfd4790e80724cb0859"
+                "reference": "ab8d959a1a765249a40573968038030d17cdecb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-talesof/zipball/bb74852265efa44b2a508cfd4790e80724cb0859",
-                "reference": "bb74852265efa44b2a508cfd4790e80724cb0859",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-talesof/zipball/ab8d959a1a765249a40573968038030d17cdecb0",
+                "reference": "ab8d959a1a765249a40573968038030d17cdecb0",
                 "shasum": ""
             },
             "require": {
@@ -2686,6 +2690,7 @@
                 }
             ],
             "description": "A Farah module that processes Tales stuff.",
+            "homepage": "http://farah.slothsoft.net/modules/talesof",
             "keywords": [
                 "docs",
                 "farah-module",
@@ -2693,22 +2698,22 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-talesof/issues",
-                "source": "https://github.com/Faulo/slothsoft-talesof/tree/master"
+                "source": "https://github.com/Faulo/slothsoft-talesof/tree/1.0.2"
             },
-            "time": "2018-08-10T13:53:42+00:00"
+            "time": "2024-03-31T23:19:27+00:00"
         },
         {
             "name": "slothsoft/w3c",
-            "version": "1.2.0",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-w3c.git",
-                "reference": "2da5c45d2b937c2bc35c8e9a4d5322507351ae06"
+                "reference": "ebfe0b99ebf902163e744d42449f5bdbb12347b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-w3c/zipball/2da5c45d2b937c2bc35c8e9a4d5322507351ae06",
-                "reference": "2da5c45d2b937c2bc35c8e9a4d5322507351ae06",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-w3c/zipball/ebfe0b99ebf902163e744d42449f5bdbb12347b1",
+                "reference": "ebfe0b99ebf902163e744d42449f5bdbb12347b1",
                 "shasum": ""
             },
             "require": {
@@ -2720,7 +2725,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-develop": "1.1.x-dev"
+                    "dev-develop": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -2746,22 +2751,22 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-w3c/issues",
-                "source": "https://github.com/Faulo/slothsoft-w3c/tree/1.2.0"
+                "source": "https://github.com/Faulo/slothsoft-w3c/tree/1.2.2"
             },
-            "time": "2023-08-28T15:29:10+00:00"
+            "time": "2024-03-31T23:20:32+00:00"
         },
         {
             "name": "slothsoft/whatthehell",
-            "version": "1.0.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-whatthehell.git",
-                "reference": "3286476f9356af975d4751b2ff912adceac53460"
+                "reference": "56dfc068fc3f1663f5c7b19e70c4e26a93d5eb92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-whatthehell/zipball/3286476f9356af975d4751b2ff912adceac53460",
-                "reference": "3286476f9356af975d4751b2ff912adceac53460",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-whatthehell/zipball/56dfc068fc3f1663f5c7b19e70c4e26a93d5eb92",
+                "reference": "56dfc068fc3f1663f5c7b19e70c4e26a93d5eb92",
                 "shasum": ""
             },
             "require": {
@@ -2792,6 +2797,7 @@
                 }
             ],
             "description": "A Farah module that contains the game What the Hell, God?",
+            "homepage": "http://farah.slothsoft.net/modules/whatthehell",
             "keywords": [
                 "docs",
                 "farah-module",
@@ -2799,9 +2805,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-whatthehell/issues",
-                "source": "https://github.com/Faulo/slothsoft-whatthehell/tree/master"
+                "source": "https://github.com/Faulo/slothsoft-whatthehell/tree/1.0.2"
             },
-            "time": "2018-08-10T13:59:52+00:00"
+            "time": "2024-03-31T23:21:05+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",

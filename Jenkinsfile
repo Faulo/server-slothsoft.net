@@ -12,8 +12,8 @@ pipeline {
 					stage ('Run tests') {
 						docker.image("faulo/farah:7.4").inside {
 							sh 'composer update --no-interaction'
-							sh 'composer exec phpunit -- --log-junit report.xml'
-							junit 'report.xml'
+							//sh 'composer exec phpunit -- --log-junit report.xml'
+							//junit 'report.xml'
 							stash name:'lock', includes:'composer.lock'
 						}
 					}

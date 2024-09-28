@@ -1,52 +1,47 @@
 {
-	"name": "slothsoft/test.slothsoft.net",
-	"type": "project",
-	"description": "slothsoft.net",
-	"license": "MIT",
-	"keywords": [
+	"name" : "slothsoft/test.slothsoft.net",
+	"type" : "project",
+	"description" : "slothsoft.net",
+	"license" : "MIT",
+	"keywords" : [
 		"slothsoft",
 		"farah-module",
 		"farah-server"
 	],
-	"autoload": {
-		"files": [
-			"config.php",
-			"src/registerModule.php"
+	"autoload" : {
+		"files" : [
+			"src/bootstrap.php"
 		]
 	},
-	"require": {
-		"php": "^7.2",
-		"slothsoft/amber": "*",
-		"slothsoft/chat": "*",
-		"slothsoft/core": "^1.11",
-		"slothsoft/cron": "*",
-		"slothsoft/dragonage": "*",
-		"slothsoft/farah": "^1.5",
-		"slothsoft/minecraft": "*",
-		"slothsoft/sse": "*",
-		"slothsoft/talesof": "*",
-		"slothsoft/whatthehell": "*",
-		"google/apiclient": "^2.0"
+	"require" : {
+		"slothsoft/amber" : "*",
+		"slothsoft/chat" : "*",
+		"slothsoft/core" : "^1.11",
+		"slothsoft/cron" : "*",
+		"slothsoft/dragonage" : "*",
+		"slothsoft/farah" : "^1.12",
+		"slothsoft/minecraft" : "*",
+		"slothsoft/sse" : "*",
+		"slothsoft/talesof" : "*",
+		"slothsoft/whatthehell" : "*",
+		"google/apiclient" : "^2.0"
 	},
-	"require-dev": {
-		"phpunit/phpunit": "^6.5"
+	"require-dev" : {
+		"phpunit/phpunit" : "^6.5"
 	},
-	"autoload-dev": {
-		"classmap": [
+	"autoload-dev" : {
+		"classmap" : [
 			"tests/"
 		]
 	},
-	"scripts": {
-		"post-autoload-dump": "composer exec server-clean cache",
-		"farah-asset": "@php vendor/slothsoft/farah/scripts/farah-asset.php",
-		"farah-page": "@php vendor/slothsoft/farah/scripts/farah-page.php"
+	"scripts" : {
+		"farah-asset" : "@php vendor/slothsoft/farah/scripts/farah-asset.php",
+		"farah-page" : "@php vendor/slothsoft/farah/scripts/farah-page.php"
 	},
-	"classmap-authoritative": true,
-	"authors": [
-		{
-			"name": "Daniel Schulz",
-			"email": "info.slothsoft@gmail.com"
+	"authors" : [{
+			"name" : "Daniel Schulz",
+			"email" : "info.slothsoft@gmail.com"
 		}
 	],
-	"homepage": "http://test.slothsoft.net"
+	"homepage" : "http://test.slothsoft.net"
 }

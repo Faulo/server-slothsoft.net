@@ -1,592 +1,592 @@
 <?xml version="1.0"?>
-<assets xmlns="http://schema.slothsoft.net/farah/module">
+<assets xmlns="http://schema.slothsoft.net/farah/module" version="1.1">
 	<directory name="bug-210">
-		<resource use="template" name="template" type="application/xslt+xml"/>
+		<resource use="template" name="template" type="application/xslt+xml" />
 	</directory>
 
-    <resource-directory name="css" type="text/css"/>
-    <resource-directory name="js" type="application/javascript"/>
-    <resource-directory name="xsl" type="application/xslt+xml"/>
-    
-    <resource-directory name="dictionary" type="application/xml"/>
-    <directory name="sitemap">
-    	<resource use="template" name="template" type="application/xslt+xml"/>
-    		
-    	<directory use="document" name="minecraft">
-			<resource use="template" name="template" type="application/xslt+xml"/>
-    		<use-document ref="//slothsoft@minecraft/data/sites.log" name="sites.log"/>
-    	</directory>    	
-    	<directory use="document" name="amber">
-    		<resource use="template" name="template" type="application/xslt+xml"/>
-    		<use-document ref="//slothsoft@amber/games/index" name="index"/>
-    	</directory>    	
-    	<directory use="document" name="tales">
-    		<resource use="template" name="template" type="application/xslt+xml"/>
-    	</directory>
-    	<directory use="document" name="fire-emblem">
-    		<resource use="template" name="template" type="application/xslt+xml"/>
-    	</directory>
-    	<directory use="document" name="dragon-age">
-			<resource use="template" name="template" type="application/xslt+xml"/>
-    	</directory>
-    	<directory use="document" name="vocab">
-    		<resource use="template" name="template" type="application/xslt+xml"/>
-    	</directory>
-    	<directory use="document" name="downloads">
-    		<resource use="template" name="template" type="application/xslt+xml"/>
-    	</directory>
-    	<directory use="document" name="backend">
-    		<resource use="template" name="template" type="application/xslt+xml"/>
-    	</directory>
-    </directory>
-    
-    
-    
-    
-    <directory name="static">
-    	<directory name="heartbeat-for-all">
-    		<resource name="screenshot" type="image/png"/>
-		    <resource name="zip" path="HeartbeatForAll.zip" type="application/zip"/>
-		    <resource name="unity" path="HeartbeatForAll.unity3d" type="application/vnd.unity"/>
-		 </directory>
-		 <resource-directory name="one-piece" type="image/png"/>
-    
-      <resource-directory name="staff-content" path="staff" type="application/xml"/>
-      <resource-directory name="staff-images" path="staff" type="image/png"/>
-      <resource name="owner" path="owner.xml" type="application/xml"/>
-      <resource name="finnish-faulo" path="finnish.faulo.xhtml" type="application/xhtml+xml"/>
-      <resource name="japanese-faulo" path="japanese.faulo.xhtml" type="application/xhtml+xml"/>
-      <resource name="japanese-faulo-verbs" path="japanese.faulo.verbs.xml" type="application/xml"/>
-      <resource name="english-julia" path="english.julia.xhtml" type="application/xhtml+xml"/>
-      <resource name="kana" path="kana.xml" type="application/xml"/>
-      <resource name="vocab.kanji.map" path="vocab.kanji.map.svg" type="image/svg+xml"/>
-      <resource name="pc" path="pc.xml" type="application/xml"/>
-      <resource name="prefFonts" path="fonts.json" type="application/json"/>
-      <resource-directory name="fonts" path="fonts" type="application/font-sfnt"/>
-      <resource-directory name="icons" path="icons" type="image/png"/>
-      <resource-directory name="system-fonts" path="system-fonts" type="application/font-sfnt"/>
-      <resource-directory name="language-images" path="lang" type="image/svg+xml"/>
-      <resource name="lang-de-de" path="lang/de-de.svg" type="image/svg+xml"/>
-      <resource name="lang-en-us" path="lang/en-us.svg" type="image/svg+xml"/>
-      <resource name="lang-ja-jp" path="lang/ja-jp.svg" type="image/svg+xml"/>
-      <resource-directory name="lang" path="lang" type="image/svg+xml"/>
-      <resource name="fire-emblem" path="fire-emblem.xml" type="application/xml"/>
-      <resource-directory name="fire-emblem-data" path="fire-emblem" type="text/csv">
-        <options del="|" sep="" output="table" min-length="1"/>
-      </resource-directory>
-      <resource-directory name="fire-emblem-por" path="fire-emblem-por" type="text/csv">
-        <options del="|" sep="" output="table" min-length="1"/>
-      </resource-directory>
-      <resource-directory name="fire-emblem-sd" path="fire-emblem-sd" type="text/csv">
-        <options del="|" sep="" output="table" min-length="1"/>
-      </resource-directory>
-      <resource-directory name="fire-emblem-bs" path="fire-emblem-bs" type="text/csv">
-        <options del="|" sep="" output="table" min-length="1"/>
-      </resource-directory>
-      <resource-directory name="fire-emblem-ss" path="fire-emblem-ss" type="text/csv">
-        <options del="|" sep="" output="table" min-length="1"/>
-      </resource-directory>
-      <resource-directory name="fire-emblem-aw" path="fire-emblem-aw" type="text/csv">
-        <options del="|" sep="" output="table" min-length="1"/>
-      </resource-directory>
-      <resource-directory name="fire-emblem-rd" path="fire-emblem-rd" type="text/csv">
-        <options del="|" sep="" output="table" min-length="1"/>
-      </resource-directory>
-      <resource name="fire-emblem-shadow-dragon" path="FireEmblemShadowDragon.csv" type="text/csv">
-        <options del="|" sep="" cols="13" output="table"/>
-      </resource>
-      <resource name="fire-emblem-shadow-dragon2" path="FireEmblemShadowDragon2.csv" type="text/csv">
-        <options del="|" sep="" cols="9" output="table"/>
-      </resource>
-      <resource name="fire-emblem-path-of-radiance" path="FireEmblemPathOfRadiance.csv" type="text/csv">
-        <options del="|" sep="" cols="9" output="table"/>
-      </resource>
-      <resource name="fire-emblem-path-of-radiance2" path="FireEmblemPathOfRadiance2.txt" type="text/plain"/>
-      <resource name="unicode-mapper" path="unicode-mapper.xml" type="application/xml"/>
-      <resource name="unicode-mapping" path="unicode-mapping.xml" type="application/xml"/>
-      <resource-directory name="pics" path="pics" type="image/png"/>
-      <resource name="favicon" path="favicon.png" type="image/png"/>
-      <resource-directory name="games" path="games" type="application/zip"/>
-      <resource-directory name="unity" path="games" type="application/vnd.unity"/>
-      <resource-directory name="music-mp3" path="music-mp3" type="audio/mpeg"/>
-      <resource-directory name="music-lyrics" path="music-lyrics" type="text/plain"/>
-      <resource-directory name="vocab-ja" path="vocab-ja" type="audio/mpeg"/>
-      <resource-directory name="vocab-jlpt" path="vocab-jlpt" type="application/xhtml+xml"/>
-      <resource name="grammar-ja" path="japanese.grammar.xml" type="application/xml"/>
-    </directory>
-    
-    <fragment name="shoutboxes">
-    	<use-document ref="//chat/api/shoutbox?chat-duration=3650" name="slothsoft">
-    		<param name="chat-database" value="slothsoft"/>
-    	</use-document>
-    	<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=tales" name="tales"/>
-    	<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=amber" name="amber"/>
-    	<use-document ref="//chat/api/shoutbox?chat-duration=90&amp;chat-database=minecraft" name="minecraft"/>
-    	<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=fire-emblem" name="fire-emblem"/>
-    	<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=archive" name="archive"/>
-    	<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=vct" name="vct"/>
-    </fragment>
-    
-    
-    
-    <fragment name="pages">
-	    <fragment name="ambermoon">
-	    	<fragment name="description">
-		      <import ref="/api/default"/>
-		      <use-document ref="//amber/html/description" name="content"/>
-		      <use-document ref="/shoutboxes/amber" name="chat"/>
-	    	</fragment>
-	    	<fragment name="editor">
-		      <import ref="/api/default"/>
-		      <use-document ref="//amber/html/editor" name="content"/>
-		    </fragment>
-	    	<fragment name="resource">
-		      <import ref="/api/default"/>
-		      <use-document ref="//amber/html/resource" name="content"/>
-		    </fragment>
-		    <fragment name="chat">
-		      <import ref="/api/default"/>
-		      <use-document ref="/shoutboxes/amber" name="content"/>
-		    </fragment>
-	    </fragment>
-	    
-	    <fragment name="dragon-age">
-	    	<fragment name="home">
-		      <import ref="/api/default"/>
-		      <use-document ref="//dragonage/html/home" name="content"/>
-		      <use-document ref="/shoutboxes/slothsoft" name="chat"/>
-	    	</fragment>
-	    	<fragment name="combos">
-		      <import ref="/api/default"/>
-		      <use-document ref="//dragonage/html/combos" name="content"/>
-	    	</fragment>
-	    </fragment>
-	    
-	    <fragment name="tales">
-	    	<fragment name="tales-home">
-		      <import ref="/api/default"/>
-		      <use-document ref="//talesof/html/home" name="content"/>
-		      <use-document ref="/shoutboxes/tales" name="chat"/>
-		    </fragment>
-	    	<fragment name="eternia-home">
-		      <import ref="/api/default"/>
-		      <use-document ref="//talesof/html/eternia/home" name="content"/>
-		      <use-document ref="/shoutboxes/tales" name="chat"/>
-		    </fragment>
-	    	<fragment name="graces-home">
-		      <import ref="/api/default"/>
-		      <use-document ref="//talesof/html/graces/home" name="content"/>
-		      <use-document ref="/shoutboxes/tales" name="chat"/>
-		    </fragment>
-	    	<fragment name="craymelEditor">
-		      <import ref="/api/default"/>
-		      <use-document ref="//talesof/html/eternia/craymels" name="content"/>
-		      <use-document ref="/shoutboxes/tales" name="chat"/>
-		    </fragment>
-	    	<fragment name="melnicsTest">
-		      <import ref="/api/default"/>
-		      <use-document ref="//talesof/html/melnics/test" name="content"/>
-		      <use-document ref="/shoutboxes/tales" name="chat"/>
-		    </fragment>
-	    	<fragment name="melnicsTable">
-		      <import ref="/api/default"/>
-		      <use-document ref="//talesof/html/melnics/table" name="content"/>
-		      <use-document ref="/shoutboxes/tales" name="chat"/>
-		    </fragment>
-	    	<fragment name="melnicsTranslator">
-		      <import ref="/api/default"/>
-		      <use-document ref="//talesof/html/melnics/translator" name="content"/>
-		      <use-document ref="/shoutboxes/tales" name="chat"/>
-		    </fragment>
-	    	<fragment name="carta-home">
-		      <import ref="/api/default"/>
-		      <use-document ref="//talesof/html/carta/home" name="content"/>
-		      <use-document ref="/shoutboxes/tales" name="chat"/>
-		    </fragment>
-	    	<fragment name="carta-list">
-		      <import ref="/api/default"/>
-		      <use-document ref="//talesof/html/carta/list" name="content"/>
-		      <use-document ref="/shoutboxes/tales" name="chat"/>
-		    </fragment>
-	    </fragment>
-	    
-	    <fragment name="minecraft">
-	    	<fragment name="home">
-		      <import ref="/api/default"/>
-		      <fragment name="content">
-		        <import ref="//minecraft/html/home"/>
-		        <use-document ref="/shoutboxes/minecraft" name="chat-short"/>
-		      </fragment>
-		    </fragment>
-	    	<fragment name="log">
-		      <import ref="/api/default"/>
-		      <use-document ref="//minecraft/log-wrapper" name="content"/>
-		    </fragment>
-	    </fragment>
-	    
-	    <fragment name="whatthehell">
-	    	<fragment name="home">
-		      <import ref="/api/default"/>
-		      <use-document ref="//whatthehell/html/home" name="content"/>
-		    </fragment>
-	    </fragment>
-	    <fragment name="heartbeat-for-all">
-	      <import ref="/api/default"/>
-	      <fragment name="content" use="document">
-	        <use-template ref="/xsl/heartbeat-for-all"/>
-	      </fragment>
-	    </fragment>
-	 </fragment>
-    
-    
-    
-    
-    
-    <fragment name="empty">
-      <import ref="/api/default"/>
-    </fragment>
-    <fragment name="home">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/home"/>
-      </fragment>
-      <use-document ref="/shoutboxes/slothsoft" name="chat"/>
-    </fragment>
-    <fragment name="about-us">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/about-us"/>
-        <use-document ref="/static/staff-content" name="staff-content"/>
-        <use-document ref="//slothsoft@farah/request" name="request"/>
-      </fragment>
-    </fragment>
-    <fragment name="chat-list">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/chat-list"/>
-        <fragment name="chat" use="document">
-	        <use-document ref="/shoutboxes/slothsoft" name="slothsoft"/>
-	        <use-document ref="/shoutboxes/minecraft" name="minecraft"/>
-	        <use-document ref="/shoutboxes/amber" name="amber"/>
-	        <use-document ref="/shoutboxes/tales" name="tales"/>
-	        <use-document ref="/shoutboxes/fire-emblem" name="fire-emblem"/>
-	    </fragment>
-      </fragment>
-    </fragment>
-    <fragment name="imprint">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/address"/>
-        <use-document ref="/static/owner" name="owner"/>
-      </fragment>
-    </fragment>
-    <fragment name="navi">
-      <use-template ref="/xsl/navi"/>
-      <use-document ref="//farah/sites" name="sites"/>
-    </fragment>
-    <fragment name="pc">
-      <param name="standalone" scope="global"/>
-      <use-template ref="/xsl/_pc"/>
-      <!-- <use-document ref="/data/pc"/> -->
-      <link-stylesheet ref="/css/default"/>
-      <link-stylesheet ref="/css/fonts"/>
-      <import ref="//core/api/HTML5"/>
-    </fragment>
-    <fragment name="validator">
-      <use-template ref="/xsl/w3c.validator"/>
-    </fragment>
-    <fragment name="dict.select">
-      <use-template ref="/xsl/dict.select"/>
-      <use-document ref="/static/language-images" name="language-images"/>
-    </fragment>
-    <fragment name="archive">
-      <use-template ref="/xsl/_archive"/>
-      <!-- <use-document ref="/data/archive"/> -->
-      <link-stylesheet ref="/css/default"/>
-      <link-stylesheet ref="/css/layout"/>
-      <link-stylesheet ref="/css/fonts"/>
-      <link-stylesheet ref="/css/colors"/>
-      <link-stylesheet ref="/css/archive"/>
-      <import ref="//sse/api/client"/>
-      <link-script ref="/js/Unison"/>
-      <use-document ref="/shoutboxes/archive" name="chat"/>
-      <import ref="//core/api/HTML5"/>
-    </fragment>
-    <fragment name="archive-hentai">
-      <use-template ref="/xsl/_archive.hentai"/>
-      <!-- <use-document ref="/data/archive.hentai"/> -->
-      <link-stylesheet ref="/css/default"/>
-      <link-stylesheet ref="/css/layout"/>
-      <link-stylesheet ref="/css/fonts"/>
-      <link-stylesheet ref="/css/colors"/>
-      <link-stylesheet ref="/css/archive"/>
-    </fragment>
-    <fragment name="archive-manga">
-      <use-template ref="/xsl/_archive.hentai"/>
-      <!-- <use-document ref="/data/archive.manga"/> -->
-      <link-stylesheet ref="/css/default"/>
-      <link-stylesheet ref="/css/layout"/>
-      <link-stylesheet ref="/css/fonts"/>
-      <link-stylesheet ref="/css/colors"/>
-      <link-stylesheet ref="/css/archive"/>
-    </fragment>
-    <fragment name="unicode-mapper">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <import ref="//core/api/DOM"/>
-        <link-script ref="/js/UnicodeMapper"/>
-        <use-template ref="/xsl/unicode-mapper"/>
-      </fragment>
-    </fragment>
-    <fragment name="kana-home">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-document ref="//farah/sites" name="sites"/>
-        <use-template ref="/xsl/kana-home"/>
-      </fragment>
-    </fragment>
-    <fragment name="kana-table">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/kana"/>
-        <link-stylesheet ref="/css/kana"/>
-        <use-document ref="/static/kana" name="kana"/>
-      </fragment>
-    </fragment>
-    <fragment name="kana-translator">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/kana-translator"/>
-        <link-stylesheet ref="/css/kana"/>
-        <import ref="//core/api/DOM"/>
-        <link-script ref="/js/Translator"/>
-        <use-document ref="/static/kana" name="kana"/>
-      </fragment>
-    </fragment>
-    <fragment name="kana-test">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/kana-test"/>
-        <!-- <use-document ref="/data/kana.test"/> -->
-        <link-stylesheet ref="/css/kana"/>
-        <import ref="//core/api/DOM"/>
-      </fragment>
-    </fragment>
-    <fragment name="kana-vocab">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/kana-vocab"/>
-        <!-- <use-document ref="/data/kana.vocab"/> -->
-        <link-stylesheet ref="/css/kana"/>
-        <import ref="//core/api/DOM"/>
-        <link-script ref="/js/Translator"/>
-        <link-script ref="/js/Vocab"/>
-        <link-script ref="/js/VocabTest"/>
-      </fragment>
-    </fragment>
-    <fragment name="kana-vocab-mobile">
-      <use-template ref="/xsl/_default"/>
-      <use-document ref="//farah/sites" name="sites"/>
-      <link-stylesheet ref="/css/default"/>
-      <link-stylesheet ref="/css/colors"/>
-      <link-stylesheet ref="/css/layout"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/kana-vocab"/>
-        <!--  <use-document ref="/data/kana.vocab"/> -->
-        <link-stylesheet ref="/css/kana"/>
-        <link-stylesheet ref="/css/kana-mobile"/>
-        <import ref="//core/api/DOM"/>
-        <link-script ref="/js/Translator"/>
-        <link-script ref="/js/Vocab"/>
-        <link-script ref="/js/VocabTest"/>
-      </fragment>
-    </fragment>
-    <fragment name="vocab-words-log">
-      <use-template ref="/xsl/vocab-log"/>
-      <!-- <use-document ref="/data/kana.vocab"/> -->
-    </fragment>
-    <fragment name="vocab-kanji-log">
-      <use-template ref="/xsl/vocab-log"/>
-      <!-- <use-document ref="/data/vocab.kanji"/> -->
-    </fragment>
-    <fragment name="vocab-list-add">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/vocab-list-add"/>
-        <!-- <use-document ref="/data/kana.vocab"/> -->
-        <link-stylesheet ref="/css/kana"/>
-        <import ref="//core/api/DOM"/>
-        <link-script ref="/js/Translator"/>
-      </fragment>
-    </fragment>
-    <fragment name="vocab-kanji">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/vocab-kanji"/>
-        <!-- <use-document ref="/data/vocab.kanji"/> -->
-        <link-stylesheet ref="/css/kana"/>
-        <import ref="//core/api/DOM"/>
-        <link-script ref="/js/Translator"/>
-        <link-script ref="/js/Vocab"/>
-        <link-script ref="/js/VocabTest"/>
-      </fragment>
-    </fragment>
-    <fragment name="vocab-kanji-mobile">
-      <use-template ref="/xsl/_default"/>
-      <use-document ref="//farah/sites" name="sites"/>
-      <link-stylesheet ref="/css/default"/>
-      <link-stylesheet ref="/css/colors"/>
-      <link-stylesheet ref="/css/layout"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/vocab-kanji"/>
-        <!-- <use-document ref="/data/vocab.kanji"/> -->
-        <link-stylesheet ref="/css/kana"/>
-        <link-stylesheet ref="/css/kana-mobile"/>
-        <import ref="//core/api/DOM"/>
-        <link-script ref="/js/Translator"/>
-        <link-script ref="/js/Vocab"/>
-        <link-script ref="/js/VocabTest"/>
-      </fragment>
-    </fragment>
-    <fragment name="vocab-words-test">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/vocab.test"/>
-        <!-- <use-document ref="/data/kana.vocab"/> -->
-        <link-stylesheet ref="/css/kana"/>
-        <import ref="//core/api/DOM"/>
-        <link-script ref="/js/Translator"/>
-        <link-script ref="/js/Vocab"/>
-        <link-script ref="/js/VocabTest"/>
-      </fragment>
-    </fragment>
-    <fragment name="vocab-kanji-test">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/vocab.test"/>
-        <!-- <use-document ref="/data/vocab.kanji"/> -->
-        <link-stylesheet ref="/css/kana"/>
-        <import ref="//core/api/DOM"/>
-        <link-script ref="/js/Translator"/>
-        <link-script ref="/js/Vocab"/>
-        <link-script ref="/js/VocabTest"/>
-      </fragment>
-    </fragment>
-    <fragment name="vocab-verbs">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/vocab-grammar"/>
-        <!-- <use-document ref="/data/vocab-grammar-verbs"/> -->
-        <link-stylesheet ref="/css/kana"/>
-        <import ref="//core/api/DOM"/>
-        <link-script ref="/js/Translator"/>
-      </fragment>
-    </fragment>
-    <fragment name="vocab-verbs-old">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/vocab-grammar"/>
-        <use-document ref="/static/japanese-faulo-verbs" name="japanese-faulo-verbs"/>
-        <link-stylesheet ref="/css/kana"/>
-        <import ref="//core/api/DOM"/>
-        <link-script ref="/js/Translator"/>
-      </fragment>
-    </fragment>
-    <fragment name="english-vocab">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/english-vocab"/>
-        <!-- <use-document ref="/data/english.vocab"/> -->
-        <link-stylesheet ref="/css/kana"/>
-        <import ref="//core/api/DOM"/>
-        <link-script ref="/js/Translator"/>
-      </fragment>
-    </fragment>
-    <fragment name="fire-emblem-home">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/fire-emblem-home"/>
-      </fragment>
-      <use-document ref="/shoutboxes/fire-emblem" name="chat"/>
-    </fragment>
-    <fragment name="fire-emblem-breeding">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/fire-emblem-breeding"/>
-        <!-- <use-document ref="/data/fire-emblem"/> -->
-        <link-script ref="/js/FireEmblem"/>
-      </fragment>
-      <use-document ref="/shoutboxes/fire-emblem" name="chat"/>
-    </fragment>
-    <fragment name="fire-emblem-cast">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/fire-emblem-cast"/>
-<!--         <use-document ref="/data/fire-emblem"/> -->
-      </fragment>
-      <use-document ref="/shoutboxes/fire-emblem" name="chat"/>
-    </fragment>
-    <fragment name="backend-colors">
-      <import ref="/api/default"/>
-      <use-document ref="//minecraft/status" name="status"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/backend.colors"/>
-        <link-script ref="/js/CSS"/>
-        <import ref="//core/api/DOM"/>
-        <link-script ref="/js/Backend"/>
-      </fragment>
-    </fragment>
-    <fragment name="deviantart">
-      <use-template ref="/xsl/deviantart"/>
-<!--       <use-document ref="/data/deviantart"/> -->
-      <param name="standalone" scope="global"/>
-    </fragment>
-    <fragment name="heartbeat-for-all">
-      <import ref="/api/default"/>
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/heartbeat-for-all"/>
-      </fragment>
-      <use-document ref="/shoutboxes/slothsoft" name="chat"/>
-    </fragment>
-    <fragment name="heartbeat-for-all.game">
-      <fragment name="content" use="document">
-        <use-template ref="/xsl/heartbeat-for-all.game"/>
-      </fragment>
-      <import ref="/api/default"/>
-    </fragment>
-    <fragment name="music">
-      <param name="standalone" scope="global"/>
-      <link-script ref="//core/js/HTML5"/>
-      <link-stylesheet ref="/css/default"/>
-      <use-document ref="/static/music-mp3" name="music-mp3"/>
-      <use-document ref="/static/music-lyrics" name="music-lyrics"/>
-      <use-template ref="/xsl/_music"/>
-    </fragment>
-    <fragment name="writing">
-      <link-stylesheet ref="/css/fonts"/>
-      <param name="standalone" scope="global"/>
-      <use-template ref="/xsl/writing"/>
-    </fragment>
-    
-    
-    
-    <fragment name="api">
-	    <fragment name="default">
-	      <link-stylesheet ref="/css/default"/>
-	      <link-stylesheet ref="/css/fonts"/>
-	      <link-stylesheet ref="/css/colors"/>
-	      <link-stylesheet ref="/css/layout"/>
-	      <use-template ref="/xsl/_default"/>
-	      <use-document ref="//farah/sites" name="sites"/>
-	      <use-document ref="/navi" name="navi"/>
-	      <use-document ref="/validator" name="validator"/>
-	      <use-document ref="/dict.select" name="dict.select"/>
-	      <import ref="//core/api/HTML5"/>
-	    </fragment>
-    </fragment>
-    
-    
-    
-    
-    
-  </assets>
+	<resource-directory name="css" type="text/css" />
+	<resource-directory name="js" type="application/javascript" />
+	<resource-directory name="xsl" type="application/xslt+xml" />
+
+	<resource-directory name="dictionary" type="application/xml" />
+	<directory name="sitemap">
+		<resource use="template" name="template" type="application/xslt+xml" />
+
+		<directory use="document" name="minecraft">
+			<resource use="template" name="template" type="application/xslt+xml" />
+			<use-document ref="//slothsoft@minecraft/data/sites.log" name="sites.log" />
+		</directory>
+		<directory use="document" name="amber">
+			<resource use="template" name="template" type="application/xslt+xml" />
+			<use-document ref="//slothsoft@amber/games/index" name="index" />
+		</directory>
+		<directory use="document" name="tales">
+			<resource use="template" name="template" type="application/xslt+xml" />
+		</directory>
+		<directory use="document" name="fire-emblem">
+			<resource use="template" name="template" type="application/xslt+xml" />
+		</directory>
+		<directory use="document" name="dragon-age">
+			<resource use="template" name="template" type="application/xslt+xml" />
+		</directory>
+		<directory use="document" name="vocab">
+			<resource use="template" name="template" type="application/xslt+xml" />
+		</directory>
+		<directory use="document" name="downloads">
+			<resource use="template" name="template" type="application/xslt+xml" />
+		</directory>
+		<directory use="document" name="backend">
+			<resource use="template" name="template" type="application/xslt+xml" />
+		</directory>
+	</directory>
+
+
+
+
+	<directory name="static">
+		<directory name="heartbeat-for-all">
+			<resource name="screenshot" type="image/png" />
+			<resource name="zip" path="HeartbeatForAll.zip" type="application/zip" />
+			<resource name="unity" path="HeartbeatForAll.unity3d" type="application/vnd.unity" />
+		</directory>
+		<resource-directory name="one-piece" type="image/png" />
+
+		<resource-directory name="staff-content" path="staff" type="application/xml" />
+		<resource-directory name="staff-images" path="staff" type="image/png" />
+		<resource name="owner" path="owner.xml" type="application/xml" />
+		<resource name="finnish-faulo" path="finnish.faulo.xhtml" type="application/xhtml+xml" />
+		<resource name="japanese-faulo" path="japanese.faulo.xhtml" type="application/xhtml+xml" />
+		<resource name="japanese-faulo-verbs" path="japanese.faulo.verbs.xml" type="application/xml" />
+		<resource name="english-julia" path="english.julia.xhtml" type="application/xhtml+xml" />
+		<resource name="kana" path="kana.xml" type="application/xml" />
+		<resource name="vocab.kanji.map" path="vocab.kanji.map.svg" type="image/svg+xml" />
+		<resource name="pc" path="pc.xml" type="application/xml" />
+		<resource name="prefFonts" path="fonts.json" type="application/json" />
+		<resource-directory name="fonts" path="fonts" type="application/font-sfnt" />
+		<resource-directory name="icons" path="icons" type="image/png" />
+		<resource-directory name="system-fonts" path="system-fonts" type="application/font-sfnt" />
+		<resource-directory name="language-images" path="lang" type="image/svg+xml" />
+		<resource name="lang-de-de" path="lang/de-de.svg" type="image/svg+xml" />
+		<resource name="lang-en-us" path="lang/en-us.svg" type="image/svg+xml" />
+		<resource name="lang-ja-jp" path="lang/ja-jp.svg" type="image/svg+xml" />
+		<resource-directory name="lang" path="lang" type="image/svg+xml" />
+		<resource name="fire-emblem" path="fire-emblem.xml" type="application/xml" />
+		<resource-directory name="fire-emblem-data" path="fire-emblem" type="text/csv">
+			<options del="|" sep="" output="table" min-length="1" />
+		</resource-directory>
+		<resource-directory name="fire-emblem-por" path="fire-emblem-por" type="text/csv">
+			<options del="|" sep="" output="table" min-length="1" />
+		</resource-directory>
+		<resource-directory name="fire-emblem-sd" path="fire-emblem-sd" type="text/csv">
+			<options del="|" sep="" output="table" min-length="1" />
+		</resource-directory>
+		<resource-directory name="fire-emblem-bs" path="fire-emblem-bs" type="text/csv">
+			<options del="|" sep="" output="table" min-length="1" />
+		</resource-directory>
+		<resource-directory name="fire-emblem-ss" path="fire-emblem-ss" type="text/csv">
+			<options del="|" sep="" output="table" min-length="1" />
+		</resource-directory>
+		<resource-directory name="fire-emblem-aw" path="fire-emblem-aw" type="text/csv">
+			<options del="|" sep="" output="table" min-length="1" />
+		</resource-directory>
+		<resource-directory name="fire-emblem-rd" path="fire-emblem-rd" type="text/csv">
+			<options del="|" sep="" output="table" min-length="1" />
+		</resource-directory>
+		<resource name="fire-emblem-shadow-dragon" path="FireEmblemShadowDragon.csv" type="text/csv">
+			<options del="|" sep="" cols="13" output="table" />
+		</resource>
+		<resource name="fire-emblem-shadow-dragon2" path="FireEmblemShadowDragon2.csv" type="text/csv">
+			<options del="|" sep="" cols="9" output="table" />
+		</resource>
+		<resource name="fire-emblem-path-of-radiance" path="FireEmblemPathOfRadiance.csv" type="text/csv">
+			<options del="|" sep="" cols="9" output="table" />
+		</resource>
+		<resource name="fire-emblem-path-of-radiance2" path="FireEmblemPathOfRadiance2.txt" type="text/plain" />
+		<resource name="unicode-mapper" path="unicode-mapper.xml" type="application/xml" />
+		<resource name="unicode-mapping" path="unicode-mapping.xml" type="application/xml" />
+		<resource-directory name="pics" path="pics" type="image/png" />
+		<resource name="favicon" path="favicon.png" type="image/png" />
+		<resource-directory name="games" path="games" type="application/zip" />
+		<resource-directory name="unity" path="games" type="application/vnd.unity" />
+		<resource-directory name="music-mp3" path="music-mp3" type="audio/mpeg" />
+		<resource-directory name="music-lyrics" path="music-lyrics" type="text/plain" />
+		<resource-directory name="vocab-ja" path="vocab-ja" type="audio/mpeg" />
+		<resource-directory name="vocab-jlpt" path="vocab-jlpt" type="application/xhtml+xml" />
+		<resource name="grammar-ja" path="japanese.grammar.xml" type="application/xml" />
+	</directory>
+
+	<fragment name="shoutboxes">
+		<use-document ref="//chat/api/shoutbox?chat-duration=3650" name="slothsoft">
+			<param name="chat-database" value="slothsoft" />
+		</use-document>
+		<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=tales" name="tales" />
+		<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=amber" name="amber" />
+		<use-document ref="//chat/api/shoutbox?chat-duration=90&amp;chat-database=minecraft" name="minecraft" />
+		<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=fire-emblem" name="fire-emblem" />
+		<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=archive" name="archive" />
+		<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=vct" name="vct" />
+	</fragment>
+
+
+
+	<fragment name="pages">
+		<fragment name="ambermoon">
+			<fragment name="description">
+				<import ref="/api/default" />
+				<use-document ref="//amber/html/description" name="content" />
+				<use-document ref="/shoutboxes/amber" name="chat" />
+			</fragment>
+			<fragment name="editor">
+				<import ref="/api/default" />
+				<use-document ref="//amber/html/editor" name="content" />
+			</fragment>
+			<fragment name="resource">
+				<import ref="/api/default" />
+				<use-document ref="//amber/html/resource" name="content" />
+			</fragment>
+			<fragment name="chat">
+				<import ref="/api/default" />
+				<use-document ref="/shoutboxes/amber" name="content" />
+			</fragment>
+		</fragment>
+
+		<fragment name="dragon-age">
+			<fragment name="home">
+				<import ref="/api/default" />
+				<use-document ref="//dragonage/html/home" name="content" />
+				<use-document ref="/shoutboxes/slothsoft" name="chat" />
+			</fragment>
+			<fragment name="combos">
+				<import ref="/api/default" />
+				<use-document ref="//dragonage/html/combos" name="content" />
+			</fragment>
+		</fragment>
+
+		<fragment name="tales">
+			<fragment name="tales-home">
+				<import ref="/api/default" />
+				<use-document ref="//talesof/html/home" name="content" />
+				<use-document ref="/shoutboxes/tales" name="chat" />
+			</fragment>
+			<fragment name="eternia-home">
+				<import ref="/api/default" />
+				<use-document ref="//talesof/html/eternia/home" name="content" />
+				<use-document ref="/shoutboxes/tales" name="chat" />
+			</fragment>
+			<fragment name="graces-home">
+				<import ref="/api/default" />
+				<use-document ref="//talesof/html/graces/home" name="content" />
+				<use-document ref="/shoutboxes/tales" name="chat" />
+			</fragment>
+			<fragment name="craymelEditor">
+				<import ref="/api/default" />
+				<use-document ref="//talesof/html/eternia/craymels" name="content" />
+				<use-document ref="/shoutboxes/tales" name="chat" />
+			</fragment>
+			<fragment name="melnicsTest">
+				<import ref="/api/default" />
+				<use-document ref="//talesof/html/melnics/test" name="content" />
+				<use-document ref="/shoutboxes/tales" name="chat" />
+			</fragment>
+			<fragment name="melnicsTable">
+				<import ref="/api/default" />
+				<use-document ref="//talesof/html/melnics/table" name="content" />
+				<use-document ref="/shoutboxes/tales" name="chat" />
+			</fragment>
+			<fragment name="melnicsTranslator">
+				<import ref="/api/default" />
+				<use-document ref="//talesof/html/melnics/translator" name="content" />
+				<use-document ref="/shoutboxes/tales" name="chat" />
+			</fragment>
+			<fragment name="carta-home">
+				<import ref="/api/default" />
+				<use-document ref="//talesof/html/carta/home" name="content" />
+				<use-document ref="/shoutboxes/tales" name="chat" />
+			</fragment>
+			<fragment name="carta-list">
+				<import ref="/api/default" />
+				<use-document ref="//talesof/html/carta/list" name="content" />
+				<use-document ref="/shoutboxes/tales" name="chat" />
+			</fragment>
+		</fragment>
+
+		<fragment name="minecraft">
+			<fragment name="home">
+				<import ref="/api/default" />
+				<fragment name="content">
+					<import ref="//minecraft/html/home" />
+					<use-document ref="/shoutboxes/minecraft" name="chat-short" />
+				</fragment>
+			</fragment>
+			<fragment name="log">
+				<import ref="/api/default" />
+				<use-document ref="//minecraft/log-wrapper" name="content" />
+			</fragment>
+		</fragment>
+
+		<fragment name="whatthehell">
+			<fragment name="home">
+				<import ref="/api/default" />
+				<use-document ref="//whatthehell/html/home" name="content" />
+			</fragment>
+		</fragment>
+		<fragment name="heartbeat-for-all">
+			<import ref="/api/default" />
+			<fragment name="content" use="document">
+				<use-template ref="/xsl/heartbeat-for-all" />
+			</fragment>
+		</fragment>
+	</fragment>
+
+
+
+
+
+	<fragment name="empty">
+		<import ref="/api/default" />
+	</fragment>
+	<fragment name="home">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/home" />
+		</fragment>
+		<use-document ref="/shoutboxes/slothsoft" name="chat" />
+	</fragment>
+	<fragment name="about-us">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/about-us" />
+			<use-document ref="/static/staff-content" name="staff-content" />
+			<use-document ref="//slothsoft@farah/request" name="request" />
+		</fragment>
+	</fragment>
+	<fragment name="chat-list">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/chat-list" />
+			<fragment name="chat" use="document">
+				<use-document ref="/shoutboxes/slothsoft" name="slothsoft" />
+				<use-document ref="/shoutboxes/minecraft" name="minecraft" />
+				<use-document ref="/shoutboxes/amber" name="amber" />
+				<use-document ref="/shoutboxes/tales" name="tales" />
+				<use-document ref="/shoutboxes/fire-emblem" name="fire-emblem" />
+			</fragment>
+		</fragment>
+	</fragment>
+	<fragment name="imprint">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/address" />
+			<use-document ref="/static/owner" name="owner" />
+		</fragment>
+	</fragment>
+	<fragment name="navi">
+		<use-template ref="/xsl/navi" />
+		<use-document ref="//farah/sites" name="sites" />
+	</fragment>
+	<fragment name="pc">
+		<param name="standalone" scope="global" />
+		<use-template ref="/xsl/_pc" />
+		<!-- <use-document ref="/data/pc"/> -->
+		<link-stylesheet ref="/css/default" />
+		<link-stylesheet ref="/css/fonts" />
+		<import ref="//core/api/HTML5" />
+	</fragment>
+	<fragment name="validator">
+		<use-template ref="/xsl/w3c.validator" />
+	</fragment>
+	<fragment name="dict.select">
+		<use-template ref="/xsl/dict.select" />
+		<use-document ref="/static/language-images" name="language-images" />
+	</fragment>
+	<fragment name="archive">
+		<use-template ref="/xsl/_archive" />
+		<!-- <use-document ref="/data/archive"/> -->
+		<link-stylesheet ref="/css/default" />
+		<link-stylesheet ref="/css/layout" />
+		<link-stylesheet ref="/css/fonts" />
+		<link-stylesheet ref="/css/colors" />
+		<link-stylesheet ref="/css/archive" />
+		<import ref="//sse/api/client" />
+		<link-script ref="/js/Unison" />
+		<use-document ref="/shoutboxes/archive" name="chat" />
+		<import ref="//core/api/HTML5" />
+	</fragment>
+	<fragment name="archive-hentai">
+		<use-template ref="/xsl/_archive.hentai" />
+		<!-- <use-document ref="/data/archive.hentai"/> -->
+		<link-stylesheet ref="/css/default" />
+		<link-stylesheet ref="/css/layout" />
+		<link-stylesheet ref="/css/fonts" />
+		<link-stylesheet ref="/css/colors" />
+		<link-stylesheet ref="/css/archive" />
+	</fragment>
+	<fragment name="archive-manga">
+		<use-template ref="/xsl/_archive.hentai" />
+		<!-- <use-document ref="/data/archive.manga"/> -->
+		<link-stylesheet ref="/css/default" />
+		<link-stylesheet ref="/css/layout" />
+		<link-stylesheet ref="/css/fonts" />
+		<link-stylesheet ref="/css/colors" />
+		<link-stylesheet ref="/css/archive" />
+	</fragment>
+	<fragment name="unicode-mapper">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<import ref="//core/api/DOM" />
+			<link-script ref="/js/UnicodeMapper" />
+			<use-template ref="/xsl/unicode-mapper" />
+		</fragment>
+	</fragment>
+	<fragment name="kana-home">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-document ref="//farah/sites" name="sites" />
+			<use-template ref="/xsl/kana-home" />
+		</fragment>
+	</fragment>
+	<fragment name="kana-table">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/kana" />
+			<link-stylesheet ref="/css/kana" />
+			<use-document ref="/static/kana" name="kana" />
+		</fragment>
+	</fragment>
+	<fragment name="kana-translator">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/kana-translator" />
+			<link-stylesheet ref="/css/kana" />
+			<import ref="//core/api/DOM" />
+			<link-script ref="/js/Translator" />
+			<use-document ref="/static/kana" name="kana" />
+		</fragment>
+	</fragment>
+	<fragment name="kana-test">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/kana-test" />
+			<!-- <use-document ref="/data/kana.test"/> -->
+			<link-stylesheet ref="/css/kana" />
+			<import ref="//core/api/DOM" />
+		</fragment>
+	</fragment>
+	<fragment name="kana-vocab">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/kana-vocab" />
+			<!-- <use-document ref="/data/kana.vocab"/> -->
+			<link-stylesheet ref="/css/kana" />
+			<import ref="//core/api/DOM" />
+			<link-script ref="/js/Translator" />
+			<link-script ref="/js/Vocab" />
+			<link-script ref="/js/VocabTest" />
+		</fragment>
+	</fragment>
+	<fragment name="kana-vocab-mobile">
+		<use-template ref="/xsl/_default" />
+		<use-document ref="//farah/sites" name="sites" />
+		<link-stylesheet ref="/css/default" />
+		<link-stylesheet ref="/css/colors" />
+		<link-stylesheet ref="/css/layout" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/kana-vocab" />
+			<!-- <use-document ref="/data/kana.vocab"/> -->
+			<link-stylesheet ref="/css/kana" />
+			<link-stylesheet ref="/css/kana-mobile" />
+			<import ref="//core/api/DOM" />
+			<link-script ref="/js/Translator" />
+			<link-script ref="/js/Vocab" />
+			<link-script ref="/js/VocabTest" />
+		</fragment>
+	</fragment>
+	<fragment name="vocab-words-log">
+		<use-template ref="/xsl/vocab-log" />
+		<!-- <use-document ref="/data/kana.vocab"/> -->
+	</fragment>
+	<fragment name="vocab-kanji-log">
+		<use-template ref="/xsl/vocab-log" />
+		<!-- <use-document ref="/data/vocab.kanji"/> -->
+	</fragment>
+	<fragment name="vocab-list-add">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/vocab-list-add" />
+			<!-- <use-document ref="/data/kana.vocab"/> -->
+			<link-stylesheet ref="/css/kana" />
+			<import ref="//core/api/DOM" />
+			<link-script ref="/js/Translator" />
+		</fragment>
+	</fragment>
+	<fragment name="vocab-kanji">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/vocab-kanji" />
+			<!-- <use-document ref="/data/vocab.kanji"/> -->
+			<link-stylesheet ref="/css/kana" />
+			<import ref="//core/api/DOM" />
+			<link-script ref="/js/Translator" />
+			<link-script ref="/js/Vocab" />
+			<link-script ref="/js/VocabTest" />
+		</fragment>
+	</fragment>
+	<fragment name="vocab-kanji-mobile">
+		<use-template ref="/xsl/_default" />
+		<use-document ref="//farah/sites" name="sites" />
+		<link-stylesheet ref="/css/default" />
+		<link-stylesheet ref="/css/colors" />
+		<link-stylesheet ref="/css/layout" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/vocab-kanji" />
+			<!-- <use-document ref="/data/vocab.kanji"/> -->
+			<link-stylesheet ref="/css/kana" />
+			<link-stylesheet ref="/css/kana-mobile" />
+			<import ref="//core/api/DOM" />
+			<link-script ref="/js/Translator" />
+			<link-script ref="/js/Vocab" />
+			<link-script ref="/js/VocabTest" />
+		</fragment>
+	</fragment>
+	<fragment name="vocab-words-test">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/vocab.test" />
+			<!-- <use-document ref="/data/kana.vocab"/> -->
+			<link-stylesheet ref="/css/kana" />
+			<import ref="//core/api/DOM" />
+			<link-script ref="/js/Translator" />
+			<link-script ref="/js/Vocab" />
+			<link-script ref="/js/VocabTest" />
+		</fragment>
+	</fragment>
+	<fragment name="vocab-kanji-test">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/vocab.test" />
+			<!-- <use-document ref="/data/vocab.kanji"/> -->
+			<link-stylesheet ref="/css/kana" />
+			<import ref="//core/api/DOM" />
+			<link-script ref="/js/Translator" />
+			<link-script ref="/js/Vocab" />
+			<link-script ref="/js/VocabTest" />
+		</fragment>
+	</fragment>
+	<fragment name="vocab-verbs">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/vocab-grammar" />
+			<!-- <use-document ref="/data/vocab-grammar-verbs"/> -->
+			<link-stylesheet ref="/css/kana" />
+			<import ref="//core/api/DOM" />
+			<link-script ref="/js/Translator" />
+		</fragment>
+	</fragment>
+	<fragment name="vocab-verbs-old">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/vocab-grammar" />
+			<use-document ref="/static/japanese-faulo-verbs" name="japanese-faulo-verbs" />
+			<link-stylesheet ref="/css/kana" />
+			<import ref="//core/api/DOM" />
+			<link-script ref="/js/Translator" />
+		</fragment>
+	</fragment>
+	<fragment name="english-vocab">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/english-vocab" />
+			<!-- <use-document ref="/data/english.vocab"/> -->
+			<link-stylesheet ref="/css/kana" />
+			<import ref="//core/api/DOM" />
+			<link-script ref="/js/Translator" />
+		</fragment>
+	</fragment>
+	<fragment name="fire-emblem-home">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/fire-emblem-home" />
+		</fragment>
+		<use-document ref="/shoutboxes/fire-emblem" name="chat" />
+	</fragment>
+	<fragment name="fire-emblem-breeding">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/fire-emblem-breeding" />
+			<!-- <use-document ref="/data/fire-emblem"/> -->
+			<link-script ref="/js/FireEmblem" />
+		</fragment>
+		<use-document ref="/shoutboxes/fire-emblem" name="chat" />
+	</fragment>
+	<fragment name="fire-emblem-cast">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/fire-emblem-cast" />
+			<!-- <use-document ref="/data/fire-emblem"/> -->
+		</fragment>
+		<use-document ref="/shoutboxes/fire-emblem" name="chat" />
+	</fragment>
+	<fragment name="backend-colors">
+		<import ref="/api/default" />
+		<use-document ref="//minecraft/status" name="status" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/backend.colors" />
+			<link-script ref="/js/CSS" />
+			<import ref="//core/api/DOM" />
+			<link-script ref="/js/Backend" />
+		</fragment>
+	</fragment>
+	<fragment name="deviantart">
+		<use-template ref="/xsl/deviantart" />
+		<!-- <use-document ref="/data/deviantart"/> -->
+		<param name="standalone" scope="global" />
+	</fragment>
+	<fragment name="heartbeat-for-all">
+		<import ref="/api/default" />
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/heartbeat-for-all" />
+		</fragment>
+		<use-document ref="/shoutboxes/slothsoft" name="chat" />
+	</fragment>
+	<fragment name="heartbeat-for-all.game">
+		<fragment name="content" use="document">
+			<use-template ref="/xsl/heartbeat-for-all.game" />
+		</fragment>
+		<import ref="/api/default" />
+	</fragment>
+	<fragment name="music">
+		<param name="standalone" scope="global" />
+		<link-script ref="//core/js/HTML5" />
+		<link-stylesheet ref="/css/default" />
+		<use-document ref="/static/music-mp3" name="music-mp3" />
+		<use-document ref="/static/music-lyrics" name="music-lyrics" />
+		<use-template ref="/xsl/_music" />
+	</fragment>
+	<fragment name="writing">
+		<link-stylesheet ref="/css/fonts" />
+		<param name="standalone" scope="global" />
+		<use-template ref="/xsl/writing" />
+	</fragment>
+
+
+
+	<fragment name="api">
+		<fragment name="default">
+			<link-stylesheet ref="/css/default" />
+			<link-stylesheet ref="/css/fonts" />
+			<link-stylesheet ref="/css/colors" />
+			<link-stylesheet ref="/css/layout" />
+			<use-template ref="/xsl/_default" />
+			<use-document ref="//farah/sites" name="sites" />
+			<use-document ref="/navi" name="navi" />
+			<use-document ref="/validator" name="validator" />
+			<use-document ref="/dict.select" name="dict.select" />
+			<import ref="//core/api/HTML5" />
+		</fragment>
+	</fragment>
+
+
+
+
+
+</assets>

@@ -1,5 +1,5 @@
 {
-	"name" : "slothsoft/test.slothsoft.net",
+	"name" : "slothsoft/slothsoft.net",
 	"type" : "project",
 	"description" : "slothsoft.net",
 	"license" : "MIT",
@@ -49,5 +49,5 @@
 			"email" : "info.slothsoft@gmail.com"
 		}
 	],
-	"homepage" : "http://test.slothsoft.net"
+	"homepage" : "http://slothsoft.net"
 }

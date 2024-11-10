@@ -1,6 +1,10 @@
 services:
     test:
         image: faulo/farah:7.4
+        secrets:
+            - mysql_password
+        environment:
+            MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_password
         volumes:
             - ./composer.json:/var/www/composer.json
             - ./composer.lock:/var/www/composer.lock
@@ -43,6 +47,14 @@ services:
                 window: 120s
         networks:
             - vhosts_default
+            - mysql_default
+
 networks:
     vhosts_default:
+        external: true
+    mysql_default:
+        external: true
+
+secrets:
+    mysql_password:
         external: true

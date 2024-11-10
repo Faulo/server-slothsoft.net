@@ -1,5 +1,5 @@
 services:
-    test:
+    slothsoft:
         image: faulo/farah:7.4
         secrets:
             - mysql_password

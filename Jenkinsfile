@@ -24,15 +24,15 @@ pipeline {
 						}
 					}
 					stage ('Deploy stack') {
-						dir("/var/vhosts/test") {
+						dir("/var/vhosts/slothsoft") {
 							checkout scm
 							unstash 'lock'
 
 							sh "mkdir -p assets src html data log"
 							sh "chmod 777 . assets src html data log"
 
-							def service = "test_test"
-							sh "docker stack deploy test --detach=true --prune --resolve-image=never -c=docker-compose.yml"
+							def service = "slothsoft_slothsoft"
+							sh "docker stack deploy slothsoft --detach=true --prune --resolve-image=never -c=docker-compose.yml"
 							sh "docker service update --force " + service
 						}
 					}

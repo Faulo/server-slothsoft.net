@@ -2582,16 +2582,16 @@
         },
         {
             "name": "slothsoft/talesof",
-            "version": "1.0.5",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-talesof.git",
-                "reference": "a9c6d036890ed73619099c61375359234e219227"
+                "reference": "35631ffa2dd03b002ce99822ae1be843b31c50da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-talesof/zipball/a9c6d036890ed73619099c61375359234e219227",
-                "reference": "a9c6d036890ed73619099c61375359234e219227",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-talesof/zipball/35631ffa2dd03b002ce99822ae1be843b31c50da",
+                "reference": "35631ffa2dd03b002ce99822ae1be843b31c50da",
                 "shasum": ""
             },
             "require": {
@@ -2631,9 +2631,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-talesof/issues",
-                "source": "https://github.com/Faulo/slothsoft-talesof/tree/1.0.5"
+                "source": "https://github.com/Faulo/slothsoft-talesof/tree/1.0.7"
             },
-            "time": "2024-10-05T20:51:13+00:00"
+            "time": "2024-11-10T19:23:20+00:00"
         },
         {
             "name": "slothsoft/w3c",

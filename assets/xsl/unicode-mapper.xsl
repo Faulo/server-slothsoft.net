@@ -3,7 +3,7 @@
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
-	<xsl:template match="data">
+	<xsl:template match="/*">
 		<div class="Translator UnicodeMapper">
 			<article>
 				<h2>Unicode Mapper</h2>
@@ -66,13 +66,13 @@
 						<p>This behavior has been described <a href="http://gschoppe.com/uncategorized/fixing-unicode-support-in-google-chrome/" rel="external">in detail by the peeps at gschoppe.com</a>.</p>
 						<p>In short, there's <a href="https://code.google.com/p/chromium/issues/detail?id=42984" rel="external">a bug almost as old as Chrome itself</a> and it makes Chrome mess up Unicode when you don't have a font installed that contains all those nifty Unicode symbols you want to display.</p>
 						<p>I did what gschoppe suggested and installed the Code200x fonts, and now Chrome can display these glyphs, tho they look a bit weird:
-							<img src="/getResource.php/slothsoft/pics/Unicode.Chrome" alt="Chrome, displaying Unicode with the Code2000 font" />
+							<img src="/slothsoft@slothsoft.net/pics/Unicode.Chrome" alt="Chrome, displaying Unicode with the Code2000 font" />
 						</p>
 						<p>For comparison, Firefox (which apparently uses an internal fallback font):
-							<img src="/getResource.php/slothsoft/pics/Unicode.Firefox" alt="Firefox, displaying Unicode as-is" />
+							<img src="/slothsoft@slothsoft.net/pics/Unicode.Firefox" alt="Firefox, displaying Unicode as-is" />
 						</p>
 						<p>Internet Explorer, incidentally, doesn't need any help to display Unicode either:
-							<img src="/getResource.php/slothsoft/pics/Unicode.InternetExplorer" alt="Internet Explorer, displaying Unicode as-is" />
+							<img src="/slothsoft@slothsoft.net/pics/Unicode.InternetExplorer" alt="Internet Explorer, displaying Unicode as-is" />
 						</p>
 						<p>In conclusion, there's nothing you can do to make other people's Chrome see your Unicode messages, but you can at least fix your own Chrome.</p>
 					</div>

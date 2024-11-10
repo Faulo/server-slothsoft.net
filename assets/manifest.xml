@@ -42,6 +42,7 @@
 
 
 
+    <resource-directory name="pics" type="image/png" />
 
 	<directory name="static">
 		<directory name="heartbeat-for-all">

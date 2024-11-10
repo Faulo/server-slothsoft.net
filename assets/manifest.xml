@@ -40,10 +40,6 @@
 		</directory>
 	</directory>
 
-
-
-    <resource-directory name="pics" type="image/png" />
-
 	<directory name="static">
 		<directory name="heartbeat-for-all">
 			<resource name="screenshot" type="image/png" />

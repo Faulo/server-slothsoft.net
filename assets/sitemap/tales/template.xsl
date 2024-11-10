@@ -7,9 +7,9 @@
 		<sitemap version="1.0">
 			<page name="Tales" title="Tales" ref="/pages/tales/tales-home" status-active="" status-public="">
 				<page name="CraymelEditor" title="Craymel Editor" ref="/pages/tales/craymelEditor" status-active="" status-public=""/>
-				<page name="MelnicsTable" title="MelnicsTable" ref="/pages/tales/melnicsTable" status-active="" status-public=""/>
-				<page name="MelnicsTest" title="Melnics Test" ref="/pages/tales/melnicsTest" status-active="" status-public=""/>
-				<page name="MelnicsTranslator" title="MelnicsTranslator" ref="/pages/tales/melnicsTranslator" status-active="" status-public=""/>
+				<page name="MelnicsTable" title="MelnicsTable" ref="/pages/tales/melnicsTable" status-active="" status-public="" redirect="/Tales/"/>
+				<page name="MelnicsTest" title="Melnics Test" ref="/pages/tales/melnicsTest" status-active="" status-public="" redirect="/Tales/"/>
+				<page name="MelnicsTranslator" title="MelnicsTranslator" ref="/pages/tales/melnicsTranslator" status-active="" status-public="" redirect="/Tales/"/>
 			
 			
 				<page name="MagicCarta" title="Magic Carta List" ref="/pages/tales/carta-list" status-active="" status-public=""/>

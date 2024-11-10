@@ -14,13 +14,13 @@
 			<xsl:apply-templates select="*[@name='amber']" />
 			<xsl:apply-templates select="*[@name='vocab']" />
 			<page name="MissingSloth" ref="missingSloth" title="Missing Sloth" status-active="" />
-			<page name="VideoChatThing" ref="vct-home" module="webrtc" title="VideoChatThing" status-active="" status-public="">
+			<page name="VideoChatThing" ref="vct-home" module="webrtc" title="VideoChatThing" status-active="" >
 				<page name="Room" ref="vct-room" title="Room" status-active="" />
 			</page>
-			<page name="WhatTheHell" title="What The Hell" ref="pages/whatthehell/home" status-active="" status-public="">
+			<page name="WhatTheHell" title="What The Hell" ref="pages/whatthehell/home" status-active="">
 				<page name="Game" title="Game" ref="game" module="whatthehell" status-active="" status-public="" />
 			</page>
-			<page name="HeartbeatForAll" title="Heartbeat For All" ref="pages/heartbeat-for-all" status-active="" status-public="">
+			<page name="HeartbeatForAll" title="Heartbeat For All" ref="pages/heartbeat-for-all" status-active="" >
 				<page name="Game" title="Game" ref="static/heartbeat-for-all/unity" status-active="" status-public="" />
 			</page>
 			<page name="UnicodeMapper" title="Unicode Text Converter" ref="unicode-mapper" status-active="" status-public="" />

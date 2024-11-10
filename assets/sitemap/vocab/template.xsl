@@ -5,7 +5,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/*">
 		<sitemap version="1.0">
-			<page name="Japanese" title="Japanese" ref="kana-home" status-active="" status-public="">
+			<page name="Japanese" title="Japanese" ref="kana-home" status-active="" >
 				<page name="Translator" title="Translator" ref="kana-translator" status-active="" status-public=""/>
 				<page name="KanaTable" title="Hepburn Romanization" ref="kana-table" status-active="" status-public=""/>
 				<page name="KanaTest" title="Kana Test" ref="kana-test" status-active="" status-public=""/>

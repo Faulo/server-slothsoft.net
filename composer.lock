@@ -2409,16 +2409,16 @@
         },
         {
             "name": "slothsoft/minecraft",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-minecraft.git",
-                "reference": "b6d959014f49cf88863354cb9fd5537a41fd283b"
+                "reference": "068e9a9460422535cccf0e426c5011d8badcb1ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-minecraft/zipball/b6d959014f49cf88863354cb9fd5537a41fd283b",
-                "reference": "b6d959014f49cf88863354cb9fd5537a41fd283b",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-minecraft/zipball/068e9a9460422535cccf0e426c5011d8badcb1ad",
+                "reference": "068e9a9460422535cccf0e426c5011d8badcb1ad",
                 "shasum": ""
             },
             "require": {
@@ -2458,9 +2458,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-minecraft/issues",
-                "source": "https://github.com/Faulo/slothsoft-minecraft/tree/1.0.5"
+                "source": "https://github.com/Faulo/slothsoft-minecraft/tree/1.0.6"
             },
-            "time": "2024-10-05T20:50:37+00:00"
+            "time": "2024-11-10T19:40:44+00:00"
         },
         {
             "name": "slothsoft/savegame",

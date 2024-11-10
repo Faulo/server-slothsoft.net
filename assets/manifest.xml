@@ -51,6 +51,7 @@
 		</directory>
 		<resource-directory name="one-piece" type="image/png" />
 
+		<resource name="umbau" type="application/xhtml+xml" />
 		<resource-directory name="staff-content" path="staff" type="application/xml" />
 		<resource-directory name="staff-images" path="staff" type="image/png" />
 		<resource name="owner" path="owner.xml" type="application/xml" />
@@ -213,8 +214,9 @@
 		<fragment name="minecraft">
 			<fragment name="home">
 				<import ref="/api/default" />
+				<use-document ref="/static/umbau" name="content" />
 				<fragment name="content">
-					<import ref="//minecraft/html/home" />
+					<import ref="//slothsoft@minecraft/html/home" />
 					<use-document ref="/shoutboxes/minecraft" name="chat-short" />
 				</fragment>
 			</fragment>

@@ -122,7 +122,7 @@
 		<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=tales" name="tales" />
 		<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=amber" name="amber" />
 		<use-document ref="//chat/api/shoutbox?chat-duration=90&amp;chat-database=minecraft" name="minecraft" />
-		<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=fire-emblem" name="fire-emblem" />
+		<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=fireemblem" name="fire-emblem" />
 		<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=archive" name="archive" />
 		<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=vct" name="vct" />
 	</fragment>

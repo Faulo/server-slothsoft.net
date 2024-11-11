@@ -35,7 +35,7 @@
 				<xsl:attribute name="status-public" />
 			</xsl:if>
 			<sfm:param name="version" value="{@name}" />
-			<page name="SaveEditor" title="SavegameEditor" ref="pages/{$game}/editor" status-active="" status-public="">
+			<page name="SaveEditor" title="SavegameEditor" ref="pages/{$game}/editor" status-active="">
 				<sfm:param name="infosetId" value="lib.save" />
 			</page>
 			<page name="GameEditor" title="GameEditor" ref="pages/{$game}/description" status-active="">
@@ -64,7 +64,7 @@
 					<sfm:param name="infosetId" value="lib.extra" />
 				</page>
 			</page>
-			<page name="GameData" title="GameData" ref="pages/{$game}/description" status-active="" status-public="">
+			<page name="GameData" title="GameData" ref="pages/{$game}/description" status-active="">
 				<page name="ItemList" title="ItemList" ref="pages/{$game}/resource" status-active="" status-public="">
 					<sfm:param name="infosetId" value="lib.items" />
 				</page>

@@ -6,38 +6,7 @@ services:
         environment:
             MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_password
         volumes:
-            - ./composer.json:/var/www/composer.json
-            - ./composer.lock:/var/www/composer.lock
-            - type: bind
-              source: ./assets
-              target: /var/www/assets
-              read_only: true
-              bind:
-                  create_host_path: true
-            - type: bind
-              source: ./src
-              target: /var/www/src
-              read_only: true
-              bind:
-                  create_host_path: true
-            - type: bind
-              source: ./html
-              target: /var/www/html
-              read_only: true
-              bind:
-                  create_host_path: true
-            - type: bind
-              source: ./data
-              target: /var/www/data
-              read_only: false
-              bind:
-                  create_host_path: true
-            - type: bind
-              source: ./log
-              target: /var/www/log
-              read_only: false
-              bind:
-                  create_host_path: true
+            - ./var/www
         deploy:
             mode: global
             restart_policy:

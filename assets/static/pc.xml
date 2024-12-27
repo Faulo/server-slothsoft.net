@@ -52,7 +52,7 @@
 	<data name="Dende" year="2012" owner="Daniel" final-price="588.96">
 		<part
 			type="Mainboard" 
-			href="http://ark.intel.com/products/53558/Intel-Server-Board-S1200BTS"
+			href="https://www.intel.com/content/www/us/en/products/sku/53558/intel-server-board-s1200bts/specifications.html"
 			name="S1200BTS"
 			tdp="5"
 			price="152.55" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2725800_-server-board-s1200bts-intel.html"
@@ -63,7 +63,7 @@
 		</part>
 		<part
 			type="CPU"
-			href="http://ark.intel.com/products/52272"
+			href="https://www.intel.com/content/www/us/en/products/sku/52272/intel-xeon-processor-e31235-8m-cache-3-20-ghz/specifications.html"
 			name="Intel E3-1235"
 			tdp="95"
 			price="200" price-uri="http://www1.idealo.de/preisvergleich/OffersOfProduct/2617810_-xeon-e3-1235-3-2-ghz-box-sockel-1155-32nm-bx80623e31235-intel.html"
@@ -170,7 +170,7 @@
 		</part>
 		<part
 			type="CPU"
-			href="http://ark.intel.com/products/52213/Intel-Core-i7-2600-Processor-%288M-Cache-3_40-GHz%29"
+			href="https://www.intel.com/content/www/us/en/products/sku/52213/intel-core-i72600-processor-8m-cache-up-to-3-80-ghz/specifications.html"
 			name="Intel Core i7 2600"
 			tdp="95"
 			price="243.50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2594240_-core-i7-2600-box-sockel-1155-32nm-bx80623i72600-intel.html"
@@ -385,7 +385,7 @@
 		</part>
 		<part
 			type="CPU"
-			href="https://ark.intel.com/content/www/us/en/ark/products/213805/intel-core-i5-11400h-processor-12m-cache-up-to-4-50-ghz.html"
+			href="https://www.intel.com/content/www/us/en/products/sku/213805/intel-core-i511400h-processor-12m-cache-up-to-4-50-ghz/specifications.html"
 			name="Intel Core i5 11400H"
 			tdp="35"
 			price="0">
@@ -429,7 +429,7 @@
 		</part>
 		<part
 			type="CPU"
-			href="https://ark.intel.com/content/www/us/en/ark/products/64901/intel-core-i7-3612qm-processor-6m-cache-up-to-3-10-ghz-bga.html"
+			href="https://www.intel.com/content/www/us/en/products/sku/64901/intel-core-i73612qm-processor-6m-cache-up-to-3-10-ghz-bga/specifications.html"
 			name="Intel Core i7 3612QM"
 			tdp="35"
 			price="0">
@@ -476,7 +476,7 @@
 		</part>
 		<part
 			type="CPU"
-			href="https://ark.intel.com/content/www/us/en/ark/products/124967/intel-core-i5-8250u-processor-6m-cache-up-to-3-40-ghz.html"
+			href="https://www.intel.com/content/www/us/en/products/sku/124967/intel-core-i58250u-processor-6m-cache-up-to-3-40-ghz/specifications.html"
 			name="Intel Core i5 8250U"
 			tdp="15"
 			price="0">
@@ -523,7 +523,7 @@
 		</part>
 		<part
 			type="CPU"
-			href="http://ark.intel.com/products/52213/Intel-Core-i7-2600-Processor-%288M-Cache-3_40-GHz%29"
+			href="https://www.intel.com/content/www/us/en/products/sku/52213/intel-core-i72600-processor-8m-cache-up-to-3-80-ghz/specifications.html"
 			name="Intel Core i7 2600"
 			tdp="95"
 			price="243.50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2594240_-core-i7-2600-box-sockel-1155-32nm-bx80623i72600-intel.html"
@@ -614,7 +614,7 @@
 		</part>
 		<part
 			type="CPU"
-			href="https://ark.intel.com/products/126686/Intel-Core-i7-8700-Processor-12M-Cache-up-to-4_60-GHz"
+			href="https://www.intel.com/content/www/us/en/products/sku/126686/intel-core-i78700-processor-12m-cache-up-to-4-60-ghz/specifications.html"
 			name="Intel Core i7 8700"
 			tdp="0"
 			price="180" price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/5765852_-core-i7-8700-box-sockel-1151-14nm-bx80684i78700-intel.html"
@@ -718,7 +718,7 @@
 		</part>
 		<part
 			type="CPU"
-			href="http://ark.intel.com/products/53426/Intel-Core-i3-2120-Processor-%283M-Cache-3_30-GHz%29"
+			href="https://www.intel.com/content/www/us/en/products/sku/53426/intel-core-i32120-processor-3m-cache-3-30-ghz/specifications.html"
 			name="Intel Core i3 2120"
 			tdp="65"
 			price="100" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2311304_-core-i3-2120-box-sockel-1155-32nm-bxc80623i32120-intel.html"
@@ -816,7 +816,7 @@
 		</part>
 		<part
 			type="CPU"
-			href="http://ark.intel.com/products/49490"
+			href="https://www.intel.com/content/www/us/en/products/sku/49490/intel-atom-processor-d525-1m-cache-1-80-ghz/specifications.html"
 			name="Intel Atom D525"
 			tdp="13"
 			price="0"
@@ -872,7 +872,7 @@
 		</part>
 		<part
 			type="CPU"
-			href="http://ark.intel.com/products/36547"
+			href="https://www.intel.com/content/www/us/en/products/sku/36547/intel-core2-quad-processor-q8200-4m-cache-2-33-ghz-1333-mhz-fsb/specifications.html"
 			name="Intel Core 2 Quad Q8200"
 			tdp="95"
 			price="200" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1062751_-core-2-quad-q8200-box-sockel-775-45nm-bx80580q8200-intel.html"
@@ -939,271 +939,4 @@
 				/>
 		</part>
 	</data>
-	
-	<data name="Unter Beobachtung">			
-		<!--
-		<part
-			type="GPU"
-			href="http://www.zotac.com/index.php?page=shop.product_details&amp;flypage=flypage_images-SRW.tpl-VGA&amp;product_id=399&amp;category_id=139&amp;option=com_virtuemart&amp;Itemid=100257&amp;lang=de"
-			name="Zotac GeForce GT 520"
-			tdp="30"
-			price="50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/3008248_-geforce-gt-520-512mb-ddr3-pcie-x1-zotac.html"
-			>
-			<properties
-				frequency="900 MHz" memory="512 MB"
-				/>
-		</part>
-		
-		<part
-			type="Laptop"
-			href="http://www.fujitsu.com/de/products/computing/pc/notebooks-tablets/advanced/lifebook-e781/"
-			name="Fujitsu LIFEBOOK E781"
-			tdp="65"
-			price="850" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/3017865_-lifebook-e781-fujitsu.html"
-			>
-			<properties
-				cpu="i5 2520M" chipset="Intel QM67" gpu="HD 3000" memory="4 GB" bonus="UMTS USB3 NumBlock"
-				/>
-		</part>
-		<part
-			type="Laptop"
-			href="http://de.computers.toshiba-europe.com/innovation/product/Tecra-R850-1FC/1123419/"
-			name="Toshiba Tecra R850-1FC"
-			tdp="65"
-			price="900" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/3304523_-tecra-r850-1fc-pt524e-03600d-toshiba.html"
-			>
-			<properties
-				cpu="i5 2450M" chipset="Intel HM65" gpu="HD 3000" memory="4 GB" bonus="UMTS USB3 NumBlock"
-				/>
-		</part>
-		<part
-			type="Laptop"
-			href="http://ie.asus.com/Commercial_Notebooks/B53_Series/B53E/#specifications"
-			name="Asus Pro B53E-SO125X"
-			tdp="65"
-			price="800" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/3039542_-pro-b53e-so125x-asus.html"
-			>
-			<properties
-				cpu="i5 2430M" chipset="Intel HM65" gpu="HD 3000" memory="4 GB" bonus="UMTS USB3 NumBlock"
-				/>
-		</part>
-		<part
-			type="Laptop"
-			href="http://www.acer.de/ac/de/DE/content/model/LX.V4J03.035"
-			name="Acer TravelMate 8573-2434G50Mnkk"
-			tdp="65"
-			price="800" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/3037599_-travelmate-8573-2434g50mnkk-lx-v4j03-035-acer.html"
-			>
-			<properties
-				cpu="i5 2430M" chipset="Intel HM65"  gpu="HD 3000" memory="4 GB" bonus="UMTS USB3 NumBlock"
-				/>
-		</part>
-		-->
-		
-	<!--
-		<part
-			type="Multiding"
-			href="http://www.canon.de/For_Home/Product_Finder/Multifunctionals/Inkjet/PIXMA_MG2150/index.aspx?specs=1"
-			name="Canon PIXMA MG 2150"
-			price="500" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2925970_-pixma-mg2150-canon.html"
-			tdp="11"
-			>
-			<properties
-				scan-type="CIS"
-				scan-resolution="1200 dpi"
-				/>
-		</part>
-		
-		<part
-			type="Multiding"
-			href="http://www.canon.de/For_Home/Product_Finder/Multifunctionals/Inkjet/PIXMA_MG8150/index.aspx?specs=1"
-			name="Canon PIXMA MG 8150"
-			price="200" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2366669_-pixma-mg8150-canon.html"
-			tdp="24"
-			>
-			<properties
-				scan-type="CCD"
-				scan-resolution="4800 dpi"
-				/>
-		</part>
-		<part
-			type="Multiding"
-			href="http://www.canon.de/For_Home/Product_Finder/Multifunctionals/Inkjet/PIXMA_MP750/index.aspx?specs=1"
-			name="Canon PIXMA MP 750"
-			price="260" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/147688.html"
-			tdp="45"
-			>
-			<properties
-				scan-type="CCD"
-				scan-resolution="2400 dpi"
-				/>
-		</part>
-		
-		<part
-			type="Scanner"
-			
-			name="Epson Perfection V33"
-			price="70" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2386599_-perfection-v33-epson.html"
-			tdp="0"
-			>
-			<properties
-				scan-type="CCD"
-				scan-resolution="4800 dpi"
-				/>
-		</part>
-		<part
-			type="Scanner"
-			
-			name="Epson Perfection V330 Photo"
-			price="75" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2386618_-perfection-v330-photo-epson.html"
-			tdp="0"
-			>
-			<properties
-				scan-type="CCD"
-				scan-resolution="4800 dpi"
-				/>
-		</part>
-		<part
-			type="Scanner"
-			
-			name="Canon CanoScan 9000F"
-			price="190" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2241110_-canoscan-9000f-canon.html"
-			tdp="0"
-			>
-			<properties
-				scan-type="CCD"
-				scan-resolution="9600 dpi"
-				/>
-		</part>
-		<part
-			type="Scanner"
-			
-			name="Hewlett-Packard HP ScanJet 4070"
-			price="50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/269500E0J2.html"
-			tdp="0"
-			>
-			<properties
-				scan-type="CIS"
-				scan-resolution="2400 dpi"
-				/>
-		</part>
-		<part
-			type="Scanner"
-			
-			name="Canon CanoScan LiDE 110"
-			price="60" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2367879_-canoscan-lide-110-canon.html"
-			tdp="0"
-			>
-			<properties
-				scan-type="CIS"
-				scan-resolution="2400 dpi"
-				/>
-		</part>
-	-->	
-	</data>
-	
-	<!--
-	<data name="Steffs PC" final-price="0">
-		<part
-			type="Mainboard" 
-			href="http://www.msi.com/product/mb/P67A-C45-B3-.html"
-			name="MSI P67A-C45 (B3)"
-			tdp="10"
-			price="100" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2567363_-p67a-c45-msi.html"
-			>
-			<properties
-				socket="LGA 1155" ram="DDR3-2200" sata="3 Gb/s" form="ATX"
-				/>
-		</part>
-		<part
-			type="CPU"
-			href="http://ark.intel.com/products/52209/Intel-Core-i5-2500-Processor-%286M-Cache-3_30-GHz%29"
-			name="Intel Core i5 2500"
-			tdp="95"
-			price="243.50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2590193_-core-i5-2500-box-sockel-1155-32nm-bx80623i52500-intel.html"
-			>
-			<properties
-				frequency="3.30 GHz" cores="4" cache-l2="4×256 KB" cache-l3="8 MB" bus="DMI" multiplier="34"
-				/>
-		</part>
-		<part
-			type="RAM"
-			
-			name="Corsair"
-			price="32" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2540724_-vengeance-8gb-kit-ddr3-pc3-12800-cl9-cmz8gx3m2a1600c9-corsair.html"
-			tdp="2"
-			>
-			<properties
-				size="2x 4 GB"
-				type="PC3-10600"
-				frequency="1333 MHz"
-				/>
-		</part>
-		<part
-			type="GPU"
-			href="http://www.asus.com/Graphics_Cards/NVIDIA_Series/ENGTX550_Ti_DCDI1GD5//#specifications"
-			name="Asus GeForce GTX 550 Ti"
-			price="100" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2942778_-geforce-gtx-550-ti-asus.html"
-			tdp="116"
-			>
-			<properties
-				frequency="900 MHz"
-				memory="1.0 GB"
-				/>
-		</part>
-		<part
-			type="HDD"
-			
-			name="Samsung SpinPoint F3"
-			price="0" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1813609_-spinpoint-f3-1tb-hd103sj-samsung.html"
-			tdp="4"
-			>
-			<properties
-				size="1000 GB"
-				/>
-		</part>		
-		<part
-			type="Disk Drive"
-			
-			name="LG BH10LS30"
-			tdp="1"
-			price="59.99" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2074499_-bh10ls30-lg.html"
-			>
-			<properties
-				/>
-		</part>
-		<part
-			type="Chassis"
-			href="http://www.cyberport.de/pc-und-zubehoer/komponenten/gehaeuse/gehaeuse-midi-tower/2A01-53Z/cooltek-ct-k2-revision-c-midi-tower-schwarz-silber-o-nt-.html"
-			name="Cooltek CT K2 Revision C"
-			tdp="1"
-			price="30.90"
-			>
-			<properties
-				size="ATX Tower"
-				psu="-"
-				/>
-		</part>
-		<part
-			type="PSU"
-			
-			name="LC Power LC6550"
-			tdp="1"
-			price="30" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/270507.html"
-			>
-			<properties
-				power="550 W"
-				/>
-		</part>
-		
-		
-		<part
-			type="Operating System"
-			name="Microsoft Windows 7 Home Premium 64Bit"
-			tdp="0"
-			price="70" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1861220_-windows-7-home-premium-64bit-oem-de-microsoft.html"
-			>
-		</part>
-	</data>	
-	-->
 </root>

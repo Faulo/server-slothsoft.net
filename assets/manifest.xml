@@ -286,7 +286,7 @@
 	<fragment name="pc">
 		<param name="standalone" scope="global" />
 		<use-template ref="/xsl/_pc" />
-		<!-- <use-document ref="/data/pc"/> -->
+		<use-document ref="/static/pc"/>
 		<link-stylesheet ref="/css/default" />
 		<link-stylesheet ref="/css/fonts" />
 		<import ref="//core/api/HTML5" />

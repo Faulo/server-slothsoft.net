@@ -1,5 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:lio="http://slothsoft.net"
+	xmlns:func="http://exslt.org/functions" extension-element-prefixes="func">
+
+
+	<func:function name="lio:price">
+		<xsl:param name="parts" select="." />
+		<func:result select="sum($parts/@price)" />
+	</func:function>
+
+	<func:function name="lio:final-price">
+		<xsl:param name="parts" select="." />
+		<func:result select="sum($parts[@final-price]/@final-price | $parts[not(@final-price)]/*/@price)" />
+	</func:function>
 
 	<xsl:template match="/*">
 		<xsl:variable name="pcs" select=".//data[part]" />
@@ -104,7 +116,6 @@ caption {
 					<th class="part-details">Properties</th>
 					<th class="part-power">Power</th>
 					<th class="part-price">Price</th>
-					<th class="part-history">Price History</th>
 				</tr>
 			</thead>
 			<tfoot>
@@ -117,13 +128,8 @@ caption {
 						&#160;W
 					</td>
 					<th>
-						<xsl:value-of select="format-number(sum(*/@price), '0.00')" />
+						<xsl:value-of select="format-number(lio:final-price(), '0.00')" />
 						&#160;€
-					</th>
-					<th title="Tatsächlich bezahlter Preis">
-						(
-						<xsl:value-of select="format-number(sum(@final-price), '0.00')" />
-						&#160;€)
 					</th>
 				</tr>
 			</tfoot>
@@ -166,39 +172,6 @@ caption {
 									&#160;€
 								</xsl:otherwise>
 							</xsl:choose>
-						</td>
-						<td>
-							<xsl:if test="price">
-								<details>
-									<summary>
-										<xsl:value-of select="count(price)" />
-										<xsl:text> Preise:</xsl:text>
-									</summary>
-									<ul>
-										<xsl:for-each select="price">
-											<xsl:variable name="prev" select="preceding-sibling::price[1]" />
-											<xsl:if test="number(@price) != number($prev/@price)">
-												<li title="{@date}" class="number">
-													<xsl:choose>
-														<xsl:when test="@price &gt; ../@price">
-															<xsl:attribute name="data-price">1</xsl:attribute>
-														</xsl:when>
-														<xsl:when test="@price &lt; ../@price">
-															<xsl:attribute name="data-price">-1</xsl:attribute>
-														</xsl:when>
-														<xsl:otherwise>
-															<xsl:attribute name="data-price">0</xsl:attribute>
-														</xsl:otherwise>
-													</xsl:choose>
-
-													<xsl:value-of select="format-number(@price, '0.00')" />
-													&#160;€
-												</li>
-											</xsl:if>
-										</xsl:for-each>
-									</ul>
-								</details>
-							</xsl:if>
 						</td>
 					</tr>
 				</xsl:for-each>

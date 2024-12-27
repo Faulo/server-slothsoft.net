@@ -1,0 +1,12 @@
+services:
+    slothsoft:
+        build:
+            context: ..
+            dockerfile_inline: |
+                FROM faulo/farah:${PHP_VERSION}
+                COPY . .
+                RUN composer update --no-interaction --no-dev --optimize-autoloader --classmap-authoritative
+                RUN apt update && apt upgrade -y
+            args:
+                PHP_VERSION: ${PHP_VERSION}
+        image: tmp/slothsoft:latest

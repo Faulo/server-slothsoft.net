@@ -117,6 +117,31 @@
 		</part>
 	</data>
 
+
+	<data name="Vati's PC" year="2010" owner="Daniel" final-price="0">
+		<part type="Mainboard" href="https://www.asus.com/de/supportonly/p6t_se/helpdesk_knowledge/" name="Asus P6T SE" tdp="10" price="0">
+			<properties socket="LGA 1366" ram="DDR3-2200" sata="3 Gb/s" form="ATX" />
+			<io>PCIe 2.0 x16</io>
+			<io>PCIe 2.0 x16</io>
+			<io>PCIe 2.0 x4</io>
+			<io>PCIe 2.0 x1</io>
+			<io>PCI</io>
+			<io>PCI</io>
+		</part>
+		<part type="CPU" href="https://www.intel.com/content/www/us/en/products/sku/47922/intel-xeon-processor-x5650-12m-cache-2-66-ghz-6-40-gts-intel-qpi/specifications.html" name="Intel Xeon X5650 "
+			tdp="95" price="0">
+			<properties frequency="2.66 GHz" cores="6" />
+		</part>
+		<part type="RAM" href="" name="Corsair" price="0" tdp="2">
+			<properties size="6x 2 GB" form="DDR3-DIMM" type="PC3-10600" frequency="1333 MHz" />
+		</part>
+		<part type="GPU" href="https://www.nvidia.com/en-us/geforce/graphics-cards/geforce-gtx-780/specifications/" name="Asus GeForce GTX 780" price="" tdp="116">
+			<properties frequency="900 MHz" memory="3.0 GB" />
+			<io>PCIe 2.0 x16</io>
+		</part>
+	</data>
+
+
 	<data name="Madeline" year="2020" owner="Daniel">
 		<part type="Laptop" href="https://www.acer.com/at-de/laptops/nitro/nitro-5/pdp/NH.QF6EV.009" name="Acer Nitro 5 AN517-54-50B1" tdp="65" price="919.19" price-uri="">
 			<properties cpu="i5 11400H" chipset="Intel HM65" gpu="GeForce RTX 3050Ti" memory="4 GB" bonus="" />

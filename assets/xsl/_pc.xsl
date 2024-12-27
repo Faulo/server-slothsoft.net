@@ -79,7 +79,7 @@ caption {
 				]]></style>
 			</head>
 			<body>
-				<h1>Computerübersicht</h1>
+				<h1>Slothsoft's Computers</h1>
 				<details>
 					<summary>Computer:</summary>
 					<ul>
@@ -113,8 +113,8 @@ caption {
 				<tr>
 					<th class="part-type">Part</th>
 					<th class="part-name">Name</th>
-                    <th class="part-details">Properties</th>
-                    <th class="part-details">I/O</th>
+					<th class="part-details">Properties</th>
+					<th class="part-details">I/O</th>
 					<th class="part-power">Power</th>
 					<th class="part-price">Price</th>
 				</tr>
@@ -123,15 +123,15 @@ caption {
 				<tr>
 					<td />
 					<td />
-                    <td />
-                    <td />
+					<td />
+					<td />
 					<td>
 						<xsl:value-of select="sum(*/@tdp)" />
-						&#160;W
+						<xsl:text>&#160;W</xsl:text>
 					</td>
 					<th>
 						<xsl:value-of select="format-number(lio:final-price(), '0.00')" />
-						&#160;€
+						<xsl:text>&#160;€</xsl:text>
 					</th>
 				</tr>
 			</tfoot>
@@ -167,19 +167,19 @@ caption {
 						</td>
 						<td class="number">
 							<xsl:value-of select="@tdp" />
-							&#160;W
+							<xsl:text>&#160;W</xsl:text>
 						</td>
 						<td class="number">
 							<xsl:choose>
 								<xsl:when test="@price-uri">
 									<a href="{@price-uri}">
 										<xsl:value-of select="format-number(@price, '0.00')" />
-										&#160;€
+										<xsl:text>&#160;€</xsl:text>
 									</a>
 								</xsl:when>
 								<xsl:otherwise>
 									<xsl:value-of select="format-number(@price, '0.00')" />
-									&#160;€
+									<xsl:text>&#160;€</xsl:text>
 								</xsl:otherwise>
 							</xsl:choose>
 						</td>
@@ -204,13 +204,13 @@ caption {
 	<xsl:template match="part[@type='RAM']">
 		<table>
 			<tr>
-				<th>Größe:</th>
+				<th>Size:</th>
 				<td>
 					<xsl:value-of select="properties/@size" />
 				</td>
 			</tr>
 			<tr>
-				<th>Typ:</th>
+				<th>Type:</th>
 				<td>
 					<xsl:value-of select="properties/@type" />
 				</td>
@@ -221,7 +221,7 @@ caption {
 	<xsl:template match="part[@type='HDD']">
 		<table>
 			<tr>
-				<th>Größe:</th>
+				<th>Size:</th>
 				<td>
 					<xsl:value-of select="properties/@size" />
 				</td>
@@ -232,13 +232,13 @@ caption {
 	<xsl:template match="part[@type='Chassis']">
 		<table>
 			<tr>
-				<th>Größe:</th>
+				<th>Size:</th>
 				<td>
 					<xsl:value-of select="properties/@size" />
 				</td>
 			</tr>
 			<tr>
-				<th>Netzteil:</th>
+				<th>PSU:</th>
 				<td>
 					<xsl:value-of select="properties/@psu" />
 				</td>
@@ -249,13 +249,13 @@ caption {
 	<xsl:template match="part[@type='CPU']">
 		<table>
 			<tr>
-				<th>Taktfrequenz:</th>
+				<th>Frequency:</th>
 				<td>
 					<xsl:value-of select="properties/@frequency" />
 				</td>
 			</tr>
 			<tr>
-				<th>Kerne:</th>
+				<th>Cores:</th>
 				<td>
 					<xsl:value-of select="properties/@cores" />
 				</td>
@@ -266,19 +266,19 @@ caption {
 	<xsl:template match="part[@type='Mainboard']">
 		<table>
 			<tr>
-				<th>Sockel:</th>
+				<th>Socket:</th>
 				<td>
 					<xsl:value-of select="properties/@socket" />
 				</td>
 			</tr>
 			<tr>
-				<th>RAM-Typ:</th>
+				<th>RAM:</th>
 				<td>
 					<xsl:value-of select="properties/@ram" />
 				</td>
 			</tr>
 			<tr>
-				<th>Form-Faktor:</th>
+				<th>Form:</th>
 				<td>
 					<xsl:value-of select="properties/@form" />
 				</td>
@@ -289,7 +289,7 @@ caption {
 	<xsl:template match="part[@type='GPU']">
 		<table>
 			<tr>
-				<th>Taktfrequenz:</th>
+				<th>Frequency:</th>
 				<td>
 					<xsl:value-of select="properties/@frequency" />
 				</td>
@@ -306,7 +306,7 @@ caption {
 	<xsl:template match="part[@type='PSU']">
 		<table>
 			<tr>
-				<th>Leistung:</th>
+				<th>Power:</th>
 				<td>
 					<xsl:value-of select="properties/@power" />
 				</td>
@@ -317,7 +317,7 @@ caption {
 	<xsl:template match="part[@type='Audio']">
 		<table>
 			<tr>
-				<th>Lautsprecher:</th>
+				<th>Channels:</th>
 				<td>
 					<xsl:value-of select="properties/@channels" />
 				</td>
@@ -328,13 +328,13 @@ caption {
 	<xsl:template match="part[@type='Scanner']|part[@type='Multiding']">
 		<table>
 			<tr>
-				<th>Scanverfahren:</th>
+				<th>Scan Type:</th>
 				<td>
 					<xsl:value-of select="properties/@scan-type" />
 				</td>
 			</tr>
 			<tr>
-				<th>Scanauflösung:</th>
+				<th>Scan Resolution:</th>
 				<td>
 					<xsl:value-of select="properties/@scan-resolution" />
 				</td>

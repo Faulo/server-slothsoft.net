@@ -1,54 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="PC.xsl"?>
 <root>
-	<!--
-	<data name="Danis Laptop">
-		<part
-			type="Laptop"
-			href="http://www.samsung.com/de/consumer/notebooks-displays/notebook-computers/professional/NP400B5B-H01DE-spec"
-			name="Samsung 400B5B-H01"
-			tdp="65"
-			price="800" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2783516_-400b5b-h01-samsung.html"
-			>
-			<properties
-				cpu="i5 2410M" chipset="Intel HM65" gpu="QUADRO NVS4200M" memory="4 GB" bonus="UMTS 2xUSB3 NumBlock"
-				/>
-		</part>
-		<part
-			type="Mainboard" 
-			href="http://ark.intel.com/products/chipsets/52774"
-			name="Intel HM65"
-			tdp="3"
-			price="0"
-			>
-			<properties
-				socket="-" ram="DDR3-1333" form="25mm x 25mm"
-				/>
-		</part>
-		<part
-			type="CPU"
-			href="http://ark.intel.com/products/52224"
-			name="Intel Core i5 2410M"
-			tdp="35"
-			price="0">
-			<properties
-				frequency="2.3 GHz" cores="2"
-				/>
-		</part>	
-		<part
-			type="GPU"
-			href="http://www.nvidia.de/object/nvidia_nvs_techspecs_de.html"
-			name="NVidia Quadro NVS 4200M"
-			tdp="0"
-			price="0"
-			>
-			<properties
-				frequency="810 MHz" memory="1 GB"
-				/>
-		</part>
-		
-	</data>
-	-->
 	<data name="Dende" year="2012" owner="Daniel" final-price="588.96">
 		<part
 			type="Mainboard" 
@@ -58,8 +10,11 @@
 			price="152.55" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2725800_-server-board-s1200bts-intel.html"
 			>
 			<properties
-				socket="LGA 1155" ram="DDR3-1333" form="Micro-ATX"
+				socket="LGA 1155" ram="4x DDR3-1333 ECC" form="Micro-ATX"
 				/>
+            <io>PCIe 2.0 x8</io>
+            <io>PCIe 2.0 x8</io>
+            <io>PCIe 2.0 x4</io>
 		</part>
 		<part
 			type="CPU"
@@ -97,17 +52,7 @@
 				frequency="135 MHz" memory="4 MB"
 				/>
 		</part>
-		<part
-			type="GPU"
-			href="http://www.zotac.com/index.php?page=shop.product_details&amp;flypage=flypage_images-SRW.tpl-VGA&amp;product_id=366&amp;category_id=147&amp;option=com_virtuemart&amp;Itemid=100262&amp;lang=de"
-			name="Zotac GeForce GT 218"
-			tdp="20"
-			price="50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/3081245_-geforce-gt-218-512mb-ddr3-zotac.html"
-			>
-			<properties
-				frequency="900 MHz" memory="512 MB"
-				/>
-		</part>
+		
 		<part
 			type="GPU"
 			href="https://www.techpowerup.com/gpu-specs/geforce-gt-730.c2590"
@@ -118,6 +63,7 @@
 			<properties
 				frequency="700 MHz" memory="2048 MB"
 				/>
+            <io>PCIe 2.0 x8</io>
 		</part>
 		<part
 			type="HDD"
@@ -167,6 +113,13 @@
 			<properties
 				socket="LGA 1155" ram="DDR3-2200" sata="6 Gb/s" form="ATX"
 				/>
+            <io>PCIe 2.0 x16</io>
+            <io>PCIe 2.0 x16</io>
+            <io>PCIe 2.0 x1</io>
+            <io>PCIe 2.0 x1</io>
+            <io>PCI</io>
+            <io>PCI</io>
+            <io>PCI</io>
 		</part>
 		<part
 			type="CPU"
@@ -204,6 +157,7 @@
 				frequency="900 MHz"
 				memory="1.0 GB"
 				/>
+            <io>PCIe 2.0 x16</io>
 		</part>
 		<part
 			type="Audio"
@@ -274,6 +228,7 @@
 			<properties
 				socket="AM4" ram="DDR4-3200" sata="6 Gb/s" form="Mini-ITX"
 				/>
+            <io>PCIe 4.0 x16</io>
 		</part>
 		<part
 			type="CPU"
@@ -299,20 +254,6 @@
 				frequency="3200 MHz"
 				/>
 		</part>
-		<!--
-		<part
-			type="PSU"
-			href="https://www.bequiet.com/en/powersupply/2276"
-			name="be quiet! Pure Power 11 FM"
-			tdp="0"
-			price="89"
-			price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/201232712_-pure-power-11-fm-650w-be-quiet.html"
-			>
-			<properties
-				power="650 W"
-				/>
-		</part>
-		-->
 		<part
 			type="Audio"
 			href="https://datasheetspdf.com/pdf-file/808237/RealtekMicroelectronics/ALC887/1"
@@ -358,6 +299,7 @@
 				frequency="1320 MHz"
 				memory="12 GB"
 				/>
+            <io>PCIe 4.0 x16</io>
 		</part>
 		<part
 			type="HDD"
@@ -858,6 +800,24 @@
 			price="20" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1985640_-b500-logitech.html"
 			/>
 	</data>
+	
+	<data name="Unbenutzt" year="TBD" owner="Daniel" >
+	   <part
+            type="GPU"
+            href="https://www.zotac.com/old_zotac/index.php?id=170088&amp;tx_zoprodisp_pi1[produid]=342"
+            name="Zotac GeForce GT 218"
+            tdp="20"
+            price="50" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/3081245_-geforce-gt-218-512mb-ddr3-zotac.html"
+            >
+            <properties
+                frequency="900 MHz" memory="512 MB"
+                />
+            <io>PCIe 2.0 x1</io>
+        </part>
+	</data>
+	
+	
+	
 	<data name="Ramsch" year="TBD" owner="Daniel" final-price="500">
 		<part
 			type="Mainboard" 

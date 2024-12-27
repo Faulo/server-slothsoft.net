@@ -113,7 +113,8 @@ caption {
 				<tr>
 					<th class="part-type">Part</th>
 					<th class="part-name">Name</th>
-					<th class="part-details">Properties</th>
+                    <th class="part-details">Properties</th>
+                    <th class="part-details">I/O</th>
 					<th class="part-power">Power</th>
 					<th class="part-price">Price</th>
 				</tr>
@@ -122,7 +123,8 @@ caption {
 				<tr>
 					<td />
 					<td />
-					<td />
+                    <td />
+                    <td />
 					<td>
 						<xsl:value-of select="sum(*/@tdp)" />
 						&#160;W
@@ -153,7 +155,15 @@ caption {
 						</td>
 						<td>
 							<xsl:apply-templates select="." />
-
+						</td>
+						<td>
+							<ul>
+								<xsl:for-each select="io">
+									<li>
+										<xsl:value-of select="." />
+									</li>
+								</xsl:for-each>
+							</ul>
 						</td>
 						<td class="number">
 							<xsl:value-of select="@tdp" />

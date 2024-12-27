@@ -111,9 +111,9 @@
 			<properties frequency="1320 MHz" memory="12 GB" />
 			<io>PCIe 4.0 x16</io>
 		</part>
-		<part type="HDD" href="https://www.intenso.de/en/products/solid-state-drives/M.2%20SSD%20Top%20Performance" name="Intenso SSD M.2 2280" price="50"
-			price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/5826821_-sata-iii-top-512gb-m-2-intenso.html" tdp="5">
-			<properties size="512 GB" />
+		<part type="HDD" href="https://americas.lexar.com/product/lexar-nm790-m-2-2280-pcie-gen-4x4-nvme-ssd/" name="Lexar NM790 M.2 2280" price="219"
+			price-uri="https://www.mindfactory.de/product_info.php/4TB-Lexar-NM790-M-2-2280-PCIe-4-0-x4-3D-NAND-TLC--LNM790X004T-RNNNG-_1496665.html" tdp="5">
+			<properties size="4096 GB" />
 		</part>
 	</data>
 
@@ -156,6 +156,14 @@
 		<part type="GPU" href="https://www.notebookcheck.com/NVIDIA-GeForce-RTX-3050-Ti-Laptop-GPU-Grafikkarte-Benchmarks-und-Spezifikationen.527429.0.html" name="NVidia GeForce RTX 3050Ti" tdp="75"
 			price="0">
 			<properties frequency="1485 MHz" memory="4 GB" />
+		</part>
+		<part type="HDD" href="https://americas.lexar.com/product/lexar-nm790-m-2-2280-pcie-gen-4x4-nvme-ssd/" name="Lexar NM790 M.2 2280" price="219"
+			price-uri="https://www.mindfactory.de/product_info.php/4TB-Lexar-NM790-M-2-2280-PCIe-4-0-x4-3D-NAND-TLC--LNM790X004T-RNNNG-_1496665.html" tdp="5">
+			<properties size="4096 GB" />
+		</part>
+		<part type="HDD" href="https://www.intenso.de/en/products/solid-state-drives/M.2%20SSD%20Top%20Performance" name="Intenso SSD M.2 2280" price="50"
+			price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/5826821_-sata-iii-top-512gb-m-2-intenso.html" tdp="5">
+			<properties size="512 GB" />
 		</part>
 	</data>
 

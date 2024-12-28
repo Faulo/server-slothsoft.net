@@ -31,7 +31,7 @@ pipeline {
 						}
 						stage ('Deploy container') {
 							callShell "docker stack deploy ${STACK_NAME} --detach=false --prune --resolve-image=never -c=.jenkins/docker-compose-${DOCKER_OS_TYPE}.yml"
-							callShell "docker service update --force ${STACK_NAME}_${STACK_NAME}"
+							callShell "docker service update --force ${STACK_NAME}_frontend"
 						}
 					}
 				}

@@ -1,5 +1,5 @@
 services:
-    slothsoft:
+    frontend:
         build:
             context: ..
             dockerfile_inline: |
@@ -11,4 +11,4 @@ services:
                 RUN composer update --no-interaction --no-dev --optimize-autoloader --classmap-authoritative
             args:
                 PHP_VERSION: ${PHP_VERSION}
-        image: tmp/slothsoft:latest
+        image: tmp/${STACK_NAME}:latest

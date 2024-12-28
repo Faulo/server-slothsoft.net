@@ -1,6 +1,6 @@
 services:
-    slothsoft:
-        image: tmp/slothsoft:latest
+    frontend:
+        image: tmp/${STACK_NAME}:latest
         volumes:
             - data:C:/www/data
         ports:

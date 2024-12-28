@@ -1,5 +1,5 @@
 services:
-    slothsoft:
+    frontend:
         image: faulo/farah:${PHP_VERSION}
         volumes:
             - ../assets:${DOCKER_WORKDIR}/assets

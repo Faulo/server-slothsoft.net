@@ -4,7 +4,7 @@ services:
             context: ..
             dockerfile_inline: |
                 FROM faulo/farah:${PHP_VERSION}
-                COPY . .
+                COPY --chmod=777 . .
                 RUN composer update --no-interaction --no-dev --optimize-autoloader --classmap-authoritative
                 RUN apt update && apt upgrade -y
             args:

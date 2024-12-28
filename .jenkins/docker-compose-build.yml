@@ -9,5 +9,4 @@ services:
                 RUN apt update && apt upgrade -y
             args:
                 PHP_VERSION: ${PHP_VERSION}
-                DOCKER_BUILDKIT: 1
         image: tmp/slothsoft:latest

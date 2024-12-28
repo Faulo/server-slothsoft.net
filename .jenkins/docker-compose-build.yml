@@ -4,11 +4,10 @@ services:
             context: ..
             dockerfile_inline: |
                 FROM faulo/farah:${PHP_VERSION}
-                COPY --chown=www-data --chmod=777 . .
-                RUN chmod 777 .
-                USER www-data
-                RUN composer update --no-interaction --no-dev --optimize-autoloader --classmap-authoritative
                 RUN apt update && apt upgrade -y
+                USER www-data
+                COPY --chmod=777 . .
+                RUN composer update --no-interaction --no-dev --optimize-autoloader --classmap-authoritative
             args:
                 PHP_VERSION: ${PHP_VERSION}
         image: tmp/slothsoft:latest

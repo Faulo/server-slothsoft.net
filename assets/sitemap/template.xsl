@@ -25,7 +25,7 @@
 			</page>
 			<page name="UnicodeMapper" title="Unicode Text Converter" ref="unicode-mapper" status-active="" status-public="" />
 			<page name="Imprint" title="Impressum" ref="imprint" status-active="" status-public="" />
-
+			<page name="HistorischerSpieleabend" title="HistorischerSpieleabend" redirect="http://historischer-spieleabend.slothsoft.net/" status-active="" />
 
 			<xsl:apply-templates select="*[@name='downloads']" />
 

@@ -2333,16 +2333,16 @@
         },
         {
             "name": "slothsoft/farah",
-            "version": "1.13.0",
+            "version": "1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-farah.git",
-                "reference": "02eaed04ccb3b0dcb8e40d2e8151571ce68bb864"
+                "reference": "574c5d043d261c69775c2cb79272462c332afc56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/02eaed04ccb3b0dcb8e40d2e8151571ce68bb864",
-                "reference": "02eaed04ccb3b0dcb8e40d2e8151571ce68bb864",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/574c5d043d261c69775c2cb79272462c332afc56",
+                "reference": "574c5d043d261c69775c2cb79272462c332afc56",
                 "shasum": ""
             },
             "require": {
@@ -2404,9 +2404,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-farah/issues",
-                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.13.0"
+                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.13.1"
             },
-            "time": "2025-01-15T12:09:28+00:00"
+            "time": "2025-03-22T14:20:44+00:00"
         },
         {
             "name": "slothsoft/minecraft",
@@ -2583,16 +2583,16 @@
         },
         {
             "name": "slothsoft/talesof",
-            "version": "1.0.7",
+            "version": "1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-talesof.git",
-                "reference": "35631ffa2dd03b002ce99822ae1be843b31c50da"
+                "reference": "8a86249c312530a6a69afebc86ff539dc3af2049"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-talesof/zipball/35631ffa2dd03b002ce99822ae1be843b31c50da",
-                "reference": "35631ffa2dd03b002ce99822ae1be843b31c50da",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-talesof/zipball/8a86249c312530a6a69afebc86ff539dc3af2049",
+                "reference": "8a86249c312530a6a69afebc86ff539dc3af2049",
                 "shasum": ""
             },
             "require": {
@@ -2632,9 +2632,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-talesof/issues",
-                "source": "https://github.com/Faulo/slothsoft-talesof/tree/1.0.7"
+                "source": "https://github.com/Faulo/slothsoft-talesof/tree/1.0.10"
             },
-            "time": "2024-11-10T19:23:20+00:00"
+            "time": "2025-03-22T15:52:54+00:00"
         },
         {
             "name": "slothsoft/w3c",
@@ -3071,16 +3071,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.12.1",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "123267b2c49fbf30d78a7b2d333f6be754b94845"
+                "reference": "024473a478be9df5fdaca2c793f2232fe788e414"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/123267b2c49fbf30d78a7b2d333f6be754b94845",
-                "reference": "123267b2c49fbf30d78a7b2d333f6be754b94845",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/024473a478be9df5fdaca2c793f2232fe788e414",
+                "reference": "024473a478be9df5fdaca2c793f2232fe788e414",
                 "shasum": ""
             },
             "require": {
@@ -3119,7 +3119,7 @@
             ],
             "support": {
                 "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.12.1"
+                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.0"
             },
             "funding": [
                 {
@@ -3127,7 +3127,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-08T17:47:46+00:00"
+            "time": "2025-02-12T12:17:51+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -3483,16 +3483,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "c00d78fb6b29658347f9d37ebe104bffadf36299"
+                "reference": "9b30d6fd026b2c132b3985ce6b23bec09ab3aa68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/c00d78fb6b29658347f9d37ebe104bffadf36299",
-                "reference": "c00d78fb6b29658347f9d37ebe104bffadf36299",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/9b30d6fd026b2c132b3985ce6b23bec09ab3aa68",
+                "reference": "9b30d6fd026b2c132b3985ce6b23bec09ab3aa68",
                 "shasum": ""
             },
             "require": {
@@ -3524,9 +3524,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.0.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.1.0"
             },
-            "time": "2024-10-13T11:29:49+00:00"
+            "time": "2025-02-19T13:28:12+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",

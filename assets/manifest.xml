@@ -166,16 +166,6 @@
 				<use-document ref="//talesof/html/home" name="content" />
 				<use-document ref="/shoutboxes/tales" name="chat" />
 			</fragment>
-			<fragment name="eternia-home">
-				<import ref="/api/default" />
-				<use-document ref="//talesof/html/eternia/home" name="content" />
-				<use-document ref="/shoutboxes/tales" name="chat" />
-			</fragment>
-			<fragment name="graces-home">
-				<import ref="/api/default" />
-				<use-document ref="//talesof/html/graces/home" name="content" />
-				<use-document ref="/shoutboxes/tales" name="chat" />
-			</fragment>
 			<fragment name="craymelEditor">
 				<import ref="/api/default" />
 				<use-document ref="//talesof/html/eternia/craymels" name="content" />
@@ -195,11 +185,7 @@
 				<import ref="/api/default" />
 				<use-document ref="//talesof/html/melnics/translator" name="content" />
 				<use-document ref="/shoutboxes/tales" name="chat" />
-			</fragment>
-			<fragment name="carta-home">
-				<import ref="/api/default" />
-				<use-document ref="//talesof/html/carta/home" name="content" />
-				<use-document ref="/shoutboxes/tales" name="chat" />
+				<link-stylesheet ref="//slothsoft@slothsoft.net/css/kana" />
 			</fragment>
 			<fragment name="carta-list">
 				<import ref="/api/default" />
@@ -286,7 +272,7 @@
 	<fragment name="pc">
 		<param name="standalone" scope="global" />
 		<use-template ref="/xsl/_pc" />
-		<use-document ref="/static/pc"/>
+		<use-document ref="/static/pc" />
 		<link-stylesheet ref="/css/default" />
 		<link-stylesheet ref="/css/fonts" />
 		<import ref="//core/api/HTML5" />

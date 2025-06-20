@@ -1,7 +1,9 @@
 ARG PHP_VERSION=8.0
 FROM faulo/farah:${PHP_VERSION}
 
-RUN apt update && apt upgrade -y
+RUN apt update
+
+RUN apt upgrade -y
 
 COPY --chown=www-data:www-data . .
 RUN chmod 777 .

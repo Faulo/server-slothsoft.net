@@ -26,9 +26,9 @@ volumes:
     data:
 
 networks:
-    vhosts_default:
+    vhosts:
         external: true
-    mysql_default:
+    mysql:
         external: true
 
 secrets:

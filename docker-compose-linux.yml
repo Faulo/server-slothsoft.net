@@ -24,4 +24,4 @@ networks:
 
 secrets:
     mysql_password:
-        external: true
+        file: /var/secrets/mysql_password

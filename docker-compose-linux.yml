@@ -1,7 +1,7 @@
 services:
     frontend:
         build:
-            context: ..
+            context: .
             dockerfile_inline: |
                 FROM faulo/farah:${PHP_VERSION}
                 RUN apt update && apt upgrade -y

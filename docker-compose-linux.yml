@@ -1,0 +1,36 @@
+services:
+    frontend:
+        build:
+            context: ..
+            dockerfile_inline: |
+                FROM faulo/farah:${PHP_VERSION}
+                RUN apt update && apt upgrade -y
+                COPY --chown=www-data:www-data . .
+                RUN chmod 777 .
+                USER www-data
+                RUN composer update --no-interaction --no-dev --optimize-autoloader --classmap-authoritative
+            args:
+                PHP_VERSION: ${PHP_VERSION}
+        secrets:
+            - mysql_password
+        environment:
+            MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_password
+        volumes:
+            - data:/var/www/data
+        networks:
+            - vhosts
+            - mysql
+        restart: unless-stopped
+
+volumes:
+    data:
+
+networks:
+    vhosts_default:
+        external: true
+    mysql_default:
+        external: true
+
+secrets:
+    mysql_password:
+        external: true

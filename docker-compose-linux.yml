@@ -2,19 +2,22 @@ services:
     frontend:
         build:
             context: .
+            args:
+                PHP_VERSION: ${PHP_VERSION}
         secrets:
             - mysql_password
         environment:
             MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_password
         volumes:
-            - data:/var/www/data
+            - slothsoft_data:/var/www/data
         networks:
             - vhosts
             - mysql
         restart: unless-stopped
 
 volumes:
-    data:
+    slothsoft_data:
+        external: true
 
 networks:
     vhosts:

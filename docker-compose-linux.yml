@@ -1,6 +1,6 @@
 services:
     frontend:
-        container_name: slothsoft_frontend
+        container_name: ${STACK_NAME}_frontend
         build:
             context: .
             args:
@@ -8,8 +8,9 @@ services:
         secrets:
             - mysql_password
         environment:
-            VIRTUAL_HOST: slothsoft.net
-            LETSENCRYPT_HOST: slothsoft.net
+            SERVER_NAME: ${SERVER_NAME}
+            VIRTUAL_HOST: ${SERVER_NAME}
+            LETSENCRYPT_HOST: ${SERVER_NAME}
             MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_password
         volumes:
             - slothsoft_data:/var/www/data

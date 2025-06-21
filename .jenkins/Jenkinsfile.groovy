@@ -6,7 +6,7 @@ pipeline {
 		stage('Load environment') {
 			steps {
 				script {
-					withEnv(readFile('stack.env').split('\n') as List) {
+					withEnv(readFile('.env').split('\n') as List) {
 						stage('Setup dependencies') {
 							callShell "docker pull faulo/farah:${PHP_VERSION}"
 

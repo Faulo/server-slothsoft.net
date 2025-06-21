@@ -14,6 +14,8 @@ services:
         networks:
             - vhosts
             - mysql
+        labels:
+            - "VIRTUAL_HOST=slothsoft.net"
         restart: unless-stopped
 
 volumes:

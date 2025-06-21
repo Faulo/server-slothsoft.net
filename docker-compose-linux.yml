@@ -14,8 +14,11 @@ services:
         networks:
             - vhosts
             - mysql
+        expose:
+            - 80
         labels:
             - "VIRTUAL_HOST=slothsoft.net"
+            - "LETSENCRYPT_HOST=slothsoft.net"
         restart: unless-stopped
 
 volumes:

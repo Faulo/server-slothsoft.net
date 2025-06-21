@@ -17,6 +17,7 @@ services:
         expose:
             - 80
         labels:
+            - "com.github.nginxproxy.nginx-proxy.expose=true"
             - "VIRTUAL_HOST=slothsoft.net"
             - "LETSENCRYPT_HOST=slothsoft.net"
         restart: unless-stopped

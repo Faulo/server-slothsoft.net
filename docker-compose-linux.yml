@@ -1,6 +1,6 @@
 services:
     frontend:
-        container_name: slothsoft_frontend
+        container_name: ${STACK_NAME}_frontend
         build:
             dockerfile: Dockerfile.linux
             args:

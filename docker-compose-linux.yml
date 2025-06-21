@@ -8,6 +8,8 @@ services:
         secrets:
             - mysql_password
         environment:
+            VIRTUAL_HOST: slothsoft.net
+            LETSENCRYPT_HOST: slothsoft.net
             MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_password
         volumes:
             - slothsoft_data:/var/www/data
@@ -16,10 +18,6 @@ services:
             - mysql
         expose:
             - 80
-        labels:
-            - "com.github.nginxproxy.nginx-proxy.expose=true"
-            - "VIRTUAL_HOST=slothsoft.net"
-            - "LETSENCRYPT_HOST=slothsoft.net"
         restart: unless-stopped
 
 volumes:

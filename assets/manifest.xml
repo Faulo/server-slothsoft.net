@@ -114,9 +114,7 @@
 	</directory>
 
 	<fragment name="shoutboxes">
-		<use-document ref="//chat/api/shoutbox?chat-duration=36500" name="slothsoft">
-			<param name="chat-database" value="slothsoft" />
-		</use-document>
+		<use-document ref="//chat/api/shoutbox?chat-duration=36500&amp;chat-database=slothsoft" name="slothsoft" />
 		<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=tales" name="tales" />
 		<use-document ref="//chat/api/shoutbox?chat-duration=3650&amp;chat-database=amber" name="amber" />
 		<use-document ref="//chat/api/shoutbox?chat-duration=90&amp;chat-database=minecraft" name="minecraft" />

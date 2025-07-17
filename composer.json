@@ -19,10 +19,10 @@
 	"require" : {
 		"slothsoft/amber" : "*",
 		"slothsoft/chat" : "*",
-		"slothsoft/core" : "^1.11",
+		"slothsoft/core" : "^1.13",
 		"slothsoft/cron" : "*",
 		"slothsoft/dragonage" : "*",
-		"slothsoft/farah" : "^1.12",
+		"slothsoft/farah" : "^1.16",
 		"slothsoft/minecraft" : "*",
 		"slothsoft/sse" : "*",
 		"slothsoft/talesof" : "*",
@@ -30,7 +30,7 @@
 		"google/apiclient" : "^2.0"
 	},
 	"require-dev" : {
-		"phpunit/phpunit" : "^6.5"
+		"phpunit/phpunit" : "~9.6.23"
 	},
 	"autoload-dev" : {
 		"classmap" : [

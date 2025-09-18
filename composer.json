@@ -22,7 +22,7 @@
 		"slothsoft/core" : "^1.13",
 		"slothsoft/cron" : "*",
 		"slothsoft/dragonage" : "*",
-		"slothsoft/farah" : "^1.16",
+		"slothsoft/farah" : "^1.19",
 		"slothsoft/minecraft" : "*",
 		"slothsoft/sse" : "*",
 		"slothsoft/talesof" : "*",

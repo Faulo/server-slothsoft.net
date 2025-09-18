@@ -27,8 +27,6 @@
 			<page name="Imprint" title="Impressum" ref="imprint" status-active="" status-public="" />
 			<page name="HistorischerSpieleabend" title="HistorischerSpieleabend" redirect="http://historischer-spieleabend.slothsoft.net/" status-active="" />
 
-			<xsl:apply-templates select="*[@name='downloads']" />
-
 			<page name="sitemap" ref="//slothsoft@farah/sitemap-generator" status-active="" />
 		</domain>
 	</xsl:template>

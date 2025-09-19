@@ -277,37 +277,6 @@
 		<use-template ref="/xsl/dict.select" />
 		<use-document ref="/static/language-images" name="language-images" />
 	</fragment>
-	<fragment name="archive">
-		<use-template ref="/xsl/_archive" />
-		<!-- <use-document ref="/data/archive"/> -->
-		<link-stylesheet ref="/css/default" />
-		<link-stylesheet ref="/css/layout" />
-		<link-stylesheet ref="/css/fonts" />
-		<link-stylesheet ref="/css/colors" />
-		<link-stylesheet ref="/css/archive" />
-		<import ref="//sse/api/client" />
-		<link-script ref="/js/Unison" />
-		<use-document ref="/shoutboxes/archive" name="chat" />
-		<import ref="//core/api/HTML5" />
-	</fragment>
-	<fragment name="archive-hentai">
-		<use-template ref="/xsl/_archive.hentai" />
-		<!-- <use-document ref="/data/archive.hentai"/> -->
-		<link-stylesheet ref="/css/default" />
-		<link-stylesheet ref="/css/layout" />
-		<link-stylesheet ref="/css/fonts" />
-		<link-stylesheet ref="/css/colors" />
-		<link-stylesheet ref="/css/archive" />
-	</fragment>
-	<fragment name="archive-manga">
-		<use-template ref="/xsl/_archive.hentai" />
-		<!-- <use-document ref="/data/archive.manga"/> -->
-		<link-stylesheet ref="/css/default" />
-		<link-stylesheet ref="/css/layout" />
-		<link-stylesheet ref="/css/fonts" />
-		<link-stylesheet ref="/css/colors" />
-		<link-stylesheet ref="/css/archive" />
-	</fragment>
 	<fragment name="unicode-mapper">
 		<import ref="/api/default" />
 		<fragment name="content" use="document">

@@ -4,7 +4,7 @@
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-	<xsl:template match="/data">
+	<xsl:template match="/*">
 		<div class="fonts">
 			<xsl:variable name="name" select="'postscript'"/>
 			<xsl:variable name="fonts" select="*[@data-cms-name='fonts']/array[string[@key=$name]]"/>

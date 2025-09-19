@@ -3,7 +3,7 @@
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
-	<xsl:template match="/data">
+	<xsl:template match="/*">
 		<div class="fire-emblem">
 			<xsl:for-each select=".//game">
 				<xsl:variable name="name" select="translate(concat('Fire Emblem: ', @name), ' ', ' ')"/>

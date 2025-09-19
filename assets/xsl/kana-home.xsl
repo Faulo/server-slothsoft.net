@@ -3,7 +3,7 @@
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	
-	<xsl:template match="/data">
+	<xsl:template match="/*">
 		<article>
 			<h2>Introduction</h2>
 			<p>These pages were created by Daniel in an attempt to enter the learning of Japanese.</p>

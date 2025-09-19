@@ -5,9 +5,9 @@
 	
 	<xsl:import href="farah://slothsoft@slothsoft.net/xsl/kana"/>
 	
-	<xsl:template match="/data/data">
+	<xsl:template match="/*">
 		<div>
-			<xsl:apply-templates select="testDates">
+			<xsl:apply-templates select=".//testDates">
 				<xsl:with-param name="dayCount" select="31"/>
 			</xsl:apply-templates>
 		</div>

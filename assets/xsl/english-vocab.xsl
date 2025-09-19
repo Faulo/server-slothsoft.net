@@ -5,7 +5,7 @@
 	
 	<xsl:import href="farah://slothsoft@slothsoft.net/xsl/kana"/>
 	
-	<xsl:template match="/data/data">
+	<xsl:template match="/*">
 		<div class="Translator English">
 			<!--
 			<article>

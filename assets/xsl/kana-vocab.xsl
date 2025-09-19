@@ -4,7 +4,13 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:import href="farah://slothsoft@slothsoft.net/xsl/kana"/>
 	
-	<xsl:template match="/data/data">
+	<xsl:template match="/*">
+        <div>
+            <xsl:apply-templates select="*[@name = 'kana.vocab']/data" />
+        </div>
+    </xsl:template>
+	
+	<xsl:template match="data">
 		<div>
 			<article class="about">
 				<h2>About</h2>

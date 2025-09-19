@@ -7,11 +7,11 @@
 	<xsl:template match="/*">
 		<div class="fonts">
 			<xsl:variable name="name" select="'postscript'"/>
-			<xsl:variable name="fonts" select="*[@data-cms-name='fonts']/array[string[@key=$name]]"/>
+			<xsl:variable name="fonts" select="*[@name='fonts']/array[string[@key=$name]]"/>
 			<xsl:choose>
-				<xsl:when test="*[@data-cms-name='prefFonts']">
+				<xsl:when test="*[@name='prefFonts']">
 					
-					<xsl:for-each select="*[@data-cms-name='prefFonts']/object/array">
+					<xsl:for-each select="*[@name='prefFonts']/object/array">
 						<h2><xsl:value-of select="@key"/></h2>
 						<table>
 							<xsl:for-each select="string">

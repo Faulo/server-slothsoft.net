@@ -13,7 +13,6 @@
 			<xsl:apply-templates select="*[@name='dragon-age']" />
 			<xsl:apply-templates select="*[@name='amber']" />
 			<xsl:apply-templates select="*[@name='vocab']" />
-			<page name="MissingSloth" ref="missingSloth" title="Missing Sloth" status-active="" />
 			<page name="VideoChatThing" ref="vct-home" module="webrtc" title="VideoChatThing" status-active="">
 				<page name="Room" ref="vct-room" title="Room" status-active="" />
 			</page>

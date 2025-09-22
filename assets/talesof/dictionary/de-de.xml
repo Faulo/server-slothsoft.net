@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-de">
+
+	<p
+		key="This editor allows you to find useful Craymel Configurations by showing all available Greater Craymels and spells, and which craymel mage they would end up with.">
+		Mit diesem Editor kann man nützliche Craymel Konfigurationen finden.
+	</p>
+	<p key="Instructions">Instruktionen</p>
+	<p key="Credits">Credits</p>
+	<p key="(code)">(Programmierung)</p>
+	<p key="(design)">(Design)</p>
+	<p key="(awesome craymel guide)">
+		<a rel="external" href="http://www.gamefaqs.com/ps/526350-tales-of-destiny-ii/faqs/14481">(tolle Craymel Anleitung)</a>
+	</p>
+
+	<p key="About">Einleitung</p>
+	<p key="Craymel Mages">Craymel Magier</p>
+	<p key="Spells">Zaubersprüche</p>
+	<p key="Test your Melnics knowledge!">Melnics-Nachhilfe!</p>
+	<p key="Test Results!">Testergebnisse!</p>
+
+	<p key="Transcribe these Melnic characters:">Transkribiere diese Melnic Buchstaben:</p>
+	<p key="Leave one whitespace between each transcription (e.g. a b c d):">
+		Lass ein Leerzeichen zwischer jeder Transkription
+		<small>(z.B. "a b c d")</small>
+		:
+	</p>
+	<p key="correct!"> richtig!</p>
+	<p key="Check">Überprüfen</p>
+	<p
+		key="Click on a Greater Craymels name to have him switch to the other craymel mage. The list will update accordingly.">Wenn man auf einen Greater Craymel klickt, wechselt er die
+		Position. Die Liste der Zaubersprüche wird automatisch
+		aktualisiert.</p>
+	<p key="Credit for the spell descriptions goes to Rena Chan for their">Die Zauberspruch-Beschreibungen wurden dankend Rena Chans </p>
+	<p key="awesome craymel guide">
+		<a rel="external" href="http://www.gamefaqs.com/ps/526350-tales-of-destiny-ii/faqs/14481">ehrfurchtgebietendem Craymel-Ratgeber</a>
+	</p>
+	<p key="."> entnommen.</p>
+	<p
+		key="Click on a Greater Craymels name and drag it to another Craymel Cage, then drop it. The list will update accordingly.">Die Greater Craymels werden per Drag'n'Drop einem anderen Käfig
+		zugeordnet. Die Liste der Zaubersprüche wird
+		automatisch aktualisiert.</p>
+	<p key="Free Craymels">
+		<h3>Free Craymels</h3>
+	</p>
+	<p key="Keele">
+		<h3>Keele</h3>
+	</p>
+	<p key="Meredy">
+		<h3>Meredy</h3>
+	</p>
+	<p key="Craymel Cage">
+		<h4>Craymel Käfig</h4>
+	</p>
+	<p key="Available Spells">
+		<h4>Verfügbare Zaubersprüche</h4>
+	</p>
+	<p key="Melnics  Learning Program">Melnics Lernprogramm</p>
+	<p key="Shoutbox! \o/">Shoutbox! \o/</p>
+	<p key="vocab/ja/rubyplugin">vocab/ja/rubyplugin</p>
+</html>

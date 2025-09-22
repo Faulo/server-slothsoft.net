@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<card id="Lloyd" name="Lloyd Irving" x="50" y="75" r="10">
+		<quote>How can we go on a quest to regenerate the world...</quote>
+		<quote>if we can't even save the people standing right in front of us?!</quote>
+	</card>
+	<card id="Farah" name="Farah Oersted" x="350" y="275" r="423">
+		<quote>Maybe we can become heroes!</quote>
+		<quote>Yeah, no problem!</quote>
+	</card>
+	<card id="Rita" name="Rita Mordio" x="450" y="345" r="320">
+		<quote>You thought you could win?</quote>
+		<quote>Too bad!</quote>
+	</card>
+	<card id="Pascal" name="Pascal" x="200" y="175" r="280">
+		<quote>Sometimes, I get so lost in serious thought...</quote>
+		<quote>About how I could think more seriously about things!</quote>
+	</card>
+
+</data>

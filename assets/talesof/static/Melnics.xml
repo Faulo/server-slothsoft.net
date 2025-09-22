@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<data>
+	<english name="h">
+		<melnics name="a" />
+	</english>
+	<english name="o">
+		<melnics name="i" />
+	</english>
+	<english name="i">
+		<melnics name="u" />
+	</english>
+	<english name="a">
+		<melnics name="e" />
+	</english>
+	<english name="u">
+		<melnics name="o" />
+	</english>
+	<english name="kh">
+		<melnics name="ka" />
+	</english>
+	<english name="ko">
+		<melnics name="ki" />
+	</english>
+	<english name="k">
+		<melnics name="ku" />
+	</english>
+	<english name="ka">
+		<melnics name="ke" />
+	</english>
+	<english name="ku">
+		<melnics name="ko" />
+	</english>
+	<english name="sh">
+		<melnics name="sa" />
+	</english>
+	<english name="so">
+		<melnics name="shi" />
+	</english>
+	<english name="s">
+		<melnics name="su" />
+	</english>
+	<english name="sa">
+		<melnics name="se" />
+	</english>
+	<english name="su">
+		<melnics name="so" />
+	</english>
+	<english name="mh">
+		<melnics name="ta" />
+	</english>
+	<english name="mo">
+		<melnics name="chi" />
+	</english>
+	<english name="m">
+		<melnics name="tou" />
+	</english>
+	<english name="ma">
+		<melnics name="te" />
+	</english>
+	<english name="mu">
+		<melnics name="to" />
+	</english>
+	<english name="vh">
+		<melnics name="na" />
+	</english>
+	<english name="vo">
+		<melnics name="ni" />
+	</english>
+	<english name="v">
+		<melnics name="nu" />
+	</english>
+	<english name="va">
+		<melnics name="ne" />
+	</english>
+	<english name="vu">
+		<melnics name="no" />
+	</english>
+	<english name="fh">
+		<melnics name="ha" />
+	</english>
+	<english name="fo">
+		<melnics name="hi" />
+	</english>
+	<english name="f">
+		<melnics name="fu" />
+	</english>
+	<english name="fa">
+		<melnics name="he" />
+	</english>
+	<english name="fu">
+		<melnics name="ho" />
+	</english>
+	<english name="nh">
+		<melnics name="ma" />
+	</english>
+	<english name="no">
+		<melnics name="mi" />
+	</english>
+	<english name="n">
+		<melnics name="mu" />
+	</english>
+	<english name="na">
+		<melnics name="me" />
+	</english>
+	<english name="nu">
+		<melnics name="mo" />
+	</english>
+	<english name="y">
+		<melnics name="ya" />
+	</english>
+	<english name="j">
+		<melnics name="yu" />
+	</english>
+	<english name="q">
+		<melnics name="yo" />
+	</english>
+	<english name="lh">
+		<melnics name="ra" />
+	</english>
+	<english name="lo">
+		<melnics name="ri" />
+	</english>
+	<english name="l">
+		<melnics name="ru" />
+	</english>
+	<english name="la">
+		<melnics name="re" />
+	</english>
+	<english name="lu">
+		<melnics name="ro" />
+	</english>
+	<english name="c">
+		<melnics name="wa" />
+	</english>
+	<english name="w">
+		<melnics name="ba" />
+	</english>
+	<english name="t">
+		<melnics name="ti" />
+	</english>
+	<english name="r">
+		<melnics name="di" />
+	</english>
+	<english name="e">
+		<melnics name="n" />
+	</english>
+	<english name="z">
+		<melnics name="tsu" />
+	</english>
+	<english name="xh">
+		<melnics name="za" />
+	</english>
+	<english name="xo">
+		<melnics name="ji" />
+	</english>
+	<english name="x">
+		<melnics name="zu" />
+	</english>
+	<english name="xa">
+		<melnics name="ze" />
+	</english>
+	<english name="xu">
+		<melnics name="zo" />
+	</english>
+	<english name="d">
+		<melnics name="dou" />
+		<melnics name="dzu" />
+	</english>
+	<english name="b">
+		<melnics name="vu" />
+		<melnics name="bu" />
+	</english>
+	<english name="gh">
+		<melnics name="ga" />
+	</english>
+	<english name="go">
+		<melnics name="gi" />
+	</english>
+	<english name="g">
+		<melnics name="gu" />
+	</english>
+	<english name="ga">
+		<melnics name="ge" />
+	</english>
+	<english name="gu">
+		<melnics name="go" />
+	</english>
+	<english name="dh">
+		<melnics name="da" />
+	</english>
+	<english name="do">
+		<melnics name="ji" />
+	</english>
+	<english name="da">
+		<melnics name="de" />
+	</english>
+	<english name="du">
+		<melnics name="do" />
+	</english>
+	<english name="bo">
+		<melnics name="bi" />
+	</english>
+	<english name="ba">
+		<melnics name="be" />
+	</english>
+	<english name="bu">
+		<melnics name="bo" />
+	</english>
+	<english name="ph">
+		<melnics name="pa" />
+	</english>
+	<english name="po">
+		<melnics name="pi" />
+	</english>
+	<english name="p">
+		<melnics name="pu" />
+	</english>
+	<english name="pa">
+		<melnics name="pe" />
+	</english>
+	<english name="pu">
+		<melnics name="po" />
+	</english>
+</data>

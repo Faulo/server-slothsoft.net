@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eccb3a01677eca52bf5a39bef5a2d484",
+    "content-hash": "f54023c7dffac12ec9f70c4040d24a88",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -2339,16 +2339,16 @@
         },
         {
             "name": "slothsoft/farah",
-            "version": "1.20.1",
+            "version": "1.21.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-farah.git",
-                "reference": "f2a86fb42fbd29010aac93863ed12551673a042a"
+                "reference": "0f906c979aa80c1c48c1eb296b3d24cb71d25cca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/f2a86fb42fbd29010aac93863ed12551673a042a",
-                "reference": "f2a86fb42fbd29010aac93863ed12551673a042a",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/0f906c979aa80c1c48c1eb296b3d24cb71d25cca",
+                "reference": "0f906c979aa80c1c48c1eb296b3d24cb71d25cca",
                 "shasum": ""
             },
             "require": {
@@ -2380,7 +2380,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.20.x-dev"
+                    "dev-main": "1.21.x-dev"
                 }
             },
             "autoload": {
@@ -2411,9 +2411,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-farah/issues",
-                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.20.1"
+                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.21.1"
             },
-            "time": "2025-09-21T18:10:21+00:00"
+            "time": "2025-09-22T20:24:03+00:00"
         },
         {
             "name": "slothsoft/minecraft",
@@ -2587,61 +2587,6 @@
                 "source": "https://github.com/Faulo/slothsoft-sse/tree/1.0.8"
             },
             "time": "2025-09-20T18:16:49+00:00"
-        },
-        {
-            "name": "slothsoft/talesof",
-            "version": "1.0.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Faulo/slothsoft-talesof.git",
-                "reference": "9279ebc92507373787abaa7e695ef676cd367be7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-talesof/zipball/9279ebc92507373787abaa7e695ef676cd367be7",
-                "reference": "9279ebc92507373787abaa7e695ef676cd367be7",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4",
-                "slothsoft/chat": "^1.0",
-                "slothsoft/core": "^1.0",
-                "slothsoft/farah": "^1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.5"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/registerModule.php"
-                ],
-                "psr-0": {
-                    "Slothsoft\\TalesOf\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel Schulz",
-                    "email": "info.slothsoft@gmail.com"
-                }
-            ],
-            "description": "A Farah module that processes Tales stuff.",
-            "homepage": "http://farah.slothsoft.net/modules/talesof",
-            "keywords": [
-                "docs",
-                "farah-module",
-                "slothsoft"
-            ],
-            "support": {
-                "issues": "https://github.com/Faulo/slothsoft-talesof/issues",
-                "source": "https://github.com/Faulo/slothsoft-talesof/tree/1.0.11"
-            },
-            "time": "2025-07-04T16:41:24+00:00"
         },
         {
             "name": "slothsoft/w3c",

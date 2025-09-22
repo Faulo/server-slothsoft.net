@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cards>
+	<card no="1" name="Stahn" quote-1="Th-The sword spoke!" quote-2="How in the world can you speak?"
+		where="Shining Spot: East Lhant Highroad" />
+	<card no="2" name="Rutee" quote-1="Hey, Atwight? I have something to ask you..." quote-2="It's about Leon."
+		where="Shining Spot: North Barona Road" />
+	<card no="3" name="Philia" quote-1="L-Look out!" quote-2="Philia Bomb!" where="Shining Spot: West Lhant Road" />
+	<card no="4" name="Garr" quote-1="Allow me to disengage my limiter!" quote-2="I leave the rest...to you..."
+		where="Shining Spot: North Lhant Road" />
+	<card no="5" name="Leon" quote-1="I hail from the Kingdom of Seingald..." quote-2="My name is Leon Magnus."
+		where="Shining Spot: South Barona Highroad" />
+	<card no="6" name="Chelsea" quote-1="No way, I'm not lost!"
+		quote-2="I was just hanging out with Keyaki and my other friends!" where="Shining Spot: Gralesyde Highroad" />
+	<card no="7" name="Mary" quote-1="I'm alive, Dalis." quote-2="You saved my life twice."
+		where="Shining Spot: Old Grale Highroad" />
+	<card no="8" name="Karyl" quote-1="People call me Blue Lightning." quote-2="You can call me Karyl!"
+		where="Shining Spot: Strahta Craglands" />
+	<card no="9" name="Bruiser" quote-1="I am the champion!" quote-2="Hey, kid! I got next! Remember that!"
+		where="Shining Spot: Strahta Desert (East)" />
+	<card no="10" name="Lilith" quote-1="A ladle in my right hand, and a frying pan in my left!"
+		quote-2="Arise! Wake the dead!" where="Shining Spot: Strahta Desert (West)" />
+	<card no="11" name="Dymlos" quote-1="It's all right, Stahn..." quote-2="We've lived too long already."
+		where="Shining Spot: Strahta Desert (North)" />
+	<card no="12" name="Atwight" quote-1="I think I've fulfilled my promise to your mother."
+		quote-2="Never change, okay Rutee?" where="Shining Spot: Fendel Borderlands" />
+	<card no="13" name="Igtenos" quote-1="Glory to Phandaria!" quote-2="And long live Garr!"
+		where="Shining Spot: Fendel Mountain Pass" />
+	<card no="14" name="Chaltier" quote-1="You will always be my young master."
+		quote-2="I will follow you, no matter what." where="Shining Spot: Fendel Highlands" />
+	<card no="15" name="Clemente" quote-1="You'll be all right. You're a strong girl."
+		quote-2="Take care of yourself, Philia." where="Shining Spot: Mt. Zavhert" />
+	<card no="16" name="Yuri" quote-1="Intend to?" quote-2="I already have."
+		where="Event: Speak with the boy to the right of the research institute in Sable Izolle" />
+	<card no="17" name="Estelle" quote-1="The voices of corpses buried beneath the trees..."
+		quote-2="creep up and lure us to our doom." where="Shining Spot: Glacier Road" />
+	<card no="18" name="Karol" quote-1="Until you really think I'm a boss..."
+		quote-2="I'll just do my part as a fellow member of Brave Vesperia." where="Shining Spot: Untrodden Snowfield" />
+	<card no="19" name="Rita" quote-1="You thought you could win?" quote-2="Too bad!"
+		where="Event: Speak with the boy to the right of the research institute in Sable Izolle" />
+	<card no="20" name="Raven" quote-1="So this is the end, huh?" quote-2="Farewell, all my dear fans the world over."
+		where="Shining Spot: Uncharted Sandstretch" />
+	<card no="21" name="Judith" quote-1="This is the path I have chosen." quote-2="...Goodbye."
+		where="Shining Spot: Region 13" />
+	<card no="22" name="Kyle" quote-1="I want to be just like my dad!" quote-2="A great hero, just like him!"
+		where="Event: Speak with the maid behind Duke Dalen's manor in Gralesyde" />
+	<card no="23" name="Loni" quote-1="Don't attack when your spirit is low!" quote-2="You'll get knocked back!"
+		where="Event: Speak with the maid behind Duke Dalen's manor in Gralesyde" />
+	<card no="24" name="Judas" quote-1="Another nightmare..." quote-2="They always begin here, don't they, Chal?"
+		where="Event: Plant five seeds in the garden at Lhant" />
+	<card no="25" name="Reala" quote-1="Kyle? Kyyyyle!" quote-2="Hey! Over here!" where="Drop: Reala (Zhonecage)" />
+	<card no="26" name="Nanaly" quote-1="I understood Lou better than anyone."
+		quote-2="If nothing else, I'm sure of that." where="Event: Speak with the maid behind Duke Dalen's manor in Gralesyde" />
+	<card no="27" name="Harold" quote-1="Always keep your rocket launcher ready to fire." quote-2="It's my motto!"
+		where="Event: Speak with the maid behind Duke Dalen's manor in Gralesyde" />
+	<card no="28" name="Cress" quote-1="We need magic to defeat Dhaos." quote-2="Would you help us, please?"
+		where="Shining Spot: Region 66" />
+	<card no="29" name="Mint" quote-1="I'm sure I heard my mother's voice!"
+		quote-2="The voice that helped me pull through." where="Chest: Lhant" />
+	<card no="30" name="Arche" quote-1="Hmph! Chester..." quote-2="I REALLY, REALLY HATE YOU!" where="Chest: Barona" />
+	<card no="31" name="Claus" quote-1="Defeat Dhaos? Are you...serious?" quote-2="Hmph, that's quite a tall tale."
+		where="Chest: Gralesyde" />
+	<card no="32" name="Suzu" quote-1="I'm not going to cry."
+		quote-2="A true ninja steels her heart against such emotions." where="Chest: Oul Raye" />
+	<card no="33" name="Chester" quote-1="Cress...Did you know?" quote-2="Ami, she liked you."
+		where="Chest: Sable Izolle" />
+	<card no="34" name="Lloyd" quote-1="How can we go on a quest to regenerate the world..."
+		quote-2="if we can't even save the people standing right in front of us?!" where="Chest: Yu Liberte" />
+	<card no="35" name="Colette" quote-1="Hehe...thanks." quote-2="I'm glad I was able to live to this day."
+		where="Chest: Warrior's Roost" />
+	<card no="36" name="Genis" quote-1="You don't have to apologize, Lloyd."
+		quote-2="I like you, as well as the people of Iselia." where="Chest: Velanik" />
+	<card no="37" name="Raine" quote-1="Lloyd Irving, wake up!" quote-2="Lloyd!" where="Chest: Zavhert" />
+	<card no="38" name="Sheena" quote-1="The people of Mizuho were chased from this land."
+		quote-2="We all live in hiding." where="Chest: Amarcian Enclave" />
+	<card no="39" name="Kratos" quote-1="Hmph...and I thought I'd finally earned the right to die."
+		quote-2="But you're as softhearted as ever." where="Chest: Telos Astue" />
+	<card no="40" name="Zelos" quote-1="Now, now, settle down, my darling hunnies!"
+		quote-2="Hi there, my little cool beauty, are you hurt?" where="Chest: Katz Korner" />
+	<card no="41" name="Presea" quote-1="Thank you for assisting me with my daddy's burial."
+		quote-2="...I've been a great burden on you all." where="Shop: Lhant (Rank 7)" />
+	<card no="42" name="Regal" quote-1="I swear upon my good name and these shackles that bind me..."
+		quote-2="I shall not betray you." where="Shop: Barona (Rank 9)" />
+	<card no="43" name="Luke" quote-1="I'm the ambassador!" quote-2="What I say goes! Understand?!"
+		where="Shop: Gralesyde (Rank 6)" />
+	<card no="44" name="Guy" quote-1="My sword cuts all!" quote-2="Enter the amazing Guy!"
+		where="Shop: Oul Raye (Rank 7)" />
+	<card no="45" name="Tear" quote-1="I didn't expect you to be a Seventh Fonist, too."
+		quote-2="That was careless of me." where="Shop: Sable Izolle (Rank 10)" />
+	<card no="46" name="Anise" quote-1="Oh, no! Ion!" quote-2="The Commandant's in danger!"
+		where="Shop: Yu Liberte (Rank 9)" />
+	<card no="47" name="Jade" quote-1="My apologies. I'd forgotten the young master here..."
+		quote-2="hasn't a clue about the world around him." where="Shop: Velanik (Rank 6)" />
+	<card no="48" name="Natalia" quote-1="Asch! Stop!" quote-2="You're making no sense!"
+		where="Shop: Zavhert (Rank 10)" />
+	<card no="49" name="Emil" quote-1="Courage is the magic that turns dreams into reality."
+		quote-2="Courage is what helped me make true friends." where="Shop: Amarcian Enclave (Rank 2)" />
+	<card no="50" name="Marta" quote-1="Are you gonna fight with me or run?" quote-2="C'mon. You're a man. Speak up!"
+		where="Shop: Telos Astue (Rank 4)" />
+	<card no="51" name="Reid" quote-1="There are people I love that live in this world."
+		quote-2="I'm not letting them die!" where="Chest: Lastalia Shaft" />
+	<card no="52" name="Farah" quote-1="Maybe we can become heroes!" quote-2="Yeah, no problem!"
+		where="Chest: Lastalia Shaft" />
+	<card no="53" name="Chat" quote-1="Will you become my deck hands?"
+		quote-2="Not subordinates, but deckhands. And you will address me as captain!" where="Chest: Lastalia Shaft" />
+	<card no="54" name="Max" quote-1="She doesn't like pickles on her burgers."
+		quote-2="She's kind of...well, you know." where="Chest: Lastalia Shaft" />
+	<card no="55" name="Keele" quote-1="What kind of technology does Celestia possess?"
+		quote-2="What exactly is that stone attached to your forehead?" where="Chest: Fodra's Core" />
+	<card no="56" name="Meredy" quote-1="You saved Meredy and Quickie." quote-2="Thank you."
+		where="Chest: Fodra's Core" />
+	<card no="57" name="Ruca" quote-1="It was probably just luck." quote-2="I've...never been in a fight before."
+		where="Chest: Strahta Desert Ruins (Lineage and Legacies)" />
+	<card no="58" name="Illia" quote-1="What the heck are you doing?!" quote-2="Are you an enemy or a friend?!"
+		where="Shining Spot: Oul Raye (After visiting Fodra's Core)" />
+	<card no="59" name="Spada" quote-1="What's up with you?" quote-2="You start talking to me and then just go quiet?"
+		where="Chest: Strahta Desert Ruins (Lineage and Legacies)" />
+	<card no="60" name="Ange" quote-1="Oh my! Then this meeting must be fate." quote-2="I myself am Ange Serena."
+		where="Chest: Fendel Glacier Ruins (Lineage and Legacies)" />
+	<card no="61" name="Ricardo" quote-1="Kids again?" quote-2="Since when did battlefields turn into playgrounds?"
+		where="Chest: Fendel Glacier Ruins (Lineage and Legacies)" />
+	<card no="62" name="Hermana" quote-1="Don't worry 'bout it. From now on, eat yer fill, 'kay?"
+		quote-2="Imma work hard to keep ya fed." where="Chest: Fendel Glacier Ruins (Lineage and Legacies)" />
+	<card no="63" name="Shing" quote-1="A guy who can't even make the girl in front of him smile?"
+		quote-2="Someone like that could never save the world." where="Inn Request: Lhant" />
+	<card no="64" name="Amber" quote-1="Yes. I believe you." quote-2="A bad person couldn't use a Soma anyway."
+		where="Drop: Amber (Zhonecage)" />
+	<card no="65" name="Jadeite" quote-1="Listen up. You lay one finger on my sister..." quote-2="and you're dead."
+		where="Inn Request: Barona" />
+	<card no="66" name="Beryl" quote-1="Shut up! Just shut up!" quote-2="I don't trust anyone!"
+		where="Inn Request: Gralesyde" />
+	<card no="67" name="Innes" quote-1="Oh? A well-endowed beauty, you say?" quote-2="I get that all the time~!"
+		where="Inn Request: Oul Raye" />
+	<card no="68" name="Kunzite" quote-1="The unique identification code my master gave me is..." quote-2="Kunzite."
+		where="Inn Request: Sable Izolle" />
+	<card no="69" name="Veigue" quote-1="All that matters is that Claire is safe."
+		quote-2="I don't care if I die myself." where="Event: Complete the Master Class in Warrior's Roost (Main Storyline)" />
+	<card no="70" name="Mao" quote-1="The past isn't important." quote-2="The future is!... Heh heh."
+		where="Chest: Gustworks Ruins" />
+	<card no="71" name="Eugene" quote-1="I have seen many Force adepts in my day..." quote-2="You have potential."
+		where="Chest: Gustworks Ruins" />
+	<card no="72" name="Annie" quote-1="Life doesn't have any one color."
+		quote-2="That's the truth that I've learned." where="Chest: Gustworks Ruins" />
+	<card no="73" name="Tytree" quote-1="Wow, sweet! That's five stars right there!"
+		quote-2="Did you know about the mushrooms?" where="Event: Show 80 Carta cards to the man in the port at Zavhert" />
+	<card no="74" name="Hilda" quote-1="I will overcome..." quote-2="I will overcome myself!"
+		where="Chest: Gustworks Ruins" />
+	<card no="75" name="Senel" quote-1="If she wants to hurt something we care about..."
+		quote-2="Then we won't show her any mercy." where="Chest: Eleth Research Laboratory" />
+	<card no="76" name="Will" quote-1="My real occupation is that of a natural historian."
+		quote-2="I never claimed to be a sheriff." where="Chest: Eleth Research Laboratory" />
+	<card no="77" name="Chloe" quote-1="It is my duty to help those in need." quote-2="I shall accompany you."
+		where="Chest: Eleth Research Laboratory" />
+	<card no="78" name="Norma" quote-1="I have no doubt anymore, master!" quote-2="I won't run from the truth!"
+		where="Chest: Eleth Research Laboratory" />
+	<card no="79" name="Moses" quote-1="This here's a job for a real man!" quote-2="Y'all leave it to me."
+		where="Chest: Arcadia Garden" />
+	<card no="80" name="Jay" quote-1="I need to know. I can't stand it when there's something I don't know."
+		quote-2="You know?" where="Chest: Arcadia Garden" />
+	<card no="81" name="Grune" quote-1="Oh, come now. Let's not worry about little things, okay?"
+		quote-2="They're...little." where="Chest: Arcadia Garden" />
+	<card no="82" name="Shirley" quote-1="They have offered their hand.." quote-2="And I intend to accept it."
+		where="Chest: Arcadia Garden" />
+	<card no="83" name="Caius" quote-1="Let's see..." quote-2="Well, it's edible...I think."
+		where="Inn Request: Yu Liberte" />
+	<card no="84" name="Rubia" quote-1="Come onnnn, flavor!" quote-2="Dinner's ready!"
+		where="Inn Request: Warrior's Roost" />
+	<card no="85" name="Asch" quote-1="If you're scared of killing..." quote-2="then throw away your sword!"
+		where="Inn Request: Velanik" />
+	<card no="86" name="Flynn" quote-1="We need just laws laid down by the government..."
+		quote-2="to ensure that people can live lives of stability and peace." where="Inn Request: Zavhert" />
+	<card no="87" name="Repede" quote-1="Grrrr..." quote-2="Woof! WOOF! WOOF!" where="Inn Request: Amarcian Enclave" />
+	<card no="88" name="Patty" quote-1="A villain like him? Pah!" quote-2="He deserves at least this much!"
+		where="Inn Request: Telos Astue" />
+	<card no="89" name="Dio" quote-1="Come on, it'll be fine!" quote-2="It'll work out somehow!"
+		where="Inn Request: Katz Korner" />
+	<card no="90" name="Mell" quote-1="How many times have we told you?" quote-2="It's dangerous to leave the house"
+		where="Inn Request: Katz Korner" />
+</cards>

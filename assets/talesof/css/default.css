@@ -1,0 +1,317 @@
+@font-face {
+	font-family: myMelnics;
+	src: local("MelniksFont"),
+		url(/slothsoft@slothsoft.net/talesof/static/fonts/MelniksFont.ttf)
+		format("truetype"),
+		url(/slothsoft@slothsoft.net/talesof/static/fonts/MelniksFont.otf)
+		format("opentype"),
+		url(/slothsoft@slothsoft.net/talesof/static/fonts/MelniksFont.svg)
+		format("svg");
+}
+
+.MagicCarta td {
+	padding: 0px 4px;
+}
+
+.Melnics {
+	font-family: myMelnics;
+}
+
+.Translator.MelnicsTranslator textarea {
+	height: 4em;
+}
+
+.Translator.MelnicsTranslator textarea.output-english {
+	font-size: 1.25em;
+	padding: 0.25em;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.MelnicsTranslator p q {
+	font-family: myCode;
+}
+
+.melnicsTest input[type="text"] {
+	font-size: 3em;
+	display: block;
+	width: 100%;
+}
+
+.melnicsTest ul {
+	list-style-type: none;
+}
+
+.melnicsTest .results td {
+	text-align: center;
+	font-size: 1.8em;
+}
+
+@media print {
+	h2 a {
+		display: none;
+	}
+}
+
+table.melnicsTable {
+	display: inline-table;
+	margin: 0px 32px;
+	font-size: 25px;
+}
+
+table.melnicsTable td {
+	text-align: center;
+	padding: 0px 8px;
+}
+
+dl.melnicsTable {
+	width: 650px;
+}
+
+dl.melnicsTable>* {
+	display: inline-block;
+	width: 32px;
+	padding: 2px 4px;
+	margin: 0px;
+}
+
+dl.melnicsTable>dt {
+	text-align: right;
+}
+
+dl.melnicsTable>dd {
+	text-align: left;
+}
+
+*[data-template="kana-table"].drawForm td {
+	
+}
+
+*[data-template="kana-table"].drawForm td>label>*:first-child {
+	padding-left: 10px;
+}
+
+*[data-template="kana-table"].drawForm td>label>*:last-child {
+	padding-right: 10px;
+}
+
+.input *[data-correct="0"] {
+	background-color: rgba(255, 0, 0, 0.5);
+	text-decoration: line-through;
+}
+
+.input *[data-correct="1"] {
+	background-color: rgba(0, 255, 0, 0.5);
+}
+
+.CraymelEditor ul {
+	list-style-type: none;
+	padding: 0px;
+}
+
+.CraymelEditor p {
+	padding-left: 16px;
+}
+
+.CraymelEditor button {
+	display: block;
+	width: 100%;
+	font-style: italic;
+	margin: 4px 0px;
+}
+
+.CraymelEditor table {
+	width: 100%;
+}
+
+.CraymelEditor td, .CraymelEditor th {
+	padding: 0 4px;
+	vertical-align: top;
+}
+
+@media ( max-width : 950px) {
+	.CraymelEditor td, .CraymelEditor th {
+		padding: 0 1px;
+	}
+}
+
+.CraymelEditor .CraymelMages {
+	border-spacing: 4px;
+}
+
+.CraymelEditor .CraymelMages td {
+	text-align: center;
+	width: 20%;
+}
+
+.CraymelEditor .CraymelMages th {
+	font-weight: normal;
+}
+
+.CraymelEditor .divide>* {
+	display: table-cell;
+	width: 100%;
+}
+
+.CraymelEditor .divide>*:first-child {
+	text-align: left;
+}
+
+.CraymelEditor .divide>*:last-child {
+	text-align: right;
+}
+
+.CraymelEditor .divide-float>* {
+	line-height: 1.3em;
+}
+
+.CraymelEditor .divide-float>*:first-child {
+	float: left;
+}
+
+.CraymelEditor .divide-float>*:last-child {
+	float: right;
+}
+
+.CraymelEditor .num {
+	font-family: monospace;
+	text-align: right;
+}
+
+.CraymelEditor .Cage, .CraymelEditor .Spells {
+	padding: 0px !important;
+	border-width: 3px;
+	border-color: navy;
+}
+
+.CraymelEditor .Cage {
+	border-style: groove;
+}
+
+.CraymelEditor .Spells {
+	border-style: groove;
+}
+
+*[data-status] *[data-cage] {
+	border-color: yellow;
+}
+
+.CraymelEditor .Cage li, .CraymelEditor .Spells li {
+	border: 2px ridge silver;
+}
+
+.CraymelEditor .Cage .divide, .CraymelEditor .Spells .divide {
+	display: table;
+	width: 100%;
+}
+
+.CraymelEditor .Spells .divide {
+	
+}
+
+.CraymelEditor [data-craymel] {
+	cursor: move !important;
+}
+
+*[data-section="free"] {
+	background-color: #e7fbbd;
+}
+
+*[data-section="Keele"] {
+	background-color: #cdefd2;
+}
+
+*[data-section="Meredy"] {
+	background-color: #eae2c8;
+}
+
+*[data-mage="Meredy"] {
+	opacity: 0.5;
+}
+
+*[data-mage="Keele"] {
+	opacity: 0.5;
+}
+
+*[data-element="Ice"] {
+	background-color: rgb(168, 214, 232);
+}
+
+*[data-element="Fire"] {
+	background-color: rgb(247, 148, 126);
+}
+
+*[data-element="Wind"] {
+	background-color: rgb(206, 237, 173);
+}
+
+*[data-element="Earth"] {
+	background-color: rgb(212, 173, 135);
+}
+
+*[data-element="Water"] {
+	background-color: rgb(138, 161, 235);
+}
+
+*[data-element="Lightning"] {
+	background-color: rgb(236, 243, 164);
+}
+
+*[data-element="Darkness"] {
+	background-color: rgb(60, 60, 60);
+}
+
+*[data-element="Light"] {
+	background-color: rgb(230, 230, 230);
+}
+
+*[data-element="Elemental"] {
+	background-color: rgb(100, 60, 120);
+}
+
+*[data-element="Time"] {
+	background-color: rgb(218, 187, 244);
+}
+
+*[data-element="Ice"], *[data-element="Fire"], *[data-element="Wind"], *[data-element="Earth"],
+	*[data-element="Water"], *[data-element="Lightning"], *[data-element="Light"],
+	*[data-element="Time"] {
+	color: black !important;
+}
+
+*[data-element="Darkness"], *[data-element="Elemental"] {
+	color: white !important;
+}
+
+.PullEditor th, .PullEditor td {
+	vertical-align: top;
+}
+
+.PullEditor *[data-value] {
+	position: relative;
+	padding-bottom: 1em;
+}
+
+.PullEditor *[data-value] input {
+	margin: 0;
+	width: 20em;
+}
+
+.PullEditor *[data-value]::after {
+	content: attr(data-value) "%";
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-family: myMonospace, monospace;
+	position: absolute;
+	top: 1.25em;
+	left: 0;
+}
+
+.PullEditor output {
+	width: 10em;
+	font-family: myMonospace, monospace;
+	text-align: center;
+	display: block;
+}

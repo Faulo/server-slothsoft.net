@@ -4,6 +4,8 @@
 	<resource-directory name="js" type="application/javascript" />
 	<resource-directory name="xsl" type="application/xslt+xml" />
 
+	<manifest-directory name="talesof" />
+
 	<resource-directory name="dictionary" type="application/xml" />
 	<directory name="sitemap">
 		<resource use="template" name="template" type="application/xslt+xml" />
@@ -157,33 +159,33 @@
 		<fragment name="tales">
 			<fragment name="tales-home">
 				<import ref="/api/default" />
-				<use-document ref="//talesof/html/home" name="content" />
+				<use-document ref="/talesof/html/home" name="content" />
 				<use-document ref="/shoutboxes/tales" name="chat" />
 			</fragment>
 			<fragment name="craymelEditor">
 				<import ref="/api/default" />
-				<use-document ref="//talesof/html/eternia/craymels" name="content" />
+				<use-document ref="/talesof/html/eternia/craymels" name="content" />
 				<use-document ref="/shoutboxes/tales" name="chat" />
 			</fragment>
 			<fragment name="melnicsTest">
 				<import ref="/api/default" />
-				<use-document ref="//talesof/html/melnics/test" name="content" />
+				<use-document ref="/talesof/html/melnics/test" name="content" />
 				<use-document ref="/shoutboxes/tales" name="chat" />
 			</fragment>
 			<fragment name="melnicsTable">
 				<import ref="/api/default" />
-				<use-document ref="//talesof/html/melnics/table" name="content" />
+				<use-document ref="/talesof/html/melnics/table" name="content" />
 				<use-document ref="/shoutboxes/tales" name="chat" />
 			</fragment>
 			<fragment name="melnicsTranslator">
 				<import ref="/api/default" />
-				<use-document ref="//talesof/html/melnics/translator" name="content" />
+				<use-document ref="/talesof/html/melnics/translator" name="content" />
 				<use-document ref="/shoutboxes/tales" name="chat" />
 				<link-stylesheet ref="//slothsoft@slothsoft.net/css/kana" />
 			</fragment>
 			<fragment name="carta-list">
 				<import ref="/api/default" />
-				<use-document ref="//talesof/html/carta/list" name="content" />
+				<use-document ref="/talesof/html/carta/list" name="content" />
 				<use-document ref="/shoutboxes/tales" name="chat" />
 			</fragment>
 		</fragment>

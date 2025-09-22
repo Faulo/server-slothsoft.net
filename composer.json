@@ -22,10 +22,9 @@
 		"slothsoft/core" : "^1.13",
 		"slothsoft/cron" : "*",
 		"slothsoft/dragonage" : "*",
-		"slothsoft/farah" : "^1.19",
+		"slothsoft/farah" : "^1.21",
 		"slothsoft/minecraft" : "*",
 		"slothsoft/sse" : "*",
-		"slothsoft/talesof" : "*",
 		"slothsoft/whatthehell" : "*",
 		"google/apiclient" : "^2.0"
 	},

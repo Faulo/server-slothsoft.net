@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<craymels>
+		<craymel type="u" name="Undine" element="Water" />
+		<craymel type="w" name="Sylph" element="Wind" />
+		<craymel type="f" name="Efreet" element="Fire" />
+
+		<craymel type="e" name="Gnome" element="Earth" />
+		<craymel type="i" name="Celsius" element="Ice" />
+		<craymel type="v" name="Volt" element="Lightning" />
+
+		<craymel type="d" name="Shadow" element="Darkness" />
+		<craymel type="l" name="Rem" element="Light" />
+		<craymel type="m" name="Maxwell" element="Elemental" />
+		<craymel type="t" name="Sekundes" element="Time" />
+	</craymels>
+	<mage name="Keele">
+		<spell cost="4" name="Aqua Edge" type="u" desc="Slice the enemy with the force of water." />
+		<spell cost="7" name="Wind Blade" type="w" desc="Shear the enemy with a blast of wind." />
+		<spell cost="7" name="Fireball" type="f" desc="Shoot multiple fireballs at the enemy." />
+	</mage>
+	<mage name="Meredy">
+		<spell cost="6" name="Ice Needles" type="i" desc="Strike the enemy with needles of ice." />
+		<spell cost="7" name="Lightning" type="v" desc="Shower the enemy with lightning." />
+		<spell cost="7" name="Grave" type="e" desc="Spear-shaped rocks are thrust up from below." />
+	</mage>
+	<spells type="u">
+		<spell cost="9" name="Spread" desc="The enemy is shredded by whirling water.">
+			<u lvl="1" />
+		</spell>
+		<spell cost="10" name="Acid Rain" desc="The acid reduces the enemy's resistance.">
+			<u lvl="12" />
+			<e lvl="5" />
+		</spell>
+		<spell cost="16" name="Heal" desc="Restores HP of an ally.">
+			<u lvl="1" />
+			<w lvl="1" />
+		</spell>
+		<spell cost="42" name="Nurse" desc="Restores all allies HP.">
+			<u lvl="14" />
+			<i lvl="1" />
+		</spell>
+		<spell cost="32" name="Cure" desc="Restores HP of an ally.">
+			<u lvl="22" />
+			<m lvl="1" />
+		</spell>
+		<spell cost="60" name="Restore" desc="Restore HP of allies within the area.">
+			<u lvl="25" />
+			<l lvl="1" />
+		</spell>
+		<spell cost="96" name="Resurrection" desc="Revives a dead ally.">
+			<u lvl="25" />
+			<t lvl="1" />
+		</spell>
+	</spells>
+	<spells type="w">
+		<spell cost="12" name="Air Thrust" desc="Shear the enemy with a blast of wind.">
+			<w lvl="1" />
+		</spell>
+		<spell cost="44" name="Cyclone" desc="Engulf the enemy in a twister.">
+			<w lvl="20" />
+			<d lvl="9" />
+		</spell>
+		<spell cost="6" name="Concentrate" desc="Increases Accuracy of an ally.">
+			<w lvl="6" />
+			<f lvl="5" />
+		</spell>
+		<spell cost="-" name="Item Plus" desc="Power up. Additional bonus is awarded after a Technical Smash.">
+			<w lvl="23" />
+			<m lvl="10" />
+		</spell>
+		<spell cost="-" name="Medical Plus"
+			desc="Power up. Additional +5% HP restored when Craymel Arte is used during battle.">
+			<w lvl="26" />
+			<l lvl="10" />
+		</spell>
+	</spells>
+	<spells type="f">
+		<spell cost="18" name="Eruption" desc="Surround the enemy in scalding magma.">
+			<f lvl="1" />
+		</spell>
+		<spell cost="12" name="Flame Wall" desc="Set a flame trap in front of the enemy.">
+			<f lvl="12" />
+			<e lvl="9" />
+		</spell>
+		<spell cost="36" name="Explode" desc="Swallow the enemy in a massive explosion.">
+			<f lvl="15" />
+			<v lvl="9" />
+		</spell>
+		<spell cost="6" name="Sharpness" desc="Increases Attack of an ally.">
+			<f lvl="5" />
+			<u lvl="7" />
+		</spell>
+	</spells>
+	<spells type="e">
+		<spell cost="18" name="Stalagmite" desc="Massive boulders are jetted out from below.">
+			<e lvl="1" />
+		</spell>
+		<spell cost="48" name="Ground Dasher" desc="Destructive forces of earth are brought to life.">
+			<e lvl="5" />
+			<d lvl="10" />
+		</spell>
+		<spell cost="-" name="Mental Charge" desc="Power up. Restore +1% of all ally TP at the end of battle.">
+			<e lvl="25" />
+			<w lvl="11" />
+		</spell>
+		<spell cost="-" name="Life Rescue" desc="Power up. HP is automatically restored as it decreases.">
+			<e lvl="24" />
+			<l lvl="10" />
+		</spell>
+		<spell cost="-" name="Mental Supply" desc="Power up. TP is restored according to the amount of damage received.">
+			<e lvl="25" />
+			<m lvl="20" />
+		</spell>
+	</spells>
+	<spells type="i">
+		<spell cost="21" name="Freeze Lancer" desc="The enemy is showered with spears of ice.">
+			<i lvl="1" />
+		</spell>
+		<spell cost="20" name="Blizzard" desc="Raises forth a fierce snow storm.">
+			<i lvl="12" />
+			<w lvl="16" />
+		</spell>
+		<spell cost="30" name="Absolute" desc="Freeze the enemy with an ultra cold blast.">
+			<i lvl="14" />
+			<v lvl="12" />
+		</spell>
+		<spell cost="6" name="Resist" desc="Increases Defense of an ally.">
+			<i lvl="10" />
+			<e lvl="11" />
+		</spell>
+		<spell cost="-" name="Freeze Guard" desc="Power up. Protects against Freeze.">
+			<i lvl="10" />
+			<f lvl="16" />
+		</spell>
+	</spells>
+	<spells type="v">
+		<spell cost="24" name="Thunder Blade" desc="Tear apart the enemy with blades of lightning.">
+			<v lvl="1" />
+		</spell>
+		<spell cost="52" name="Indignation" desc="The enemy is englufed in a lightning storm.">
+			<v lvl="22" />
+			<l lvl="10" />
+		</spell>
+		<spell cost="10" name="Recover" desc="Cure abnormal status of an ally.">
+			<v lvl="6" />
+			<e lvl="11" />
+		</spell>
+		<spell cost="100" name="Charge" desc="Share your TP with an ally. Defeating the enemy restores TP.">
+			<v lvl="5" />
+			<w lvl="15" />
+		</spell>
+		<spell cost="-" name="Stun Guard" desc="Power up. Protects against Stun.">
+			<v lvl="10" />
+			<u lvl="19" />
+		</spell>
+	</spells>
+	<spells type="d">
+		<spell cost="32" name="Dark Force" desc="Wrap the enemy in a barrier of darkness.">
+			<d lvl="1" />
+		</spell>
+		<spell cost="72" name="Bloody Howl" desc="The enemy is shredded by a screaming curse.">
+			<d lvl="28" />
+			<t lvl="18" />
+		</spell>
+		<spell cost="6" name="Deep Mist" desc="Shroud the enemy in mist that reduces the enemy attack accuracy.">
+			<d lvl="5" />
+			<u lvl="19" />
+		</spell>
+		<spell cost="6" name="Barrier" desc="Increase Defense of an ally.">
+			<d lvl="5" />
+			<v lvl="15" />
+		</spell>
+	</spells>
+	<spells type="l">
+		<spell cost="30" name="Ray" desc="The enemy is showered with numerous heat rays.">
+			<l lvl="1" />
+		</spell>
+		<spell cost="52" name="Holy Lance" desc="The enemy is showered with numerous heat rays.">
+			<l lvl="21" />
+			<m lvl="24" />
+		</spell>
+		<spell cost="8" name="Holy Bliss" desc="Gradually regenerates HP and heals the last damage received.">
+			<l lvl="15" />
+			<f lvl="24" />
+		</spell>
+		<spell cost="-" name="Health" desc="Power up. Defeating an enemy restores some HP.">
+			<l lvl="10" />
+			<d lvl="21" />
+		</spell>
+	</spells>
+	<spells type="m">
+		<spell cost="60" name="Meteor Swarm" desc="Call forth meteors to strike the enemy.">
+			<m lvl="1" />
+		</spell>
+		<spell cost="80" name="Shooting Star" desc="Call forth shooting stars to strike the enemy.">
+			<m lvl="26" />
+			<t lvl="26" />
+		</spell>
+		<spell cost="10" name="Poison Guard" desc="Power up. Protects against Poison.">
+			<m lvl="10" />
+			<d lvl="17" />
+		</spell>
+		<spell cost="10" name="Life Up" desc="Power up. +2 bonus HP at level up.">
+			<m lvl="10" />
+			<i lvl="22" />
+		</spell>
+	</spells>
+	<spells type="t">
+		<spell cost="64" name="Distortion" desc="Time is distorted to erase enemy existance.">
+			<t lvl="1" />
+		</spell>
+		<spell cost="16" name="Stagnation" desc="The enemy's recovery time is delayed.">
+			<t lvl="2" />
+			<i lvl="30" />
+		</spell>
+		<spell cost="60" name="Delay" desc="The enemy's chant is delayed by distorting time.">
+			<t lvl="20" />
+			<e lvl="30" />
+		</spell>
+		<spell cost="-" name="Drain Guard" desc="Power up. Protects against Weak.">
+			<t lvl="10" />
+			<l lvl="11" />
+		</spell>
+		<spell cost="-" name="Mental Up" desc="Power up. Bonus +1 TP at level up.">
+			<t lvl="10" />
+			<f lvl="24" />
+		</spell>
+	</spells>
+</data>

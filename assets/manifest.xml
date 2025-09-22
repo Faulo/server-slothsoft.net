@@ -268,7 +268,6 @@
 		<use-document ref="/static/pc" />
 		<link-stylesheet ref="/css/default" />
 		<link-stylesheet ref="/css/fonts" />
-		<import ref="//core/api/HTML5" />
 	</fragment>
 	<fragment name="validator">
 		<use-template ref="/xsl/w3c.validator" />
@@ -280,7 +279,7 @@
 	<fragment name="unicode-mapper">
 		<import ref="/api/default" />
 		<fragment name="content" use="document">
-			<import ref="//core/api/DOM" />
+			<import ref="//farah/api/DOM" />
 			<link-script ref="/js/UnicodeMapper" />
 			<use-template ref="/xsl/unicode-mapper" />
 		</fragment>
@@ -305,7 +304,7 @@
 		<fragment name="content" use="document">
 			<use-template ref="/xsl/kana-translator" />
 			<link-stylesheet ref="/css/kana" />
-			<import ref="//core/api/DOM" />
+			<import ref="//farah/api/DOM" />
 			<link-script ref="/js/Translator" />
 			<use-document ref="/static/kana" name="kana" />
 		</fragment>
@@ -316,7 +315,7 @@
 			<use-template ref="/xsl/kana-test" />
 			<!-- <use-document ref="/data/kana.test"/> -->
 			<link-stylesheet ref="/css/kana" />
-			<import ref="//core/api/DOM" />
+			<import ref="//farah/api/DOM" />
 		</fragment>
 	</fragment>
 	<fragment name="kana-vocab">
@@ -325,7 +324,7 @@
 			<use-template ref="/xsl/kana-vocab" />
 			<!-- <use-document ref="/data/kana.vocab"/> -->
 			<link-stylesheet ref="/css/kana" />
-			<import ref="//core/api/DOM" />
+			<import ref="//farah/api/DOM" />
 			<link-script ref="/js/Translator" />
 			<link-script ref="/js/Vocab" />
 			<link-script ref="/js/VocabTest" />
@@ -342,7 +341,7 @@
 			<!-- <use-document ref="/data/kana.vocab"/> -->
 			<link-stylesheet ref="/css/kana" />
 			<link-stylesheet ref="/css/kana-mobile" />
-			<import ref="//core/api/DOM" />
+			<import ref="//farah/api/DOM" />
 			<link-script ref="/js/Translator" />
 			<link-script ref="/js/Vocab" />
 			<link-script ref="/js/VocabTest" />
@@ -362,7 +361,7 @@
 			<use-template ref="/xsl/vocab-list-add" />
 			<!-- <use-document ref="/data/kana.vocab"/> -->
 			<link-stylesheet ref="/css/kana" />
-			<import ref="//core/api/DOM" />
+			<import ref="//farah/api/DOM" />
 			<link-script ref="/js/Translator" />
 		</fragment>
 	</fragment>
@@ -372,7 +371,7 @@
 			<use-template ref="/xsl/vocab-kanji" />
 			<!-- <use-document ref="/data/vocab.kanji"/> -->
 			<link-stylesheet ref="/css/kana" />
-			<import ref="//core/api/DOM" />
+			<import ref="//farah/api/DOM" />
 			<link-script ref="/js/Translator" />
 			<link-script ref="/js/Vocab" />
 			<link-script ref="/js/VocabTest" />
@@ -389,7 +388,7 @@
 			<!-- <use-document ref="/data/vocab.kanji"/> -->
 			<link-stylesheet ref="/css/kana" />
 			<link-stylesheet ref="/css/kana-mobile" />
-			<import ref="//core/api/DOM" />
+			<import ref="//farah/api/DOM" />
 			<link-script ref="/js/Translator" />
 			<link-script ref="/js/Vocab" />
 			<link-script ref="/js/VocabTest" />
@@ -401,7 +400,7 @@
 			<use-template ref="/xsl/vocab.test" />
 			<!-- <use-document ref="/data/kana.vocab"/> -->
 			<link-stylesheet ref="/css/kana" />
-			<import ref="//core/api/DOM" />
+			<import ref="//farah/api/DOM" />
 			<link-script ref="/js/Translator" />
 			<link-script ref="/js/Vocab" />
 			<link-script ref="/js/VocabTest" />
@@ -413,7 +412,7 @@
 			<use-template ref="/xsl/vocab.test" />
 			<!-- <use-document ref="/data/vocab.kanji"/> -->
 			<link-stylesheet ref="/css/kana" />
-			<import ref="//core/api/DOM" />
+			<import ref="//farah/api/DOM" />
 			<link-script ref="/js/Translator" />
 			<link-script ref="/js/Vocab" />
 			<link-script ref="/js/VocabTest" />
@@ -425,7 +424,7 @@
 			<use-template ref="/xsl/vocab-grammar" />
 			<!-- <use-document ref="/data/vocab-grammar-verbs"/> -->
 			<link-stylesheet ref="/css/kana" />
-			<import ref="//core/api/DOM" />
+			<import ref="//farah/api/DOM" />
 			<link-script ref="/js/Translator" />
 		</fragment>
 	</fragment>
@@ -435,7 +434,7 @@
 			<use-template ref="/xsl/vocab-grammar" />
 			<use-document ref="/static/japanese-faulo-verbs" name="japanese-faulo-verbs" />
 			<link-stylesheet ref="/css/kana" />
-			<import ref="//core/api/DOM" />
+			<import ref="//farah/api/DOM" />
 			<link-script ref="/js/Translator" />
 		</fragment>
 	</fragment>
@@ -445,7 +444,7 @@
 			<use-template ref="/xsl/english-vocab" />
 			<!-- <use-document ref="/data/english.vocab"/> -->
 			<link-stylesheet ref="/css/kana" />
-			<import ref="//core/api/DOM" />
+			<import ref="//farah/api/DOM" />
 			<link-script ref="/js/Translator" />
 		</fragment>
 	</fragment>
@@ -479,7 +478,7 @@
 		<fragment name="content" use="document">
 			<use-template ref="/xsl/backend.colors" />
 			<link-script ref="/js/CSS" />
-			<import ref="//core/api/DOM" />
+			<import ref="//farah/api/DOM" />
 			<link-script ref="/js/Backend" />
 		</fragment>
 	</fragment>
@@ -503,7 +502,6 @@
 	</fragment>
 	<fragment name="music">
 		<param name="standalone" scope="global" />
-		<link-script ref="//core/js/HTML5" />
 		<link-stylesheet ref="/css/default" />
 		<use-document ref="/static/music-mp3" name="music-mp3" />
 		<use-document ref="/static/music-lyrics" name="music-lyrics" />
@@ -528,7 +526,6 @@
 			<use-document ref="/navi" name="navi" />
 			<use-document ref="/validator" name="validator" />
 			<use-document ref="/dict.select" name="dict.select" />
-			<import ref="//core/api/HTML5" />
 		</fragment>
 	</fragment>
 

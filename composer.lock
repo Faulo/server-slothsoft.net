@@ -1342,16 +1342,16 @@
         },
         {
             "name": "paragonie/constant_time_encoding",
-            "version": "v2.7.0",
+            "version": "v2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/constant_time_encoding.git",
-                "reference": "52a0d99e69f56b9ec27ace92ba56897fe6993105"
+                "reference": "ce27936c8dfb73e3ab9c94469130428af9752c96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/52a0d99e69f56b9ec27ace92ba56897fe6993105",
-                "reference": "52a0d99e69f56b9ec27ace92ba56897fe6993105",
+                "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/ce27936c8dfb73e3ab9c94469130428af9752c96",
+                "reference": "ce27936c8dfb73e3ab9c94469130428af9752c96",
                 "shasum": ""
             },
             "require": {
@@ -1405,7 +1405,7 @@
                 "issues": "https://github.com/paragonie/constant_time_encoding/issues",
                 "source": "https://github.com/paragonie/constant_time_encoding"
             },
-            "time": "2024-05-08T12:18:48+00:00"
+            "time": "2025-09-22T20:41:46+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2339,16 +2339,16 @@
         },
         {
             "name": "slothsoft/farah",
-            "version": "1.21.1",
+            "version": "1.21.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-farah.git",
-                "reference": "0f906c979aa80c1c48c1eb296b3d24cb71d25cca"
+                "reference": "bbebb373379b30c74d389b6a3906bb5e20cbae28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/0f906c979aa80c1c48c1eb296b3d24cb71d25cca",
-                "reference": "0f906c979aa80c1c48c1eb296b3d24cb71d25cca",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/bbebb373379b30c74d389b6a3906bb5e20cbae28",
+                "reference": "bbebb373379b30c74d389b6a3906bb5e20cbae28",
                 "shasum": ""
             },
             "require": {
@@ -2411,9 +2411,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-farah/issues",
-                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.21.1"
+                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.21.3"
             },
-            "time": "2025-09-22T20:24:03+00:00"
+            "time": "2025-09-23T01:38:05+00:00"
         },
         {
             "name": "slothsoft/minecraft",

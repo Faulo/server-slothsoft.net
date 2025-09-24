@@ -132,7 +132,7 @@
 			tdp="95" price="0">
 			<properties frequency="2.66 GHz" cores="6" />
 		</part>
-		<part type="RAM" href="" name="Corsair" price="0" tdp="2">
+		<part type="RAM" name="Corsair" price="0" tdp="2">
 			<properties size="6x 2 GB" form="DDR3-DIMM" type="PC3-10600" frequency="1333 MHz" />
 		</part>
 		<part type="GPU" href="https://www.nvidia.com/en-us/geforce/graphics-cards/geforce-gtx-780/specifications/" name="Asus GeForce GTX 780" price="" tdp="116">
@@ -143,14 +143,14 @@
 
 
 	<data name="Madeline" year="2020" owner="Daniel">
-		<part type="Laptop" href="https://www.acer.com/at-de/laptops/nitro/nitro-5/pdp/NH.QF6EV.009" name="Acer Nitro 5 AN517-54-50B1" tdp="65" price="919.19" price-uri="">
+		<part type="Laptop" href="https://www.acer.com/at-de/laptops/nitro/nitro-5/pdp/NH.QF6EV.009" name="Acer Nitro 5 AN517-54-50B1" tdp="65" price="919.19">
 			<properties cpu="i5 11400H" chipset="Intel HM65" gpu="GeForce RTX 3050Ti" memory="4 GB" bonus="" />
 		</part>
 		<part type="CPU" href="https://www.intel.com/content/www/us/en/products/sku/213805/intel-core-i511400h-processor-12m-cache-up-to-4-50-ghz/specifications.html" name="Intel Core i5 11400H"
 			tdp="35" price="0">
 			<properties frequency="2.7 GHz" cores="6" />
 		</part>
-		<part type="RAM" name="RAM" price="0" price-uri="" tdp="0">
+		<part type="RAM" name="RAM" price="0" tdp="0">
 			<properties size="2x 8 GB" form="DDR4-SO-DIMM" type="PC4-25600" frequency="3200 MHz" />
 		</part>
 		<part type="GPU" href="https://www.notebookcheck.com/NVIDIA-GeForce-RTX-3050-Ti-Laptop-GPU-Grafikkarte-Benchmarks-und-Spezifikationen.527429.0.html" name="NVidia GeForce RTX 3050Ti" tdp="75"
@@ -183,14 +183,14 @@
 	</data>
 
 	<data name="Vivi" year="2018" owner="Daniel">
-		<part type="Laptop" href="https://www.notebookinfo.de/produkt/asus-vivobook-15-x542un-dm129t-grau-34248" name="Asus VivoBook X542UN-DM129T" tdp="65" price="634.99" price-uri="">
+		<part type="Laptop" href="https://www.notebookinfo.de/produkt/asus-vivobook-15-x542un-dm129t-grau-34248" name="Asus VivoBook X542UN-DM129T" tdp="65" price="634.99">
 			<properties cpu="i5 8250U" chipset="Intel HM65" gpu="GeForce MX150" memory="8 GB" />
 		</part>
 		<part type="CPU" href="https://www.intel.com/content/www/us/en/products/sku/124967/intel-core-i58250u-processor-6m-cache-up-to-3-40-ghz/specifications.html" name="Intel Core i5 8250U" tdp="15"
 			price="0">
 			<properties frequency="1.6 GHz" cores="4" />
 		</part>
-		<part type="RAM" name="RAM" price="0" price-uri="" tdp="0">
+		<part type="RAM" name="RAM" price="0" tdp="0">
 			<properties size="1x 8 GB" form="DDR4-SO-DIMM" type="PC4-17000" frequency="2133 MHz" />
 		</part>
 		<part type="GPU" href="https://www.notebookcheck.com/NVIDIA-GeForce-MX150-GPU-Benchmarks-und-Specs-der-GT-1030-fuer-Laptops.223528.0.html" name="NVidia GeForce MX150" tdp="75" price="0">
@@ -207,7 +207,7 @@
 		</part>
 	</data>
 
-	<data name="Steffis PC" year="2012" owner="Steffi" final-price="629.69">
+	<data name="Steffis PC 2012" year="2012" owner="Steffi" final-price="629.69">
 		<part type="Mainboard" href="http://www.asus.com/Motherboards/Intel_Socket_1155/P8Z68V_LE/#specifications" name="Asus P8Z68-V LE" tdp="10" price="100"
 			price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/2924276_-p8z68-v-le-asus.html">
 			<properties socket="LGA 1155" ram="DDR3-2200" sata="6 Gb/s" form="ATX" />
@@ -238,7 +238,7 @@
 			name="Cherry Stream XT" tdp="1" price="15" price-uri="http://www.idealo.de/preisvergleich/OffersOfProduct/1402650_-evolution-stream-xt-corded-multimedia-keyboard-de-cherry.html" />
 	</data>
 
-	<data name="Steffis PC" year="2018" owner="Steffi">
+	<data name="Steffis PC 2018" year="2018" owner="Steffi">
 		<part type="Mainboard" href="https://www.msi.com/Motherboard/Z370-TOMAHAWK" name="MSI Z370 Tomahawk" tdp="" price="130"
 			price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/5766553_-z370-tomahawk-msi.html">
 			<properties socket="LGA 1151" ram="DDR4-4000" sata="6 Gb/s" form="ATX" />

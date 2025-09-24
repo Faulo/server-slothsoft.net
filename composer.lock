@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f54023c7dffac12ec9f70c4040d24a88",
+    "content-hash": "7017148cd5a6e96de5773b85194e6b0d",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -1342,16 +1342,16 @@
         },
         {
             "name": "paragonie/constant_time_encoding",
-            "version": "v2.8.0",
+            "version": "v2.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/constant_time_encoding.git",
-                "reference": "ce27936c8dfb73e3ab9c94469130428af9752c96"
+                "reference": "e6352b9f43318821f148c1e8c2d9e944aa9accb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/ce27936c8dfb73e3ab9c94469130428af9752c96",
-                "reference": "ce27936c8dfb73e3ab9c94469130428af9752c96",
+                "url": "https://api.github.com/repos/paragonie/constant_time_encoding/zipball/e6352b9f43318821f148c1e8c2d9e944aa9accb5",
+                "reference": "e6352b9f43318821f148c1e8c2d9e944aa9accb5",
                 "shasum": ""
             },
             "require": {
@@ -1405,7 +1405,7 @@
                 "issues": "https://github.com/paragonie/constant_time_encoding/issues",
                 "source": "https://github.com/paragonie/constant_time_encoding"
             },
-            "time": "2025-09-22T20:41:46+00:00"
+            "time": "2025-09-24T01:40:13+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2339,16 +2339,16 @@
         },
         {
             "name": "slothsoft/farah",
-            "version": "1.21.3",
+            "version": "1.21.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-farah.git",
-                "reference": "bbebb373379b30c74d389b6a3906bb5e20cbae28"
+                "reference": "0a08c6478fc2e2d10d761c6b4b9de44ed3181e16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/bbebb373379b30c74d389b6a3906bb5e20cbae28",
-                "reference": "bbebb373379b30c74d389b6a3906bb5e20cbae28",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/0a08c6478fc2e2d10d761c6b4b9de44ed3181e16",
+                "reference": "0a08c6478fc2e2d10d761c6b4b9de44ed3181e16",
                 "shasum": ""
             },
             "require": {
@@ -2411,9 +2411,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-farah/issues",
-                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.21.3"
+                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.21.6"
             },
-            "time": "2025-09-23T01:38:05+00:00"
+            "time": "2025-09-24T07:53:47+00:00"
         },
         {
             "name": "slothsoft/minecraft",
@@ -3537,16 +3537,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.6.27",
+            "version": "9.6.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "0a9aa4440b6a9528cf360071502628d717af3e0a"
+                "reference": "9ecfec57835a5581bc888ea7e13b51eb55ab9dd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0a9aa4440b6a9528cf360071502628d717af3e0a",
-                "reference": "0a9aa4440b6a9528cf360071502628d717af3e0a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9ecfec57835a5581bc888ea7e13b51eb55ab9dd3",
+                "reference": "9ecfec57835a5581bc888ea7e13b51eb55ab9dd3",
                 "shasum": ""
             },
             "require": {
@@ -3571,7 +3571,7 @@
                 "sebastian/comparator": "^4.0.9",
                 "sebastian/diff": "^4.0.6",
                 "sebastian/environment": "^5.1.5",
-                "sebastian/exporter": "^4.0.6",
+                "sebastian/exporter": "^4.0.8",
                 "sebastian/global-state": "^5.0.8",
                 "sebastian/object-enumerator": "^4.0.4",
                 "sebastian/resource-operations": "^3.0.4",
@@ -3620,7 +3620,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.27"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.29"
             },
             "funding": [
                 {
@@ -3644,7 +3644,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-09-14T06:18:03+00:00"
+            "time": "2025-09-24T06:29:11+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -4087,16 +4087,16 @@
         },
         {
             "name": "sebastian/exporter",
-            "version": "4.0.7",
+            "version": "4.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/exporter.git",
-                "reference": "eb49b981ef0817890129cb70f774506bebe57740"
+                "reference": "14c6ba52f95a36c3d27c835d65efc7123c446e8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/eb49b981ef0817890129cb70f774506bebe57740",
-                "reference": "eb49b981ef0817890129cb70f774506bebe57740",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/14c6ba52f95a36c3d27c835d65efc7123c446e8c",
+                "reference": "14c6ba52f95a36c3d27c835d65efc7123c446e8c",
                 "shasum": ""
             },
             "require": {
@@ -4152,7 +4152,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/exporter/issues",
-                "source": "https://github.com/sebastianbergmann/exporter/tree/4.0.7"
+                "source": "https://github.com/sebastianbergmann/exporter/tree/4.0.8"
             },
             "funding": [
                 {
@@ -4172,7 +4172,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-09-22T05:18:21+00:00"
+            "time": "2025-09-24T06:03:27+00:00"
         },
         {
             "name": "sebastian/global-state",

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sfm="http://schema.slothsoft.net/farah/module">
+<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sfm="http://schema.slothsoft.net/farah/module"
+	xmlns:sfx="http://schema.slothsoft.net/farah/xslt">
 
 	<xsl:import href="farah://slothsoft@farah/xsl/module" />
+	<xsl:import href="farah://slothsoft@farah/xsl/xslt" />
 
 	<xsl:variable name="craymels" select="//craymel" />
 	<xsl:variable name="fringeSpells" select="//data/spells" />
@@ -196,7 +198,7 @@
 	<xsl:template match="spell" mode="mages">
 		<xsl:param name="type" select="@type" />
 		<xsl:variable name="craymel" select="$craymels[@type = $type]" />
-		<a class="divide" href="#{generate-id(.)}">
+		<a class="divide" href="#{sfx:id(.)}">
 			<xsl:attribute name="data-element">
 				<xsl:value-of select="$craymel/@element" />
 			</xsl:attribute>
@@ -282,7 +284,7 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:variable>
-						<tr data-mage="{$ownerMage}" id="{generate-id(.)}">
+						<tr data-mage="{$ownerMage}" id="{sfx:id(.)}">
 							<td>
 								<xsl:value-of select="$ownerMage" />
 							</td>

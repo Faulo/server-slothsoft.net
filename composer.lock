@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7017148cd5a6e96de5773b85194e6b0d",
+    "content-hash": "ecac12adcda8b2afdd30a077fbda75fa",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -2339,16 +2339,16 @@
         },
         {
             "name": "slothsoft/farah",
-            "version": "1.21.9",
+            "version": "1.21.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-farah.git",
-                "reference": "b21037812d005a1a26ec70b5e2928473cf6a85c4"
+                "reference": "0a08c6478fc2e2d10d761c6b4b9de44ed3181e16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/b21037812d005a1a26ec70b5e2928473cf6a85c4",
-                "reference": "b21037812d005a1a26ec70b5e2928473cf6a85c4",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/0a08c6478fc2e2d10d761c6b4b9de44ed3181e16",
+                "reference": "0a08c6478fc2e2d10d761c6b4b9de44ed3181e16",
                 "shasum": ""
             },
             "require": {
@@ -2411,9 +2411,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-farah/issues",
-                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.21.9"
+                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.21.6"
             },
-            "time": "2025-09-25T16:13:10+00:00"
+            "time": "2025-09-24T07:53:47+00:00"
         },
         {
             "name": "slothsoft/minecraft",

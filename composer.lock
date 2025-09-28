@@ -2151,16 +2151,16 @@
         },
         {
             "name": "slothsoft/core",
-            "version": "1.13.8",
+            "version": "1.13.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-core.git",
-                "reference": "87a90fc5ba80f5e03c7ed0e056570d6ca55423fd"
+                "reference": "1f559c1696d46aeab164132f2692c04cb64a4f4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-core/zipball/87a90fc5ba80f5e03c7ed0e056570d6ca55423fd",
-                "reference": "87a90fc5ba80f5e03c7ed0e056570d6ca55423fd",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-core/zipball/1f559c1696d46aeab164132f2692c04cb64a4f4b",
+                "reference": "1f559c1696d46aeab164132f2692c04cb64a4f4b",
                 "shasum": ""
             },
             "require": {
@@ -2221,9 +2221,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-core/issues",
-                "source": "https://github.com/Faulo/slothsoft-core/tree/1.13.8"
+                "source": "https://github.com/Faulo/slothsoft-core/tree/1.13.10"
             },
-            "time": "2025-09-17T20:43:52+00:00"
+            "time": "2025-09-28T17:37:35+00:00"
         },
         {
             "name": "slothsoft/cron",

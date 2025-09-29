@@ -4,6 +4,7 @@
 	<resource-directory name="js" type="application/javascript" />
 	<resource-directory name="xsl" type="application/xslt+xml" />
 
+	<manifest-directory name="dragonage" />
 	<manifest-directory name="talesof" />
 
 	<resource-directory name="dictionary" type="application/xml" />
@@ -147,12 +148,12 @@
 		<fragment name="dragon-age">
 			<fragment name="home">
 				<import ref="/api/default" />
-				<use-document ref="//dragonage/html/home" name="content" />
+				<use-document ref="/dragonage/html/home" name="content" />
 				<use-document ref="/shoutboxes/slothsoft" name="chat" />
 			</fragment>
 			<fragment name="combos">
 				<import ref="/api/default" />
-				<use-document ref="//dragonage/html/combos" name="content" />
+				<use-document ref="/dragonage/html/combos" name="content" />
 			</fragment>
 		</fragment>
 

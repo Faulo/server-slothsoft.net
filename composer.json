@@ -21,7 +21,6 @@
 		"slothsoft/chat" : "*",
 		"slothsoft/core" : "^1.13",
 		"slothsoft/cron" : "*",
-		"slothsoft/dragonage" : "*",
 		"slothsoft/farah" : "^1.21.14",
 		"slothsoft/minecraft" : "*",
 		"slothsoft/sse" : "*",

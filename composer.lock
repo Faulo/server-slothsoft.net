@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8508c814fe5dcc1c53ec7b85d85334da",
+    "content-hash": "a4cbf7c6d928fb1731a0f367986d8b94",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -2285,70 +2285,17 @@
             "time": "2025-07-04T16:40:18+00:00"
         },
         {
-            "name": "slothsoft/dragonage",
-            "version": "1.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Faulo/slothsoft-dragonage.git",
-                "reference": "25fb3e12e9e8af0f631407ec420f3cdb45707026"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-dragonage/zipball/25fb3e12e9e8af0f631407ec420f3cdb45707026",
-                "reference": "25fb3e12e9e8af0f631407ec420f3cdb45707026",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4",
-                "slothsoft/core": "^1.0",
-                "slothsoft/farah": "^1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.5"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/registerModule.php"
-                ],
-                "psr-0": {
-                    "Slothsoft\\DragonAge\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel Schulz",
-                    "email": "info.slothsoft@gmail.com"
-                }
-            ],
-            "description": "A Farah module that blabla Dragon Age.",
-            "homepage": "http://farah.slothsoft.net/modules/dragonage",
-            "keywords": [
-                "farah-module",
-                "slothsoft"
-            ],
-            "support": {
-                "issues": "https://github.com/Faulo/slothsoft-dragonage/issues",
-                "source": "https://github.com/Faulo/slothsoft-dragonage/tree/1.0.6"
-            },
-            "time": "2025-07-04T16:40:25+00:00"
-        },
-        {
             "name": "slothsoft/farah",
-            "version": "1.21.15",
+            "version": "1.21.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-farah.git",
-                "reference": "769f847cba4ac4eee6858ad2513b2571f21a97a8"
+                "reference": "1a689543b177baf1d7f8715758615adf4fbfa7d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/769f847cba4ac4eee6858ad2513b2571f21a97a8",
-                "reference": "769f847cba4ac4eee6858ad2513b2571f21a97a8",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/1a689543b177baf1d7f8715758615adf4fbfa7d5",
+                "reference": "1a689543b177baf1d7f8715758615adf4fbfa7d5",
                 "shasum": ""
             },
             "require": {
@@ -2411,9 +2358,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-farah/issues",
-                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.21.15"
+                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.21.16"
             },
-            "time": "2025-09-28T18:59:52+00:00"
+            "time": "2025-09-29T11:20:18+00:00"
         },
         {
             "name": "slothsoft/minecraft",

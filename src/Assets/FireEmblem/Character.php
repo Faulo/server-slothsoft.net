@@ -5,33 +5,31 @@ namespace Slothsoft\Server\Slothsoft\Assets\FireEmblem;
 use Slothsoft\Core\Storage;
 use Slothsoft\Core\Calendar\Seconds;
 use DOMDocument;
+use DOMElement;
+use DOMXPath;
 use Exception;
 
-class Character
-{
-
-    protected $ownerGame;
-
-    protected $data;
-
-    protected $supportList;
-
-    protected $wikiXPath;
-
-    public function __construct(Game $game)
-    {
+class Character {
+    
+    private Game $ownerGame;
+    
+    private array $data;
+    
+    private array $supportList;
+    
+    private ?DOMXPath $wikiXPath;
+    
+    public function __construct(Game $game) {
         $this->ownerGame = $game;
     }
-
-    public function initData(array $data)
-    {
+    
+    public function initData(array $data): void {
         $this->data = $data;
         $this->supportList = [];
         $this->setWikiName($this->getName());
     }
-
-    public function initWiki($wikiURI)
-    {
+    
+    public function initWiki(string $wikiURI): void {
         $uri = $wikiURI . $this->data['wiki-name'];
         $queries = [];
         // $queries['table'] = '//*[@id="mw-content-text"]/table[contains(., "Game")]';
@@ -79,41 +77,34 @@ class Character
                 }
             }
         } else {
-            
             throw new Exception('invalid character page? ' . PHP_EOL . $uri);
         }
     }
-
-    public function getName()
-    {
-        return isset($this->data['Name']) ? $this->data['Name'] : null;
+    
+    public function getName(): ?string {
+        return $this->data['Name'] ?? null;
     }
-
-    public function getURL()
-    {
-        return isset($this->data['wiki-href']) ? $this->data['wiki-href'] : null;
+    
+    public function getURL(): ?string {
+        return $this->data['wiki-href'] ?? null;
     }
-
-    public function setWikiName($name)
-    {
+    
+    public function setWikiName($name): void {
         $this->data['wiki-name'] = $name;
     }
-
-    public function addSupport(Character $char)
-    {
+    
+    public function addSupport(Character $char): void {
         if ($char !== $this and ! in_array($char, $this->supportList)) {
             $this->supportList[] = $char;
             $char->addSupport($this);
         }
     }
-
-    public function getSupportList()
-    {
+    
+    public function getSupportList(): array {
         return $this->supportList;
     }
-
-    public function asNode(DOMDocument $dataDoc)
-    {
+    
+    public function asNode(DOMDocument $dataDoc): DOMElement {
         $retNode = $dataDoc->createElement('char');
         
         foreach ($this->data as $key => $val) {

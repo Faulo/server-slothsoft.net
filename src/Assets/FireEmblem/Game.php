@@ -5,32 +5,32 @@ namespace Slothsoft\Server\Slothsoft\Assets\FireEmblem;
 use Slothsoft\Core\DOMHelper;
 use DOMDocument;
 use DOMElement;
+use DOMXPath;
 use Exception;
 
-class Game
-{
-
-    const XPATH_GAME = '//game[@key="%s"]';
-
-    protected $configDoc;
-
-    protected $dataDocList;
-
-    protected $gameKey;
-
-    protected $gameNode;
-
-    protected $characterList = [];
-
-    public function __construct(DOMDocument $configDoc, array $dataDocList)
-    {
+class Game {
+    
+    private const XPATH_GAME = '//game[@key="%s"]';
+    
+    private DOMDocument $configDoc;
+    
+    private DOMXPath $configXPath;
+    
+    private array $dataDocList;
+    
+    private string $gameKey;
+    
+    private DOMElement $gameNode;
+    
+    private array $characterList = [];
+    
+    public function __construct(DOMDocument $configDoc, array $dataDocList) {
         $this->configDoc = $configDoc;
         $this->configXPath = DOMHelper::loadXPath($this->configDoc);
         $this->dataDocList = $dataDocList;
     }
-
-    public function initGame($game)
-    {
+    
+    public function initGame(string $game): void {
         $this->gameKey = $game;
         foreach ($this->configXPath->evaluate(sprintf(self::XPATH_GAME, $this->gameKey)) as $gameNode) {
             $this->gameNode = $gameNode;
@@ -58,13 +58,12 @@ class Game
                 }
             }
         }
-        if (! $this->gameNode) {
+        if (! isset($this->gameNode)) {
             throw new Exception('Fire Emblem not found: ' . $this->gameKey);
         }
     }
-
-    public function initCharacters(DOMDocument $growthDoc)
-    {
+    
+    public function initCharacters(DOMDocument $growthDoc): void {
         $this->characterList = [];
         
         $keyList = [];
@@ -89,9 +88,8 @@ class Game
             }
         }
     }
-
-    public function initFilter(DOMElement $filterNode)
-    {
+    
+    public function initFilter(DOMElement $filterNode): void {
         $filterText = $filterNode->textContent;
         $newList = [];
         foreach ($this->characterList as $char) {
@@ -103,9 +101,8 @@ class Game
         }
         $this->characterList = $newList;
     }
-
-    public function initMapping(DOMElement $mappingNode)
-    {
+    
+    public function initMapping(DOMElement $mappingNode): void {
         $mappingText = $mappingNode->textContent;
         $matches = [];
         preg_match_all('/([\+\w]+)\/([^\s]+)/', $mappingText, $matches);
@@ -118,9 +115,8 @@ class Game
             }
         }
     }
-
-    public function initSupport(DOMElement $supportNode)
-    {
+    
+    public function initSupport(DOMElement $supportNode): void {
         $supportText = $supportNode->textContent;
         switch ($supportNode->getAttribute('type')) {
             case '/':
@@ -150,9 +146,8 @@ class Game
                 break;
         }
     }
-
-    public function establishSupport($nameA, $nameB)
-    {
+    
+    public function establishSupport($nameA, $nameB): void {
         $charA = $this->getCharacterByName($nameA);
         $charB = $this->getCharacterByName($nameB);
         if ($charA and $charB) {
@@ -162,9 +157,8 @@ class Game
             // my_dump([$nameA, $nameB]);
         }
     }
-
-    public function getCharacterByName($name)
-    {
+    
+    public function getCharacterByName(string $name): ?Character {
         $ret = null;
         foreach ($this->characterList as $char) {
             if ($char->getName() === $name) {
@@ -174,9 +168,8 @@ class Game
         }
         return $ret;
     }
-
-    public function getCharacterByURL($url)
-    {
+    
+    public function getCharacterByURL(string $url): ?Character {
         $ret = null;
         foreach ($this->characterList as $char) {
             if ($char->getURL() === $url) {
@@ -186,9 +179,8 @@ class Game
         }
         return $ret;
     }
-
-    public function asNode(DOMDocument $dataDoc)
-    {
+    
+    public function asNode(DOMDocument $dataDoc): DOMElement {
         $retNode = $dataDoc->importNode($this->gameNode, true);
         
         foreach ($this->characterList as $char) {

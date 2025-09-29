@@ -24,7 +24,7 @@
 		<use-document ref="/whatthehell/static/adventure" name="adventure"/>
 		<link-stylesheet ref="/whatthehell/css/default"/>
 		<link-stylesheet ref="/whatthehell/css/objects"/>
-		<import ref="//slothsoft@core/api/DOM"/>
+		<import ref="//slothsoft@farah/api/DOM"/>
 		<link-script ref="/whatthehell/js/2D"/>
 		<link-script ref="/whatthehell/js/2Dfix"/>
 		<link-script ref="/whatthehell/js/Trait"/>

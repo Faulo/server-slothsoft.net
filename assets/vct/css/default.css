@@ -1,0 +1,260 @@
+html {
+    background-color: black;
+}
+
+html, body {
+    margin: 0;
+}
+
+button {
+    
+}
+
+pre {
+    background-color: silver;
+    margin: 0;
+    padding: 0.5em;
+}
+
+pre>* {
+    display: block;
+}
+
+pre>*.message {
+    color: blue;
+}
+
+pre>*.error {
+    color: red;
+}
+
+pre>*.credits {
+    color: yellow;
+    font-weight: bold;
+}
+
+#WebRTC  h1, #WebRTC  h2, #WebRTC  h3 {
+    font-size: 1em;
+    margin: 0;
+}
+
+*[data-template="flex"] {
+    max-width: 100%;
+}
+
+*[data-template="flex"]>ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+*[data-template="flex"]>ul>li {
+    display: block;
+    box-sizing: border-box;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: auto;
+    position: relative;
+}
+
+.settings {
+    background: white;
+    border: 2px ridge silver;
+}
+
+@media screen and (orientation:landscape) {
+    .settings {
+        width: 20ch;
+        height: 100vh;
+    }
+    .settings video {
+        width: 50%;
+    }
+    *[data-template="flex"]>ul {
+        flex-direction: row;
+    }
+}
+
+@media screen and (orientation:portrait) {
+    .settings {
+        width: 100vw;
+        height: 8em;
+    }
+    .settings video {
+        height: 50%;
+    }
+    *[data-template="flex"]>ul {
+        flex-direction: column;
+    }
+}
+
+video {
+    display: block;
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+.settings video {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.settings .log {
+    display: none;
+}
+/*
+#WebRTC > div {
+    display: table;
+    width: 100%;
+    height: 480px;
+}
+#WebRTC > div > * {
+    display: table-cell;
+    vertical-align: top;
+}
+#WebRTC > div > #WebRTC-user {
+    width: 160px;
+    min-width: 160px;
+    background: white;
+}
+#WebRTC-log {
+    position: relative;
+}
+#WebRTC-chat {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#WebRTC-chat form {
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    width: 380px;
+}
+#WebRTC-chat [data-chat-id="list"] {
+    height: 420px;
+}
+#WebRTC-user > div {
+}
+#WebRTC-user > div > * {
+    display: inline-block;
+    vertical-align: top;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+}
+#WebRTC-user > div > span {
+    width: 100px;
+}
+#WebRTC-user > div > button {
+    width: 30px;
+    text-align: center;
+}
+#WebRTC-user button[title=""] {
+    visibility: hidden;
+}
+#WebRTC-user video {
+    width: 160px;
+    display: block;
+}
+#WebRTC > div > #WebRTC-video {
+    
+}
+#WebRTC-video video {
+    min-width: 640px;
+    min-height: 480px;
+    display: inline-block;
+    vertical-align: top;
+}
+/*/
+*[data-vct-user] {
+    color: navy;
+    font-weight: bold;
+    background-color: rgba(0, 255, 0, 0.1);
+    border: 1px solid rgba(0, 255, 0, 0.2);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+*[data-vct-user]>*:first-child {
+    flex-grow: 1;
+}
+
+*[data-vct-user="local"] {
+    color: darkgreen;
+}
+
+*[data-vct-connection="new"] {
+    background-color: blue;
+    border-color: darkblue;
+}
+
+*[data-vct-connection="checking"], *[data-vct-connection="connecting"] {
+    background-color: white;
+    border-color: silver;
+}
+
+*[data-vct-connection="connected"], *[data-vct-connection="completed"] {
+    background-color: green;
+    border-color: darkgreen;
+}
+
+*[data-vct-connection="failed"], *[data-vct-connection="disconnected"],
+    *[data-vct-connection="closed"] {
+    background-color: red;
+    border-color: darkred;
+}
+
+/* callButton */
+*[data-vct-button="offer"]::before {
+    content: "📤"; /*📡*/
+}
+
+*[data-vct-button="offer"][data-vct-connection="checking"]::before, *[data-vct-button="offer"][data-vct-connection="connecting"]::before
+    {
+    content: "...";
+}
+
+/* callButton */
+*[data-vct-button="answer"]::before {
+    content: "📥"; /*📻*/
+}
+
+*[data-vct-button="answer"][data-vct-connection="checking"]::before, *[data-vct-button="answer"][data-vct-connection="connecting"]::before
+    {
+    content: "...";
+}
+
+*[data-vct-button] {
+    font-weight: bold;
+    display: block;
+    width: 2.5em;
+    box-sizing: border-box;
+    border-radius: 0;
+    border-width: 3px;
+}
+
+*[data-vct-button]:disabled {
+    border-color: transparent;
+}
+
+*[data-vct-button][hidden] {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+*[data-vct-button="0"] {
+    color: red;
+}
+
+*[data-vct-button="1"] {
+    color: green;
+}

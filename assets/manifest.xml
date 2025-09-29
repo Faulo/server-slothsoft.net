@@ -6,6 +6,7 @@
 
 	<manifest-directory name="dragonage" />
 	<manifest-directory name="talesof" />
+	<manifest-directory name="whatthehell" />
 
 	<resource-directory name="dictionary" type="application/xml" />
 	<directory name="sitemap">
@@ -209,7 +210,7 @@
 		<fragment name="whatthehell">
 			<fragment name="home">
 				<import ref="/api/default" />
-				<use-document ref="//whatthehell/html/home" name="content" />
+				<use-document ref="/whatthehell/html/home" name="content" />
 			</fragment>
 		</fragment>
 		<fragment name="heartbeat-for-all">

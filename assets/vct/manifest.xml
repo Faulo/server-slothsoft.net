@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<assets xmlns="http://schema.slothsoft.net/farah/module" version="1.1">
+	<resource-directory name="css" type="text/css" />
+	<resource-directory name="js" type="application/javascript" />
+	<resource-directory name="xsl" type="application/xslt+xml" />
+
+	<fragment name="html">
+		<fragment name="vct">
+			<fragment name="home">
+				<use-template ref="/vct/xsl/vct-home" />
+				<link-stylesheet ref="/vct/css/default" />
+			</fragment>
+			<fragment name="room">
+				<use-template ref="/vct/xsl/vct-room" />
+				<link-stylesheet ref="/vct/css/default" />
+				<import ref="//slothsoft@sse/api/webrtc-client" />
+				<use-document ref="/vct/api/vct" name="vct" />
+			</fragment>
+		</fragment>
+	</fragment>
+
+	<fragment name="api">
+		<custom-asset name="vct" executable-builder="Slothsoft\WebRTC\Assets\VideoChatThingBuilder" />
+	</fragment>
+</assets>

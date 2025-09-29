@@ -6,33 +6,48 @@
 	<p key="home">
 		<h2>mediale* 2012</h2>
 		<p>
-			Dieses Spiel wurde während des Game Jams der <a href="http://www.mediale.org/" rel="external" target="_blank">mediale*</a> 2012 zu dem gestellten Thema "Die Götter müssen verrückt sein" erstellt.
+			Dieses Spiel wurde während des Game Jams der
+			<a href="http://www.mediale.org/" rel="external" target="_blank">mediale*</a>
+			2012 zu dem gestellten Thema "Die Götter müssen verrückt sein" erstellt.
 		</p>
 		<p>
 			Es ist ein asymmetrisches, kooperatives Browserspiel für 2 Personen, in denen einer die Rolle von Gott einnimmt und der andere die Rolle des Propheten.
 		</p>
 		<p>
 			Gott hat einen Plan für seinen Propheten, aber nur begrenzte Möglichkeiten diesen Plan zu kommunizieren.
-			<span class="wth-god">Seine</span> Macht ist beinahe grenzenlos, <span class="wth-god">er</span> kann beliebige Objekte erschaffen und wieder vernichten,
-			während der Prophet darauf angewiesen ist, über die vom Himmel regnenden Gegenstände zu erahnen, was <span class="wth-god">er</span> von ihm verlangt.
+			<span class="wth-god">Seine</span>
+			Macht ist beinahe grenzenlos,
+			<span class="wth-god">er</span>
+			kann beliebige Objekte erschaffen und wieder vernichten,
+			während der Prophet darauf angewiesen ist, über die vom Himmel regnenden Gegenstände zu erahnen, was
+			<span class="wth-god">er</span>
+			von ihm verlangt.
 		</p>
-		<p>Zu Beginn des Spiels wird Gott eine Aufgabe präsentiert und eine Vielzahl von Objekten angeboten, 
-		mit denen diese Aufgabe erfüllt werden kann. Nun liegt es an <span class="wth-god">ihm</span>, 
-		dem Propheten allein über das Erschaffen und Entfernen dieser Objekte zu vermitteln, 
-		was diese Aufgabe ist und wie er sie zu erfüllen hat.
-		Der Prophet kann, im Gegensatz zu Gott, Objekte in der Spielwelt bewegen, benutzen, und kombinieren, um Gottes Plan zu verwirklichen. 
+		<p>
+			Zu Beginn des Spiels wird Gott eine Aufgabe präsentiert und eine Vielzahl von Objekten angeboten,
+			mit denen diese Aufgabe erfüllt werden kann. Nun liegt es an
+			<span class="wth-god">ihm</span>
+			,
+			dem Propheten allein über das Erschaffen und Entfernen dieser Objekte zu vermitteln,
+			was diese Aufgabe ist und wie er sie zu erfüllen hat.
+			Der Prophet kann, im Gegensatz zu Gott, Objekte in der
+			Spielwelt bewegen, benutzen, und kombinieren, um Gottes Plan zu verwirklichen.
 		</p>
-		<p>Das Spiel endet, wenn Gott zufrieden mit dem Werk <span class="wth-god">seines</span> Propheten ist.</p>
+		<p>
+			Das Spiel endet, wenn Gott zufrieden mit dem Werk
+			<span class="wth-god">seines</span>
+			Propheten ist.
+		</p>
 		<p>
 			<figure>
-				<img src="/slothsoft@slothsoft@whatthehell/static/screenshot" alt="Eine Sofafort-Baustelle"/>
+				<img src="/slothsoft@slothsoft.net/whatthehell/static/screenshot" alt="Eine Sofafort-Baustelle" />
 				<figcaption>Beide Spieler sehen die Spielwelt, aber nur Gott sieht die Aufgabenstellung links und die möglichen Objekte dafür.</figcaption>
 			</figure>
 		</p>
 		<p>Entwickler:</p>
 		<ul>
 			<li>Daniel Schulz (Game Design, Programmierung)</li>
-			<li>Claudia Osthof (Art)</li>
+			<li>Arden Osthof (Art)</li>
 		</ul>
 	</p>
 </html>

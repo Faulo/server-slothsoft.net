@@ -13,7 +13,7 @@
 
 	<xsl:template match="layer">
 		<g class="map-layer" buffer-rendering="static">
-			<image width="1000" height="500" xlink:href="/slothsoft@whatthehell/static/background-fort" />
+			<image width="1000" height="500" xlink:href="/slothsoft@slothsoft.net/whatthehell/static/background-fort" />
 			<g id="items" />
 		</g>
 	</xsl:template>

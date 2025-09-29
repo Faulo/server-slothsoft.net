@@ -23,7 +23,7 @@
 		"slothsoft/cron" : "*",
 		"slothsoft/farah" : "^1.21.14",
 		"slothsoft/minecraft" : "*",
-		"slothsoft/sse" : "*",
+		"slothsoft/sse" : "^1.0.9",
 		"google/apiclient" : "^2.0"
 	},
 	"require-dev" : {

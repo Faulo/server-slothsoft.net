@@ -2,7 +2,8 @@
 declare(strict_types = 1);
 namespace Slothsoft\Server\Slothsoft\Assets;
 
-use Slothsoft\Core\IO\Writable\Delegates\DOMWriterFromElementDelegate;
+use Slothsoft\Core\IO\Writable\DOMWriterInterface;
+use Slothsoft\Core\IO\Writable\Traits\DOMWriterDocumentFromElementTrait;
 use Slothsoft\Farah\FarahUrl\FarahUrlArguments;
 use Slothsoft\Farah\Module\Asset\AssetInterface;
 use Slothsoft\Farah\Module\Asset\ExecutableBuilderStrategy\ExecutableBuilderStrategyInterface;
@@ -10,8 +11,6 @@ use Slothsoft\Farah\Module\Executable\ExecutableStrategies;
 use Slothsoft\Farah\Module\Executable\ResultBuilderStrategy\DOMWriterResultBuilder;
 use DOMDocument;
 use DOMElement;
-use Slothsoft\Core\IO\Writable\DOMWriterInterface;
-use Slothsoft\Core\IO\Writable\Traits\DOMWriterDocumentFromElementTrait;
 
 class MelnicsTestBuilder implements ExecutableBuilderStrategyInterface, DOMWriterInterface {
     use DOMWriterDocumentFromElementTrait;

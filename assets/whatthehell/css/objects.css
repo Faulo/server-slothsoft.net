@@ -1,0 +1,142 @@
+*[data-item] {
+	
+}
+
+*[data-item]>path {
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.god *[data-item="floor"] {
+	fill: none;
+}
+
+.human *[data-item="floor"] {
+	fill: black;
+}
+
+*[data-item="sessel"]>path:nth-of-type(1) {
+	fill: #dd8c00;
+	stroke: #dd8c00;
+}
+
+*[data-item="sessel"]>path:nth-of-type(2) {
+	fill: #dd8c00;
+	stroke: #dd8c00;
+}
+
+*[data-item="sessel"]>path:nth-of-type(3) {
+	fill: #fbb700;
+	stroke: #fbb700;
+}
+
+*[data-item="sessel"]>path:nth-of-type(4) {
+	fill: #00cce1;
+	stroke: #00cce1;
+}
+
+*[data-item="sofa"]>path:nth-of-type(1) {
+	fill: #dd8c00;
+	stroke: #dd8c00;
+}
+
+*[data-item="sofa"]>path:nth-of-type(2) {
+	fill: #dd8c00;
+	stroke: #dd8c00;
+}
+
+*[data-item="sofa"]>path:nth-of-type(3) {
+	fill: #6adf0c;
+	stroke: #6adf0c;
+}
+
+*[data-item="sofa"]>path:nth-of-type(4) {
+	fill: #97f948;
+	stroke: #97f948;
+}
+
+*[data-item="sofa"]>path:nth-of-type(5) {
+	fill: #5ef0ff;
+	stroke: #5ef0ff;
+}
+
+*[data-item="sofa"]>path:nth-of-type(6) {
+	fill: #5ef0ff;
+	stroke: #5ef0ff;
+}
+
+*[data-item="stuhl"]>path:nth-of-type(1) {
+	fill: #08d108;
+	stroke: #08d108;
+}
+
+*[data-item="stuhl"]>path:nth-of-type(2) {
+	fill: #fbb700;
+	stroke: #fbb700;
+}
+
+*[data-item="decke"]>path:nth-of-type(1) {
+	fill: #ea6c05;
+	stroke: #ea6c05;
+}
+
+*[data-item="decke"]>path:nth-of-type(2) {
+	fill: #ea6c05;
+	stroke: #ea6c05;
+}
+
+*[data-item="decke"]>path:nth-of-type(3) {
+	fill: #f8b605;
+	stroke: #f8b605;
+}
+
+*[data-item="buch"]>path:nth-of-type(1) {
+	fill: #f7ea7a;
+	stroke: #f7ea7a;
+}
+
+*[data-item="buch"]>path:nth-of-type(2) {
+	fill: #0070b0;
+	stroke: #0070b0;
+}
+
+*[data-item="kissen"]>path:nth-of-type(1) {
+	fill: #79e5f2;
+	stroke: #79e5f2;
+}
+
+*[data-item="taschenlampe"]>path:nth-of-type(1) {
+	fill: #1f4ab4;
+	stroke: #1f4ab4;
+}
+
+*[data-item="taschenlampe"]>path:nth-of-type(2) {
+	fill: #fff12c;
+	stroke: #fff12c;
+}
+
+*[data-item="taschenlampe"]>path:nth-of-type(3) {
+	fill: #45b5f8;
+	stroke: #45b5f8;
+}
+
+*[data-item="kakao"]>path:nth-of-type(1) {
+	fill: #9ae126;
+	stroke: #9ae126;
+}
+
+*[data-item="kakao"]>path:nth-of-type(2) {
+	fill: #9ae126;
+	stroke: #9ae126;
+}
+
+*[data-item="kakao"]>path:nth-of-type(3) {
+	fill: #993c16;
+	stroke: #993c16;
+}
+
+*[data-item="kakao"]>path:nth-of-type(4) {
+	fill: #ccb9b9;
+	stroke: #ccb9b9;
+}

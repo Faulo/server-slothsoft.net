@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4cbf7c6d928fb1731a0f367986d8b94",
+    "content-hash": "eee7b5ff00619e7b9e7f21f1958baa26",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -2587,60 +2587,6 @@
                 "source": "https://github.com/Faulo/slothsoft-w3c/tree/1.2.8"
             },
             "time": "2025-09-17T20:55:08+00:00"
-        },
-        {
-            "name": "slothsoft/whatthehell",
-            "version": "1.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Faulo/slothsoft-whatthehell.git",
-                "reference": "6431d8002a9daf7c876a5d3667992387d0bdfe3c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-whatthehell/zipball/6431d8002a9daf7c876a5d3667992387d0bdfe3c",
-                "reference": "6431d8002a9daf7c876a5d3667992387d0bdfe3c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4",
-                "slothsoft/core": "^1.0",
-                "slothsoft/farah": "^1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.5"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/registerModule.php"
-                ],
-                "psr-0": {
-                    "Slothsoft\\WhatTheHell\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniel Schulz",
-                    "email": "info.slothsoft@gmail.com"
-                }
-            ],
-            "description": "A Farah module that contains the game What the Hell, God?",
-            "homepage": "http://farah.slothsoft.net/modules/whatthehell",
-            "keywords": [
-                "docs",
-                "farah-module",
-                "slothsoft"
-            ],
-            "support": {
-                "issues": "https://github.com/Faulo/slothsoft-whatthehell/issues",
-                "source": "https://github.com/Faulo/slothsoft-whatthehell/tree/1.0.6"
-            },
-            "time": "2025-07-04T16:42:43+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",

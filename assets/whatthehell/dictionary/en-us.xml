@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+
+	<p key="What The Hell">What The Hell</p>
+	<p key="Slothsoft">Slothsoft</p>
+	<p key="home">
+		<h2>mediale* 2012</h2>
+		<p>
+			This was our entry for the
+			<a href="http://www.mediale.org/" rel="external" target="_blank">mediale*</a>
+			game jam in 2012.
+		</p>
+		<p>
+			It was intended as a co-op game, but the 2 days we spent coding it weren't quite enough to make multiplayer work
+			the way we wanted to, so it remained single-player.
+		</p>
+		<p>It was developed by:</p>
+		<ul>
+			<li>Daniel Schulz</li>
+			<li>Claudia Osthof</li>
+		</ul>
+	</p>
+</html>

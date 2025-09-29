@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<assets xmlns="http://schema.slothsoft.net/farah/module" version="1.1">
+	<resource-directory name="css" type="text/css"/>
+	<resource-directory name="js" type="application/javascript"/>
+	<resource-directory name="xsl" type="application/xslt+xml"/>
+
+	<resource-directory name="dictionary" type="application/xml"/>
+
+	<directory name="static">
+		<resource name="adventure" path="adventure.xml" type="application/xml"/>
+		<resource name="background-fort" path="background-fort.png" type="image/png"/>
+		<resource name="screenshot" path="screenshot.png" type="image/png"/>
+		<resource name="font" path="prstartk.ttf" type="application/x-ttf"/>
+	</directory>
+
+	<fragment name="html">
+		<fragment name="home">
+			<use-template ref="/whatthehell/xsl/home"/>
+		</fragment>
+	</fragment>
+
+	<fragment name="game">
+		<use-template ref="/whatthehell/xsl/adventure"/>
+		<use-document ref="/whatthehell/static/adventure" name="adventure"/>
+		<link-stylesheet ref="/whatthehell/css/default"/>
+		<link-stylesheet ref="/whatthehell/css/objects"/>
+		<import ref="//slothsoft@core/api/DOM"/>
+		<link-script ref="/whatthehell/js/2D"/>
+		<link-script ref="/whatthehell/js/2Dfix"/>
+		<link-script ref="/whatthehell/js/Trait"/>
+		<link-script ref="/whatthehell/js/Trait.View"/>
+		<link-script ref="/whatthehell/js/Trait.ViewGameElement"/>
+		<link-script ref="/whatthehell/js/Adventure"/>
+		<link-script ref="/whatthehell/js/Adventure.Controller"/>
+		<link-script ref="/whatthehell/js/Adventure.Controller.Pull"/>
+		<link-script ref="/whatthehell/js/Adventure.Model"/>
+		<link-script ref="/whatthehell/js/Adventure.Model.Pull"/>
+		<link-script ref="/whatthehell/js/Adventure.View"/>
+		<link-script ref="/whatthehell/js/Adventure.View.God"/>
+		<link-script ref="/whatthehell/js/Adventure.View.Human"/>
+		<link-script ref="/whatthehell/js/Adventure.View.Map"/>
+		<link-script ref="/whatthehell/js/Adventure.View.Map.Item"/>
+		<link-script ref="/whatthehell/js/Adventure.View.Menu"/>
+		<link-script ref="/whatthehell/js/Adventure.View.Solo"/>
+	</fragment>
+
+	<fragment name="api">
+		<custom-asset name="pull" executable-builder="Slothsoft\Server\Slothsoft\Assets\WhatTheHell\PullBuilder"/>
+		<custom-asset name="push" executable-builder="Slothsoft\Server\Slothsoft\Assets\WhatTheHell\PushBuilder"/>
+	</fragment>
+</assets>

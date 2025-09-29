@@ -1,0 +1,100 @@
+@font-face {
+	font-family: myWriting;
+	src: url(/slothsoft@whatthehell/static/font);
+}
+
+svg {
+	/*viewport-fill: black;*/
+	background-color: #111;
+}
+
+text, textArea, rect, circle {
+	pointer-events: none;
+	cursor: default;
+}
+
+*[data-item] {
+	/*pointer-events: auto;*/
+	
+}
+
+text[data-tooltip], rect[data-tooltip], circle[data-tooltip], path[data-tooltip]
+	{
+	pointer-events: fill;
+}
+
+text[data-highlight] {
+	pointer-events: fill;
+}
+/* Filter 
+text {
+	filter: url(filter.svg#greyOutline);
+}
+text[data-highlight]:hover {
+	filter: url(filter.svg#gammaOutline);
+}
+text[data-highlight]:active {
+	filter: url(filter.svg#clickOutline);
+}
+.menu-button > rect {
+	filter:url(filter.svg#silverOutline);
+	pointer-events: fill;
+}
+.menu-button > rect:hover + text {
+	filter: url(filter.svg#gammaOutline);
+}
+.menu-button > rect:active {
+	filter:url(filter.svg#greyOutline);
+}
+.menu-button > rect:active + text {
+	filter: url(filter.svg#clickOutline);
+}
+*/
+#body {
+	
+}
+
+#map {
+	
+}
+
+#frame {
+	stroke: silver;
+	stroke-width: 16px;
+	fill: none;
+	pointer-events: none;
+}
+
+text, textArea {
+	font-family: myWriting;
+	fill: #11DD11;
+	/*text-decoration: underline;*/
+}
+
+.white {
+	fill: #fafafa;
+}
+
+.green {
+	fill: #1d1;
+}
+
+.cyan {
+	fill: #1cc; /*1dd*/
+}
+
+.blue {
+	fill: #11d;
+}
+
+.yellow {
+	fill: #dd1;
+}
+
+.red {
+	fill: #d11;
+}
+
+.pink {
+	fill: #d1d;
+}

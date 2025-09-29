@@ -24,7 +24,6 @@
 		"slothsoft/farah" : "^1.21.14",
 		"slothsoft/minecraft" : "*",
 		"slothsoft/sse" : "*",
-		"slothsoft/whatthehell" : "*",
 		"google/apiclient" : "^2.0"
 	},
 	"require-dev" : {

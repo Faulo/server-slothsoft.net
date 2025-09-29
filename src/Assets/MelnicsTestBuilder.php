@@ -10,14 +10,14 @@ use Slothsoft\Farah\Module\Executable\ExecutableStrategies;
 use Slothsoft\Farah\Module\Executable\ResultBuilderStrategy\DOMWriterResultBuilder;
 use DOMDocument;
 use DOMElement;
+use Slothsoft\Core\IO\Writable\DOMWriterInterface;
+use Slothsoft\Core\IO\Writable\Traits\DOMWriterDocumentFromElementTrait;
 
-class MelnicsTestBuilder implements ExecutableBuilderStrategyInterface {
+class MelnicsTestBuilder implements ExecutableBuilderStrategyInterface, DOMWriterInterface {
+    use DOMWriterDocumentFromElementTrait;
     
     public function buildExecutableStrategies(AssetInterface $context, FarahUrlArguments $args): ExecutableStrategies {
-        return new ExecutableStrategies(new DOMWriterResultBuilder(new DOMWriterFromElementDelegate([
-            $this,
-            'toElement'
-        ])));
+        return new ExecutableStrategies(new DOMWriterResultBuilder($this));
     }
     
     public function toElement(DOMDocument $dataDoc): DOMElement {

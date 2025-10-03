@@ -20,6 +20,6 @@
 	</fragment>
 
 	<fragment name="api">
-		<custom-asset name="vct" executable-builder="Slothsoft\WebRTC\Assets\VideoChatThingBuilder" />
+		<custom-asset name="vct" executable-builder="Slothsoft\Server\Slothsoft\Assets\VideoChatThingBuilder" />
 	</fragment>
 </assets>

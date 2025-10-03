@@ -1,6 +1,6 @@
 <?php
 declare(strict_types = 1);
-namespace Slothsoft\WebRTC\Assets;
+namespace Slothsoft\Server\Slothsoft\Assets;
 
 use Slothsoft\Core\Game\Name;
 use Slothsoft\Core\IO\Writable\Delegates\DOMWriterFromElementDelegate;

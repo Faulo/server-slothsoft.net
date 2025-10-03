@@ -10,10 +10,10 @@
 	<xsl:variable name="freeCraymels" select="//data/craymels/craymel" />
 	<xsl:variable name="mages" select="//data/mage" />
 
-	<xsl:template match="sfm:fragment">
+	<xsl:template match="sfm:fragment-info">
 		<div>
 			<xsl:apply-templates select="sfm:error" mode="sfm:html" />
-			<xsl:apply-templates select="sfm:document[@name='CraymelEditor']/data" />
+			<xsl:apply-templates select="sfm:document-info[@name='CraymelEditor']/data" />
 		</div>
 	</xsl:template>
 

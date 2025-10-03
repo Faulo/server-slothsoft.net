@@ -2286,16 +2286,16 @@
         },
         {
             "name": "slothsoft/farah",
-            "version": "1.21.18",
+            "version": "1.21.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-farah.git",
-                "reference": "8227d5b7e624c5f468a51c3e194b299aeed91b06"
+                "reference": "08a4ff986bad54557051f5472f9573835cc61268"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/8227d5b7e624c5f468a51c3e194b299aeed91b06",
-                "reference": "8227d5b7e624c5f468a51c3e194b299aeed91b06",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/08a4ff986bad54557051f5472f9573835cc61268",
+                "reference": "08a4ff986bad54557051f5472f9573835cc61268",
                 "shasum": ""
             },
             "require": {
@@ -2358,9 +2358,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-farah/issues",
-                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.21.18"
+                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.21.19"
             },
-            "time": "2025-10-01T13:12:15+00:00"
+            "time": "2025-10-03T17:53:18+00:00"
         },
         {
             "name": "slothsoft/minecraft",

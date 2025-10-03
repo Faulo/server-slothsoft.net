@@ -239,6 +239,7 @@
 		<import ref="/api/default" />
 		<fragment name="content" use="document">
 			<use-template ref="/xsl/about-us" />
+			<use-document ref="//farah/current-request" name="request" />
 			<use-document ref="/static/staff-content" name="staff-content" />
 		</fragment>
 	</fragment>

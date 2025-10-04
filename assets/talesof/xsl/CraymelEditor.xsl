@@ -198,7 +198,8 @@
 	<xsl:template match="spell" mode="mages">
 		<xsl:param name="type" select="@type" />
 		<xsl:variable name="craymel" select="$craymels[@type = $type]" />
-		<a class="divide" href="#{sfx:id(.)}">
+		<a class="divide">
+			<xsl:call-template name="sfx:set-href" />
 			<xsl:attribute name="data-element">
 				<xsl:value-of select="$craymel/@element" />
 			</xsl:attribute>
@@ -284,7 +285,8 @@
 								</xsl:otherwise>
 							</xsl:choose>
 						</xsl:variable>
-						<tr data-mage="{$ownerMage}" id="{sfx:id(.)}">
+						<tr data-mage="{$ownerMage}">
+							<xsl:call-template name="sfx:set-id" />
 							<td>
 								<xsl:value-of select="$ownerMage" />
 							</td>

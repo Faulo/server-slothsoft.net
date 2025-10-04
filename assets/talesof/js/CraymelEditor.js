@@ -6,36 +6,32 @@ var CraymelEditor = {
     craymels: {},
     mages: [],
     events: {
-        dragmousedown: function(_) {
+        dragmousedown(_) {
             this.setAttribute("data-status", "inuse");
         },
-        dragmouseup: function(_) {
+        dragmouseup(_) {
             this.removeAttribute("data-status");
         },
-        dragstart: function(eve) {
+        dragstart(eve) {
             eve.dataTransfer.setData("text", this.getAttribute("data-craymel"));
             this._ce.drawParent.setAttribute("data-status", "");
         },
-        dragend: function(_) {
+        dragend(_) {
             this._ce.drawParent.removeAttribute("data-status");
         },
-        dragover: function(eve) {
+        dragover(eve) {
             eve.preventDefault();
         },
-        drop: function(eve) {
-            var craymelName, mageNo;
+        drop(eve) {
             eve.preventDefault();
-
             this._ce.drawParent.setAttribute("data-status", "busy");
-
             try {
-                craymelName = eve.dataTransfer.getData("text");
-                mageNo = this.getAttribute("data-cage");
+                const craymelName = eve.dataTransfer.getData("text");
+                const mageNo = this.getAttribute("data-cage");
                 this._ce.setCraymel(craymelName, mageNo);
             } catch (e) {
                 console.log(e);
             }
-
             this._ce.drawParent.removeAttribute("data-status");
         },
     },
@@ -131,30 +127,20 @@ var CraymelEditor = {
         }
     },
     tradeCraymel: function(ele) {
-        var craymel, craymelName, mageNo;
-        craymelName = ele.getAttribute("data-craymel");
-        craymel = this.craymels[craymelName];
-        mageNo = craymel.mage;
-        if (mageNo === 2) {
-            mageNo = 0;
-        } else {
-            mageNo++;
-        }
+        const craymelName = ele.getAttribute("data-craymel");
+        const craymel = this.craymels[craymelName];
+        let mageNo = craymel.mage;
+        mageNo = (mageNo === 2) ? 0 : mageNo + 1;
         craymel.mage = mageNo;
         this.mages[mageNo].appendChild(craymel);
         this.draw();
     },
+
     setCraymel: function(craymelName, mageNo) {
-        var craymel = this.craymels[craymelName];
+        const craymel = this.craymels[craymelName];
         this.mages[mageNo].appendChild(craymel);
         this.draw();
     },
 };
 
-addEventListener(
-    "load",
-    function(eve) {
-        CraymelEditor.init();
-    },
-    false
-);
+CraymelEditor.init();

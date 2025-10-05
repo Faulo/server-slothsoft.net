@@ -12,17 +12,15 @@ use Slothsoft\Farah\Module\Executable\ResultBuilderStrategy\DOMWriterResultBuild
 use DOMDocument;
 use DOMElement;
 
-class VideoChatThingBuilder implements ExecutableBuilderStrategyInterface
-{
-
-    public function buildExecutableStrategies(AssetInterface $context, FarahUrlArguments $args): ExecutableStrategies
-    {
+class VideoChatThingBuilder implements ExecutableBuilderStrategyInterface {
+    
+    public function buildExecutableStrategies(AssetInterface $context, FarahUrlArguments $args): ExecutableStrategies {
         $name = $args->get('name');
         if (! $name) {
             $name = $this->inventName();
         }
         
-        $args->set('chat-database', "vct.$name"); // TOOD: where should this go?
+        $args = $args->withArgument('chat-database', "vct.$name"); // TOOD: where should this go?
         
         $toElement = function (DOMDocument $targetDoc) use ($name): DOMElement {
             $retNode = $targetDoc->createElement('vct');
@@ -35,9 +33,8 @@ class VideoChatThingBuilder implements ExecutableBuilderStrategyInterface
         $resultBuilder = new DOMWriterResultBuilder($writer);
         return new ExecutableStrategies($resultBuilder);
     }
-
-    private function inventName(): string
-    {
+    
+    private function inventName(): string {
         $config = [];
         $config[Name::GENERATE_CONFIG_FIRSTNAMEONLY] = 0;
         $config[Name::GENERATE_CONFIG_ALLITERATION] = 0;

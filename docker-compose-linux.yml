@@ -13,7 +13,9 @@ services:
             LETSENCRYPT_HOST: ${SERVER_NAME}
             MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_password
         volumes:
-            - slothsoft_data:/var/www/data
+            - /var/vhosts/${SERVER_NAME}/:/var/www/data/
+        tmpfs:
+            - /var/www/cache/:uid=33,gid=33
         networks:
             - vhosts
             - mysql

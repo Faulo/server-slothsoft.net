@@ -6,7 +6,7 @@
 		<html>
 			<head>
 				<title>Slothsoft's Video Chat Thing</title>
-				<link rel="icon" type="image/png" href="/getResource.php/slothsoft/favicon" />
+				<link rel="icon" type="image/png" href="/favicon.ico" />
 				<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 				<meta name="author" content="Daniel Schulz" />
 			</head>

@@ -2482,23 +2482,23 @@
         },
         {
             "name": "slothsoft/sse",
-            "version": "1.0.9",
+            "version": "1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-sse.git",
-                "reference": "47184376d7c2652e63b4b372494f3e73e99af34b"
+                "reference": "dff2b9a8030403fa88b91fc1f77846722df14fdb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-sse/zipball/47184376d7c2652e63b4b372494f3e73e99af34b",
-                "reference": "47184376d7c2652e63b4b372494f3e73e99af34b",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-sse/zipball/dff2b9a8030403fa88b91fc1f77846722df14fdb",
+                "reference": "dff2b9a8030403fa88b91fc1f77846722df14fdb",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4",
                 "psr/http-message": "^1.0",
                 "slothsoft/core": "^1.0",
-                "slothsoft/farah": "^1.21.3"
+                "slothsoft/farah": "^1.22.2"
             },
             "require-dev": {
                 "phpunit/phpunit": "~9.6.23"
@@ -2531,9 +2531,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-sse/issues",
-                "source": "https://github.com/Faulo/slothsoft-sse/tree/1.0.9"
+                "source": "https://github.com/Faulo/slothsoft-sse/tree/1.0.10"
             },
-            "time": "2025-09-29T13:35:44+00:00"
+            "time": "2025-10-18T18:06:04+00:00"
         },
         {
             "name": "slothsoft/w3c",

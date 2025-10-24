@@ -277,6 +277,7 @@
 	</fragment>
 	<fragment name="validator">
 		<use-template ref="/xsl/w3c.validator" />
+        <use-document ref="//farah/current-request" name="request" />
 	</fragment>
 	<fragment name="dict.select">
 		<use-template ref="/xsl/dict.select" />

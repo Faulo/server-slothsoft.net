@@ -17,8 +17,12 @@
 	font-family: myMelnics;
 }
 
-.Translator.MelnicsTranslator textarea {
-	height: 4em;
+@media ( min-width : 951px) {
+	.Translator.MelnicsTranslator textarea {
+		height: 4em;
+		width: calc(100% - 450px);
+		display: block;
+	}
 }
 
 .Translator.MelnicsTranslator textarea.output-english {

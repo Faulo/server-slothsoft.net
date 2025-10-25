@@ -1,6 +1,16 @@
-// © 2012 Daniel Schulz
+import DOM from "/slothsoft@farah/js/DOM";
 
-var MelnicsTranslator = {
+export default class {
+    constructor(rootNode) {
+        MelnicsTranslator.init(rootNode);
+    }
+
+    typeCharacter(inputNode) {
+        MelnicsTranslator.typeCharacter(inputNode);
+    }
+}
+
+const MelnicsTranslator = {
     initialized: false,
     typingCharacter: false,
     dataDoc: undefined,
@@ -11,25 +21,21 @@ var MelnicsTranslator = {
         "output-english": undefined,
         "output-melnics": undefined,
     },
-    init: function() {
-        if (!this.initialized) {
-            var req = new XMLHttpRequest();
-            req.open("GET", "/slothsoft@slothsoft.net/talesof/static/Melnics", false);
-            req.send();
-            this.dataDoc = req.responseXML;
-
-            this.rootNode = document.getElementsByClassName("Translator")[0];
-            for (var i in this.formNodes) {
-                this.formNodes[i] = this.rootNode.getElementsByClassName(i)[0];
-            }
-            //alert(this.formNodes["input-english"]);
-            this.initialized = true;
+    init: async function(rootNode) {
+        this.dataDoc = await DOM.loadDocumentAsync("/slothsoft@slothsoft.net/talesof/static/Melnics");
+        this.rootNode = rootNode;
+        for (var i in this.formNodes) {
+            this.formNodes[i] = this.rootNode.querySelector("." + i);
         }
+        this.initialized = true;
     },
     typeCharacter: function(inputNode) {
+        if (!this.initialized) {
+            return;
+        }
+
         if (!this.typingCharacter) {
             var match, input, output, regex, key, found, searchType, found;
-            this.init();
             this.typingCharacter = true;
 
             regex = {
@@ -44,8 +50,7 @@ var MelnicsTranslator = {
             searchType = inputNode.getAttribute("data-translator-type");
             input = inputNode.value;
             input = input.toLowerCase();
-            //input = input.split("\n").join(" ").split("\r").join(" ");
-            //alert(input);
+
             output = [];
             do {
                 found = false;
@@ -85,7 +90,7 @@ var MelnicsTranslator = {
                 }
             } while (found);
             output = output.join("");
-            //alert(output);
+
             switch (searchType) {
                 case "melnics":
                     this.formNodes["input-english"].value = output;
@@ -94,6 +99,7 @@ var MelnicsTranslator = {
                     this.formNodes["input-melnics"].value = output;
                     break;
             }
+
             this.formNodes["output-english"].value = this.formNodes["input-english"].value;
             this.typingCharacter = false;
         }
@@ -111,7 +117,7 @@ var MelnicsTranslator = {
                 return false;
         }
 
-        var kana = XPath.evaluate(query, this.dataDoc);
+        var kana = DOM.evaluate(query, this.dataDoc);
         if (kana === "") {
             return false;
         }
@@ -119,12 +125,3 @@ var MelnicsTranslator = {
         return kana;
     },
 };
-
-addEventListener(
-    "load",
-    function(eve) {
-        MelnicsTranslator.init();
-
-    },
-    false
-);

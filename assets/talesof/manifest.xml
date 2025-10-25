@@ -43,10 +43,8 @@
 				<use-document ref="/talesof/api/melnics-test" name="melnics-test" />
 			</fragment>
 			<fragment name="translator">
-				<import ref="//slothsoft@farah/api/DOM" />
 				<use-template ref="/talesof/xsl/melnics.translator" />
 				<link-stylesheet ref="/talesof/css/default" />
-				<link-script ref="/talesof/js/MelnicsTranslator" />
 			</fragment>
 		</fragment>
 		<fragment name="eternia">

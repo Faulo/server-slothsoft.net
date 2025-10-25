@@ -6,6 +6,11 @@
 	<xsl:template match="/*">
 		<div class="Translator MelnicsTranslator">
 			<xsl:apply-templates select="sfm:error" mode="sfm:html" />
+			<script type="module"><![CDATA[
+import Translator from "/slothsoft@slothsoft.net/talesof/js/MelnicsTranslator";
+
+window.MelnicsTranslator = new Translator(document.querySelector(".MelnicsTranslator"));
+]]></script>
 			<article>
 				<h2>About</h2>
 				<article>

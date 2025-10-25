@@ -17,22 +17,45 @@ const CraymelEditor = {
     mages: [],
     events: {
         dragmousedown(_) {
+            if (!this._ce) {
+                return;
+            }
+
             this.setAttribute("data-status", "inuse");
         },
         dragmouseup(_) {
+            if (!this._ce) {
+                return;
+            }
+
             this.removeAttribute("data-status");
         },
         dragstart(eve) {
+            if (!this._ce) {
+                return;
+            }
+
             eve.dataTransfer.setData("text", this.getAttribute("data-craymel"));
             this._ce.drawParent.setAttribute("data-status", "");
         },
         dragend(_) {
+            if (!this._ce) {
+                return;
+            }
+
             this._ce.drawParent.removeAttribute("data-status");
         },
         dragover(eve) {
+            if (!this._ce) {
+                return;
+            }
+
             eve.preventDefault();
         },
         drop(eve) {
+            if (!this._ce) {
+                return;
+            }
             eve.preventDefault();
             this._ce.drawParent.setAttribute("data-status", "busy");
             try {
@@ -40,7 +63,7 @@ const CraymelEditor = {
                 const mageNo = this.getAttribute("data-cage");
                 this._ce.setCraymel(craymelName, mageNo);
             } catch (e) {
-                console.log(e);
+                console.error(e);
             }
             this._ce.drawParent.removeAttribute("data-status");
         },
@@ -147,8 +170,10 @@ const CraymelEditor = {
     },
 
     setCraymel: function(craymelName, mageNo) {
-        const craymel = this.craymels[craymelName];
-        this.mages[mageNo].appendChild(craymel);
-        this.draw();
+        if (this.craymels[craymelName] && this.mages[mageNo]) {
+            const craymel = this.craymels[craymelName];
+            this.mages[mageNo].appendChild(craymel);
+            this.draw();
+        }
     },
 };

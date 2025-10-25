@@ -13,10 +13,8 @@
 			<use-template ref="/dragonage/xsl/home" />
 		</fragment>
 		<fragment name="combos">
-			<import ref="//slothsoft@farah/api/DOM" />
 			<use-template ref="/dragonage/xsl/_combos" />
 			<link-stylesheet ref="/dragonage/css/default" />
-			<link-script ref="/dragonage/js/ComboManager" />
 			<use-document ref="/dragonage/static/games" name="games" />
 		</fragment>
 	</fragment>

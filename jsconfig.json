@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "/slothsoft@amber/*": [
+        "../slothsoft-amber/assets/*"
+      ],
+      "/slothsoft@chat/*": [
+        "../slothsoft-chat/assets/*"
+      ],
+      "/slothsoft@cron/*": [
+        "../slothsoft-cron/assets/*"
+      ],
+      "/slothsoft@farah/*": [
+        "../slothsoft-farah/assets/*"
+      ],
+      "/slothsoft@minecraft/*": [
+        "../slothsoft-minecraft/assets/*"
+      ],
+      "/slothsoft@savegame/*": [
+        "../slothsoft-savegame/assets/*"
+      ],
+      "/slothsoft@sse/*": [
+        "../slothsoft-sse/assets/*"
+      ]
+    }
+  }
+}

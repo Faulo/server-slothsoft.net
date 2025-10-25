@@ -19,6 +19,9 @@
       "/slothsoft@savegame/*": [
         "../slothsoft-savegame/assets/*"
       ],
+      "/slothsoft@slothsoft.net/*": [
+        "./assets/*"
+      ],
       "/slothsoft@sse/*": [
         "../slothsoft-sse/assets/*"
       ]

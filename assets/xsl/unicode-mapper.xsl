@@ -30,7 +30,7 @@ window.UnicodeMapper = new UnicodeMapper(document.querySelector(".UnicodeMapper 
 					I was too lazy to check if these exists for Umlaute (or ß or what have you), so only the 26 letters of the ANSI code page are supported.
 					</p>
 					<p>
-					Credit goes to whoever compiled these awesome <a href="http://www.fileformat.info/info/unicode/category/Ll/list.htm" rel="external">lowercase</a> and <a href="http://www.fileformat.info/info/unicode/category/Lu/list.htm" rel="external">uppercase</a> letter lists!
+					<xsl:text>Credit goes to whoever compiled these awesome </xsl:text><a href="http://www.fileformat.info/info/unicode/category/Ll/list.htm" rel="external">lowercase</a><xsl:text> and </xsl:text><a href="http://www.fileformat.info/info/unicode/category/Lu/list.htm" rel="external">uppercase</a><xsl:text> letter lists!</xsl:text>
 					</p>
 					<p>
 					... In case you're wondering, I wrote this to allow for a bit more 𝑣𝑎𝑟𝑖𝑒𝑡𝑦 in Twitter or Tumblr posts. :3
@@ -43,7 +43,7 @@ window.UnicodeMapper = new UnicodeMapper(document.querySelector(".UnicodeMapper 
 				</article>
 				<article>
 					<h3>v1.2 - 24.12.2012</h3>
-					<p>(╯^_^)╯︵ sdıʃɟǝʃqɐ⊥! Courtesy of <a href="http://www.fileformat.info/convert/text/upside-down-map.htm" rel="external">fileformat.info</a>! :D</p>
+					<p><xsl:text>(╯^_^)╯︵ sdıʃɟǝʃqɐ⊥! Courtesy of </xsl:text><a href="http://www.fileformat.info/convert/text/upside-down-map.htm" rel="external">fileformat.info</a><xsl:text>! :D</xsl:text></p>
 				</article>
 				<article>
 					<h3>v1.3 - 07.02.2013</h3>
@@ -51,12 +51,12 @@ window.UnicodeMapper = new UnicodeMapper(document.querySelector(".UnicodeMapper 
 				</article>
 				<article>
 					<h3>v1.4 - 18.09.2015</h3>
-					<p>No changes to the code, but I added an FAQ. If you have any questions, hit me up at <a href="mailto:info.slothsoft@gmail.com" rel="author">info.slothsoft@gmail.com</a>!</p>
+					<p><xsl:text>No changes to the code, but I added an FAQ. If you have any questions, hit me up at </xsl:text><a href="mailto:info.slothsoft@gmail.com" rel="author">info.slothsoft@gmail.com</a><xsl:text>!</xsl:text></p>
 				</article>
 				<article>
 					<h3>v1.5 - 29.05.2016</h3>
 					<p>Revamped the code, changed the available fonts. Underlining and flipping never really worked all that well anyway.</p>
-					<p>The mapping is now done based on an <a href="/slothsoft@slothsoft.net/static/unicode-mapper">XML file</a>.</p>
+					<p><xsl:text>The mapping is now done based on an </xsl:text><a href="/slothsoft@slothsoft.net/static/unicode-mapper">XML file</a><xsl:text>.</xsl:text></p>
 				</article>
 				<article>
 					<h3>v1.6 - 01.06.2016</h3>

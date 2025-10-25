@@ -5,6 +5,11 @@
 	
 	<xsl:template match="/*">
 		<div class="Translator UnicodeMapper">
+		      <script type="module"><![CDATA[
+import UnicodeMapper from "/slothsoft@slothsoft.net/js/UnicodeMapper";
+
+window.UnicodeMapper = new UnicodeMapper(document.querySelector(".UnicodeMapper fieldset"));
+                ]]></script>
 			<article>
 				<h2>Unicode Mapper</h2>
 				<label>

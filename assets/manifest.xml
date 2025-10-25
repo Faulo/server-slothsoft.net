@@ -277,7 +277,7 @@
 	</fragment>
 	<fragment name="validator">
 		<use-template ref="/xsl/w3c.validator" />
-        <use-document ref="//farah/current-request" name="request" />
+		<use-document ref="//farah/current-request" name="request" />
 	</fragment>
 	<fragment name="dict.select">
 		<use-template ref="/xsl/dict.select" />
@@ -286,8 +286,6 @@
 	<fragment name="unicode-mapper">
 		<import ref="/api/default" />
 		<fragment name="content" use="document">
-			<import ref="//farah/api/DOM" />
-			<link-script ref="/js/UnicodeMapper" />
 			<use-template ref="/xsl/unicode-mapper" />
 		</fragment>
 	</fragment>

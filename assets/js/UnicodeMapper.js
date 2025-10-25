@@ -1,21 +1,34 @@
-// © 2012 Daniel Schulz
-//"(╯^_^)╯"	"╯)^_^╯)"
-var tableFlip = " ︵╯(^‾^╯)";
-var UnicodeMapper = {
+import DOM from "/slothsoft@farah/js/DOM";
+import { NS } from "/slothsoft@farah/js/XMLNamespaces";
+
+export default class {
+    constructor(fontNode) {
+        UnicodeMapper.init(fontNode);
+    }
+    typeCharacter(inputNode) {
+        if (UnicodeMapper.initialized) {
+            UnicodeMapper.typeCharacter(inputNode);
+        }
+    }
+}
+
+const UnicodeMapper = {
     fontList: {},
     outputNodes: undefined,
     unicodeDocument: undefined,
     unicodeURI: "/slothsoft@slothsoft.net/static/unicode-mapper",
-    init: function() {
-        var fontNodeList, fontNode, labelNode, spanNode, i, nodeList, j, key, val, font, fontName;
+    init: async function(containerNode) {
+        const document = containerNode.ownerDocument;
+
+        var fontNodeList, labelNode, spanNode, i, nodeList, j, key, val, font, fontName;
         if (!this.initialized) {
             this.fontList = {};
 
-            this.unicodeDocument = DOM.loadDocument(this.unicodeURI);
+            this.unicodeDocument = await DOM.loadDocumentAsync(this.unicodeURI);
             if (this.unicodeDocument) {
                 fontNodeList = this.unicodeDocument.getElementsByTagName("font");
                 for (i = 0; i < fontNodeList.length; i++) {
-                    fontNode = fontNodeList[i];
+                    let fontNode = fontNodeList[i];
                     fontName = fontNode.getAttribute("name");
                     font = {};
                     nodeList = fontNode.getElementsByTagName("letter");
@@ -29,7 +42,6 @@ var UnicodeMapper = {
             }
 
             this.outputNodes = {};
-            fontNode = document.querySelector("body fieldset");
 
             for (fontName in this.fontList) {
                 labelNode = document.createElementNS(NS.HTML, "label");
@@ -39,7 +51,7 @@ var UnicodeMapper = {
                 this.outputNodes[fontName] = document.createElementNS(NS.HTML, "textarea");
                 this.outputNodes[fontName].setAttribute("class", "myParagraph");
                 labelNode.appendChild(this.outputNodes[fontName]);
-                fontNode.appendChild(labelNode);
+                containerNode.appendChild(labelNode);
             }
 
             this.initialized = true;
@@ -49,7 +61,6 @@ var UnicodeMapper = {
     },
     typeCharacter: function(inputNode) {
         var text, currentChar, i, fontType, outputNode, outputText, isUpperCase, codePoint, inputText;
-        this.init();
         inputText = inputNode.value;
         outputText = {};
 
@@ -95,11 +106,6 @@ var UnicodeMapper = {
             }
             outputText += currentChar;
         }
-        /*
-        if (fontType === tableFlip) {
-            outputText = this.flipString(outputText);
-        }
-        //*/
         return outputText;
     },
     flipString: function(str) {
@@ -111,11 +117,3 @@ var UnicodeMapper = {
         return ret;
     },
 };
-
-addEventListener(
-    "load",
-    function(eve) {
-        UnicodeMapper.init();
-    },
-    false
-);

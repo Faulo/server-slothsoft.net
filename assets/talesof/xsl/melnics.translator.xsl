@@ -11,41 +11,48 @@ import Translator from "/slothsoft@slothsoft.net/talesof/js/MelnicsTranslator";
 
 window.MelnicsTranslator = new Translator(document.querySelector(".MelnicsTranslator"));
 ]]></script>
-            <article>
-                <h2>Melnics Translator</h2>
-                <label>
-                    <span>
-                        <em>Pronunciation:</em>
-                        Input latin transcription of spoken Melnics here....
-                    </span>
-                    <textarea placeholder="baiba!" data-translator-type="melnics" class="input-melnics" oninput="MelnicsTranslator.typeCharacter(this)" autofocus="autofocus" />
-                </label>
-                <label>
-                    <span>
-                        <em>Meaning:</em>
-                        Input English text to be melnicsized here....
-                    </span>
-                    <textarea placeholder="wow!" data-translator-type="english" class="input-english" oninput="MelnicsTranslator.typeCharacter(this)" />
-                </label>
-                <label>
-                    <span>
-                        <em>Spelling:</em>
-                        Actual Melnics...
-                    </span>
-                    <textarea placeholder="wow!" class="output-english Melnics" readonly="readonly" />
-                </label>
-            </article>
-            <hr />
+			<article>
+				<h2>Melnics Translator</h2>
+				<label>
+					<span>
+						<em>Pronunciation:</em>
+						Input latin transcription of spoken Melnics here....
+					</span>
+					<textarea placeholder="baiba!" data-translator-type="melnics" class="input-melnics" oninput="MelnicsTranslator.typeCharacter(this)" autofocus="autofocus" />
+				</label>
+				<label>
+					<span>
+						<em>Meaning:</em>
+						Input English text to be melnicsized here....
+					</span>
+					<textarea placeholder="wow!" data-translator-type="english" class="input-english" oninput="MelnicsTranslator.typeCharacter(this)" />
+				</label>
+				<label>
+					<span>
+						<em>Spelling:</em>
+						Actual Melnics...
+					</span>
+					<textarea placeholder="wow!" class="output-english Melnics" readonly="readonly" />
+				</label>
+			</article>
+			<hr />
 			<article>
 				<h2>About</h2>
 				<article>
 					<h3>[1.0.2] - 2025-10-10</h3>
 					<p>
-						<xsl:text>Some of you have asked for the Melnics font that is used here. I can't tell where I got it from anymore sadly, but if you want to use it yourself, you can just use my copy:</xsl:text>
+						<xsl:text>Some of you have asked for a copy of the Melnics font that is used here. I can't tell where I got it from anymore sadly, but if you want to use it yourself, you can just use my copy:</xsl:text>
 					</p>
 					<p>
 						<xsl:text>📥 </xsl:text>
 						<a href="/slothsoft@slothsoft.net/talesof/static/fonts/MelniksFont.ttf">MelniksFont.ttf</a>
+					</p>
+					<p>
+						<small>
+							<xsl:text>(I'm pretty sure the font was distributed freely when I got it; if YOU are the owner of that copyright and want to chat about my usage of your intellectual property, hit me up at </xsl:text>
+							<a href="mailto:info.slothsoft@gmail.com">info.slothsoft@gmail.com</a>
+							<xsl:text>!)</xsl:text>
+						</small>
 					</p>
 				</article>
 				<article>

@@ -39,7 +39,7 @@ window.MelnicsTranslator = new Translator(document.querySelector(".MelnicsTransl
 			<article>
 				<h2>About</h2>
 				<article>
-					<h3>[1.0.2] - 2025-10-10</h3>
+					<h3>[1.0.2] - 2025-10-25</h3>
 					<p>
 						<xsl:text>Some of you have asked for a copy of the Melnics font that is used here. I can't tell where I got it from anymore sadly, but if you want to use it yourself, you can just use my copy:</xsl:text>
 					</p>

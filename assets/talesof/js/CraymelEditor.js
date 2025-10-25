@@ -1,6 +1,16 @@
-var CraymelEditor = {
+import DOM from "/slothsoft@farah/js/DOM";
+import XSLT from "/slothsoft@farah/js/XSLT";
+
+export default class {
+    constructor(host) {
+        CraymelEditor.init(host);
+    }
+}
+
+const CraymelEditor = {
     drawParent: undefined,
     drawNode: undefined,
+    isDrawing: false,
     dataDoc: undefined,
     templateDoc: undefined,
     craymels: {},
@@ -35,11 +45,12 @@ var CraymelEditor = {
             this._ce.drawParent.removeAttribute("data-status");
         },
     },
-    init: async function() {
-        const host = document.querySelector(".CraymelEditor");
+
+    init: async function(host) {
         if (!host) {
             throw new Error("CraymelEditor: no element with class .CraymelEditor found.");
         }
+
         this.drawParent = host.parentNode;
 
         this.drawParent.setAttribute("data-status", "busy");
@@ -50,8 +61,8 @@ var CraymelEditor = {
         try {
             // Load both XMLs in parallel
             const [templateDoc, dataDoc] = await Promise.all([
-                this.loadDocument(TEMPLATE_URL),
-                this.loadDocument(DATA_URL)
+                DOM.loadDocumentAsync(TEMPLATE_URL),
+                DOM.loadDocumentAsync(DATA_URL)
             ]);
             this.templateDoc = templateDoc;
             this.dataDoc = dataDoc;
@@ -69,7 +80,7 @@ var CraymelEditor = {
                 this.craymels[node.getAttribute("name")] = node;
             }
 
-            this.draw();
+            await this.draw();
         } catch (err) {
             console.error(err);
             // optional: surface error in UI
@@ -79,76 +90,17 @@ var CraymelEditor = {
             this.drawParent.removeAttribute("data-status");
         }
     },
-    normalizeUrl: function(uri) {
-        if (uri.startsWith("farah://")) {
-            return "/" + uri.substring("farah://".length);
-        }
-        return uri;
-    },
-    loadDocument: async function(uri) {
-        return new Promise((resolve, reject) => {
-            const request = new XMLHttpRequest();
-            request.open("GET", this.normalizeUrl(uri), true);
-            request.addEventListener(
-                "loadend",
-                (eve) => {
-                    const request = eve.target;
-                    const document = request.responseXML;
-                    if (document) {
-                        document.fileURI = uri;
-                        resolve(document);
-                    } else {
-                        reject("Error " + request.status + ":\n" + request.statusText);
-                    }
-                },
-                false
-            );
-            request.send();
-        });
-    },
-    transformToFragment: async function(dataNode, templateDoc, ownerDoc) {
-        try {
-            try {
-                for (let node; node = XPath.evaluate("/xsl:stylesheet/xsl:import", templateDoc)[0];) {
-                    const uri = node.getAttribute("href");
-                    const tmpDoc = await this.loadDocument(uri);
-                    const nodeList = XPath.evaluate("/xsl:stylesheet/*", tmpDoc);
-                    for (let i = 0; i < nodeList.length; i++) {
-                        templateDoc.documentElement.appendChild(templateDoc.importNode(nodeList[i], true));
-                    }
-                    templateDoc.documentElement.removeChild(node);
-                }
-            } catch (e) {
-                console.log("XSLT Error: could not process xsl:import elements");
-                console.log("Exception:%o", e);
-            }
 
-            const xslt = new XSLTProcessor();
-            xslt.importStylesheet(templateDoc);
-
-            const retFragment = xslt.transformToFragment(dataNode, ownerDoc);
-
-            if (!retFragment) {
-                throw new Error("XSLTProcessor.transformToFragment returned null!");
-            }
-
-            return retFragment;
-        } catch (e) {
-            console.log("An error occured while attempting to XSL transform. :|");
-            console.log("Data node:%o", dataNode);
-            console.log("Template document:%o", templateDoc);
-            console.log("Owner document:%o", ownerDoc);
-            console.log("Exception:%o", e);
-            return ownerDoc.createDocumentFragment();
-        }
-    },
-    transformToNode: async function(dataNode, templateDoc, ownerDoc) {
-        return (await this.transformToFragment(dataNode, templateDoc, ownerDoc)).firstChild;
-    },
     draw: async function() {
+        if (this.isDrawing) {
+            return;
+        }
+
+        this.isDrawing = true;
+
         const oldTables = this.drawParent.querySelectorAll("table");
 
-        this.drawNode = await this.transformToNode(this.dataDoc, this.templateDoc, document);
+        this.drawNode = (await XSLT.transformToFragmentAsync(this.dataDoc, this.templateDoc, this.drawParent.ownerDocument)).firstChild;
 
         if (!this.drawNode) {
             return;
@@ -160,7 +112,7 @@ var CraymelEditor = {
         }
 
         // draggable sources
-        let nodeList = XPath.evaluate(".//*[@data-craymel]", this.drawParent);
+        let nodeList = DOM.evaluate(".//*[@data-craymel]", this.drawParent);
         for (let i = 0; i < nodeList.length; i++) {
             const node = nodeList[i];
             node._ce = this;
@@ -172,7 +124,7 @@ var CraymelEditor = {
         }
 
         // drop targets
-        nodeList = XPath.evaluate(".//*[@data-cage]", this.drawParent);
+        nodeList = DOM.evaluate(".//*[@data-cage]", this.drawParent);
         for (let i = 0; i < nodeList.length; i++) {
             const node = nodeList[i];
             node._ce = this;
@@ -180,6 +132,8 @@ var CraymelEditor = {
             node.addEventListener("dragover", this.events.dragover, false);
             node.addEventListener("drop", this.events.drop, false);
         }
+
+        this.isDrawing = false;
     },
 
     tradeCraymel: function(ele) {
@@ -198,5 +152,3 @@ var CraymelEditor = {
         this.draw();
     },
 };
-
-CraymelEditor.init();

@@ -23,6 +23,11 @@
 
 	<xsl:template match="data">
 		<div class="CraymelEditor">
+			<script type="module"><![CDATA[
+import Editor from "/slothsoft@slothsoft.net/talesof/js/CraymelEditor";
+
+window.CraymelEditor = new Editor(document.querySelector(".CraymelEditor"));
+]]></script>
 			<article data-media="screen">
 				<h2 data-dict="">About</h2>
 				<article>
@@ -215,7 +220,6 @@
 	</xsl:template>
 
 	<xsl:template match="craymel" mode="mages">
-		<!--<button data-craymel="{@name}" onclick="CraymelEditor.tradeCraymel(this);" class="divide"> -->
 		<span data-craymel="{@name}" class="divide">
 			<xsl:attribute name="data-element">
 				<xsl:value-of select="@element" />

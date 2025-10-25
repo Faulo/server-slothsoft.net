@@ -18,8 +18,6 @@
 		</resource>
 	</directory>
 
-
-
 	<fragment name="html">
 		<fragment name="home">
 			<use-template ref="/talesof/xsl/tales-home" />
@@ -51,9 +49,6 @@
 			<fragment name="craymels">
 				<use-template ref="/talesof/xsl/CraymelEditor" />
 				<link-stylesheet ref="/talesof/css/default" />
-				<import ref="//slothsoft@farah/api/DOM" />
-				<link-script ref="/talesof/js/CraymelEditor" />
-				<link-script ref="//slothsoft@farah/js-core/TouchAndDrag" />
 				<use-document ref="/talesof/static/CraymelEditor" name="CraymelEditor" />
 			</fragment>
 		</fragment>

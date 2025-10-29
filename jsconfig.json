@@ -2,25 +2,25 @@
   "compilerOptions": {
     "paths": {
       "/slothsoft@amber/*": [
-        "../slothsoft-amber/assets/*"
+        "vendor/slothsoft/amber/assets/*"
       ],
       "/slothsoft@chat/*": [
-        "../slothsoft-chat/assets/*"
+        "vendor/slothsoft/chat/assets/*"
       ],
       "/slothsoft@cron/*": [
-        "../slothsoft-cron/assets/*"
+        "vendor/slothsoft/cron/assets/*"
       ],
       "/slothsoft@farah/*": [
-        "../slothsoft-farah/assets/*"
+        "vendor/slothsoft/farah/assets/*"
       ],
       "/slothsoft@minecraft/*": [
-        "../slothsoft-minecraft/assets/*"
+        "vendor/slothsoft/minecraft/assets/*"
       ],
       "/slothsoft@slothsoft.net/*": [
-        "./assets/*"
+        "assets/*"
       ],
       "/slothsoft@sse/*": [
-        "../slothsoft-sse/assets/*"
+        "vendor/slothsoft/sse/assets/*"
       ]
     }
   }

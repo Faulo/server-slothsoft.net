@@ -17,7 +17,7 @@ ServerEnvironment::setDataDirectory($root . DIRECTORY_SEPARATOR . 'data');
 
 Kernel::setCurrentSitemap('farah://slothsoft@slothsoft.net/sitemap');
 Kernel::setTrackingEnabled(false);
-Dictionary::setSupportedLanguages('en-us');
+Dictionary::setSupportedLanguages('de-de', 'en-us');
 
 Module::registerWithXmlManifestAndDefaultAssets('slothsoft@slothsoft.net', $root . DIRECTORY_SEPARATOR . 'assets');
 

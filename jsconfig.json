@@ -16,9 +16,6 @@
       "/slothsoft@minecraft/*": [
         "../slothsoft-minecraft/assets/*"
       ],
-      "/slothsoft@savegame/*": [
-        "../slothsoft-savegame/assets/*"
-      ],
       "/slothsoft@slothsoft.net/*": [
         "./assets/*"
       ],

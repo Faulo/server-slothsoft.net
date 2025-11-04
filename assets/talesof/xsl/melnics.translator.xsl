@@ -7,9 +7,14 @@
 		<div class="Translator MelnicsTranslator">
 			<xsl:apply-templates select="sfm:error" mode="sfm:html" />
 			<script type="module"><![CDATA[
+import DOM from "/slothsoft@farah/js/DOM";
 import Translator from "/slothsoft@slothsoft.net/talesof/js/MelnicsTranslator";
 
-window.MelnicsTranslator = new Translator(document.querySelector(".MelnicsTranslator"));
+DOM
+    .loadDocumentAsync("/slothsoft@slothsoft.net/talesof/static/Melnics")
+    .then(dataDoc => {
+        window.MelnicsTranslator = new Translator(document.querySelector(".MelnicsTranslator"), dataDoc);
+    });
 ]]></script>
 			<article>
 				<h2>Melnics Translator</h2>
@@ -38,6 +43,18 @@ window.MelnicsTranslator = new Translator(document.querySelector(".MelnicsTransl
 			<hr />
 			<article>
 				<h2>About</h2>
+				<article>
+					<h3>[1.0.3] - 2025-11-04</h3>
+					<p>
+						<xsl:text>I've gotten multiple requests for an offline version of this tool, so I put together a </xsl:text>
+						<a href="Standalone/">single-page version</a>
+						<xsl:text>. It's still HTML, just without all the networking.</xsl:text>
+					</p>
+					<p>
+						<xsl:text>To use it, either right-click on the link and use "save target as", or open the page and find "save page as" somewhere in your browser's menus. Either way, it should come out as a single file called "transformation.xhtml".</xsl:text>
+					</p>
+					<p>Have fun!</p>
+				</article>
 				<article>
 					<h3>[1.0.2] - 2025-10-25</h3>
 					<p>

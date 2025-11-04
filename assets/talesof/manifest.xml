@@ -43,6 +43,7 @@
 			<fragment name="translator">
 				<use-template ref="/talesof/xsl/melnics.translator" />
 				<link-stylesheet ref="/talesof/css/default" />
+				<link-stylesheet ref="/talesof/css/translator" />
 			</fragment>
 		</fragment>
 		<fragment name="eternia">
@@ -56,5 +57,12 @@
 
 	<fragment name="api">
 		<custom-asset name="melnics-test" executable-builder="Slothsoft\Server\Slothsoft\Assets\MelnicsTestBuilder" />
+		<fragment name="translator-standalone">
+			<use-template ref="/talesof/xsl/_melnics.translator" />
+			<use-document ref="/talesof/css/translator" name="css" />
+			<use-document ref="/talesof/static/fonts/MelniksFont.ttf" name="font" />
+			<use-document ref="/talesof/js/MelnicsTranslator" name="script" />
+			<use-document ref="/talesof/static/Melnics" name="data" />
+		</fragment>
 	</fragment>
 </assets>

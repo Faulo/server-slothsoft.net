@@ -6,7 +6,9 @@
 				<page name="CraymelEditor" title="Craymel Editor" ref="/pages/tales/craymelEditor" status-active="" status-public="" />
 				<page name="MelnicsTable" title="MelnicsTable" ref="/pages/tales/melnicsTable" status-active="" />
 				<page name="MelnicsTest" title="Melnics Test" ref="/pages/tales/melnicsTest" status-active="" />
-				<page name="MelnicsTranslator" title="MelnicsTranslator" ref="/pages/tales/melnicsTranslator" status-active="" status-public="" />
+				<page name="MelnicsTranslator" title="MelnicsTranslator" ref="/pages/tales/melnicsTranslator" status-active="" status-public="">
+					<page name="Standalone" title="Standalone Version" ref="/talesof/api/translator-standalone" status-active="" status-public="" />
+				</page>
 
 				<page name="MagicCarta" title="Magic Carta List" ref="/pages/tales/carta-list" status-active="" status-public="" />
 			</page>

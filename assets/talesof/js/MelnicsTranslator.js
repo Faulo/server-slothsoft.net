@@ -1,8 +1,6 @@
-import DOM from "/slothsoft@farah/js/DOM";
-
 export default class {
-    constructor(rootNode) {
-        MelnicsTranslator.init(rootNode);
+    constructor(rootNode, dataDoc) {
+        MelnicsTranslator.init(rootNode, dataDoc);
     }
 
     typeCharacter(inputNode) {
@@ -21,8 +19,8 @@ const MelnicsTranslator = {
         "output-english": undefined,
         "output-melnics": undefined,
     },
-    init: async function(rootNode) {
-        this.dataDoc = await DOM.loadDocumentAsync("/slothsoft@slothsoft.net/talesof/static/Melnics");
+    init: function(rootNode, dataDoc) {
+        this.dataDoc = dataDoc; //await DOM.loadDocumentAsync("/slothsoft@slothsoft.net/talesof/static/Melnics");
         this.rootNode = rootNode;
         for (var i in this.formNodes) {
             this.formNodes[i] = this.rootNode.querySelector("." + i);
@@ -105,23 +103,21 @@ const MelnicsTranslator = {
         }
     },
     findChar: function(input, searchType) {
-        var query;
         switch (searchType) {
             case "melnics":
-                query = 'string(//melnics[@name = "' + input + '"][1]/../@name)';
+                const melnics = this.dataDoc.querySelector(`melnics[name = "${input}"]`);
+                if (melnics) {
+                    return melnics.parentNode.getAttribute("name");
+                }
                 break;
             case "english":
-                query = 'string(//english[@name = "' + input + '"][1]/melnics[1]/@name)';
+                const english = this.dataDoc.querySelector(`english[name = "${input}"]`);
+                if (english) {
+                    return english.firstElementChild.getAttribute("name");
+                }
                 break;
-            default:
-                return false;
         }
 
-        var kana = DOM.evaluate(query, this.dataDoc);
-        if (kana === "") {
-            return false;
-        }
-
-        return kana;
+        return false;
     },
 };

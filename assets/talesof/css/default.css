@@ -13,30 +13,6 @@
 	padding: 0px 4px;
 }
 
-.Melnics {
-	font-family: myMelnics;
-}
-
-@media ( min-width : 951px) {
-	.Translator.MelnicsTranslator textarea {
-		height: 4em;
-		width: calc(100% - 450px);
-		display: block;
-	}
-}
-
-.Translator.MelnicsTranslator textarea.output-english {
-	font-size: 1.25em;
-	padding: 0.25em;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-
-.MelnicsTranslator p q {
-	font-family: myCode;
-}
-
 .melnicsTest input[type="text"] {
 	font-size: 3em;
 	display: block;

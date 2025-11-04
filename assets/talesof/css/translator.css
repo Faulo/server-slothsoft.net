@@ -1,0 +1,64 @@
+.Melnics {
+	font-family: myMelnics;
+}
+
+.Translator.MelnicsTranslator label {
+	display: block;
+}
+
+.Translator.MelnicsTranslator textarea {
+	height: 4em;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.Translator.MelnicsTranslator textarea.output-english {
+	font-size: 1.25em;
+	padding: 0.25em;
+}
+
+.MelnicsTranslator p q {
+	font-family: myCode;
+}
+
+@media ( min-width : 951px) {
+	.Translator.MelnicsTranslator textarea {
+		width: calc(100% - 450px);
+		display: block;
+	}
+}
+
+.MelnicsStandalone textarea {
+	width: 100% !important;
+	height: 8rem !important;
+	display: block;
+}
+
+.MelnicsStandalone {
+	background-color: #AFEB6A;
+}
+
+.MelnicsStandalone header {
+	color: #FFFFFF;
+	text-shadow: 1px 1px 1px #000000, 1px 1px 0 #000000;
+	background-color: #196F69;
+	padding: 1rem;
+}
+
+.MelnicsStandalone h1 {
+	margin: 0;
+}
+
+.MelnicsStandalone body {
+	margin: 0;
+}
+
+.MelnicsStandalone article {
+	padding: 1rem;
+}
+
+.MelnicsStandalone .footer {
+	text-align: right;
+	font-style: italic;
+}

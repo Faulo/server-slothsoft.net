@@ -23,6 +23,14 @@
   }
 }
         ]]></script>
+		<script type="application/javascript"><![CDATA[
+document.addEventListener(
+    "DOMContentLoaded",
+    async () => {
+        await import("]]><xsl:value-of select="@href" /><![CDATA[");
+    }
+);
+]]></script>
 	</xsl:template>
 
 	<xsl:template match="sfm:document-info[@name = 'css']">
@@ -47,14 +55,9 @@
 				<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 				<meta name="author" content="Daniel Schulz" />
 				<xsl:apply-templates select="sfm:document-info" />
-				<script type="module"><![CDATA[
-import Translator from "/slothsoft@slothsoft.net/talesof/js/MelnicsTranslator";
-
-window.MelnicsTranslator = new Translator(document.querySelector(".MelnicsTranslator"), document.querySelector("#melnics-data").content);
-]]></script>
 			</head>
 			<body>
-				<div class="Translator MelnicsTranslator">
+				<div class="Translator MelnicsTranslator" id="melnics-translator">
 					<xsl:apply-templates select="sfm:error" mode="sfm:html" />
 					<header>
 						<h1>Melnics Translator - Standalone Version</h1>
@@ -65,21 +68,21 @@ window.MelnicsTranslator = new Translator(document.querySelector(".MelnicsTransl
 							<span>
 								Input latin transcription of spoken Melnics here....
 							</span>
-							<textarea placeholder="baiba!" data-translator-type="melnics" class="input-melnics" oninput="MelnicsTranslator.typeCharacter(this)" autofocus="autofocus" />
+							<textarea placeholder="baiba!" data-translator-type="melnics" class="input-melnics" oninput="MelnicsTranslator.typeCharacter(this)" autofocus="autofocus" disabled="disabled" />
 						</label>
 						<h2>Meaning</h2>
 						<label>
 							<span>
 								Input English text to be melnicsized here....
 							</span>
-							<textarea placeholder="wow!" data-translator-type="english" class="input-english" oninput="MelnicsTranslator.typeCharacter(this)" />
+							<textarea placeholder="wow!" data-translator-type="english" class="input-english" oninput="MelnicsTranslator.typeCharacter(this)" disabled="disabled" />
 						</label>
 						<h2>Spelling</h2>
 						<label>
 							<span>
 								Actual Melnics...
 							</span>
-							<textarea placeholder="wow!" class="output-english Melnics" readonly="readonly" />
+							<textarea placeholder="wow!" class="output-english Melnics" readonly="readonly" disabled="disabled" />
 						</label>
 						<p class="footer">
 							<a href="https://slothsoft.net/Tales/MelnicsTranslator/">Melnics Translator</a>

@@ -4,18 +4,11 @@
 	<xsl:import href="farah://slothsoft@farah/xsl/module" />
 
 	<xsl:template match="/*">
-		<div class="Translator MelnicsTranslator">
+		<div class="Translator MelnicsTranslator" id="melnics-translator">
 			<xsl:apply-templates select="sfm:error" mode="sfm:html" />
-			<script type="module"><![CDATA[
-import DOM from "/slothsoft@farah/js/DOM";
-import Translator from "/slothsoft@slothsoft.net/talesof/js/MelnicsTranslator";
-
-DOM
-    .loadDocumentAsync("/slothsoft@slothsoft.net/talesof/static/Melnics")
-    .then(dataDoc => {
-        window.MelnicsTranslator = new Translator(document.querySelector(".MelnicsTranslator"), dataDoc);
-    });
-]]></script>
+			<template id="melnics-data">
+				<xsl:copy-of select="sfm:document-info[@name = 'data']/*" />
+			</template>
 			<article>
 				<h2>Melnics Translator</h2>
 				<label>
@@ -23,26 +16,35 @@ DOM
 						<em>Pronunciation:</em>
 						Input latin transcription of spoken Melnics here....
 					</span>
-					<textarea placeholder="baiba!" data-translator-type="melnics" class="input-melnics" oninput="MelnicsTranslator.typeCharacter(this)" autofocus="autofocus" />
+					<textarea placeholder="baiba!" data-translator-type="melnics" class="input-melnics" oninput="MelnicsTranslator.typeCharacter(this)" autofocus="autofocus" disabled="disabled" />
 				</label>
 				<label>
 					<span>
 						<em>Meaning:</em>
 						Input English text to be melnicsized here....
 					</span>
-					<textarea placeholder="wow!" data-translator-type="english" class="input-english" oninput="MelnicsTranslator.typeCharacter(this)" />
+					<textarea placeholder="wow!" data-translator-type="english" class="input-english" oninput="MelnicsTranslator.typeCharacter(this)" disabled="disabled" />
 				</label>
 				<label>
 					<span>
 						<em>Spelling:</em>
 						Actual Melnics...
 					</span>
-					<textarea placeholder="wow!" class="output-english Melnics" readonly="readonly" />
+					<textarea placeholder="wow!" class="output-english Melnics" readonly="readonly" disabled="disabled" />
 				</label>
 			</article>
 			<hr />
 			<article>
 				<h2>About</h2>
+				<article>
+					<h3>[1.0.4] - 2025-11-10</h3>
+					<p>
+						<xsl:text>As some of you noticed, the v1.0.3 patch broke the translator in all Chromium-related browsers courtesy of </xsl:text>
+						<a href="https://issues.chromium.org/issues/40518469" rel="external" target="_blank">their inability to load JavaScript modules in XHTML</a>
+						<xsl:text>. I've found a workaround, so now both this and the standalone version work in those browsers.</xsl:text>
+					</p>
+					<p>Cheers!</p>
+				</article>
 				<article>
 					<h3>[1.0.3] - 2025-11-04</h3>
 					<p>

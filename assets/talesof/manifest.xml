@@ -44,6 +44,8 @@
 				<use-template ref="/talesof/xsl/melnics.translator" />
 				<link-stylesheet ref="/talesof/css/default" />
 				<link-stylesheet ref="/talesof/css/translator" />
+				<link-module ref="/talesof/js/MelnicsTranslator" />
+				<use-document ref="/talesof/static/Melnics" name="data" />
 			</fragment>
 		</fragment>
 		<fragment name="eternia">

@@ -1,4 +1,4 @@
-export default class {
+export default class Translator {
     constructor(rootNode, dataDoc) {
         MelnicsTranslator.init(rootNode, dataDoc);
     }
@@ -14,16 +14,24 @@ const MelnicsTranslator = {
     dataDoc: undefined,
     rootNode: undefined,
     formNodes: {
-        "input-english": undefined,
         "input-melnics": undefined,
-        "output-english": undefined,
+        "input-english": undefined,
         "output-melnics": undefined,
+        "output-english": undefined,
     },
     init: function(rootNode, dataDoc) {
         this.dataDoc = dataDoc; //await DOM.loadDocumentAsync("/slothsoft@slothsoft.net/talesof/static/Melnics");
         this.rootNode = rootNode;
+
         for (var i in this.formNodes) {
             this.formNodes[i] = this.rootNode.querySelector("." + i);
+            if (this.formNodes[i] instanceof HTMLTextAreaElement) {
+                this.formNodes[i].disabled = false;
+
+                if (this.formNodes[i].hasAttribute("autofocus")) {
+                    this.formNodes[i].focus();
+                }
+            }
         }
         this.initialized = true;
     },
@@ -121,3 +129,9 @@ const MelnicsTranslator = {
         return false;
     },
 };
+
+const rootNode = document.querySelector("#melnics-translator");
+const dataNode = document.querySelector("#melnics-data");
+if (rootNode && dataNode) {
+    self.MelnicsTranslator = new Translator(rootNode, dataNode.content);
+}

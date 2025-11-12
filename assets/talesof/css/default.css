@@ -64,10 +64,6 @@ dl.melnicsTable>dd {
 	text-align: left;
 }
 
-*[data-template="kana-table"].drawForm td {
-	
-}
-
 *[data-template="kana-table"].drawForm td>label>*:first-child {
 	padding-left: 10px;
 }
@@ -184,10 +180,6 @@ dl.melnicsTable>dd {
 .CraymelEditor .Cage .divide, .CraymelEditor .Spells .divide {
 	display: table;
 	width: 100%;
-}
-
-.CraymelEditor .Spells .divide {
-	
 }
 
 .CraymelEditor [data-craymel] {

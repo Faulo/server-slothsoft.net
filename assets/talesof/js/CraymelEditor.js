@@ -9,9 +9,6 @@ function bootstrap() {
 }
 
 export default class CraymelEditor {
-    static {
-    }
-
     static TEMPLATE_URL = "farah://slothsoft@slothsoft.net/talesof/xsl/CraymelEditor";
     static DATA_URL = "farah://slothsoft@slothsoft.net/talesof/static/CraymelEditor";
 

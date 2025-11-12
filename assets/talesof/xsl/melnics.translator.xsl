@@ -4,11 +4,8 @@
 	<xsl:import href="farah://slothsoft@farah/xsl/module" />
 
 	<xsl:template match="/*">
-		<div class="Translator MelnicsTranslator" id="melnics-translator">
+		<div class="Translator MelnicsTranslator">
 			<xsl:apply-templates select="sfm:error" mode="sfm:html" />
-			<template id="melnics-data">
-				<xsl:copy-of select="sfm:document-info[@name = 'data']/*" />
-			</template>
 			<article>
 				<h2>Melnics Translator</h2>
 				<label>
@@ -16,14 +13,14 @@
 						<em>Pronunciation:</em>
 						Input latin transcription of spoken Melnics here....
 					</span>
-					<textarea placeholder="baiba!" data-translator-type="melnics" class="input-melnics" oninput="MelnicsTranslator.typeCharacter(this)" autofocus="autofocus" disabled="disabled" />
+					<textarea placeholder="baiba!" data-translator-type="melnics" class="input-melnics" autofocus="autofocus" disabled="disabled" />
 				</label>
 				<label>
 					<span>
 						<em>Meaning:</em>
 						Input English text to be melnicsized here....
 					</span>
-					<textarea placeholder="wow!" data-translator-type="english" class="input-english" oninput="MelnicsTranslator.typeCharacter(this)" disabled="disabled" />
+					<textarea placeholder="wow!" data-translator-type="english" class="input-english" disabled="disabled" />
 				</label>
 				<label>
 					<span>

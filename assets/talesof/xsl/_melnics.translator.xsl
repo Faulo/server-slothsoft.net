@@ -10,7 +10,7 @@
 	<xsl:template match="sfm:document-info" />
 
 	<xsl:template match="sfm:document-info[@name = 'data']">
-		<template id="melnics-data">
+		<template data-url="{@url}">
 			<xsl:copy-of select="*" />
 		</template>
 	</xsl:template>

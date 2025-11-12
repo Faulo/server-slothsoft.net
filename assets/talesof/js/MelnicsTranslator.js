@@ -1,14 +1,14 @@
-export default class Translator {
-    static {
-        const dataNode = document.querySelector('template[data-url = "farah://slothsoft@slothsoft.net/talesof/static/Melnics"]');
-        if (dataNode) {
-            const rootNodes = document.querySelectorAll(".MelnicsTranslator");
-            for (const rootNode of rootNodes) {
-                new Translator(rootNode, dataNode.content);
-            }
+function bootstrap() {
+    const dataNode = document.querySelector('template[data-url = "farah://slothsoft@slothsoft.net/talesof/static/Melnics"]');
+    if (dataNode) {
+        const rootNodes = document.querySelectorAll(".MelnicsTranslator");
+        for (const rootNode of rootNodes) {
+            new MelnicsTranslator(rootNode, dataNode.content);
         }
     }
+}
 
+export default class MelnicsTranslator {
     rootNode = undefined;
     dataDoc = undefined;
 
@@ -58,8 +58,8 @@ export default class Translator {
         let found;
         do {
             found = false;
-            for (const key in Translator.regex) {
-                const match = Translator.regex[key].exec(input);
+            for (const key in MelnicsTranslator.regex) {
+                const match = MelnicsTranslator.regex[key].exec(input);
                 if (match) {
                     switch (key) {
                         case "neException":
@@ -128,3 +128,5 @@ export default class Translator {
         return false;
     }
 }
+
+bootstrap();

@@ -23,11 +23,6 @@
 
 	<xsl:template match="data">
 		<div class="CraymelEditor">
-			<script type="module"><![CDATA[
-import Editor from "/slothsoft@slothsoft.net/talesof/js/CraymelEditor";
-
-window.CraymelEditor = new Editor(document.querySelector(".CraymelEditor"));
-]]></script>
 			<article data-media="screen">
 				<h2 data-dict="">About</h2>
 				<article>

@@ -53,6 +53,7 @@
 				<use-template ref="/talesof/xsl/CraymelEditor" />
 				<link-stylesheet ref="/talesof/css/default" />
 				<use-document ref="/talesof/static/CraymelEditor" name="CraymelEditor" />
+				<link-module ref="/talesof/js/CraymelEditor" />
 			</fragment>
 		</fragment>
 	</fragment>

@@ -54,6 +54,8 @@
 				<link-stylesheet ref="/talesof/css/default" />
 				<use-document ref="/talesof/static/CraymelEditor" name="CraymelEditor" />
 				<link-module ref="/talesof/js/CraymelEditor" />
+				<link-content ref="/talesof/static/CraymelEditor" />
+				<link-content ref="/talesof/xsl/CraymelEditor?includes=embed" />
 			</fragment>
 		</fragment>
 	</fragment>

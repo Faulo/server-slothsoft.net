@@ -2,8 +2,8 @@
 <xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sfm="http://schema.slothsoft.net/farah/module"
 	xmlns:sfx="http://schema.slothsoft.net/farah/xslt">
 
-	<xsl:import href="farah://slothsoft@farah/xsl/module" />
-	<xsl:import href="farah://slothsoft@farah/xsl/xslt" />
+	<xsl:include href="farah://slothsoft@farah/xsl/module" />
+	<xsl:include href="farah://slothsoft@farah/xsl/xslt" />
 
 	<xsl:variable name="craymels" select="//craymel" />
 	<xsl:variable name="fringeSpells" select="//data/spells" />

@@ -2,9 +2,13 @@ import DOM from "/slothsoft@farah/js/DOM";
 import XSLT from "/slothsoft@farah/js/XSLT";
 
 function bootstrap() {
-    const nodes = document.querySelectorAll(".CraymelEditor");
-    for (const node of nodes) {
-        new CraymelEditor(node);
+    const dataNode = document.querySelector('template[data-url = "farah://slothsoft@slothsoft.net/talesof/static/CraymelEditor"]');
+    const templateNode = document.querySelector('template[data-url = "farah://slothsoft@slothsoft.net/talesof/xsl/CraymelEditor?includes=embed"]');
+    if (dataNode && templateNode) {
+        const nodes = document.querySelectorAll(".CraymelEditor");
+        for (const node of nodes) {
+            new CraymelEditor(node, dataNode.content.firstElementChild, templateNode.content.firstElementChild);
+        }
     }
 }
 
@@ -76,40 +80,38 @@ export default class CraymelEditor {
     craymels = {};
     mages = [];
 
-    constructor(host) {
+    constructor(host, dataDoc, templateDoc) {
         if (!host) {
             throw new Error("CraymelEditor: missing root node");
         }
+        if (!dataDoc) {
+            throw new Error("CraymelEditor: missing data node");
+        }
+        if (!templateDoc) {
+            throw new Error("CraymelEditor: missing template node");
+        }
 
-        this.init(host);
-    }
-
-    async init(host) {
         this.drawParent = host.parentNode;
         this.drawParent.setAttribute("data-status", "busy");
 
         try {
-            const [templateDoc, dataDoc] = await Promise.all([
-                DOM.loadDocumentAsync(CraymelEditor.TEMPLATE_URL),
-                DOM.loadDocumentAsync(CraymelEditor.DATA_URL),
-            ]);
             this.templateDoc = templateDoc;
             this.dataDoc = dataDoc;
 
             // collect mages
             this.mages = [
-                ...this.dataDoc.getElementsByTagName("craymels"),
-                ...this.dataDoc.getElementsByTagName("mage"),
+                ...this.dataDoc.querySelectorAll("craymels"),
+                ...this.dataDoc.querySelectorAll("mage"),
             ];
 
             // index craymels
             this.craymels = {};
-            for (const node of this.dataDoc.getElementsByTagName("craymel")) {
+            for (const node of this.dataDoc.querySelectorAll("craymel")) {
                 node.mage = 0;
                 this.craymels[node.getAttribute("name")] = node;
             }
 
-            await this.draw();
+            this.draw();
         } catch (err) {
             console.error(err);
             this.drawParent.setAttribute("data-status", "error");

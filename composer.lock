@@ -2287,16 +2287,16 @@
         },
         {
             "name": "slothsoft/farah",
-            "version": "1.25.4",
+            "version": "1.25.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-farah.git",
-                "reference": "67a477735d884a23a382fcba375d834f9d7f50dd"
+                "reference": "51c2eefaa37988f888ea5f67c5b45599314a5a45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/67a477735d884a23a382fcba375d834f9d7f50dd",
-                "reference": "67a477735d884a23a382fcba375d834f9d7f50dd",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/51c2eefaa37988f888ea5f67c5b45599314a5a45",
+                "reference": "51c2eefaa37988f888ea5f67c5b45599314a5a45",
                 "shasum": ""
             },
             "require": {
@@ -2360,9 +2360,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-farah/issues",
-                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.25.4"
+                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.25.5"
             },
-            "time": "2025-11-13T22:12:31+00:00"
+            "time": "2025-11-15T02:01:58+00:00"
         },
         {
             "name": "slothsoft/minecraft",
@@ -4720,16 +4720,16 @@
         },
         {
             "name": "slothsoft/farah-testing",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-farah-testing.git",
-                "reference": "4161827c4c41ae130d5c4a1c9c5bfc7c2b9401a6"
+                "reference": "c618d835ea3c491f6e4052d8fa962af6a363a94a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-farah-testing/zipball/4161827c4c41ae130d5c4a1c9c5bfc7c2b9401a6",
-                "reference": "4161827c4c41ae130d5c4a1c9c5bfc7c2b9401a6",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-farah-testing/zipball/c618d835ea3c491f6e4052d8fa962af6a363a94a",
+                "reference": "c618d835ea3c491f6e4052d8fa962af6a363a94a",
                 "shasum": ""
             },
             "require": {
@@ -4741,6 +4741,9 @@
                 "slothsoft/farah": "^1.23.0",
                 "symfony/dom-crawler": ">=5.4.48",
                 "symfony/panther": "^1.1.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~9.6.23"
             },
             "type": "library",
             "extra": {
@@ -4764,14 +4767,15 @@
                 }
             ],
             "description": "Constraints and test suite stubs for Farah modules.",
+            "homepage": "http://farah.slothsoft.net/modules/farah-testing",
             "keywords": [
                 "testing"
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-farah-testing/issues",
-                "source": "https://github.com/Faulo/slothsoft-farah-testing/tree/1.1.2"
+                "source": "https://github.com/Faulo/slothsoft-farah-testing/tree/1.1.3"
             },
-            "time": "2025-10-23T15:23:02+00:00"
+            "time": "2025-11-14T12:44:04+00:00"
         },
         {
             "name": "symfony/browser-kit",
@@ -6323,5 +6327,5 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }

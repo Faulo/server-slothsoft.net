@@ -9,12 +9,6 @@
 
 	<xsl:template match="sfm:document-info" />
 
-	<xsl:template match="sfm:document-info[@name = 'data']">
-		<template data-url="{@url}">
-			<xsl:copy-of select="*" />
-		</template>
-	</xsl:template>
-
 	<xsl:template match="sfm:document-info[@name = 'script']">
 		<script type="importmap"><![CDATA[
 {
@@ -68,14 +62,14 @@ document.addEventListener(
 							<span>
 								Input latin transcription of spoken Melnics here....
 							</span>
-							<textarea placeholder="baiba!" data-translator-type="melnics" class="input-melnics" oninput="MelnicsTranslator.typeCharacter(this)" autofocus="autofocus" disabled="disabled" />
+							<textarea placeholder="baiba!" data-translator-type="melnics" class="input-melnics" autofocus="autofocus" disabled="disabled" />
 						</label>
 						<h2>Meaning</h2>
 						<label>
 							<span>
 								Input English text to be melnicsized here....
 							</span>
-							<textarea placeholder="wow!" data-translator-type="english" class="input-english" oninput="MelnicsTranslator.typeCharacter(this)" disabled="disabled" />
+							<textarea placeholder="wow!" data-translator-type="english" class="input-english" disabled="disabled" />
 						</label>
 						<h2>Spelling</h2>
 						<label>

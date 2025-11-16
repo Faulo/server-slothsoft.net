@@ -1,5 +1,5 @@
 function bootstrap() {
-    const dataNode = document.querySelector('template[data-url = "farah://slothsoft@slothsoft.net/talesof/static/Melnics"]');
+    const dataNode = document.querySelector('template[*|base = "farah://slothsoft@slothsoft.net/talesof/static/Melnics"]');
     if (dataNode) {
         const rootNodes = document.querySelectorAll(".MelnicsTranslator");
         for (const rootNode of rootNodes) {

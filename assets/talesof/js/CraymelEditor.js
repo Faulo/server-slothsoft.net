@@ -2,8 +2,8 @@ import DOM from "/slothsoft@farah/js/DOM";
 import XSLT from "/slothsoft@farah/js/XSLT";
 
 function bootstrap() {
-    const dataNode = document.querySelector('template[data-url = "farah://slothsoft@slothsoft.net/talesof/static/CraymelEditor"]');
-    const templateNode = document.querySelector('template[data-url = "farah://slothsoft@slothsoft.net/talesof/xsl/CraymelEditor?includes=embed"]');
+    const dataNode = document.querySelector('template[*|base = "farah://slothsoft@slothsoft.net/talesof/static/CraymelEditor"]');
+    const templateNode = document.querySelector('template[*|base = "farah://slothsoft@slothsoft.net/talesof/xsl/CraymelEditor"]');
     if (dataNode && templateNode) {
         const nodes = document.querySelectorAll(".CraymelEditor");
         for (const node of nodes) {

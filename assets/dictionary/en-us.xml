@@ -505,4 +505,25 @@
 		<li>Denise Sostre</li>
 	</ul>
 </p>
+    <p key="chat/title/amber">Ambermoon Shoutbox</p>
+    <p key="chat/description/amber">For any questions regarding the Ambermoon Editor, feel free to
+        ask here. :&gt;</p>
+    <p key="chat/title/tales">Tales Shoutbox</p>
+    <p key="chat/description/tales">If you have any questions about the Tales section, here's the
+        place to ask!</p>
+    <p key="chat/title/fireemblem">Fire Emblem Shoutbox</p>
+    <p key="chat/description/fireemblem">Any questions regarding the Fire Emblem pages go here! :D</p>
+    <p key="chat/title/slothsoft">Slothsoft Shoutbox</p>
+    <p key="chat/description/slothsoft">You can leave questions regarding anything related to
+        Slothsoft here. :3</p>
+    <p key="chat/title/minecraft">Minecraft Shoutbox</p>
+    <p key="chat/description/minecraft">
+        Our
+        <a href="/Minecraft/">Minecraft Server</a>
+        's chat.
+    </p>
+    <p key="chat/title/archive">Archive Chat</p>
+    <p key="chat/description/archive">Feel free to comment on what you see. :3</p>
+    <p key="chat/title/vct">Video Chat Thing Shoutbox</p>
+    <p key="chat/description/vct">Feedback/Bugs of the Video Chat Thing /o/</p>
 </html>

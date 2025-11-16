@@ -477,4 +477,26 @@
 		<li>Denise Sostre (Art)</li>
 	</ul>
 </p>
+
+    <p key="chat/title/amber">Ambermoon Shoutbox</p>
+    <p key="chat/description/amber">Falls ihr Fragen zum Ambermoon-Editor habt könnt ihr die hier
+        stellen. :&gt;</p>
+    <p key="chat/title/tales">Tales Shoutbox</p>
+    <p key="chat/description/tales">Hier könnt ihr Fragen zu der Tales-Sektion stellen!</p>
+    <p key="chat/title/fireemblem">Fire Emblem Shoutbox</p>
+    <p key="chat/description/fireemblem">Fragen zu den Fire Emblem Seiten können hier gestellt werden.
+        :D</p>
+    <p key="chat/title/slothsoft">Slothsoft Shoutbox</p>
+    <p key="chat/description/slothsoft">Wenn ihr Fragen zu einem Slothsoft-Projekt habt, stellt sie
+        hier. :3</p>
+    <p key="chat/title/minecraft">Minecraft Shoutbox</p>
+    <p key="chat/description/minecraft">
+        Der Chat unseres
+        <a href="/Minecraft/">Minecraft Servers</a>
+        .
+    </p>
+    <p key="chat/title/archive">Archive Chat</p>
+    <p key="chat/description/archive">Feel free to comment on what you see. :3</p>
+    <p key="chat/title/vct">Video Chat Thing Shoutbox</p>
+    <p key="chat/description/vct">Feedback/Bugs of the Video Chat Thing /o/</p>
 </html>

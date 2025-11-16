@@ -15,6 +15,7 @@
   <uri name="farah://slothsoft@slothsoft.net/talesof/xsl/MagicCarta" uri="assets/talesof/xsl/MagicCarta.xsl"/>
   <uri name="farah://slothsoft@slothsoft.net/talesof/xsl/Melnics" uri="assets/talesof/xsl/Melnics.xsl"/>
   <uri name="farah://slothsoft@slothsoft.net/talesof/xsl/MelnicsTable" uri="assets/talesof/xsl/MelnicsTable.xsl"/>
+  <uri name="farah://slothsoft@slothsoft.net/talesof/xsl/_melnics.translator" uri="assets/talesof/xsl/_melnics.translator.xsl"/>
   <uri name="farah://slothsoft@slothsoft.net/talesof/xsl/_skitcontest" uri="assets/talesof/xsl/_skitcontest.xsl"/>
   <uri name="farah://slothsoft@slothsoft.net/talesof/xsl/eternia-home" uri="assets/talesof/xsl/eternia-home.xsl"/>
   <uri name="farah://slothsoft@slothsoft.net/talesof/xsl/graces-home" uri="assets/talesof/xsl/graces-home.xsl"/>

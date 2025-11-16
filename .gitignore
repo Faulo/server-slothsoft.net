@@ -5,16 +5,18 @@ Desktop.ini
 $RECYCLE.BIN/
 
 # == Composer ==
+/composer.phar
 /vendor/
 
 # == phpDocumentor ==
-/docs/tmp/
+/docs/
 
 # == PHPUnit ==
 /.phpunit.result.cache
 
-# == Farah ==
+# == Slothsoft ==
+/.farah-*
+*.local
 /data/
 /cache/
 /log/
-

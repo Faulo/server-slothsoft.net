@@ -7,9 +7,9 @@ services:
             - ../src:${DOCKER_WORKDIR}/src
             - ../html:${DOCKER_WORKDIR}/html
             - ../.farah-vendor:${DOCKER_WORKDIR}/vendor
-            - ../.farah-cache:${DOCKER_WORKDIR}/cache
-            - ../.farah-data:${DOCKER_WORKDIR}/data
-            - ../.farah-log:${DOCKER_WORKDIR}/log
+            - ../cache:${DOCKER_WORKDIR}/cache
+            - ../data:${DOCKER_WORKDIR}/data
+            - ../log:${DOCKER_WORKDIR}/log
             - ../composer.json:${DOCKER_WORKDIR}/composer.json
         ports:
             - 80:80

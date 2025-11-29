@@ -1,73 +1,75 @@
 <?xml version="1.0"?>
 <assets xmlns="http://schema.slothsoft.net/farah/module" version="1.1">
-	<resource-directory name="css" type="text/css" />
-	<resource-directory name="js" type="application/javascript" />
-	<resource-directory name="xsl" type="application/xslt+xml" />
+    <resource-directory name="css" type="text/css" />
+    <resource-directory name="js" type="application/javascript" />
+    <resource-directory name="xsl" type="application/xslt+xml" />
 
-	<resource-directory name="dictionary" type="application/xml" />
-	<directory name="static">
-		<resource-directory name="fonts" path="fonts" type="application/*" />
-		<resource name="CraymelEditor" path="CraymelEditor.xml" type="application/xml" />
-		<resource name="MagicCarta" path="MagicCarta.xml" type="application/xml" />
-		<resource name="Melnics" path="Melnics.xml" type="application/xml" />
-		<resource name="Londau" path="Londau.jpg" type="image/jpeg" />
-		<resource name="mc-cards" path="mc.cards.xml" type="application/xml" />
-		<resource name="ToL.Heroes" path="ToL.Heroes.xml" type="application/xml" />
-		<resource name="ToL.Heroes-csv" path="ToL.Heroes.csv" type="text/csv">
-			<options output="thead" />
-		</resource>
-	</directory>
+    <resource-directory name="dictionary" type="application/xml" />
+    <directory name="static">
+        <resource-directory name="fonts" path="fonts" type="application/*" />
+        <resource name="CraymelEditor" path="CraymelEditor.xml" type="application/xml" />
+        <resource name="MagicCarta" path="MagicCarta.xml" type="application/xml" />
+        <resource name="Melnics" path="Melnics.xml" type="application/xml" />
+        <resource name="Londau" path="Londau.jpg" type="image/jpeg" />
+        <resource name="mc-cards" path="mc.cards.xml" type="application/xml" />
+        <resource name="ToL.Heroes" path="ToL.Heroes.xml" type="application/xml" />
+        <resource name="ToL.Heroes-csv" path="ToL.Heroes.csv" type="text/csv">
+            <options output="thead" />
+        </resource>
+    </directory>
 
-	<fragment name="html">
-		<fragment name="home">
-			<use-template ref="/talesof/xsl/tales-home" />
-		</fragment>
-		<fragment name="carta">
-			<fragment name="list">
-				<use-template ref="/talesof/xsl/MagicCarta" />
-				<use-document ref="/talesof/static/MagicCarta" />
-				<link-stylesheet ref="/talesof/css/default" />
-			</fragment>
-		</fragment>
-		<fragment name="melnics">
-			<fragment name="test">
-				<use-template ref="/talesof/xsl/Melnics" />
-				<link-stylesheet ref="/talesof/css/default" />
-				<use-document ref="/talesof/api/melnics-test" name="melnics-test" />
-			</fragment>
-			<fragment name="table">
-				<use-template ref="/talesof/xsl/MelnicsTable" />
-				<link-stylesheet ref="/talesof/css/default" />
-				<use-document ref="/talesof/api/melnics-test" name="melnics-test" />
-			</fragment>
-			<fragment name="translator">
-				<use-template ref="/talesof/xsl/melnics.translator" />
-				<link-stylesheet ref="/talesof/css/default" />
-				<link-stylesheet ref="/talesof/css/translator" />
-				<link-module ref="/talesof/js/MelnicsTranslator" />
-				<link-content ref="/talesof/static/Melnics" />
-			</fragment>
-		</fragment>
-		<fragment name="eternia">
-			<fragment name="craymels">
-				<use-template ref="/talesof/xsl/CraymelEditor" />
-				<link-stylesheet ref="/talesof/css/default" />
-				<use-document ref="/talesof/static/CraymelEditor" name="CraymelEditor" />
-				<link-module ref="/talesof/js/CraymelEditor" />
-				<link-content ref="/talesof/static/CraymelEditor" />
-				<link-content ref="/talesof/xsl/CraymelEditor?includes=embed" />
-			</fragment>
-		</fragment>
-	</fragment>
+    <fragment name="html">
+        <fragment name="home">
+            <use-template ref="/talesof/xsl/tales-home" />
+        </fragment>
+        <fragment name="carta">
+            <fragment name="list">
+                <use-template ref="/talesof/xsl/MagicCarta" />
+                <use-document ref="/talesof/static/MagicCarta" />
+                <link-stylesheet ref="/talesof/css/default" />
+            </fragment>
+        </fragment>
+        <fragment name="melnics">
+            <fragment name="test">
+                <use-template ref="/talesof/xsl/Melnics" />
+                <link-stylesheet ref="/talesof/css/default" />
+                <use-document ref="/talesof/api/melnics-test" name="melnics-test" />
+            </fragment>
+            <fragment name="table">
+                <use-template ref="/talesof/xsl/MelnicsTable" />
+                <link-stylesheet ref="/talesof/css/default" />
+                <use-document ref="/talesof/api/melnics-test" name="melnics-test" />
+            </fragment>
+            <fragment name="translator">
+                <use-template ref="/talesof/xsl/melnics.translator" />
+                <link-stylesheet ref="/talesof/css/default" />
+                <link-stylesheet ref="/talesof/css/translator" />
+                <link-module ref="/talesof/js/MelnicsTranslator" />
+                <link-content ref="/talesof/static/Melnics" />
+            </fragment>
+        </fragment>
+        <fragment name="eternia">
+            <fragment name="craymels">
+                <use-template ref="/talesof/xsl/CraymelEditor" />
+                <link-stylesheet ref="/talesof/css/default" />
+                <use-document ref="/talesof/static/CraymelEditor" name="CraymelEditor" />
+                <link-module ref="/talesof/js/CraymelEditor" />
+                <link-content ref="/talesof/static/CraymelEditor" />
+                <link-content ref="/talesof/xsl/CraymelEditor?includes=embed" />
+            </fragment>
+        </fragment>
+    </fragment>
 
-	<fragment name="api">
-		<custom-asset name="melnics-test" executable-builder="Slothsoft\Server\Slothsoft\Assets\MelnicsTestBuilder" />
-		<fragment name="translator-standalone">
-			<use-template ref="/talesof/xsl/_melnics.translator" />
-			<use-document ref="/talesof/css/translator" name="css" />
-			<use-document ref="/talesof/static/fonts/MelniksFont.ttf" name="font" />
-			<use-document ref="/talesof/js/MelnicsTranslator" name="script" />
-			<link-content ref="/talesof/static/Melnics" />
-		</fragment>
-	</fragment>
+    <fragment name="api">
+        <custom-asset name="melnics-test" executable-builder="Slothsoft\Server\Slothsoft\Assets\MelnicsTestBuilder" />
+        <fragment name="translator-standalone">
+            <use-template ref="/talesof/xsl/_melnics.translator" />
+            <use-document ref="/css/default" />
+            <use-document ref="/talesof/css/translator" />
+            <use-document ref="/talesof/static/fonts/MelniksFont.ttf" />
+            <use-document ref="//farah/js/Bootstrap" />
+            <use-document ref="/talesof/js/MelnicsTranslator" />
+            <link-content ref="/talesof/static/Melnics" />
+        </fragment>
+    </fragment>
 </assets>

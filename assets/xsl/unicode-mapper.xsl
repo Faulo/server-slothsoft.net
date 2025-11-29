@@ -13,9 +13,8 @@
                     <legend>Unicode'd text</legend>
                 </fieldset>
             </article>
-            <hr />
             <article>
-                <h2>About</h2>
+                <h2 class="heading">About</h2>
                 <p>This is a text transformation tool that converts letters and digits into their various fancy equivalents of the mighty Unicode.</p>
                 <p>
                     I was too lazy to check if these exists for Umlaute (or ß or what have you), so only the 26 letters of the ANSI code page are supported.
@@ -31,9 +30,8 @@
                     ... In case you're wondering, I wrote this to allow for a bit more 𝑣𝑎𝑟𝑖𝑒𝑡𝑦 in Twitter or Tumblr posts. :3
                 </p>
             </article>
-            <hr />
             <article>
-                <h2>Changelog</h2>
+                <h2 class="heading">Changelog</h2>
                 <article>
                     <h3>[1.6.1] - 2025-11-29</h3>
                     <p>Rewrote the code to use JavaScript modules, which briefly broke it in Chrome (and related browsers). Should work everywhere again now. :)</p>
@@ -81,9 +79,8 @@
                     <p>Initial release!</p>
                 </article>
             </article>
-            <hr />
             <article>
-                <h2>FAQ</h2>
+                <h2 class="heading">FAQ</h2>
                 <details>
                     <summary>Google Chrome can't display these Unicode characters, what's up with that?</summary>
                     <div>

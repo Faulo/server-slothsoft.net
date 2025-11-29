@@ -1,12 +1,4 @@
-function bootstrap() {
-    const dataNode = document.querySelector('template[*|base = "farah://slothsoft@slothsoft.net/talesof/static/Melnics"]');
-    if (dataNode) {
-        const rootNodes = document.querySelectorAll(".MelnicsTranslator");
-        for (const rootNode of rootNodes) {
-            new MelnicsTranslator(rootNode, dataNode.content);
-        }
-    }
-}
+
 
 export default class MelnicsTranslator {
     rootNode = undefined;
@@ -128,5 +120,3 @@ export default class MelnicsTranslator {
         return false;
     }
 }
-
-bootstrap();

@@ -1,3 +1,4 @@
+import Bootstrap from "/slothsoft@farah/js/Bootstrap";
 import DOM from "/slothsoft@farah/js/DOM";
 import XSLT from "/slothsoft@farah/js/XSLT";
 
@@ -191,4 +192,4 @@ export default class CraymelEditor {
     }
 }
 
-bootstrap();
+Bootstrap.run(bootstrap);

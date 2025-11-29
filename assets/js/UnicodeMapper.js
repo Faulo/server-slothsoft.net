@@ -1,95 +1,104 @@
+import Bootstrap from "/slothsoft@farah/js/Bootstrap";
 import DOM from "/slothsoft@farah/js/DOM";
 import { NS } from "/slothsoft@farah/js/XMLNamespaces";
 
-export default class {
-    constructor(fontNode) {
-        UnicodeMapper.init(fontNode);
-    }
-    typeCharacter(inputNode) {
-        if (UnicodeMapper.initialized) {
-            UnicodeMapper.typeCharacter(inputNode);
+const UNICODE_XML = "/slothsoft@slothsoft.net/static/unicode-mapper";
+
+Bootstrap.run(async () => {
+    const nodes = document.querySelectorAll(".UnicodeMapper");
+    if (nodes.length) {
+        const unicodeDocument = await DOM.loadDocumentAsync(UNICODE_XML);
+        for (const node of nodes) {
+            new UnicodeMapper(node, unicodeDocument);
         }
     }
-}
+});
 
-const UnicodeMapper = {
-    fontList: {},
-    outputNodes: undefined,
-    unicodeDocument: undefined,
-    unicodeURI: "/slothsoft@slothsoft.net/static/unicode-mapper",
-    init: async function(containerNode) {
-        const document = containerNode.ownerDocument;
+export default class UnicodeMapper {
+    fontList = {};
+    outputNodes = {};
 
-        var fontNodeList, labelNode, spanNode, i, nodeList, j, key, val, font, fontName;
-        if (!this.initialized) {
-            this.fontList = {};
+    constructor(containerNode, unicodeDocument) {
+        if (!containerNode) {
+            throw new Error("UnicodeMapper requires a container node.");
+        }
 
-            this.unicodeDocument = await DOM.loadDocumentAsync(this.unicodeURI);
-            if (this.unicodeDocument) {
-                fontNodeList = this.unicodeDocument.getElementsByTagName("font");
-                for (i = 0; i < fontNodeList.length; i++) {
-                    let fontNode = fontNodeList[i];
-                    fontName = fontNode.getAttribute("name");
-                    font = {};
-                    nodeList = fontNode.getElementsByTagName("letter");
-                    for (j = 0; j < nodeList.length; j++) {
-                        key = nodeList[j].getAttribute("source");
-                        val = nodeList[j].getAttribute("target");
-                        font[key] = val;
-                    }
-                    this.fontList[fontName] = font;
+        if (!unicodeDocument) {
+            throw new Error("UnicodeMapper requires a unicode document.");
+        }
+
+        const fontNodeList = unicodeDocument.querySelectorAll("font");
+
+        for (const fontNode of fontNodeList) {
+            const fontName = fontNode.getAttribute("name");
+            if (!fontName) {
+                continue;
+            }
+
+            const font = {};
+            const letterNodes = fontNode.querySelectorAll("letter");
+
+            for (const letterNode of letterNodes) {
+                const key = letterNode.getAttribute("source");
+                const val = letterNode.getAttribute("target");
+                if (key && val) {
+                    font[key] = val;
                 }
             }
 
-            this.outputNodes = {};
+            this.fontList[fontName] = font;
+        }
 
-            for (fontName in this.fontList) {
-                labelNode = document.createElementNS(NS.HTML, "label");
-                spanNode = document.createElementNS(NS.HTML, "span");
-                spanNode.appendChild(document.createTextNode(this.convertWord("Output, " + fontName, fontName)));
-                labelNode.appendChild(spanNode);
-                this.outputNodes[fontName] = document.createElementNS(NS.HTML, "textarea");
-                this.outputNodes[fontName].setAttribute("class", "myParagraph");
-                labelNode.appendChild(this.outputNodes[fontName]);
-                containerNode.appendChild(labelNode);
+        const document = containerNode.ownerDocument;
+        const outputNode = containerNode.querySelector("fieldset");
+
+        for (const fontName in this.fontList) {
+            const labelNode = document.createElementNS(NS.HTML, "label");
+
+            const spanNode = document.createElementNS(NS.HTML, "span");
+            spanNode.appendChild(
+                document.createTextNode(this.convertWord(`Output, ${fontName}`, fontName)),
+            );
+            labelNode.appendChild(spanNode);
+
+            const textarea = document.createElementNS(NS.HTML, "textarea");
+            textarea.setAttribute("class", "myParagraph");
+
+            labelNode.appendChild(textarea);
+            outputNode.appendChild(labelNode);
+
+            this.outputNodes[fontName] = textarea;
+        }
+
+        const inputNode = containerNode.querySelector("textarea");
+        inputNode.addEventListener(
+            "input",
+            eve => this.typeCharacter(eve.target),
+            false
+        );
+        this.typeCharacter(inputNode);
+    }
+
+    typeCharacter(inputNode) {
+        const inputText = inputNode.value ?? "";
+
+        for (const fontType in this.fontList) {
+            const outputText = this.convertWord(inputText, fontType);
+            this.outputNodes[fontType].value = outputText;
+        }
+    }
+
+    convertWord(inputText, fontType) {
+        let outputText = "";
+
+        for (let i = 0; i < inputText.length; i++) {
+            let currentChar = inputText[i];
+
+            const font = this.fontList[fontType];
+            if (font && font[currentChar]) {
+                currentChar = font[currentChar];
             }
 
-            this.initialized = true;
-
-            this.typeCharacter(document.getElementsByTagNameNS(NS.HTML, "textarea")[0]);
-        }
-    },
-    typeCharacter: function(inputNode) {
-        var text, currentChar, i, fontType, outputNode, outputText, isUpperCase, codePoint, inputText;
-        inputText = inputNode.value;
-        outputText = {};
-
-        //initialize output
-        for (fontType in this.fontList) {
-            outputText[fontType] = "";
-        }
-
-        //generate output
-        for (fontType in this.fontList) {
-            outputText[fontType] = this.convertWord(inputText, fontType);
-        }
-
-        //set output
-        for (fontType in this.fontList) {
-            if (outputNode = this.outputNodes[fontType]) {
-                outputNode.value = outputText[fontType];
-            }
-        }
-    },
-    convertWord: function(inputText, fontType) {
-        var outputText, currentChar;
-        outputText = "";
-        for (var i = 0; i < inputText.length; i++) {
-            currentChar = inputText[i];
-            if (this.fontList[fontType] && this.fontList[fontType][currentChar]) {
-                currentChar = this.fontList[fontType][currentChar];
-            }
-            //Special stuff
             switch (fontType) {
                 case "underlined-single":
                     currentChar += "̲";
@@ -104,16 +113,10 @@ const UnicodeMapper = {
                     currentChar += "̷";
                     break;
             }
+
             outputText += currentChar;
         }
+
         return outputText;
-    },
-    flipString: function(str) {
-        var ret, i;
-        ret = "";
-        for (i = str.length - 1; i >= 0; i--) {
-            ret += str[i];
-        }
-        return ret;
-    },
-};
+    }
+}

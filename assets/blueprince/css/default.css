@@ -1,0 +1,26 @@
+.WordBuilder ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.WordBuilder .output th {
+	text-transform: capitalize;
+	font-size: 2em;
+}
+
+.WordBuilder .output td {
+	vertical-align: top;
+}
+
+.WordBuilder .output li {
+	padding: 0.1em 0.2em;
+	text-transform: capitalize;
+}
+
+.WordBuilder .output li:nth-child(odd) {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.WordBuilder .output li:nth-child(even) {
+	background-color: rgba(0, 0, 0, 0.1);
+}

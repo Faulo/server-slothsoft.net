@@ -199,7 +199,7 @@
             <fragment name="home">
                 <import ref="/api/default" />
                 <use-document ref="/static/umbau" name="content" />
-                <fragment name="content">
+                <fragment name="content-old">
                     <import ref="//slothsoft@minecraft/html/home" />
                     <use-document ref="/shoutboxes/minecraft" name="chat-short" />
                 </fragment>

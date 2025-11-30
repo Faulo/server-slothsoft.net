@@ -11,6 +11,7 @@
     <manifest-directory name="blueprince" />
 
     <resource-directory name="dictionary" type="application/xml" />
+    <resource-directory name="dictionary-new" type="application/xml" />
     <directory name="sitemap">
         <resource use="template" name="template" type="application/xslt+xml" />
 
@@ -539,6 +540,7 @@
             <use-document ref="/navi" name="navi" />
             <use-document ref="/validator" name="validator" />
             <use-document ref="/dict.select" name="dict.select" />
+            <link-dictionary ref="/dictionary-new" />
         </fragment>
     </fragment>
 

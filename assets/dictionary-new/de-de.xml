@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sfd:dictionary xmlns="http://www.w3.org/1999/xhtml" xmlns:sfd="http://schema.slothsoft.net/farah/dictionary" version="1.0">
+    <sfd:text xml:id="chat.title.amber">Ambermoon Shoutbox</sfd:text>
+    <sfd:text xml:id="chat.description.amber">Falls ihr Fragen zum Ambermoon-Editor habt könnt ihr die hier stellen. :&gt;</sfd:text>
+    <sfd:text xml:id="chat.title.tales">Tales Shoutbox</sfd:text>
+    <sfd:text xml:id="chat.description.tales">Hier könnt ihr Fragen zu der Tales-Sektion stellen!</sfd:text>
+    <sfd:text xml:id="chat.title.fireemblem">Fire Emblem Shoutbox</sfd:text>
+    <sfd:text xml:id="chat.description.fireemblem">Fragen zu den Fire Emblem Seiten können hier gestellt werden. :D</sfd:text>
+    <sfd:text xml:id="chat.title.slothsoft">Slothsoft Shoutbox</sfd:text>
+    <sfd:text xml:id="chat.description.slothsoft">Wenn ihr Fragen zu einem Slothsoft-Projekt habt, stellt sie hier. :3</sfd:text>
+    <sfd:text xml:id="chat.title.minecraft">Minecraft Shoutbox</sfd:text>
+    <sfd:entry xml:id="chat.description.minecraft" xml:space="preserve">Der Chat unseres <a href="/Minecraft/">Minecraft Servers</a>.</sfd:entry>
+    <sfd:text xml:id="chat.title.archive">Archive Chat</sfd:text>
+    <sfd:text xml:id="chat.description.archive">Feel free to comment on what you see. :3</sfd:text>
+    <sfd:text xml:id="chat.title.vct">Video Chat Thing Shoutbox</sfd:text>
+    <sfd:text xml:id="chat.description.vct">Feedback/Bugs of the Video Chat Thing /o/</sfd:text>
+</sfd:dictionary>

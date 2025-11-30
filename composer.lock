@@ -2096,16 +2096,16 @@
         },
         {
             "name": "slothsoft/chat",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-chat.git",
-                "reference": "b84ee5966ff12d1090c9cc03700456f52b21ebac"
+                "reference": "47159d55c83246fd63ab39029b815585efbdebe7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-chat/zipball/b84ee5966ff12d1090c9cc03700456f52b21ebac",
-                "reference": "b84ee5966ff12d1090c9cc03700456f52b21ebac",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-chat/zipball/47159d55c83246fd63ab39029b815585efbdebe7",
+                "reference": "47159d55c83246fd63ab39029b815585efbdebe7",
                 "shasum": ""
             },
             "require": {
@@ -2146,9 +2146,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-chat/issues",
-                "source": "https://github.com/Faulo/slothsoft-chat/tree/1.1.0"
+                "source": "https://github.com/Faulo/slothsoft-chat/tree/1.1.1"
             },
-            "time": "2025-11-30T14:10:39+00:00"
+            "time": "2025-11-30T14:32:55+00:00"
         },
         {
             "name": "slothsoft/core",

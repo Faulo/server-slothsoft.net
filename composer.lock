@@ -1976,16 +1976,16 @@
         },
         {
             "name": "slothsoft/amber",
-            "version": "1.1.14",
+            "version": "1.1.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-amber.git",
-                "reference": "2d0af21949f222a32b8ffb31767d2c7a44cbdaf2"
+                "reference": "663066c93e8832d403432bde33834a33d8ab17ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-amber/zipball/2d0af21949f222a32b8ffb31767d2c7a44cbdaf2",
-                "reference": "2d0af21949f222a32b8ffb31767d2c7a44cbdaf2",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-amber/zipball/663066c93e8832d403432bde33834a33d8ab17ec",
+                "reference": "663066c93e8832d403432bde33834a33d8ab17ec",
                 "shasum": ""
             },
             "require": {
@@ -1993,11 +1993,12 @@
                 "ext-imagick": "*",
                 "php": ">=7.4",
                 "slothsoft/core": "^1.13.3",
-                "slothsoft/farah": "^1.21.3",
-                "slothsoft/savegame": "^1.0.10"
+                "slothsoft/farah": "^1.22.2",
+                "slothsoft/savegame": "^1.0.11"
             },
             "require-dev": {
-                "phpunit/phpunit": "~9.6.23"
+                "phpunit/phpunit": "~9.6.23",
+                "slothsoft/farah-testing": "^1.1.2"
             },
             "type": "library",
             "extra": {
@@ -2032,9 +2033,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-amber/issues",
-                "source": "https://github.com/Faulo/slothsoft-amber/tree/1.1.14"
+                "source": "https://github.com/Faulo/slothsoft-amber/tree/1.1.15"
             },
-            "time": "2025-10-03T21:10:15+00:00"
+            "time": "2025-12-01T15:16:11+00:00"
         },
         {
             "name": "slothsoft/blob",

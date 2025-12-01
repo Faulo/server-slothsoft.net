@@ -4720,16 +4720,16 @@
         },
         {
             "name": "slothsoft/farah-testing",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-farah-testing.git",
-                "reference": "e4d442a8f10881b9fdd42f2b5228543b379c4b31"
+                "reference": "d9a58c19b0ee426556ef8d8ab4bca940c45d5eb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-farah-testing/zipball/e4d442a8f10881b9fdd42f2b5228543b379c4b31",
-                "reference": "e4d442a8f10881b9fdd42f2b5228543b379c4b31",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-farah-testing/zipball/d9a58c19b0ee426556ef8d8ab4bca940c45d5eb4",
+                "reference": "d9a58c19b0ee426556ef8d8ab4bca940c45d5eb4",
                 "shasum": ""
             },
             "require": {
@@ -4773,9 +4773,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-farah-testing/issues",
-                "source": "https://github.com/Faulo/slothsoft-farah-testing/tree/1.1.4"
+                "source": "https://github.com/Faulo/slothsoft-farah-testing/tree/1.1.5"
             },
-            "time": "2025-12-01T13:01:49+00:00"
+            "time": "2025-12-01T15:04:11+00:00"
         },
         {
             "name": "symfony/browser-kit",

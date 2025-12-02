@@ -2153,16 +2153,16 @@
         },
         {
             "name": "slothsoft/core",
-            "version": "1.14.2",
+            "version": "1.14.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-core.git",
-                "reference": "552a0a3c4acd941584437f2a15dd7dc1d5e72bcb"
+                "reference": "7a6ef8b33317c40098d8cf81bbb1c6ad95d4b714"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-core/zipball/552a0a3c4acd941584437f2a15dd7dc1d5e72bcb",
-                "reference": "552a0a3c4acd941584437f2a15dd7dc1d5e72bcb",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-core/zipball/7a6ef8b33317c40098d8cf81bbb1c6ad95d4b714",
+                "reference": "7a6ef8b33317c40098d8cf81bbb1c6ad95d4b714",
                 "shasum": ""
             },
             "require": {
@@ -2223,9 +2223,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-core/issues",
-                "source": "https://github.com/Faulo/slothsoft-core/tree/1.14.2"
+                "source": "https://github.com/Faulo/slothsoft-core/tree/1.14.3"
             },
-            "time": "2025-11-18T17:23:48+00:00"
+            "time": "2025-12-01T16:16:53+00:00"
         },
         {
             "name": "slothsoft/cron",
@@ -2422,16 +2422,16 @@
         },
         {
             "name": "slothsoft/savegame",
-            "version": "1.0.11",
+            "version": "1.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-savegame.git",
-                "reference": "c5f65a3536a6ccea4842dba814a3f9607571ce72"
+                "reference": "60bb5bde12f28ba139ae02f67f09ee65e67f430a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-savegame/zipball/c5f65a3536a6ccea4842dba814a3f9607571ce72",
-                "reference": "c5f65a3536a6ccea4842dba814a3f9607571ce72",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-savegame/zipball/60bb5bde12f28ba139ae02f67f09ee65e67f430a",
+                "reference": "60bb5bde12f28ba139ae02f67f09ee65e67f430a",
                 "shasum": ""
             },
             "require": {
@@ -2441,7 +2441,8 @@
                 "slothsoft/farah": "^1.21.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "~9.6.23"
+                "phpunit/phpunit": "~9.6.23",
+                "slothsoft/farah-testing": "^1.1.2"
             },
             "suggest": {
                 "ext-ds": "*"
@@ -2479,9 +2480,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-savegame/issues",
-                "source": "https://github.com/Faulo/slothsoft-savegame/tree/1.0.11"
+                "source": "https://github.com/Faulo/slothsoft-savegame/tree/1.0.13"
             },
-            "time": "2025-10-06T13:19:10+00:00"
+            "time": "2025-12-01T18:17:23+00:00"
         },
         {
             "name": "slothsoft/sse",

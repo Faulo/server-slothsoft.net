@@ -40,8 +40,8 @@ final class NumericCore {
         foreach (self::EQUATIONS as $equation) {
             $equation = vsprintf($equation, $this->numbers);
             $result = eval($equation);
-            if (is_int($result) and $result > 0) {
-                $candidates[] = $result;
+            if (floor($result) === ceil($result) and $result > 0) {
+                $candidates[] = (int) $result;
             }
         }
         

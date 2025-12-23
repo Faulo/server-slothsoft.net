@@ -36,6 +36,14 @@ final class NumericCoreTest extends TestCase {
             19,
             19
         ];
+        
+        yield 'hand' => [
+            8,
+            1,
+            14,
+            4,
+            2
+        ];
     }
     
     /**

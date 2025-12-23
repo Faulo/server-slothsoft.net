@@ -224,6 +224,10 @@
                 <import ref="/api/default" />
                 <use-document ref="/blueprince/html/words" name="content" />
             </fragment>
+            <fragment name="numeric-core">
+                <import ref="/api/default" />
+                <use-document ref="/blueprince/html/numeric-core" name="content" />
+            </fragment>
         </fragment>
     </fragment>
 

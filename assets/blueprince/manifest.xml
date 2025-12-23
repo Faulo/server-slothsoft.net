@@ -1,21 +1,27 @@
 <?xml version="1.0"?>
 <assets xmlns="http://schema.slothsoft.net/farah/module" version="1.1">
-    <resource-directory name="css" type="text/css" />
-    <resource-directory name="js" type="application/javascript" />
-    <resource-directory name="xsl" type="application/xslt+xml" />
+	<resource-directory name="css" type="text/css" />
+	<resource-directory name="js" type="application/javascript" />
+	<resource-directory name="xsl" type="application/xslt+xml" />
 
-    <resource name="words_alpha" type="text/csv" />
+	<resource name="words_alpha" type="text/csv" />
 
-    <fragment name="html">
-        <fragment name="words">
-            <use-template ref="/blueprince/xsl/words" />
-            <link-stylesheet ref="/blueprince/css/default" />
-            <use-document ref="/blueprince/api/dictionary" name="dictionary" />
-        </fragment>
-    </fragment>
+	<fragment name="html">
+		<fragment name="words">
+			<use-template ref="/blueprince/xsl/words" />
+			<link-stylesheet ref="/blueprince/css/default" />
+			<use-document ref="/blueprince/api/dictionary" name="dictionary" />
+		</fragment>
+		<fragment name="numeric-core">
+			<use-template ref="/blueprince/xsl/core" />
+			<link-stylesheet ref="/blueprince/css/default" />
+			<use-document ref="/blueprince/api/core" name="core" />
+		</fragment>
+	</fragment>
 
-    <fragment name="api">
-        <use-document name="words" ref="../../words_alpha" />
-        <custom-asset name="dictionary" executable-builder="Slothsoft\Server\Slothsoft\Assets\BluePrince\DictionaryBuilder" />
-    </fragment>
+	<fragment name="api">
+		<use-document name="words" ref="../../words_alpha" />
+		<custom-asset name="dictionary" executable-builder="Slothsoft\Server\Slothsoft\Assets\BluePrince\DictionaryBuilder" />
+		<custom-asset name="core" executable-builder="Slothsoft\Server\Slothsoft\Assets\BluePrince\NumericCoreBuilder" />
+	</fragment>
 </assets>

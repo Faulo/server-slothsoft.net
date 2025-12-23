@@ -23,7 +23,7 @@
 				<page name="Game" title="Game" ref="static/heartbeat-for-all/unity" status-active="" status-public="" />
 			</page>
 			<page name="BluePrince" title="Blue Prince" ref="pages/blue-prince/words" status-active="" status-public="">
-				<page name="NumericCore" title="Numeric Core" ref="pages/blue-prince/numeric-cores" status-active="" />
+				<page name="NumericCore" title="Numeric Core" ref="pages/blue-prince/numeric-core" status-active="" />
 			</page>
 			<page name="UnicodeMapper" title="Unicode Text Converter" ref="unicode-mapper" status-active="" status-public="" />
 			<page name="Imprint" title="Impressum" ref="imprint" status-active="" status-public="" />

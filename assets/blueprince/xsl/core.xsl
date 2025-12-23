@@ -10,21 +10,17 @@
 				<p>Even the concept of numeric cores is a spoiler, so no more context will be given.</p>
 				<xsl:for-each select="*/core">
 					<form action="" method="GET">
-						<h2 class="heading">Input</h2>
-						<ul class="input">
-							<xsl:for-each select="input">
-								<li>
-									<input type="number" name="numbers[]" value="{.}" />
-								</li>
-							</xsl:for-each>
-						</ul>
+						<h2 class="heading">Input as 4 numbers</h2>
+
+						<xsl:for-each select="input">
+							<input type="number" size="3" name="numbers[]" value="{.}" />
+						</xsl:for-each>
+
 						<button type="submit">Look up core!</button>
 					</form>
 					<form action="" method="GET">
-						<h2 class="heading">Input</h2>
-						<xsl:for-each select="word">
-							<input type="text" name="word" value="{.}" />
-						</xsl:for-each>
+						<h2 class="heading">Input as word</h2>
+						<input type="text" size="4" name="word" value="{word}" />
 						<button type="submit">Look up core!</button>
 					</form>
 					<xsl:choose>
@@ -33,7 +29,7 @@
 							<textarea readonly="readonly">
 								<xsl:value-of select="result" />
 								<xsl:text> = </xsl:text>
-								<xsl:value-of select="@letter" />
+								<xsl:value-of select="result/@letter" />
 							</textarea>
 						</xsl:when>
 						<xsl:otherwise>

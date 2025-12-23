@@ -1515,16 +1515,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "3.0.47",
+            "version": "3.0.48",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "9d6ca36a6c2dd434765b1071b2644a1c683b385d"
+                "reference": "64065a5679c50acb886e82c07aa139b0f757bb89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/9d6ca36a6c2dd434765b1071b2644a1c683b385d",
-                "reference": "9d6ca36a6c2dd434765b1071b2644a1c683b385d",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/64065a5679c50acb886e82c07aa139b0f757bb89",
+                "reference": "64065a5679c50acb886e82c07aa139b0f757bb89",
                 "shasum": ""
             },
             "require": {
@@ -1605,7 +1605,7 @@
             ],
             "support": {
                 "issues": "https://github.com/phpseclib/phpseclib/issues",
-                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.47"
+                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.48"
             },
             "funding": [
                 {
@@ -1621,7 +1621,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-10-06T01:07:24+00:00"
+            "time": "2025-12-15T11:51:42+00:00"
         },
         {
             "name": "psr/cache",
@@ -2288,16 +2288,16 @@
         },
         {
             "name": "slothsoft/farah",
-            "version": "1.26.11",
+            "version": "1.26.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-farah.git",
-                "reference": "6fc732357dbabff7684c4d9606fac2e6b509ff82"
+                "reference": "0902a62d11bde0a342f8294f000ac0934e1e9163"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/6fc732357dbabff7684c4d9606fac2e6b509ff82",
-                "reference": "6fc732357dbabff7684c4d9606fac2e6b509ff82",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/0902a62d11bde0a342f8294f000ac0934e1e9163",
+                "reference": "0902a62d11bde0a342f8294f000ac0934e1e9163",
                 "shasum": ""
             },
             "require": {
@@ -2361,9 +2361,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-farah/issues",
-                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.26.11"
+                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.26.12"
             },
-            "time": "2025-12-04T16:23:25+00:00"
+            "time": "2025-12-17T23:33:22+00:00"
         },
         {
             "name": "slothsoft/minecraft",

@@ -23,8 +23,7 @@
 		"slothsoft/cron" : "*",
 		"slothsoft/farah" : "*",
 		"slothsoft/minecraft" : "*",
-		"slothsoft/sse" : "*",
-		"google/apiclient" : "^2.0"
+		"slothsoft/sse" : "*"
 	},
 	"require-dev" : {
 		"phpunit/phpunit" : "~9.6.23",

@@ -4,18 +4,18 @@ namespace Slothsoft\Server\Slothsoft\Assets\BluePrince;
 
 use Ds\Set;
 use Slothsoft\Core\IO\Writable\Delegates\DOMWriterFromElementDelegate;
+use Slothsoft\Farah\FarahUrl\FarahUrl;
 use Slothsoft\Farah\FarahUrl\FarahUrlArguments;
 use Slothsoft\Farah\Module\Asset\AssetInterface;
 use Slothsoft\Farah\Module\Asset\ExecutableBuilderStrategy\ExecutableBuilderStrategyInterface;
 use Slothsoft\Farah\Module\Executable\ExecutableStrategies;
+use Slothsoft\Farah\Module\Executable\ResultBuilderStrategy\DOMWriterResultBuilder;
 use DOMDocument;
 use DOMElement;
-use Slothsoft\Farah\Module\Executable\ResultBuilderStrategy\DOMWriterResultBuilder;
-use Slothsoft\Farah\FarahUrl\FarahUrl;
 
 final class DictionaryBuilder implements ExecutableBuilderStrategyInterface {
     
-    private const MAX_COUNT = 6;
+    private const MAX_COUNT = 8;
     
     public function buildExecutableStrategies(AssetInterface $context, FarahUrlArguments $args): ExecutableStrategies {
         $url = FarahUrl::createFromReference('../words', $context->createUrl());

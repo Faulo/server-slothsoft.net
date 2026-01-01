@@ -1,14 +1,21 @@
 <?php
 declare(strict_types = 1);
-namespace Slothsoft\Server\Slothsoft\Tests\API\BluePrince;
+namespace Slothsoft\Server\Slothsoft\Assets\BluePrince;
 
 use Ds\Set;
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Constraint\IsEqual;
-use Slothsoft\Server\Slothsoft\Assets\BluePrince\Dictionary;
-use function Symfony\Component\DependencyInjection\Loader\Configurator\iterator;
 
+/**
+ * DictionaryTest
+ *
+ * @see Dictionary
+ */
 final class DictionaryTest extends TestCase {
+    
+    public function testClassExists(): void {
+        $this->assertTrue(class_exists(Dictionary::class), "Failed to load class 'Slothsoft\Server\Slothsoft\Assets\BluePrince\Dictionary'!");
+    }
     
     /**
      *

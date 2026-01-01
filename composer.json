@@ -34,7 +34,7 @@
 			"tests/"
 		],
 		"psr-4" : {
-			"Slothsoft\\Server\\Slothsoft\\Tests\\" : "tests"
+			"Slothsoft\\Server\\Slothsoft\\" : "tests"
 		}
 	},
 	"scripts" : {

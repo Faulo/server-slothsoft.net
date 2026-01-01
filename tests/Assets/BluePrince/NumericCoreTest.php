@@ -1,12 +1,20 @@
 <?php
 declare(strict_types = 1);
-namespace Slothsoft\Server\Slothsoft\Tests\API\BluePrince;
+namespace Slothsoft\Server\Slothsoft\Assets\BluePrince;
 
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Constraint\IsEqual;
-use Slothsoft\Server\Slothsoft\Assets\BluePrince\NumericCore;
 
+/**
+ * NumericCoreTest
+ *
+ * @see NumericCore
+ */
 final class NumericCoreTest extends TestCase {
+    
+    public function testClassExists(): void {
+        $this->assertTrue(class_exists(NumericCore::class), "Failed to load class 'Slothsoft\Server\Slothsoft\Assets\BluePrince\NumericCore'!");
+    }
     
     /**
      *

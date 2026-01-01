@@ -15,7 +15,7 @@ use DOMElement;
 
 final class DictionaryBuilder implements ExecutableBuilderStrategyInterface {
     
-    private const MAX_COUNT = 8;
+    public const MAX_COUNT = 8;
     
     public function buildExecutableStrategies(AssetInterface $context, FarahUrlArguments $args): ExecutableStrategies {
         $url = FarahUrl::createFromReference('../words', $context->createUrl());

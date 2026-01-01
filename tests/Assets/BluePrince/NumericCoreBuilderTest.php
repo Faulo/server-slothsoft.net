@@ -1,6 +1,6 @@
 <?php
 declare(strict_types = 1);
-namespace Slothsoft\Server\Slothsoft\Tests\API\BluePrince;
+namespace Slothsoft\Server\Slothsoft\Assets\BluePrince;
 
 use PHPUnit\Framework\TestCase;
 use Slothsoft\Core\DOMHelper;
@@ -10,7 +10,16 @@ use Slothsoft\Farah\FarahUrl\FarahUrl;
 use Slothsoft\Farah\FarahUrl\FarahUrlArguments;
 use DOMDocument;
 
+/**
+ * NumericCoreBuilderTest
+ *
+ * @see NumericCoreBuilder
+ */
 final class NumericCoreBuilderTest extends TestCase {
+    
+    public function testClassExists(): void {
+        $this->assertTrue(class_exists(NumericCoreBuilder::class), "Failed to load class 'Slothsoft\Server\Slothsoft\Assets\BluePrince\NumericCoreBuilder'!");
+    }
     
     /**
      *

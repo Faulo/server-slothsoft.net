@@ -1,6 +1,6 @@
 <?php
 declare(strict_types = 1);
-namespace Slothsoft\Server\Slothsoft\Tests\API\BluePrince;
+namespace Slothsoft\Server\Slothsoft\Assets\BluePrince;
 
 use PHPUnit\Framework\TestCase;
 use Slothsoft\Core\DOMHelper;
@@ -10,7 +10,16 @@ use Slothsoft\Farah\FarahUrl\FarahUrl;
 use Slothsoft\Farah\FarahUrl\FarahUrlArguments;
 use DOMDocument;
 
+/**
+ * DictionaryBuilderTest
+ *
+ * @see DictionaryBuilder
+ */
 final class DictionaryBuilderTest extends TestCase {
+    
+    public function testClassExists(): void {
+        $this->assertTrue(class_exists(DictionaryBuilder::class), "Failed to load class 'Slothsoft\Server\Slothsoft\Assets\BluePrince\DictionaryBuilder'!");
+    }
     
     /**
      *
@@ -31,7 +40,7 @@ final class DictionaryBuilderTest extends TestCase {
             $node->textContent = $text;
             $rootNode->appendChild($node);
         }
-        for ($i = count($input); $i < 6; $i ++) {
+        for ($i = count($input); $i < DictionaryBuilder::MAX_COUNT; $i ++) {
             $rootNode->appendChild($expectedDocument->createElement('input'));
         }
         for ($i = 0; $i < strlen($input[0]); $i ++) {

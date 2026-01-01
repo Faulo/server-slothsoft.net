@@ -7,7 +7,7 @@ use Slothsoft\FarahTesting\Module\AbstractSitemapTest;
 use Slothsoft\Farah\Module\Asset\AssetInterface;
 
 class SitemapTest extends AbstractSitemapTest {
-
+    
     protected static function loadSitesAsset(): AssetInterface {
         return (new AssetConfigurationField('farah://slothsoft@slothsoft.net/sitemap'))->getValue();
     }

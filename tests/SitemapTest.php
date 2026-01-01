@@ -1,12 +1,12 @@
 <?php
 declare(strict_types = 1);
-namespace Slothsoft\Server\Slothsoft\Tests;
+namespace Slothsoft\Server\Slothsoft;
 
+use Sluse 
+Slothsoft\FarahTesting\Module\AbstractSitemapTest;
 use Slothsoft\Farah\Configuration\AssetConfigurationField;
-use Slothsoft\FarahTesting\Module\AbstractSitemapTest;
 use Slothsoft\Farah\Module\Asset\AssetInterface;
-
-class SitemapTest extends AbstractSitemapTest {
+l class SitemapTest extends AbstractSitemapTest {
     
     protected static function loadSitesAsset(): AssetInterface {
         return (new AssetConfigurationField('farah://slothsoft@slothsoft.net/sitemap'))->getValue();

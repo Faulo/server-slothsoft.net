@@ -1152,16 +1152,16 @@
         },
         {
             "name": "slothsoft/amber",
-            "version": "1.1.16",
+            "version": "1.1.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-amber.git",
-                "reference": "f13a3f35cafdb3cbcb3e125ff48e9924807dd079"
+                "reference": "da35ba77e7365f8255f3974707483e6ed67aa493"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-amber/zipball/f13a3f35cafdb3cbcb3e125ff48e9924807dd079",
-                "reference": "f13a3f35cafdb3cbcb3e125ff48e9924807dd079",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-amber/zipball/da35ba77e7365f8255f3974707483e6ed67aa493",
+                "reference": "da35ba77e7365f8255f3974707483e6ed67aa493",
                 "shasum": ""
             },
             "require": {
@@ -1169,7 +1169,7 @@
                 "ext-imagick": "*",
                 "php": ">=7.4",
                 "slothsoft/core": "^1.14.3",
-                "slothsoft/farah": "^1.22.2",
+                "slothsoft/farah": "^1.26.14",
                 "slothsoft/savegame": "^1.1.7"
             },
             "require-dev": {
@@ -1209,9 +1209,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-amber/issues",
-                "source": "https://github.com/Faulo/slothsoft-amber/tree/1.1.16"
+                "source": "https://github.com/Faulo/slothsoft-amber/tree/1.1.17"
             },
-            "time": "2025-12-26T23:44:31+00:00"
+            "time": "2025-12-30T23:31:59+00:00"
         },
         {
             "name": "slothsoft/blob",

@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="farah://slothsoft@slothsoft.net/blueprince/xsl/core" uri="assets/blueprince/xsl/core.xsl"/>
   <uri name="farah://slothsoft@slothsoft.net/blueprince/xsl/words" uri="assets/blueprince/xsl/words.xsl"/>
   <uri name="farah://slothsoft@slothsoft.net/dictionary-new/de-de" uri="assets/dictionary-new/de-de.xml"/>
   <uri name="farah://slothsoft@slothsoft.net/dictionary-new/en-us" uri="assets/dictionary-new/en-us.xml"/>

@@ -1152,29 +1152,29 @@
         },
         {
             "name": "slothsoft/amber",
-            "version": "1.1.15",
+            "version": "1.1.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-amber.git",
-                "reference": "663066c93e8832d403432bde33834a33d8ab17ec"
+                "reference": "f13a3f35cafdb3cbcb3e125ff48e9924807dd079"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-amber/zipball/663066c93e8832d403432bde33834a33d8ab17ec",
-                "reference": "663066c93e8832d403432bde33834a33d8ab17ec",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-amber/zipball/f13a3f35cafdb3cbcb3e125ff48e9924807dd079",
+                "reference": "f13a3f35cafdb3cbcb3e125ff48e9924807dd079",
                 "shasum": ""
             },
             "require": {
                 "ext-gd": "*",
                 "ext-imagick": "*",
                 "php": ">=7.4",
-                "slothsoft/core": "^1.13.3",
+                "slothsoft/core": "^1.14.3",
                 "slothsoft/farah": "^1.22.2",
-                "slothsoft/savegame": "^1.0.11"
+                "slothsoft/savegame": "^1.1.7"
             },
             "require-dev": {
                 "phpunit/phpunit": "~9.6.23",
-                "slothsoft/farah-testing": "^1.1.2"
+                "slothsoft/farah-testing": "^1.1.6"
             },
             "type": "library",
             "extra": {
@@ -1209,9 +1209,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-amber/issues",
-                "source": "https://github.com/Faulo/slothsoft-amber/tree/1.1.15"
+                "source": "https://github.com/Faulo/slothsoft-amber/tree/1.1.16"
             },
-            "time": "2025-12-01T15:16:11+00:00"
+            "time": "2025-12-26T23:44:31+00:00"
         },
         {
             "name": "slothsoft/blob",
@@ -1329,16 +1329,16 @@
         },
         {
             "name": "slothsoft/core",
-            "version": "1.14.3",
+            "version": "1.14.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-core.git",
-                "reference": "7a6ef8b33317c40098d8cf81bbb1c6ad95d4b714"
+                "reference": "8ec1d6f6d660210b0769dbd67eb63c6afe69aa63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-core/zipball/7a6ef8b33317c40098d8cf81bbb1c6ad95d4b714",
-                "reference": "7a6ef8b33317c40098d8cf81bbb1c6ad95d4b714",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-core/zipball/8ec1d6f6d660210b0769dbd67eb63c6afe69aa63",
+                "reference": "8ec1d6f6d660210b0769dbd67eb63c6afe69aa63",
                 "shasum": ""
             },
             "require": {
@@ -1399,9 +1399,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-core/issues",
-                "source": "https://github.com/Faulo/slothsoft-core/tree/1.14.3"
+                "source": "https://github.com/Faulo/slothsoft-core/tree/1.14.7"
             },
-            "time": "2025-12-01T16:16:53+00:00"
+            "time": "2025-12-31T21:20:17+00:00"
         },
         {
             "name": "slothsoft/cron",
@@ -1464,16 +1464,16 @@
         },
         {
             "name": "slothsoft/farah",
-            "version": "1.26.12",
+            "version": "1.26.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-farah.git",
-                "reference": "0902a62d11bde0a342f8294f000ac0934e1e9163"
+                "reference": "f79a1450b674c60f706dc7a8859bf3ec61355342"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/0902a62d11bde0a342f8294f000ac0934e1e9163",
-                "reference": "0902a62d11bde0a342f8294f000ac0934e1e9163",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/f79a1450b674c60f706dc7a8859bf3ec61355342",
+                "reference": "f79a1450b674c60f706dc7a8859bf3ec61355342",
                 "shasum": ""
             },
             "require": {
@@ -1488,7 +1488,7 @@
                 "psr/http-message": "^1.0",
                 "psr/log": "^1.0",
                 "slothsoft/blob": "^1.0",
-                "slothsoft/core": "^1.14.2"
+                "slothsoft/core": "^1.14.7"
             },
             "require-dev": {
                 "phpunit/phpunit": "~9.6.23",
@@ -1537,9 +1537,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-farah/issues",
-                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.26.12"
+                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.26.16"
             },
-            "time": "2025-12-17T23:33:22+00:00"
+            "time": "2026-01-01T18:35:56+00:00"
         },
         {
             "name": "slothsoft/minecraft",
@@ -1598,16 +1598,16 @@
         },
         {
             "name": "slothsoft/savegame",
-            "version": "1.1.3",
+            "version": "1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-savegame.git",
-                "reference": "7e6142e4f983b61a92c5012c386f3072778513bd"
+                "reference": "527cc07ac4560834006cb9937acfe8f203c0529a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-savegame/zipball/7e6142e4f983b61a92c5012c386f3072778513bd",
-                "reference": "7e6142e4f983b61a92c5012c386f3072778513bd",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-savegame/zipball/527cc07ac4560834006cb9937acfe8f203c0529a",
+                "reference": "527cc07ac4560834006cb9937acfe8f203c0529a",
                 "shasum": ""
             },
             "require": {
@@ -1656,9 +1656,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-savegame/issues",
-                "source": "https://github.com/Faulo/slothsoft-savegame/tree/1.1.3"
+                "source": "https://github.com/Faulo/slothsoft-savegame/tree/1.1.7"
             },
-            "time": "2025-12-26T20:20:55+00:00"
+            "time": "2025-12-26T23:40:39+00:00"
         },
         {
             "name": "slothsoft/sse",
@@ -2274,16 +2274,16 @@
         },
         {
             "name": "php-webdriver/webdriver",
-            "version": "1.15.2",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-webdriver/php-webdriver.git",
-                "reference": "998e499b786805568deaf8cbf06f4044f05d91bf"
+                "reference": "ac0662863aa120b4f645869f584013e4c4dba46a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-webdriver/php-webdriver/zipball/998e499b786805568deaf8cbf06f4044f05d91bf",
-                "reference": "998e499b786805568deaf8cbf06f4044f05d91bf",
+                "url": "https://api.github.com/repos/php-webdriver/php-webdriver/zipball/ac0662863aa120b4f645869f584013e4c4dba46a",
+                "reference": "ac0662863aa120b4f645869f584013e4c4dba46a",
                 "shasum": ""
             },
             "require": {
@@ -2292,7 +2292,7 @@
                 "ext-zip": "*",
                 "php": "^7.3 || ^8.0",
                 "symfony/polyfill-mbstring": "^1.12",
-                "symfony/process": "^5.0 || ^6.0 || ^7.0"
+                "symfony/process": "^5.0 || ^6.0 || ^7.0 || ^8.0"
             },
             "replace": {
                 "facebook/webdriver": "*"
@@ -2305,10 +2305,10 @@
                 "php-parallel-lint/php-parallel-lint": "^1.2",
                 "phpunit/phpunit": "^9.3",
                 "squizlabs/php_codesniffer": "^3.5",
-                "symfony/var-dumper": "^5.0 || ^6.0 || ^7.0"
+                "symfony/var-dumper": "^5.0 || ^6.0 || ^7.0 || ^8.0"
             },
             "suggest": {
-                "ext-SimpleXML": "For Firefox profile creation"
+                "ext-simplexml": "For Firefox profile creation"
             },
             "type": "library",
             "autoload": {
@@ -2334,9 +2334,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-webdriver/php-webdriver/issues",
-                "source": "https://github.com/php-webdriver/php-webdriver/tree/1.15.2"
+                "source": "https://github.com/php-webdriver/php-webdriver/tree/1.16.0"
             },
-            "time": "2024-11-21T15:12:59+00:00"
+            "time": "2025-12-28T23:57:40+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",

@@ -18,7 +18,7 @@ final class IndexTest extends AbstractTestCase {
         
         $response = $requestStrategy->process($request);
         
-        $data = stream_get_contents($response->getBody()->detach());
+        $data = (string) $response->getBody();
         
         $doc = new DOMDocument();
         $this->assertTrue($doc->loadXML($data));

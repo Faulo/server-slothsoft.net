@@ -135,18 +135,6 @@
                 <use-document ref="//amber/html/description" name="content" />
                 <use-document ref="/shoutboxes/amber" name="chat" />
             </fragment>
-            <fragment name="editor">
-                <import ref="/api/default" />
-                <use-document ref="//amber/html/editor" name="content" />
-            </fragment>
-            <fragment name="resource">
-                <import ref="/api/default" />
-                <use-document ref="//amber/html/resource" name="content" />
-            </fragment>
-            <fragment name="chat">
-                <import ref="/api/default" />
-                <use-document ref="/shoutboxes/amber" name="content" />
-            </fragment>
         </fragment>
 
         <fragment name="dragon-age">

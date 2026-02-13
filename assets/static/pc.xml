@@ -1,27 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-    <data name="Strayfarer" year="2026" owner="Strayfarer" final-price="">
+    <data name="Strayfarer Smol" year="2026" owner="Strayfarer" final-price="">
+        <part type="Mainboard" href="https://de.msi.com/Motherboard/B840-GAMING-PLUS-WIFI" name="MSI B840" tdp="6" price="135" price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/205554698_-b850-gaming-plus-wifi-msi.html">
+            <properties socket="AM5" ram="DDR5-8200" sata="6 Gb/s" form="ATX" />
+            <io>AM5 Socket</io>
+            <io>PCIe 4.0 x16</io>
+            <io>M.2 PCIe 4.0 x4</io>
+            <io>DDR5-8200</io>
+            <io>Wi-Fi 7</io>
+            <io>Bluetooth 5.4</io>
+        </part>
+        <part type="CPU" href="https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-5-9600x.html" name="AMD Ryzen 5 9600X" tdp="65" price="189" price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/204581794_-ryzen-5-9600x-boxed-amd.html">
+            <properties frequency="3.90 GHz" cores="6" cache-l2="3 KB" cache-l3="32 MB" socket="AM4" pcie="5.0" />
+            <io>AM5 Socket</io>
+            <io>DDR5-5600</io>
+        </part>
+        <part type="RAM" name="Kingston FURY Beast RGB" price="175" price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/202593458_-fury-beast-rgb-16gb-kit-ddr5-5600-cl40-kf556c40bwa-16-kingston.html" tdp="0">
+            <properties size="2x 16 GB" form="DDR5-DIMM" type="DDR5-5600" frequency="5600 MHz" />
+            <io>DDR5-5600</io>
+        </part>
+        <part type="Audio" name="RealTek ALC897" price="0" tdp="0">
+            <properties channels="7.1" />
+        </part>
+        <part type="HDD" href="https://www.biwintech.com/product/nv7200-pcie-ssd/" name="Biwin NV7200" price="180" price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/206323557_-nv7200-2tb-biwin.html" tdp="5">
+            <properties size="2048 GB" />
+            <io>M.2 PCIe 4.0 x4</io>
+        </part>
+    </data>
+    
+    <data name="Strayfarer Premium" year="2026" owner="Strayfarer" final-price="">
         <part type="Mainboard" href="https://de.msi.com/Motherboard/B850-GAMING-PLUS-WIFI/Specification" name="MSI B850" tdp="6" price="175" price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/205554698_-b850-gaming-plus-wifi-msi.html">
             <properties socket="AM5" ram="DDR5-8200" sata="6 Gb/s" form="ATX" />
             <io>AM5 Socket</io>
             <io>PCIe 5.0 x16</io>
             <io>M.2 PCIe 5.0 x4</io>
             <io>DDR5-8200</io>
+            <io>Wi-Fi 7</io>
+            <io>Bluetooth 5.4</io>
         </part>
-        <part type="CPU" href="https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9700x.html" name="AMD Ryzen 7 9700X" tdp="65" price="254" price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/204581803_-ryzen-7-9700x-amd.html">
-            <properties frequency="3.80 GHz" cores="8" cache-l2="3 KB" cache-l3="32 MB" socket="AM4" pcie="4.0" />
+        <part type="CPU" href="https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9700x.html" name="AMD Ryzen 7 9700X" tdp="65" price="289" price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/204581415_-ryzen-7-9700x-boxed-amd.html">
+            <properties frequency="3.80 GHz" cores="8" cache-l2="3 KB" cache-l3="32 MB" socket="AM4" pcie="5.0" />
             <io>AM5 Socket</io>
             <io>DDR5-5600</io>
         </part>
-        <part type="RAM" name="Kingston FURY Beast RGB" price="350" price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/202593458_-fury-beast-rgb-16gb-kit-ddr5-5600-cl40-kf556c40bwa-16-kingston.html" tdp="0">
-            <properties size="4x 16 GB" form="DDR5-DIMM" type="DDR5-5600" frequency="5600 MHz" />
+        <part type="RAM" name="Kingston FURY Beast RGB" price="175" price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/202593458_-fury-beast-rgb-16gb-kit-ddr5-5600-cl40-kf556c40bwa-16-kingston.html" tdp="0">
+            <properties size="2x 16 GB" form="DDR5-DIMM" type="DDR5-5600" frequency="5600 MHz" />
             <io>DDR5-5600</io>
         </part>
         <part type="Audio" name="RealTek ALC897" price="0" tdp="0">
             <properties channels="7.1" />
         </part>
-        <part type="HDD" href="https://www.lexar.com/global/products/Lexar-NM990-M-2-2280-PCIe-5-0-NVMe-SSD/" name="Lexar NM990 M.2 2280" price="395" price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/206792643_-nm990-4tb-lexar.html" tdp="5">
-            <properties size="4096 GB" />
+        <part type="HDD" href="https://www.lexar.com/global/products/Lexar-NM990-M-2-2280-PCIe-5-0-NVMe-SSD/" name="Lexar NM990" price="235" price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/206792641_-nm990-2tb-lexar.html" tdp="5">
+            <properties size="2048 GB" />
             <io>M.2 PCIe 5.0 x4</io>
         </part>
     </data>
@@ -165,9 +195,10 @@
         <part type="GPU" href="https://www.notebookcheck.com/NVIDIA-GeForce-RTX-3050-Ti-Laptop-GPU-Grafikkarte-Benchmarks-und-Spezifikationen.527429.0.html" name="NVidia GeForce RTX 3050Ti" tdp="75" price="0">
             <properties frequency="1485 MHz" memory="4 GB" />
         </part>
-        <part type="HDD" href="https://americas.lexar.com/product/lexar-nm790-m-2-2280-pcie-gen-4x4-nvme-ssd/" name="Lexar NM790 M.2 2280" price="219" price-uri="https://www.mindfactory.de/product_info.php/4TB-Lexar-NM790-M-2-2280-PCIe-4-0-x4-3D-NAND-TLC--LNM790X004T-RNNNG-_1496665.html"
+        <part type="HDD" href="https://americas.lexar.com/product/lexar-nm790-m-2-2280-pcie-gen-4x4-nvme-ssd/" name="Lexar NM790" price="219" price-uri="https://www.mindfactory.de/product_info.php/4TB-Lexar-NM790-M-2-2280-PCIe-4-0-x4-3D-NAND-TLC--LNM790X004T-RNNNG-_1496665.html"
             tdp="5">
             <properties size="4096 GB" />
+            <io>M.2 PCIe 4.0 x4</io>
         </part>
         <part type="HDD" href="https://www.intenso.de/en/products/solid-state-drives/M.2%20SSD%20Top%20Performance" name="Intenso SSD M.2 2280" price="50" price-uri="https://www.idealo.de/preisvergleich/OffersOfProduct/5826821_-sata-iii-top-512gb-m-2-intenso.html" tdp="5">
             <properties size="512 GB" />

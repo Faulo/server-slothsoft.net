@@ -1,6 +1,6 @@
 <?php
 declare(strict_types = 1);
-namespace Slothsoft\Server\Slothsoft\Tests;
+namespace Slothsoft\Server\Slothsoft;
 
 use Slothsoft\FarahTesting\Module\AbstractXmlManifestTest;
 

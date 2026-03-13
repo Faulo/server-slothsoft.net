@@ -1,6 +1,6 @@
 <?php
 declare(strict_types = 1);
-namespace Slothsoft\Server\Slothsoft\Assets\BluePrince;
+namespace Slothsoft\Server\Slothsoft\Tests\Assets\BluePrince;
 
 use PHPUnit\Framework\TestCase;
 use Slothsoft\Core\DOMHelper;
@@ -8,6 +8,7 @@ use Slothsoft\Farah\Kernel;
 use Slothsoft\FarahTesting\Constraints\DOMNodeEqualTo;
 use Slothsoft\Farah\FarahUrl\FarahUrl;
 use Slothsoft\Farah\FarahUrl\FarahUrlArguments;
+use Slothsoft\Server\Slothsoft\Assets\BluePrince\DictionaryBuilder;
 use DOMDocument;
 
 /**

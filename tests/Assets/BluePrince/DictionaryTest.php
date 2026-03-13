@@ -1,10 +1,11 @@
 <?php
 declare(strict_types = 1);
-namespace Slothsoft\Server\Slothsoft\Assets\BluePrince;
+namespace Slothsoft\Server\Slothsoft\Tests\Assets\BluePrince;
 
 use Ds\Set;
 use PHPUnit\Framework\TestCase;
 use PHPUnit\Framework\Constraint\IsEqual;
+use Slothsoft\Server\Slothsoft\Assets\BluePrince\Dictionary;
 
 /**
  * DictionaryTest

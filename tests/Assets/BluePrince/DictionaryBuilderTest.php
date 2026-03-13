@@ -1,6 +1,6 @@
 <?php
 declare(strict_types = 1);
-namespace Slothsoft\Server\Slothsoft\Tests\Assets\BluePrince;
+namespace Slothsoft\Server\Slothsoft\Assets\BluePrince;
 
 use PHPUnit\Framework\TestCase;
 use Slothsoft\Core\DOMHelper;

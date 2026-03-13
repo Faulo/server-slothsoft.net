@@ -19,22 +19,22 @@
 	"require" : {
 		"slothsoft/amber" : "*",
 		"slothsoft/chat" : "*",
-		"slothsoft/core" : "*",
+		"slothsoft/core" : "^1.14",
 		"slothsoft/cron" : "*",
-		"slothsoft/farah" : "*",
+		"slothsoft/farah" : "^1.27",
 		"slothsoft/minecraft" : "*",
 		"slothsoft/sse" : "*"
 	},
 	"require-dev" : {
 		"phpunit/phpunit" : "~9.6.23",
-		"slothsoft/farah-testing" : "*"
+		"slothsoft/farah-testing" : "^1.3.1"
 	},
 	"autoload-dev" : {
 		"classmap" : [
 			"tests/"
 		],
 		"psr-4" : {
-			"Slothsoft\\Server\\Slothsoft\\" : "tests"
+			"Slothsoft\\Server\\Slothsoft\\Tests\\" : "tests"
 		}
 	},
 	"scripts" : {
@@ -46,5 +46,5 @@
 			"email" : "info.slothsoft@gmail.com"
 		}
 	],
-	"homepage" : "http://slothsoft.net"
+	"homepage" : "https://slothsoft.net"
 }

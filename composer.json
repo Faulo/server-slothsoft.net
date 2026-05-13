@@ -1,50 +1,51 @@
 {
-	"name" : "slothsoft/slothsoft.net",
-	"type" : "project",
-	"description" : "slothsoft.net",
-	"license" : "MIT",
-	"keywords" : [
-		"slothsoft",
-		"farah-module",
-		"farah-server"
-	],
-	"autoload" : {
-		"files" : [
-			"src/bootstrap.php"
-		],
-		"psr-4" : {
-			"Slothsoft\\Server\\Slothsoft\\" : "src"
-		}
-	},
-	"require" : {
-		"slothsoft/amber" : "*",
-		"slothsoft/chat" : "*",
-		"slothsoft/core" : "^1.14.19",
-		"slothsoft/cron" : "*",
-		"slothsoft/farah" : "^1.27.1",
-		"slothsoft/minecraft" : "*",
-		"slothsoft/sse" : "*"
-	},
-	"require-dev" : {
-		"phpunit/phpunit" : "~9.6.23",
-		"slothsoft/farah-testing" : "^1.3.1"
-	},
-	"autoload-dev" : {
-		"classmap" : [
-			"tests/"
-		],
-		"psr-4" : {
-			"Slothsoft\\Server\\Slothsoft\\" : "tests"
-		}
-	},
-	"scripts" : {
-		"farah-asset" : "@php vendor/slothsoft/farah/scripts/farah-asset.php",
-		"farah-page" : "@php vendor/slothsoft/farah/scripts/farah-page.php"
-	},
-	"authors" : [{
-			"name" : "Daniel Schulz",
-			"email" : "info.slothsoft@gmail.com"
-		}
-	],
-	"homepage" : "https://slothsoft.net"
+    "name": "slothsoft/slothsoft.net",
+    "type": "project",
+    "description": "slothsoft.net",
+    "license": "MIT",
+    "keywords": [
+        "slothsoft",
+        "farah-module",
+        "farah-server"
+    ],
+    "autoload": {
+        "files": [
+            "src/bootstrap.php"
+        ],
+        "psr-4": {
+            "Slothsoft\\Server\\Slothsoft\\": "src"
+        }
+    },
+    "require": {
+        "slothsoft/amber": "*",
+        "slothsoft/chat": "*",
+        "slothsoft/core": "^1.14.19",
+        "slothsoft/cron": "*",
+        "slothsoft/farah": "^1.27.1",
+        "slothsoft/minecraft": "*",
+        "slothsoft/sse": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.6.23",
+        "slothsoft/farah-testing": "^1.3.1"
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ],
+        "psr-4": {
+            "Slothsoft\\Server\\Slothsoft\\": "tests"
+        }
+    },
+    "scripts": {
+        "farah-asset": "@php vendor/slothsoft/farah/scripts/farah-asset.php",
+        "farah-page": "@php vendor/slothsoft/farah/scripts/farah-page.php"
+    },
+    "authors": [
+        {
+            "name": "Daniel Schulz",
+            "email": "info.slothsoft@gmail.com"
+        }
+    ],
+    "homepage": "https://slothsoft.net"
 }

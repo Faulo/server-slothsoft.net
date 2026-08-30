@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "504051bea331d0088bf9c10522228f74",
+    "content-hash": "5aa24597e72c6bcdc9d38d77cd4c6cd6",
     "packages": [
         {
             "name": "guzzlehttp/psr7",
@@ -1332,16 +1332,16 @@
         },
         {
             "name": "slothsoft/core",
-            "version": "1.14.26",
+            "version": "1.14.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-core.git",
-                "reference": "fdac4252d5299f6d01e8fed11f23d78c9d33df64"
+                "reference": "b57aa699cffc56e9902741b6654c5ba66aa63a3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-core/zipball/fdac4252d5299f6d01e8fed11f23d78c9d33df64",
-                "reference": "fdac4252d5299f6d01e8fed11f23d78c9d33df64",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-core/zipball/b57aa699cffc56e9902741b6654c5ba66aa63a3d",
+                "reference": "b57aa699cffc56e9902741b6654c5ba66aa63a3d",
                 "shasum": ""
             },
             "require": {
@@ -1401,16 +1401,16 @@
                 }
             ],
             "description": "Core stuff.",
-            "homepage": "http://farah.slothsoft.net/modules/core",
+            "homepage": "https://farah.slothsoft.net/modules/core",
             "keywords": [
                 "docs",
                 "slothsoft"
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-core/issues",
-                "source": "https://github.com/Faulo/slothsoft-core/tree/1.14.26"
+                "source": "https://github.com/Faulo/slothsoft-core/tree/1.14.27"
             },
-            "time": "2026-07-24T12:23:53+00:00"
+            "time": "2026-08-30T23:00:26+00:00"
         },
         {
             "name": "slothsoft/cron",

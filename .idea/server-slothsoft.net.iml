@@ -48,8 +48,9 @@
       <sourceFolder url="file://$MODULE_DIR$/.farah-vendor/slothsoft/farah/src" isTestSource="false" packagePrefix="Slothsoft\Farah\" />
       <sourceFolder url="file://$MODULE_DIR$/.farah-vendor/slothsoft/farah/src-pthreads" isTestSource="false" packagePrefix="Slothsoft\Farah\PThreads\" />
       <sourceFolder url="file://$MODULE_DIR$/.farah-vendor/slothsoft/farah/tests" isTestSource="true" packagePrefix="Slothsoft\Farah\" />
-      <sourceFolder url="file://$MODULE_DIR$/.farah-vendor/slothsoft/minecraft/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/.farah-vendor/slothsoft/minecraft/src" isTestSource="false" packagePrefix="Slothsoft\Minecraft\" />
       <sourceFolder url="file://$MODULE_DIR$/.farah-vendor/slothsoft/minecraft/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/.farah-vendor/slothsoft/minecraft/tests" isTestSource="true" packagePrefix="Slothsoft\Minecraft\" />
       <sourceFolder url="file://$MODULE_DIR$/.farah-vendor/slothsoft/savegame/src" isTestSource="false" packagePrefix="Slothsoft\Savegame\" />
       <sourceFolder url="file://$MODULE_DIR$/.farah-vendor/slothsoft/savegame/tests" isTestSource="true" packagePrefix="Slothsoft\Savegame\" />
       <sourceFolder url="file://$MODULE_DIR$/.farah-vendor/slothsoft/sse/src" isTestSource="false" packagePrefix="Slothsoft\SSE\" />

@@ -1,0 +1,8 @@
+COPY --from=farah /usr/share/farah/ /usr/share/farah/
+COPY --from=farah /etc/apache2/conf-available/custom.conf /etc/apache2/conf-available/farah.conf
+
+RUN sed -i \
+        -e 's#/var/www/vendor/#/var/www/html/vendor/#' \
+        -e '/$request = MessageFactory::createServerRequest/i $_SERVER["HTTPS"] = "off";\n$_SERVER["REQUEST_SCHEME"] = "http";' \
+        /usr/share/farah/index.php \
+    && ln -s ../conf-available/farah.conf /etc/apache2/conf-enabled/farah.conf

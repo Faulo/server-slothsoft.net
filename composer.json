@@ -19,7 +19,7 @@
     "require": {
         "slothsoft/amber": "*",
         "slothsoft/chat": "*",
-        "slothsoft/core": "^1.14.19",
+        "slothsoft/core": "^1.14.27",
         "slothsoft/cron": "*",
         "slothsoft/farah": "^1.27.1",
         "slothsoft/minecraft": "*",

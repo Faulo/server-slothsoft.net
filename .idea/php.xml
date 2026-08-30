@@ -36,19 +36,8 @@
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-servicemanager" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-validator" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-escaper" />
-      <path value="$PROJECT_DIR$/vendor/slothsoft/chat" />
-      <path value="$PROJECT_DIR$/vendor/slothsoft/core" />
-      <path value="$PROJECT_DIR$/vendor/slothsoft/farah" />
-      <path value="$PROJECT_DIR$/vendor/slothsoft/w3c" />
-      <path value="$PROJECT_DIR$/vendor/slothsoft/savegame" />
-      <path value="$PROJECT_DIR$/vendor/slothsoft/cron" />
-      <path value="$PROJECT_DIR$/vendor/slothsoft/minecraft" />
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
-      <path value="$PROJECT_DIR$/vendor/slothsoft/amber" />
-      <path value="$PROJECT_DIR$/vendor/slothsoft/sse" />
-      <path value="$PROJECT_DIR$/vendor/slothsoft/blob" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
-      <path value="$PROJECT_DIR$/vendor/slothsoft/farah-testing" />
       <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
       <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
       <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
@@ -98,6 +87,17 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/slothsoft/amber" />
+      <path value="$PROJECT_DIR$/vendor/slothsoft/blob" />
+      <path value="$PROJECT_DIR$/vendor/slothsoft/farah-testing" />
+      <path value="$PROJECT_DIR$/vendor/slothsoft/minecraft" />
+      <path value="$PROJECT_DIR$/vendor/slothsoft/savegame" />
+      <path value="$PROJECT_DIR$/vendor/slothsoft/sse" />
+      <path value="$PROJECT_DIR$/vendor/slothsoft/chat" />
+      <path value="$PROJECT_DIR$/vendor/slothsoft/core" />
+      <path value="$PROJECT_DIR$/vendor/slothsoft/cron" />
+      <path value="$PROJECT_DIR$/vendor/slothsoft/farah" />
+      <path value="$PROJECT_DIR$/vendor/slothsoft/w3c" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

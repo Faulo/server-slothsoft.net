@@ -1,2 +1,2 @@
-COPY --from=farah /usr/share/farah/ /usr/share/farah/
+COPY --from=farah /farah/ /farah/
 COPY --from=farah /etc/apache2/conf-available/custom.conf /etc/apache2/conf-enabled/farah.conf

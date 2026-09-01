@@ -1,2 +1,2 @@
-dev.slothsoft.net
-=================
+slothsoft.net
+=============

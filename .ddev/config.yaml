@@ -27,3 +27,6 @@ webimage_extra_packages:
     - php${DDEV_PHP_VERSION}-xsl
     - php${DDEV_PHP_VERSION}-zip
 
+hooks:
+  post-start:
+    - exec: MYSQL_PWD="$MYSQL_PASSWORD" mysql --host="$MYSQL_HOST" --user="$MYSQL_USER" --execute="CREATE DATABASE IF NOT EXISTS \`chat\`"

@@ -2,7 +2,7 @@
   <configuration default="false" name="PHPUnit DDEV" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
     <CommandLine>
       <PhpTestInterpreterSettings>
-        <option name="interpreterName" value="$COMPOSER_VENDOR-$COMPOSER_MODULE" />
+        <option name="interpreterName" value="slothsoft" />
       </PhpTestInterpreterSettings>
     </CommandLine>
     <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" coverage_engine="PHPDBG" scope="XML" use_alternative_configuration_file="true" />

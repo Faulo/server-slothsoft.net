@@ -1339,27 +1339,27 @@
         },
         {
             "name": "slothsoft/chat",
-            "version": "1.1.6",
+            "version": "1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-chat.git",
-                "reference": "5cb7a1183edef7c6b6392f07de91f14abc8553bb"
+                "reference": "7fffb5b2be60fcc2587fd9055920e2fb8f4ded01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-chat/zipball/5cb7a1183edef7c6b6392f07de91f14abc8553bb",
-                "reference": "5cb7a1183edef7c6b6392f07de91f14abc8553bb",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-chat/zipball/7fffb5b2be60fcc2587fd9055920e2fb8f4ded01",
+                "reference": "7fffb5b2be60fcc2587fd9055920e2fb8f4ded01",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.2",
-                "slothsoft/core": "^1.14.19",
-                "slothsoft/farah": "^1.28.2",
+                "slothsoft/core": "^1.14.27",
+                "slothsoft/farah": "^1.29.2",
                 "slothsoft/sse": "^1.11.2"
             },
             "require-dev": {
                 "phpunit/phpunit": "~9.6.34",
-                "slothsoft/farah-testing": "^1.3.8"
+                "slothsoft/farah-testing": "^1.3.13"
             },
             "type": "library",
             "autoload": {
@@ -1381,7 +1381,7 @@
                 }
             ],
             "description": "A Farah module that renders a simple shoutbox.",
-            "homepage": "http://farah.slothsoft.net/modules/chat",
+            "homepage": "https://faulo.github.io/slothsoft-chat/",
             "keywords": [
                 "docs",
                 "farah-module",
@@ -1389,9 +1389,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-chat/issues",
-                "source": "https://github.com/Faulo/slothsoft-chat/tree/1.1.6"
+                "source": "https://github.com/Faulo/slothsoft-chat/tree/1.1.7"
             },
-            "time": "2026-04-02T18:10:51+00:00"
+            "time": "2026-09-04T22:01:52+00:00"
         },
         {
             "name": "slothsoft/core",
@@ -1477,20 +1477,21 @@
         },
         {
             "name": "slothsoft/farah",
-            "version": "1.29.1",
+            "version": "1.29.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-farah.git",
-                "reference": "cfa0f6b555d82489813caededba1b72f57760036"
+                "reference": "1ef4b425dddb31bdc3dc0c11bf9d27351f3aa839"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/cfa0f6b555d82489813caededba1b72f57760036",
-                "reference": "cfa0f6b555d82489813caededba1b72f57760036",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-farah/zipball/1ef4b425dddb31bdc3dc0c11bf9d27351f3aa839",
+                "reference": "1ef4b425dddb31bdc3dc0c11bf9d27351f3aa839",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
+                "ext-libxml": "*",
                 "ext-sockets": "*",
                 "ext-zlib": "*",
                 "guzzlehttp/psr7": "^2.9.0",
@@ -1546,7 +1547,7 @@
                 }
             ],
             "description": "Files and Resources and Hypertext: A content management system.",
-            "homepage": "http://farah.slothsoft.net/modules/farah",
+            "homepage": "https://faulo.github.io/slothsoft-farah/",
             "keywords": [
                 "docs",
                 "farah-module",
@@ -1554,9 +1555,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-farah/issues",
-                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.29.1"
+                "source": "https://github.com/Faulo/slothsoft-farah/tree/1.29.2"
             },
-            "time": "2026-09-04T20:04:50+00:00"
+            "time": "2026-09-04T21:39:02+00:00"
         },
         {
             "name": "slothsoft/minecraft",

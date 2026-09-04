@@ -2,7 +2,6 @@
 declare(strict_types = 1);
 namespace Slothsoft\Server\Slothsoft\Assets;
 
-use Slothsoft\Core\Game\Name;
 use Slothsoft\Core\IO\Writable\Delegates\DOMWriterFromElementDelegate;
 use Slothsoft\Farah\FarahUrl\FarahUrlArguments;
 use Slothsoft\Farah\Module\Asset\AssetInterface;
@@ -35,18 +34,6 @@ class VideoChatThingBuilder implements ExecutableBuilderStrategyInterface {
     }
     
     private function inventName(): string {
-        $config = [];
-        $config[Name::GENERATE_CONFIG_FIRSTNAMEONLY] = 0;
-        $config[Name::GENERATE_CONFIG_ALLITERATION] = 0;
-        if ($list = Name::generate($config)) {
-            $tmp = reset($list);
-            $tmp = strstr($tmp, ' ');
-            $tmp = trim($tmp);
-            if (strlen($tmp)) {
-                return $tmp;
-            }
-        }
         return uniqid();
     }
 }
-

@@ -1,7 +1,7 @@
 name: slothsoft
 type: php
 docroot: html
-php_version: "7.4"
+php_version: "8.2"
 webserver_type: apache-fpm
 xdebug_enabled: false
 database:

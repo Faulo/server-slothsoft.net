@@ -17,17 +17,16 @@
         }
     },
     "require": {
-        "slothsoft/amber": "*",
-        "slothsoft/chat": "*",
+        "slothsoft/amber": "1.1.17",
+        "slothsoft/chat": "^1.1.4",
         "slothsoft/core": "^1.14.27",
-        "slothsoft/cron": "*",
-        "slothsoft/farah": "^1.27.1",
-        "slothsoft/minecraft": "*",
-        "slothsoft/sse": "*"
+        "slothsoft/farah": "^1.29.0",
+        "slothsoft/minecraft": "^1.0.9",
+        "slothsoft/sse": "^1.10.16"
     },
     "require-dev": {
         "phpunit/phpunit": "~9.6.34",
-        "slothsoft/farah-testing": "^1.3.3"
+        "slothsoft/farah-testing": "^1.3.13"
     },
     "autoload-dev": {
         "classmap": [
@@ -50,7 +49,7 @@
     "homepage": "https://slothsoft.net",
     "config": {
         "platform": {
-            "php": "7.4"
+            "php": "8.2"
         }
     }
 }

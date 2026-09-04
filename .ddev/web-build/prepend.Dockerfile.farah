@@ -1,1 +1,1 @@
-FROM faulo/farah:7.4 AS farah
+FROM faulo/farah:8.2 AS farah

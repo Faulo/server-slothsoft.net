@@ -1,0 +1,3 @@
+hooks:
+  post-start:
+    - exec: MYSQL_PWD="$MYSQL_PASSWORD" mysql --host="$MYSQL_HOST" --user="$MYSQL_USER" --execute="CREATE DATABASE IF NOT EXISTS \`chat\`"

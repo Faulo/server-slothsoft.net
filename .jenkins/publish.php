@@ -29,7 +29,7 @@ $isWithin = static function (string $path, string $directory) use ($pathKey): bo
     $path = $pathKey(rtrim($path, '/\\'));
     $directory = $pathKey(rtrim($directory, '/\\'));
 
-    return $path === $directory || str_starts_with($path, $directory . '/');
+    return $path === $directory || strpos($path, $directory . '/') === 0;
 };
 
 $remove = function (string $path) use (&$remove): void {
@@ -118,7 +118,7 @@ foreach (array_slice($argv, 2) as $argument) {
 
     if (
         $relative === ''
-        || str_starts_with($relative, '/')
+        || strpos($relative, '/') === 0
         || preg_match('/^[A-Za-z]:\//', $relative) === 1
         || count($parts) !== 1
         || in_array($relative, ['.', '..'], true)

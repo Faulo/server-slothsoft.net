@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectResources">
+    <CATALOG_PROPERTIES>$PROJECT_DIR$/catalog.properties</CATALOG_PROPERTIES>
     <resource url="farah://slothsoft@amber/schema/amberdata/0.1" location="$PROJECT_DIR$/vendor/slothsoft/amber/assets/schema/amberdata/0.1.xsd"/>
-    <resource url="farah://slothsoft@cron/schema/instructions/0.1" location="$PROJECT_DIR$/vendor/slothsoft/cron/assets/schema/instructions/0.1.xsd"/>
     <resource url="farah://slothsoft@farah/schema/dictionary/0.1" location="$PROJECT_DIR$/vendor/slothsoft/farah/assets/schema/dictionary/0.1.xsd"/>
     <resource url="farah://slothsoft@farah/schema/dictionary/1.0" location="$PROJECT_DIR$/vendor/slothsoft/farah/assets/schema/dictionary/1.0.xsd"/>
     <resource url="farah://slothsoft@farah/schema/module/1.0" location="$PROJECT_DIR$/vendor/slothsoft/farah/assets/schema/module/1.0.xsd"/>
@@ -14,7 +14,6 @@
     <resource url="farah://slothsoft@savegame/schema/editor/0.3" location="$PROJECT_DIR$/vendor/slothsoft/savegame/assets/schema/editor/0.3.xsd"/>
     <resource url="farah://slothsoft@savegame/schema/editor/0.4" location="$PROJECT_DIR$/vendor/slothsoft/savegame/assets/schema/editor/0.4.xsd"/>
     <resource url="http://schema.slothsoft.net/amber/amberdata" location="$PROJECT_DIR$/vendor/slothsoft/amber/assets/schema/amberdata/0.1.xsd"/>
-    <resource url="http://schema.slothsoft.net/cron/instructions" location="$PROJECT_DIR$/vendor/slothsoft/cron/assets/schema/instructions/0.1.xsd"/>
     <resource url="http://schema.slothsoft.net/farah/dictionary" location="$PROJECT_DIR$/vendor/slothsoft/farah/assets/schema/dictionary/1.0.xsd"/>
     <resource url="http://schema.slothsoft.net/farah/module" location="$PROJECT_DIR$/vendor/slothsoft/farah/assets/schema/module/1.1.xsd"/>
     <resource url="http://schema.slothsoft.net/farah/sitemap" location="$PROJECT_DIR$/vendor/slothsoft/farah/assets/schema/sitemap/1.1.xsd"/>
@@ -22,6 +21,5 @@
     <resource url="http://symfony.com/schema/dic/services" location="$PROJECT_DIR$/vendor/symfony/dependency-injection/Loader/schema/dic/services/services-1.0.xsd"/>
     <resource url="http://www.w3.org/XML/1998/namespace" location="$PROJECT_DIR$/vendor/slothsoft/farah/assets/schema/xml/1.0.xsd"/>
     <resource url="https://phar.io/xml/manifest/1.0" location="$PROJECT_DIR$/vendor/phar-io/manifest/manifest.xsd"/>
-    <CATALOG_PROPERTIES>$PROJECT_DIR$/catalog.properties</CATALOG_PROPERTIES>
   </component>
 </project>

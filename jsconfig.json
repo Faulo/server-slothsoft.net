@@ -7,9 +7,6 @@
       "/slothsoft@chat/*": [
         "./vendor/slothsoft/chat/assets/*"
       ],
-      "/slothsoft@cron/*": [
-        "./vendor/slothsoft/cron/assets/*"
-      ],
       "/slothsoft@farah/*": [
         "./vendor/slothsoft/farah/assets/*"
       ],

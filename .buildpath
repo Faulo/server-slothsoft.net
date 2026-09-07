@@ -2,7 +2,6 @@
 <buildpath>
 	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-amber"/>
 	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-chat"/>
-	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-cron"/>
 	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-farah"/>
 	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-minecraft"/>
 	<buildpathentry combineaccessrules="false" kind="prj" path="/slothsoft-sse"/>

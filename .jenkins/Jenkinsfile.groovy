@@ -25,7 +25,9 @@ pipeline {
                                 junit 'report.xml'
                             }
                             stage ('Publish') {
-                                if (currentBuild.currentResult == 'SUCCESS') {
+                                if (env.BRANCH_NAME != 'main') {
+                                    echo "Skipping publication on branch ${env.BRANCH_NAME}."
+                                } else if (currentBuild.currentResult == 'SUCCESS') {
                                     exec 'php .jenkins/publish.php .deploy composer.json composer.lock assets src html'
 
                                     dir('.deploy') {

@@ -1,0 +1,11 @@
+services:
+  frontend:
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_password
+    secrets:
+      - source: slothsoft_mysql_root_v1
+        target: mysql_password
+
+secrets:
+  slothsoft_mysql_root_v1:
+    external: true

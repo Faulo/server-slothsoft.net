@@ -4,7 +4,9 @@ Shared instructions for coding agents. Project-specific information is kept in [
 
 ## Farah Module
 
-This project is a farah module. Its assets lie in `assets`.
+This project is a Farah module. Its module assets live in `assets/`, with `assets/manifest.xml` as the public entry point. Treat published asset paths, manifest identifiers, parameters, and stream names as public API. Preserve them unless the task explicitly permits a breaking release.
+
+Keep manifests, schemas, PHP registration code, fixtures, and documentation synchronized when the module contract changes. Test both lookup and the resolved result: a manifest entry existing is not sufficient if it produces the wrong stream, media type, transformation, or content.
 
 ## PHP
 

@@ -3,7 +3,6 @@ declare(strict_types = 1);
 
 namespace Slothsoft\Server\Slothsoft;
 
-use DOMDocument;
 use Slothsoft\Farah\Http\MessageFactory;
 use Slothsoft\Farah\RequestStrategy\LookupPageStrategy;
 use Slothsoft\FarahTesting\Module\AbstractTestCase;
@@ -21,7 +20,7 @@ final class IndexTest extends AbstractTestCase {
         
         $data = (string) $response->getBody();
         
-        $doc = new DOMDocument();
+        $doc = new \DOMDocument();
         $this->assertTrue($doc->loadXML($data));
     }
 }

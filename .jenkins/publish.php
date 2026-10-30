@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+declare(strict_types = 1);
 
 if ($argc < 3) {
     fwrite(STDERR, "Usage: php publish.php <destination> <path> [path ...]\n");
@@ -13,7 +13,7 @@ $destination = realpath($argv[1]);
 if ($workspace === false) {
     throw new RuntimeException('Could not resolve the workspace.');
 }
-if ($destination === false || !is_dir($destination)) {
+if ($destination === false || ! is_dir($destination)) {
     throw new InvalidArgumentException(sprintf('Destination directory does not exist: %s', $argv[1]));
 }
 if ($destination === dirname($destination)) {
@@ -28,34 +28,34 @@ $pathKey = static function (string $path): string {
 $isWithin = static function (string $path, string $directory) use ($pathKey): bool {
     $path = $pathKey(rtrim($path, '/\\'));
     $directory = $pathKey(rtrim($directory, '/\\'));
-
+    
     return $path === $directory || strpos($path, $directory . '/') === 0;
 };
 
 $remove = function (string $path) use (&$remove): void {
     if (is_link($path) || is_file($path)) {
-        if (!unlink($path)) {
+        if (! unlink($path)) {
             throw new RuntimeException(sprintf('Could not remove file: %s', $path));
         }
         return;
     }
-
-    if (!is_dir($path)) {
+    
+    if (! is_dir($path)) {
         return;
     }
-
+    
     $items = scandir($path);
     if ($items === false) {
         throw new RuntimeException(sprintf('Could not read directory: %s', $path));
     }
-
+    
     foreach ($items as $item) {
         if ($item !== '.' && $item !== '..') {
             $remove($path . DIRECTORY_SEPARATOR . $item);
         }
     }
-
-    if (!rmdir($path)) {
+    
+    if (! rmdir($path)) {
         throw new RuntimeException(sprintf('Could not remove directory: %s', $path));
     }
 };
@@ -64,7 +64,7 @@ $setOwnership = static function (string $path): void {
     if (PHP_OS_FAMILY === 'Windows') {
         return;
     }
-
+    
     @chown($path, 33);
     @chgrp($path, 33);
 };
@@ -72,35 +72,35 @@ $setOwnership = static function (string $path): void {
 $copy = function (string $source, string $target) use (&$copy, $setOwnership): void {
     if (is_link($source)) {
         $linkTarget = readlink($source);
-        if ($linkTarget === false || !symlink($linkTarget, $target)) {
+        if ($linkTarget === false || ! symlink($linkTarget, $target)) {
             throw new RuntimeException(sprintf('Could not copy symbolic link: %s', $source));
         }
         return;
     }
-
+    
     if (is_file($source)) {
-        if (!copy($source, $target)) {
+        if (! copy($source, $target)) {
             throw new RuntimeException(sprintf('Could not copy file: %s', $source));
         }
         @chmod($target, fileperms($source) & 0777);
         $setOwnership($target);
         return;
     }
-
-    if (!is_dir($source)) {
+    
+    if (! is_dir($source)) {
         throw new RuntimeException(sprintf('Unsupported source path: %s', $source));
     }
-
-    if (!mkdir($target, fileperms($source) & 0777, true) && !is_dir($target)) {
+    
+    if (! mkdir($target, fileperms($source) & 0777, true) && ! is_dir($target)) {
         throw new RuntimeException(sprintf('Could not create directory: %s', $target));
     }
     $setOwnership($target);
-
+    
     $items = scandir($source);
     if ($items === false) {
         throw new RuntimeException(sprintf('Could not read directory: %s', $source));
     }
-
+    
     foreach ($items as $item) {
         if ($item !== '.' && $item !== '..') {
             $copy(
@@ -115,7 +115,7 @@ $entries = [];
 foreach (array_slice($argv, 2) as $argument) {
     $relative = str_replace('\\', '/', trim($argument));
     $parts = explode('/', $relative);
-
+    
     if (
         $relative === ''
         || strpos($relative, '/') === 0
@@ -125,25 +125,25 @@ foreach (array_slice($argv, 2) as $argument) {
     ) {
         throw new InvalidArgumentException(sprintf('Publish paths must be workspace root entries: %s', $argument));
     }
-
+    
     $source = $workspace . DIRECTORY_SEPARATOR . $relative;
-    if (!file_exists($source) && !is_link($source)) {
+    if (! file_exists($source) && ! is_link($source)) {
         throw new InvalidArgumentException(sprintf('Source path does not exist: %s', $source));
     }
-
+    
     $resolvedSource = realpath($source);
-    if ($resolvedSource === false || !$isWithin($resolvedSource, $workspace)) {
+    if ($resolvedSource === false || ! $isWithin($resolvedSource, $workspace)) {
         throw new InvalidArgumentException(sprintf('Source path leaves the workspace: %s', $source));
     }
     if ($isWithin($resolvedSource, $destination)) {
         throw new InvalidArgumentException(sprintf('Source path is inside the destination: %s', $source));
     }
-
+    
     $key = $pathKey($relative);
     if (isset($entries[$key])) {
         throw new InvalidArgumentException(sprintf('Source path was supplied more than once: %s', $relative));
     }
-
+    
     $entries[$key] = [
         'name' => $relative,
         'source' => $source,
@@ -161,10 +161,10 @@ try {
         $staged[] = $entry;
         $copy($entry['source'], $stage);
     }
-
+    
     foreach ($staged as $entry) {
         $remove($entry['target']);
-        if (!rename($entry['stage'], $entry['target'])) {
+        if (! rename($entry['stage'], $entry['target'])) {
             throw new RuntimeException(sprintf('Could not publish path: %s', $entry['name']));
         }
     }

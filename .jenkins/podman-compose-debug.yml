@@ -1,8 +1,8 @@
 services:
-    frontend:
-        container_name: ${STACK_NAME}_frontend
-        image: faulo/farah:${PHP_VERSION}
-        volumes:
-            - ..:/var/www
-        ports:
-            - 8080:80
+  frontend:
+    container_name: ${STACK_NAME}_frontend
+    image: faulo/farah:${PHP_VERSION}
+    volumes:
+      - ..:/var/www
+    ports:
+      - 8080:80

@@ -34,10 +34,11 @@
     padding-inline-end: calc(var(--ff-unit) * 2);
 }
 
-.final-fantasy .ff-ui th {
-    font-size: calc(var(--ff-font-size) * 3);
-    line-height: 150%;
+.final-fantasy .ff-ui thead th {
     text-align: center;
+    vertical-align: middle;
+    /* NES color $28, used in the ROM's Black Mage sprite palette. */
+    color: #f8b800;
 }
 
 .final-fantasy .ff-reference {

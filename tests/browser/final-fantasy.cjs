@@ -123,9 +123,13 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
                         classOrder: portraits.map(face => Number(face.dataset.class)),
                         borderCollapse: tableStyle.borderCollapse,
                         numberAlignment: [...table.querySelectorAll('td.ff-number')].map(cell => getComputedStyle(cell).textAlign),
-                        headerStyles: [...table.querySelectorAll('th')].map(cell => {
+                        headerStyles: [...table.querySelectorAll('thead th')].map(cell => {
                             const style = getComputedStyle(cell);
-                            return [style.fontSize, style.lineHeight, style.textAlign];
+                            return [style.fontSize, style.lineHeight, style.textAlign, style.verticalAlign, style.color];
+                        }),
+                        nameStyles: [...table.querySelectorAll('tbody th')].map(cell => {
+                            const style = getComputedStyle(cell);
+                            return [style.fontSize, style.textAlign, style.color];
                         }),
                         columnGap: tableStyle.borderSpacing,
                         legendOffset: node.querySelector('legend') ? node.querySelector('legend').getBoundingClientRect().left - node.getBoundingClientRect().left : 0,
@@ -135,7 +139,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
                         inlineResists: [...node.querySelectorAll('.ff-resists li')].every(item => getComputedStyle(item).display === 'inline'),
                         themedCells: cells.every(cell => {
                             const style = getComputedStyle(cell);
-                            return style.fontFamily.includes('Final Fantasy I') && style.color === 'rgb(252, 252, 252)';
+                            return style.fontFamily.includes('Final Fantasy I') && style.color === (cell.matches('thead th') ? 'rgb(248, 184, 0)' : 'rgb(252, 252, 252)');
                         }),
                         outsideFont: getComputedStyle(node.closest('article')).fontFamily,
                         outsideBackground: getComputedStyle(node.closest('article')).backgroundColor
@@ -151,7 +155,10 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
                 assert.deepEqual(metrics.classOrder, [0, 6, 1, 7, 2, 8, 3, 9, 4, 10, 5, 11]);
                 assert.ok(metrics.numberAlignment.length > 0 && metrics.numberAlignment.every(alignment => alignment === 'right'));
                 for (const header of metrics.headerStyles) {
-                    assert.deepEqual(header, ['24px', '36px', 'center']);
+                    assert.deepEqual(header, ['16px', '24px', 'center', 'middle', 'rgb(248, 184, 0)']);
+                }
+                for (const name of metrics.nameStyles) {
+                    assert.deepEqual(name, ['16px', 'left', 'rgb(252, 252, 252)']);
                 }
                 assert.equal(metrics.columnGap, '0px');
                 assert.equal(metrics.borderCollapse, 'collapse');

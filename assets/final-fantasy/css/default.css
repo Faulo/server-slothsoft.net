@@ -119,7 +119,7 @@
 
 .final-fantasy .ff-equipment {
     display: grid;
-    grid-template-columns: repeat(2, minmax(12em, 1fr));
+    grid-template-columns: repeat(2, max-content);
     gap: 0 1em;
 }
 
@@ -136,6 +136,8 @@
 
 .final-fantasy .ff-item-picker select {
     box-sizing: border-box;
+    /* One ch of padding, two for the native dropdown arrow, plus both borders. */
+    width: calc(var(--ff-option-width) + 3ch + var(--ff-border) * 2);
     height: 1.5em;
     padding: 0 .5em;
     line-height: 1;

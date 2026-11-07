@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sf1="http://schema.slothsoft.net/final-fantasy/i" exclude-result-prefixes="sf1">
+<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sf1="http://schema.slothsoft.net/final-fantasy/i" xmlns:exsl="http://exslt.org/common" exclude-result-prefixes="sf1 exsl">
     <!-- D4-E1, retaining the unused E0 tile in the private-use area. -->
     <xsl:variable name="item-glyphs" select="'&#x1F5E1;&#x1F528;&#x1F52A;&#x1FA93;&#x1FA84;&#x1F962;&#x1F9BA;&#x26E8;&#x1FA96;&#x1F9E4;&#x1F48D;&#x1F455;&#xE0E0;&#x1F9F4;'" />
     <xsl:key name="classes" match="sf1:classes/sf1:class" use="@id" />
@@ -359,6 +359,39 @@
         <xsl:variable name="selected" select="@id" />
         <xsl:variable name="field" select="concat('equipment[', $character, '][', $kind, '][', @index, ']')" />
         <xsl:variable name="id" select="concat('ff-', $character, '-', $kind, '-', @index)" />
+        <xsl:variable name="options">
+            <option value="0">
+                <xsl:if test="$selected=0">
+                    <xsl:attribute name="selected">selected</xsl:attribute>
+                </xsl:if>
+            </option>
+            <xsl:for-each select="ancestor::sf1:final-fantasy/*[local-name()=$kind]/*">
+                <option aria-label="{@name}" class="ff-text" value="{@id}">
+                    <xsl:if test="@id=$selected">
+                        <xsl:attribute name="selected">selected</xsl:attribute>
+                    </xsl:if>
+                    <xsl:variable name="text">
+                        <xsl:choose>
+                            <xsl:when test="sf1:label">
+                                <xsl:apply-templates select="sf1:label/node()" mode="item-text" />
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="@name" />
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:variable>
+                    <xsl:value-of select="normalize-space($text)" />
+                </option>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="option-width">
+            <xsl:for-each select="exsl:node-set($options)/*">
+                <xsl:sort select="string-length(.)" data-type="number" order="descending" />
+                <xsl:if test="position()=1">
+                    <xsl:value-of select="string-length(.)" />
+                </xsl:if>
+            </xsl:for-each>
+        </xsl:variable>
         <div class="ff-slot">
             <input type="checkbox" class="ff-equipped" name="{$field}[equipped]" value="1"
                    aria-label="Equip {../../@name} {$kind} slot {@index+1}">
@@ -368,30 +401,12 @@
             </input>
             <span class="ff-item-picker">
                 <select name="{$field}[id]" id="{$id}" class="ff-text" aria-label="{../../@name} {$kind} slot {@index+1}">
-                    <option value="0">
-                        <xsl:if test="$selected=0">
-                            <xsl:attribute name="selected">selected</xsl:attribute>
-                        </xsl:if>
-                        Empty
-                    </option>
-                    <xsl:for-each select="ancestor::sf1:final-fantasy/*[local-name()=$kind]/*">
-                        <option aria-label="{@name}" class="ff-text" value="{@id}">
-                            <xsl:if test="@id=$selected">
-                                <xsl:attribute name="selected">selected</xsl:attribute>
-                            </xsl:if>
-                            <xsl:variable name="text">
-                                <xsl:choose>
-                                    <xsl:when test="sf1:label">
-                                        <xsl:apply-templates select="sf1:label/node()" mode="item-text" />
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:value-of select="@name" />
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                            </xsl:variable>
-                            <xsl:value-of select="normalize-space($text)" />
-                        </option>
-                    </xsl:for-each>
+                    <xsl:attribute name="style">
+                        <xsl:text>--ff-option-width: </xsl:text>
+                        <xsl:value-of select="$option-width" />
+                        <xsl:text>ch</xsl:text>
+                    </xsl:attribute>
+                    <xsl:copy-of select="$options" />
                 </select>
             </span>
         </div>

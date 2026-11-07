@@ -1,5 +1,6 @@
 // Run inside DDEV against a host configured with the private US ROM and save.
 const assert = require('node:assert/strict');
+const {readFile} = require('node:fs/promises');
 const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
 
 (async () => {
@@ -18,11 +19,39 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
             }
         };
         await loadSave(page);
+        const downloadSave = async () => {
+            const [download] = await Promise.all([
+                page.waitForEvent('download'),
+                page.getByRole('button', {name: 'Download edited save'}).click()
+            ]);
+            const chunks = [];
+            for await (const chunk of await download.createReadStream()) {
+                chunks.push(chunk);
+            }
+            return Buffer.concat(chunks);
+        };
+        assert.deepEqual(await downloadSave(), await readFile(process.env.FF_SAVE_PATH), 'An unchanged save must round-trip byte for byte');
+        const originalItem = await page.locator('#ff-0-weapons-0').inputValue();
+        const changedItem = originalItem === '40' ? '1' : '40';
+        await page.locator('#ff-0-weapons-0').selectOption(changedItem);
+        const editedSave = await downloadSave();
+        await page.locator('#ff-save').setInputFiles({name: 'edited.sav', mimeType: 'application/octet-stream', buffer: editedSave});
+        await Promise.all([page.waitForNavigation(), page.getByRole('button', {name: 'Load save'}).click()]);
+        assert.equal(await page.locator('#ff-0-weapons-0').inputValue(), changedItem, 'Downloaded equipment changes must survive re-upload');
+        await loadSave(page);
         assert.equal(await page.locator('.ff-combobox, .ff-choice').count(), 0);
         assert.equal(await page.locator('.ff-item-picker select:visible').count(), 32);
         assert.equal(await page.locator('.ff-selected-icon, script[src*="item-icons"]').count(), 0);
         assert.equal(await page.locator('.ff-character legend .ff-class-sprite[aria-label]').count(), 4);
         assert.equal(await page.locator('.ff-slot > label').count(), 0);
+        const optionWidths = await page.locator('.ff-item-picker select').evaluateAll(selects => selects.map(select => {
+            const longest = Math.max(...[...select.options].map(option => [...option.text].length));
+            return [select.style.getPropertyValue('--ff-option-width'), `${longest}ch`, select.options[0].text];
+        }));
+        optionWidths.forEach(([actual, expected, empty]) => {
+            assert.equal(actual, expected);
+            assert.equal(empty, '');
+        });
         const gridShapes = await page.locator('.ff-equipment').evaluateAll(grids => grids.map(grid => {
             const slots = [...grid.children].map(slot => slot.getBoundingClientRect());
             return [slots.length, new Set(slots.map(slot => slot.left)).size, new Set(slots.map(slot => slot.top)).size,

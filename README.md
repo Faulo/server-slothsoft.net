@@ -14,7 +14,9 @@ The editor gives each character a framed name-and-class-sprite legend. Weapons
 and armor each use a 2×2 grid, with native checkboxes rendered as E markers that
 dim when unequipped. Slot numbers remain in accessible control names only.
 Equipment rows are 24px tall at 2×, including the select borders, with no vertical
-gap between rows. Item glyphs appear only within the option text.
+gap between rows. Item glyphs appear only within the option text. Select widths
+use the longest rendered option in ch, plus padding, borders and space for the
+native dropdown arrow. The empty equipment option has no text.
 Narrow screens scroll each equipment grid horizontally to keep item names legible.
 
 Reference tables show every class sprite, dimming classes without equip/learn
@@ -59,6 +61,12 @@ configured path must be inside the web container. The package itself has no
 default ROM location. ROMs and root-level saves are ignored by Git; do not put
 them in public document roots or assets. Without a readable ROM the overview
 remains accessible and reference/editor pages display an unavailable message.
+
+Production stores the private ROM at `/var/www/data/private/final-fantasy-i-us.nes`
+in the persistent `slothsoft_farah-data` volume. Set `FF1_ROM_PATH` on the
+`slothsoft_frontend` service to that path, including when redeploying the stack.
+The web document root is `/var/www/html`; the ROM is outside it and is not part
+of the application image or Jenkins publication.
 
 The new package is required as `dev-main` through its Git repository until a
 release is published. The site also explicitly allows `slothsoft/savegame:dev-main`

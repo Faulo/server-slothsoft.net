@@ -139,7 +139,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
                         inlineResists: [...node.querySelectorAll('.ff-resists li')].every(item => getComputedStyle(item).display === 'inline'),
                         themedCells: cells.every(cell => {
                             const style = getComputedStyle(cell);
-                            return style.fontFamily.includes('Final Fantasy I') && style.color === (cell.matches('thead th') ? 'rgb(248, 184, 0)' : 'rgb(252, 252, 252)');
+                            return style.fontFamily.includes('Final Fantasy I') && style.color === (cell.matches('thead th, a') ? 'rgb(248, 184, 0)' : 'rgb(252, 252, 252)');
                         }),
                         outsideFont: getComputedStyle(node.closest('article')).fontFamily,
                         outsideBackground: getComputedStyle(node.closest('article')).backgroundColor
@@ -181,6 +181,30 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
                     return [css.fontSize, css.lineHeight, css.borderTopWidth, sprite.width, sprite.height];
                 });
                 assert.deepEqual(scaled, ['8px', '12px', '1px', '16px', '12px']);
+            }
+            const link = references.locator('.ff-ui a').first();
+            if (await link.count()) {
+                const linkStyle = () => link.evaluate(node => {
+                    const css = getComputedStyle(node);
+                    return {color: css.color, decoration: css.textDecorationLine, outline: css.outlineStyle, focus: node.matches(':focus-visible')};
+                });
+                assert.equal((await linkStyle()).color, 'rgb(248, 184, 0)');
+                assert.equal((await linkStyle()).decoration, 'none');
+                await link.focus();
+                await references.keyboard.press('Tab');
+                await references.keyboard.press('Shift+Tab');
+                const focused = await linkStyle();
+                assert.equal(focused.focus, true);
+                assert.equal(focused.color, 'rgb(0, 252, 252)');
+                assert.equal(focused.outline, 'solid');
+                assert.equal(focused.decoration, 'none');
+                await references.locator('h2').first().click();
+                await link.hover();
+                assert.equal((await linkStyle()).color, 'rgb(0, 252, 252)');
+                await references.mouse.down();
+                assert.equal((await linkStyle()).color, 'rgb(252, 252, 252)');
+                await references.mouse.move(0, 0);
+                await references.mouse.up();
             }
         }
         if (process.env.FF_REFERENCE_SCREENSHOT) {

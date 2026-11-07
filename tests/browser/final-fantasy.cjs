@@ -78,13 +78,14 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
             const nodes = [panel, ...panel.querySelectorAll('label, input, button, select, option')];
             return nodes.map(node => {
                 const css = getComputedStyle(node);
-                return {font: css.fontFamily, size: css.fontSize, color: css.color, background: css.backgroundColor};
+                return {font: css.fontFamily, size: css.fontSize, color: css.color, background: css.backgroundColor, shadow: css.textShadow};
             });
         });
         for (const css of controlStyles) {
             assert.match(css.font, /Final Fantasy I/);
             assert.equal(css.size, '16px');
             assert.equal(css.color, 'rgb(252, 252, 252)');
+            assert.equal(css.shadow, 'rgb(0, 0, 0) 2px 2px 0px');
         }
         await page.setViewportSize({width: 390, height: 1000});
         assert.ok((await select.boundingBox()).width >= 128, 'The narrow editor must leave room for item names');
@@ -139,8 +140,10 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
                         inlineResists: [...node.querySelectorAll('.ff-resists li')].every(item => getComputedStyle(item).display === 'inline'),
                         themedCells: cells.every(cell => {
                             const style = getComputedStyle(cell);
-                            return style.fontFamily.includes('Final Fantasy I') && style.color === (cell.matches('thead th, a') ? 'rgb(248, 184, 0)' : 'rgb(252, 252, 252)');
+                            const color = cell.matches('thead th') ? 'rgb(164, 228, 252)' : cell.matches('a') ? 'rgb(248, 184, 0)' : 'rgb(252, 252, 252)';
+                            return style.fontFamily.includes('Final Fantasy I') && style.color === color && style.textShadow === 'rgb(0, 0, 0) 2px 2px 0px';
                         }),
+                        unexpectedShadows: cells.filter(cell => getComputedStyle(cell).textShadow !== 'rgb(0, 0, 0) 2px 2px 0px').map(cell => [cell.tagName, cell.className, getComputedStyle(cell).textShadow]),
                         outsideFont: getComputedStyle(node.closest('article')).fontFamily,
                         outsideBackground: getComputedStyle(node.closest('article')).backgroundColor
                     };
@@ -155,7 +158,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
                 assert.deepEqual(metrics.classOrder, [0, 6, 1, 7, 2, 8, 3, 9, 4, 10, 5, 11]);
                 assert.ok(metrics.numberAlignment.length > 0 && metrics.numberAlignment.every(alignment => alignment === 'right'));
                 for (const header of metrics.headerStyles) {
-                    assert.deepEqual(header, ['16px', '24px', 'center', 'middle', 'rgb(248, 184, 0)']);
+                    assert.deepEqual(header, ['16px', '24px', 'center', 'middle', 'rgb(164, 228, 252)']);
                 }
                 for (const name of metrics.nameStyles) {
                     assert.deepEqual(name, ['16px', 'left', 'rgb(252, 252, 252)']);
@@ -167,7 +170,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
                     assert.ok(parseFloat(metrics.fieldsetWidth) <= metrics.tableWidth + metrics.fieldsetInset + 1);
                 }
                 assert.equal(metrics.inlineResists, true);
-                assert.equal(metrics.themedCells, true);
+                assert.equal(metrics.themedCells, true, JSON.stringify(metrics.unexpectedShadows));
                 assert.doesNotMatch(metrics.outsideFont, /Final Fantasy I/);
                 assert.notEqual(metrics.outsideBackground, 'rgb(0, 0, 252)');
                 assert.equal(await references.locator('article.final-fantasy > header').count(), 0);
@@ -178,9 +181,9 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
                 const scaled = await panel.evaluate(node => {
                     const css = getComputedStyle(node);
                     const sprite = getComputedStyle(node.querySelector('.ff-class-sprite'));
-                    return [css.fontSize, css.lineHeight, css.borderTopWidth, sprite.width, sprite.height];
+                    return [css.fontSize, css.lineHeight, css.borderTopWidth, sprite.width, sprite.height, css.textShadow, getComputedStyle(node.querySelector('tbody th')).textShadow];
                 });
-                assert.deepEqual(scaled, ['8px', '12px', '1px', '16px', '12px']);
+                assert.deepEqual(scaled, ['8px', '12px', '1px', '16px', '12px', 'rgb(0, 0, 0) 1px 1px 0px', 'rgb(0, 0, 0) 1px 1px 0px']);
             }
             const link = references.locator('.ff-ui a').first();
             if (await link.count()) {

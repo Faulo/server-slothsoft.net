@@ -30,7 +30,7 @@ transforms the package's XML data API directly; no package HTML pages are embedd
 The package CSS uses base sizes of 8px for text and 24px for sprite height; the
 site sets `--ff-scale: 2` on each panel for 16px text and 48px sprite height.
 Column headings keep the panel's 2× (16px) text, centered horizontally and
-vertically, with gold from the Black Mage sprite palette (NES $28). Body name
+vertically, in pale blue (NES $31) to distinguish them from gold links. Body name
 cells remain white and left-aligned.
 The Classes column uses 2× sprites cropped to their top half, arranged in one
 24px row of all 12 faces to match the text's line height, pairing each class with

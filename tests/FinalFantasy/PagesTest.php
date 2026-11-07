@@ -28,8 +28,14 @@ final class PagesTest extends TestCase {
         self::assertSame((float) ($rows * 12), $xpath->evaluate('count(//h:span[@class="ff-class-sprite"])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:span[@class="ff-classes"][count(h:span) != 12])'));
         if ($path === '/FinalFantasy/I/Weapons/') {
+            self::assertSame('217', $xpath->evaluate('string(//h:tr[@id="weapon-1"]/h:th/h:span[@class="ff-item-icon"]/@data-glyph)'));
+            self::assertStringNotContainsString('[nunchuck]', $document->textContent);
             self::assertSame('false', $xpath->evaluate('string(//h:tr[h:th[contains(., "Rapier")]]//h:span[@data-class="4"]/@data-allowed)'));
             self::assertSame('true', $xpath->evaluate('string(//h:tr[h:th[contains(., "Rapier")]]//h:span[@data-class="0"]/@data-allowed)'));
+        }
+        if ($path === '/FinalFantasy/I/Armor/') {
+            self::assertGreaterThan(0, $xpath->evaluate('count(//h:tr/h:th/h:span[@class="ff-item-icon"])'));
+            self::assertStringNotContainsString('[armor]', $document->textContent);
         }
         self::assertSame(5.0, $xpath->evaluate('count(//h:nav[@aria-label="Final Fantasy"]/h:a)'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:a[not(starts-with(@href, "/FinalFantasy/I/"))])'));
@@ -74,6 +80,9 @@ final class PagesTest extends TestCase {
         self::assertSame(1.0, $xpath->evaluate('count(//h:p[@role="alert"])'));
         self::assertSame(32.0, $xpath->evaluate('count(//h:select)'));
         self::assertSame(1312.0, $xpath->evaluate('count(//h:select/h:option)'));
+        self::assertSame(32.0, $xpath->evaluate('count(//h:span[contains(@class, "ff-selected-icon")])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:select/h:option[contains(., "[")])'));
+        self::assertSame('217', $xpath->evaluate('string(//h:select[@id="ff-0-weapons-0"]/h:option[@value="1"]/@data-icon)'));
     }
     
     public function testMissingRomStillProvidesOverviewAndUsefulMessage(): void {

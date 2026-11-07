@@ -30,15 +30,15 @@ final class PagesTest extends TestCase {
         self::assertSame((float) $rows, $xpath->evaluate('count(//h:tbody/h:tr/h:th[@class="ff-text"])'));
         self::assertSame((float) ($rows * 12), $xpath->evaluate('count(//h:span[@class="ff-class-tooltip"]/h:span[@class="ff-text"])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:tbody//h:a[contains(@href, "#spell-")][@class!="ff-text"])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:tbody/h:tr/h:th/*)'));
         if ($path === '/FinalFantasy/I/Weapons/') {
-            self::assertSame('217', $xpath->evaluate('string(//h:tr[@id="weapon-1"]/h:th/h:span[@class="ff-item-icon"]/@data-glyph)'));
-            self::assertSame("\u{1F962}", $xpath->evaluate('string(//h:tr[@id="weapon-1"]/h:th/h:span[@class="ff-item-icon"])'));
+            self::assertSame("Wooden\u{1F962}", $xpath->evaluate('string(//h:tr[@id="weapon-1"]/h:th)'));
             self::assertStringNotContainsString('[nunchuck]', $document->textContent);
             self::assertSame('false', $xpath->evaluate('string(//h:tr[h:th[contains(., "Rapier")]]//h:span[@data-class="4"]/@data-allowed)'));
             self::assertSame('true', $xpath->evaluate('string(//h:tr[h:th[contains(., "Rapier")]]//h:span[@data-class="0"]/@data-allowed)'));
         }
         if ($path === '/FinalFantasy/I/Armor/') {
-            self::assertGreaterThan(0, $xpath->evaluate('count(//h:tr/h:th/h:span[@class="ff-item-icon"])'));
+            self::assertStringContainsString("\u{1F9BA}", $document->textContent);
             self::assertStringNotContainsString('[armor]', $document->textContent);
         }
         self::assertSame(5.0, $xpath->evaluate('count(//h:nav[@aria-label="Final Fantasy"]/h:a)'));

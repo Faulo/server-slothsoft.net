@@ -41,7 +41,10 @@ final class PagesTest extends TestCase {
             self::assertStringContainsString("\u{1F9BA}", $document->textContent);
             self::assertStringNotContainsString('[armor]', $document->textContent);
         }
-        self::assertSame(5.0, $xpath->evaluate('count(//h:nav[@aria-label="Final Fantasy"]/h:a)'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]/h:header | //h:nav[@aria-label="Final Fantasy"])'));
+        self::assertSame($rows ? 1.0 : 0.0, $xpath->evaluate('count(//h:div[contains(@class, "ff-ui")]/h:table)'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:article[contains(@class, "ff-ui")])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:form[not(contains(@class, "ff-ui"))])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:a[not(starts-with(@href, "/FinalFantasy/I/"))])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:form[@action!="/FinalFantasy/I/SaveEditor/"])'));
     }

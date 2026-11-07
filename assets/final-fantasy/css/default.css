@@ -1,0 +1,81 @@
+.final-fantasy {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.final-fantasy .ff-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1rem;
+}
+
+.final-fantasy .ff-cards > a {
+    display: block;
+    padding: 1rem;
+}
+
+.final-fantasy .ff-ui {
+    --ff-scale: 2;
+    margin-block: 1em;
+}
+
+.final-fantasy .ff-upload {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1em;
+}
+
+.final-fantasy .ff-party {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 32em), 1fr));
+    gap: 1em;
+}
+
+.final-fantasy .ff-slot {
+    display: grid;
+    grid-template-columns: 6em minmax(0, 1fr) auto;
+    align-items: center;
+    gap: .5em;
+    margin-block: .5em;
+}
+
+.final-fantasy .ff-item-picker {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 1em;
+    align-items: center;
+    gap: .5em;
+}
+
+.final-fantasy .ff-equipped {
+    white-space: nowrap;
+}
+
+.final-fantasy .ff-error {
+    font-weight: bold;
+}
+
+.final-fantasy .ff-note {
+    margin-top: 1em;
+}
+
+@media (max-width: 42rem) {
+    .final-fantasy .ff-slot {
+        grid-template-columns: 1fr auto;
+    }
+
+    .final-fantasy .ff-slot > label:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .final-fantasy .ff-equipped {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .final-fantasy .ff-item-picker {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+}

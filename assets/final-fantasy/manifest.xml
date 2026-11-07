@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<assets xmlns="http://schema.slothsoft.net/farah/module" version="1.1">
+    <resource-directory name="xsl" type="application/xslt+xml" />
+    <resource-directory name="css" type="text/css" />
+    <resource-directory name="js" type="application/javascript" />
+    <fragment name="html">
+        <fragment name="home">
+            <use-template ref="/final-fantasy/xsl/page" />
+            <use-document ref="//slothsoft@final-fantasy/i/api/data?view=home" name="data" />
+            <link-stylesheet ref="//slothsoft@final-fantasy/i/css/default" />
+            <link-stylesheet ref="/final-fantasy/css/default" />
+        </fragment>
+        <fragment name="editor">
+            <use-template ref="/final-fantasy/xsl/page" />
+            <use-document ref="//slothsoft@final-fantasy/i/api/data?view=editor" name="data" />
+            <link-stylesheet ref="//slothsoft@final-fantasy/i/css/default" />
+            <link-stylesheet ref="/final-fantasy/css/default" />
+            <link-script ref="/final-fantasy/js/item-icons" />
+        </fragment>
+        <fragment name="weapons">
+            <use-template ref="/final-fantasy/xsl/page" />
+            <use-document ref="//slothsoft@final-fantasy/i/api/data?view=weapons" name="data" />
+            <link-stylesheet ref="//slothsoft@final-fantasy/i/css/default" />
+            <link-stylesheet ref="/final-fantasy/css/default" />
+        </fragment>
+        <fragment name="armor">
+            <use-template ref="/final-fantasy/xsl/page" />
+            <use-document ref="//slothsoft@final-fantasy/i/api/data?view=armor" name="data" />
+            <link-stylesheet ref="//slothsoft@final-fantasy/i/css/default" />
+            <link-stylesheet ref="/final-fantasy/css/default" />
+        </fragment>
+        <fragment name="spells">
+            <use-template ref="/final-fantasy/xsl/page" />
+            <use-document ref="//slothsoft@final-fantasy/i/api/data?view=spells" name="data" />
+            <link-stylesheet ref="//slothsoft@final-fantasy/i/css/default" />
+            <link-stylesheet ref="/final-fantasy/css/default" />
+        </fragment>
+    </fragment>
+</assets>

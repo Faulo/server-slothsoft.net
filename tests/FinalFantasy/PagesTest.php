@@ -103,7 +103,12 @@ final class PagesTest extends TestCase {
         self::assertSame(1.0, $xpath->evaluate('count(//h:p[@role="alert"])'));
         self::assertSame(32.0, $xpath->evaluate('count(//h:select[@class="ff-text"])'));
         self::assertSame(1280.0, $xpath->evaluate('count(//h:select/h:option[@class="ff-text"][@aria-label])'));
-        self::assertSame(8.0, $xpath->evaluate('count(//h:legend/h:span[@class="ff-text"])'));
+        self::assertSame(4.0, $xpath->evaluate('count(//h:legend//h:span[@class="ff-text"])'));
+        self::assertSame(4.0, $xpath->evaluate('count(//h:legend//h:span[@class="ff-class-sprite"][@role="img"][@aria-label])'));
+        self::assertSame(8.0, $xpath->evaluate('count(//h:div[@class="ff-equipment"][count(h:div[@class="ff-slot"])=4])'));
+        self::assertSame(32.0, $xpath->evaluate('count(//h:input[@class="ff-equipped"][@type="checkbox"][@aria-label])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:div[@class="ff-slot"]/h:label)'));
+        self::assertSame(32.0, $xpath->evaluate('count(//h:select[@class="ff-text"][@aria-label])'));
         self::assertStringContainsString("\u{1F962}", $xpath->evaluate('string(//h:select[@id="ff-0-weapons-0"]/h:option[@value="1"])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:script[contains(@src, "equipment-picker")])'));
         self::assertSame(1312.0, $xpath->evaluate('count(//h:select/h:option)'));

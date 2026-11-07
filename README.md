@@ -10,6 +10,11 @@ Farah module. It provides `/FinalFantasy/I/SaveEditor/`, `/FinalFantasy/I/Weapon
 weapons, armor and equipped flags; reference pages read names, stats and class
 permissions from the original US ROM through savegame XML specifications.
 
+The editor gives each character a framed name-and-class-sprite legend. Weapons
+and armor each use a 2×2 grid, with native checkboxes rendered as E markers that
+dim when unequipped. Slot numbers remain in accessible control names only.
+Narrow screens scroll each equipment grid horizontally to keep item names legible.
+
 Reference tables show every class sprite, dimming classes without equip/learn
 permission. The package generates transparent eight-pose PNG sheets from the ROM
 at `/slothsoft@final-fantasy/i/gfx/class?class=0` (class IDs 0–11); CSS selects the

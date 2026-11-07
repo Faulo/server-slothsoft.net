@@ -20,6 +20,32 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         await loadSave(page);
         assert.equal(await page.locator('.ff-combobox, .ff-choice').count(), 0);
         assert.equal(await page.locator('.ff-item-picker select:visible').count(), 32);
+        assert.equal(await page.locator('.ff-character legend .ff-class-sprite[aria-label]').count(), 4);
+        assert.equal(await page.locator('.ff-slot > label').count(), 0);
+        const gridShapes = await page.locator('.ff-equipment').evaluateAll(grids => grids.map(grid => {
+            const slots = [...grid.children].map(slot => slot.getBoundingClientRect());
+            return [slots.length, new Set(slots.map(slot => slot.left)).size, new Set(slots.map(slot => slot.top)).size];
+        }));
+        assert.equal(gridShapes.length, 8);
+        gridShapes.forEach(shape => assert.deepEqual(shape, [4, 2, 2]));
+        const legendStyles = await page.locator('.ff-character').evaluateAll(characters => characters.map(character => {
+            const legend = character.querySelector('legend');
+            const css = getComputedStyle(legend);
+            return [legend.getBoundingClientRect().left - character.getBoundingClientRect().left, css.borderTopWidth, css.borderTopStyle];
+        }));
+        legendStyles.forEach(style => assert.deepEqual(style, [0, '2px', 'solid']));
+        const equipped = page.locator('.ff-equipped').first();
+        const originallyEquipped = await equipped.isChecked();
+        await equipped.uncheck();
+        const markerStyle = () => equipped.evaluate(node => {
+            const css = getComputedStyle(node, '::after');
+            return [css.content, css.opacity, new FormData(node.form).get(node.name)];
+        });
+        assert.deepEqual(await markerStyle(), ['"E"', '0.25', null]);
+        await equipped.focus();
+        await equipped.press('Space');
+        assert.deepEqual(await markerStyle(), ['"E"', '1', '1']);
+        await equipped.setChecked(originallyEquipped);
         const select = page.locator('#ff-0-weapons-0');
         assert.equal(await select.locator('option').count(), 41);
         await select.selectOption('1');
@@ -72,6 +98,10 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         await loadSave(fallback, false);
         assert.equal(await fallback.locator('#ff-0-weapons-0').isVisible(), true);
         assert.equal(await fallback.locator('#ff-0-weapons-0 option[value="1"]').textContent(), 'Wooden\u{1F962}');
+        const fallbackEquipped = fallback.locator('.ff-equipped').first();
+        await fallbackEquipped.uncheck();
+        await fallbackEquipped.press('Space');
+        assert.equal(await fallbackEquipped.isChecked(), true);
         // Site copy must stay outside the themed panels; every panel control uses FF typography.
         assert.equal(await page.locator('article.final-fantasy > header').count(), 0);
         const controlStyles = await page.locator('.ff-ui').first().evaluate(panel => {
@@ -90,6 +120,13 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         await page.setViewportSize({width: 390, height: 1000});
         assert.ok((await select.boundingBox()).width >= 128, 'The narrow editor must leave room for item names');
         assert.equal(await page.evaluate(() => document.body.scrollWidth <= innerWidth), true);
+        assert.equal(await page.locator('.ff-equipment').first().evaluate(grid => {
+            const slots = [...grid.children].map(slot => slot.getBoundingClientRect());
+            return new Set(slots.map(slot => slot.left)).size === 2 && new Set(slots.map(slot => slot.top)).size === 2;
+        }), true);
+        if (process.env.FF_MOBILE_SCREENSHOT) {
+            await page.locator('.ff-editor').screenshot({path: process.env.FF_MOBILE_SCREENSHOT});
+        }
         const references = await browser.newPage({ignoreHTTPSErrors: true, viewport: {width: 1500, height: 1000}});
         for (const route of ['Weapons', 'Armor', 'Spells']) {
             await references.goto(new URL(`../${route}/`, url).href);

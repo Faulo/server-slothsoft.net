@@ -313,7 +313,7 @@
     </xsl:template>
     <xsl:template name="editor">
         <h2>Equipment editor</h2>
-        <p>Edit the four weapon and armor slots of each party member. Check Equipped to use an item; leave it unchecked to carry it.</p>
+        <p>Edit the four weapon and armor slots of each party member. Toggle E to equip an item; a dim E means it is only being carried.</p>
         <xsl:if test="sf1:error">
             <p class="ff-error" role="alert">
                 <xsl:value-of select="sf1:error" />
@@ -332,14 +332,20 @@
                 <input type="hidden" name="ff-source" value="{@source}" />
                 <div class="ff-party">
                     <xsl:for-each select="sf1:character">
-                        <fieldset class="ff-panel">
+                        <fieldset class="ff-panel ff-character">
                             <legend>
-                                <span class="ff-text">
-                                    <xsl:value-of select="@name" />
-                                </span>
-                                <xsl:text> - </xsl:text>
-                                <span class="ff-text">
-                                    <xsl:value-of select="key('classes', @class)/@name" />
+                                <span class="ff-character-heading">
+                                    <span class="ff-text">
+                                        <xsl:value-of select="@name" />
+                                    </span>
+                                    <span class="ff-class-sprite" data-class="{@class}" role="img"
+                                          aria-label="{key('classes', @class)/@name}">
+                                        <xsl:attribute name="style">
+                                            <xsl:text>background-image: url('/slothsoft@final-fantasy/i/gfx/class?class=</xsl:text>
+                                            <xsl:value-of select="@class" />
+                                            <xsl:text>')</xsl:text>
+                                        </xsl:attribute>
+                                    </span>
                                 </span>
                             </legend>
                             <xsl:for-each select="sf1:weapons | sf1:armor">
@@ -349,7 +355,11 @@
                                         <xsl:otherwise>Armor</xsl:otherwise>
                                     </xsl:choose>
                                 </h3>
-                                <xsl:apply-templates select="sf1:slot" />
+                                <div class="ff-equipment-scroll">
+                                    <div class="ff-equipment">
+                                        <xsl:apply-templates select="sf1:slot" />
+                                    </div>
+                                </div>
                             </xsl:for-each>
                         </fieldset>
                     </xsl:for-each>
@@ -368,11 +378,14 @@
         <xsl:variable name="field" select="concat('equipment[', $character, '][', $kind, '][', @index, ']')" />
         <xsl:variable name="id" select="concat('ff-', $character, '-', $kind, '-', @index)" />
         <div class="ff-slot">
-            <label for="{$id}">Slot
-                <xsl:value-of select="@index+1" />
-            </label>
+            <input type="checkbox" class="ff-equipped" name="{$field}[equipped]" value="1"
+                   aria-label="Equip {../../@name} {$kind} slot {@index+1}">
+                <xsl:if test="@equipped=1">
+                    <xsl:attribute name="checked">checked</xsl:attribute>
+                </xsl:if>
+            </input>
             <span class="ff-item-picker">
-                <select name="{$field}[id]" id="{$id}" class="ff-text">
+                <select name="{$field}[id]" id="{$id}" class="ff-text" aria-label="{../../@name} {$kind} slot {@index+1}">
                     <option value="0">
                         <xsl:if test="$selected=0">
                             <xsl:attribute name="selected">selected</xsl:attribute>
@@ -404,14 +417,6 @@
                     <xsl:with-param name="class" select="'ff-item-icon ff-selected-icon'" />
                 </xsl:call-template>
             </span>
-            <label class="ff-equipped">
-                <input type="checkbox" name="{$field}[equipped]" value="1">
-                    <xsl:if test="@equipped=1">
-                        <xsl:attribute name="checked">checked</xsl:attribute>
-                    </xsl:if>
-                </input>
-                Equipped
-            </label>
         </div>
     </xsl:template>
 </xsl:stylesheet>

@@ -25,6 +25,12 @@ final class PagesTest extends TestCase {
         $xpath->registerNamespace('h', 'http://www.w3.org/1999/xhtml');
         self::assertStringContainsString($expected, $document->textContent);
         self::assertSame((float) $rows, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:tbody/h:tr)'));
+        self::assertSame((float) ($rows * 12), $xpath->evaluate('count(//h:span[@class="ff-class-sprite"])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:span[@class="ff-classes"][count(h:span) != 12])'));
+        if ($path === '/FinalFantasy/I/Weapons/') {
+            self::assertSame('false', $xpath->evaluate('string(//h:tr[h:th[contains(., "Rapier")]]//h:span[@data-class="4"]/@data-allowed)'));
+            self::assertSame('true', $xpath->evaluate('string(//h:tr[h:th[contains(., "Rapier")]]//h:span[@data-class="0"]/@data-allowed)'));
+        }
         self::assertSame(5.0, $xpath->evaluate('count(//h:nav[@aria-label="Final Fantasy"]/h:a)'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:a[not(starts-with(@href, "/FinalFantasy/I/"))])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:form[@action!="/FinalFantasy/I/SaveEditor/"])'));

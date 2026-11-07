@@ -10,6 +10,11 @@ Farah module. It provides `/FinalFantasy/I/SaveEditor/`, `/FinalFantasy/I/Weapon
 weapons, armor and equipped flags; reference pages read names, stats and class
 permissions from the original US ROM through savegame XML specifications.
 
+Reference tables show every class sprite, dimming classes without equip/learn
+permission. The package generates transparent eight-pose PNG sheets from the ROM
+at `/slothsoft@final-fantasy/i/gfx/class?class=0` (class IDs 0–11); CSS selects the
+standing pose. No extracted graphics are bundled with either project.
+
 The package owns the extraction specifications, domain schema, save editing,
 PHP classes and presentation assets. This project owns routing, site layout
 and private ROM configuration. The domain namespace is

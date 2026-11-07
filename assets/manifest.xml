@@ -9,12 +9,6 @@
     <manifest-directory name="whatthehell" />
     <manifest-directory name="vct" />
     <manifest-directory name="blueprince" />
-    <manifest-directory name="final-fantasy" />
-    <directory name="schema" path="final-fantasy">
-        <directory name="final-fantasy" path="schema">
-            <resource name="1.0" path="1.0.xsd" type="application/xml" />
-        </directory>
-    </directory>
 
     <resource-directory name="dictionary" type="application/xml" />
     <resource-directory name="dictionary-new" type="application/xml" />
@@ -137,23 +131,23 @@
         <fragment name="final-fantasy">
             <fragment name="home">
                 <import ref="/api/default" />
-                <use-document ref="/final-fantasy/html/home" name="content" />
+                <use-document ref="//slothsoft@final-fantasy/i/html/home" name="content" />
             </fragment>
             <fragment name="editor">
                 <import ref="/api/default" />
-                <use-document ref="/final-fantasy/html/editor" name="content" />
+                <use-document ref="//slothsoft@final-fantasy/i/html/editor" name="content" />
             </fragment>
             <fragment name="weapons">
                 <import ref="/api/default" />
-                <use-document ref="/final-fantasy/html/weapons" name="content" />
+                <use-document ref="//slothsoft@final-fantasy/i/html/weapons" name="content" />
             </fragment>
             <fragment name="armor">
                 <import ref="/api/default" />
-                <use-document ref="/final-fantasy/html/armor" name="content" />
+                <use-document ref="//slothsoft@final-fantasy/i/html/armor" name="content" />
             </fragment>
             <fragment name="spells">
                 <import ref="/api/default" />
-                <use-document ref="/final-fantasy/html/spells" name="content" />
+                <use-document ref="//slothsoft@final-fantasy/i/html/spells" name="content" />
             </fragment>
         </fragment>
         <fragment name="ambermoon">

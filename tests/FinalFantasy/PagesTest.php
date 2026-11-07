@@ -8,6 +8,7 @@ use DOMXPath;
 use GuzzleHttp\Psr7\ServerRequest;
 use PHPUnit\Framework\TestCase;
 use Slothsoft\Farah\RequestStrategy\LookupPageStrategy;
+use Slothsoft\FinalFantasy\Configuration;
 
 /** @runTestsInSeparateProcesses */
 final class PagesTest extends TestCase {
@@ -68,7 +69,7 @@ final class PagesTest extends TestCase {
     }
     
     public function testMissingRomStillProvidesOverviewAndUsefulMessage(): void {
-        putenv('FF1_ROM_PATH=/nonexistent/final-fantasy.nes');
+        Configuration::setRomPath('i', '/nonexistent/final-fantasy.nes');
         $_SERVER['REQUEST_METHOD'] = 'GET';
         $response = (new LookupPageStrategy())->process(new ServerRequest('GET', 'https://slothsoft.net/FinalFantasy/Weapons/'));
         self::assertSame(200, $response->getStatusCode());

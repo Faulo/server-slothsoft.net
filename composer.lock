@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0836a777a2d8f3ab2b5c4ab05d30b96f",
+    "content-hash": "aba3924c602aea734f63ba8f722d6b56",
     "packages": [
         {
             "name": "guzzlehttp/psr7",
@@ -1587,6 +1587,88 @@
             "published-time": "2026-10-26T01:32:19+00:00"
         },
         {
+            "name": "slothsoft/final-fantasy",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Faulo/slothsoft-final-fantasy.git",
+                "reference": "45271ea5412307d007559f7005d4ad4b5f025010"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-final-fantasy/zipball/45271ea5412307d007559f7005d4ad4b5f025010",
+                "reference": "45271ea5412307d007559f7005d4ad4b5f025010",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-xsl": "*",
+                "php": "^8.2",
+                "slothsoft/core": "^1.15.1",
+                "slothsoft/farah": "^1.29.7",
+                "slothsoft/savegame": "^1.5.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^2.3.4",
+                "phpunit/phpunit": "~9.6.34",
+                "slothsoft/farah-testing": "^1.3.14",
+                "symfony/polyfill-php83": "^1.31"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Slothsoft\\FinalFantasy\\": "src"
+                },
+                "files": [
+                    "src/bootstrap.php"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Slothsoft\\FinalFantasy\\": "tests"
+                }
+            },
+            "archive": {
+                "exclude": [
+                    "*.nes",
+                    "*.sav",
+                    "*.srm",
+                    "/config.local.php",
+                    "/.ddev",
+                    "/.data",
+                    "/.cache",
+                    "/.log"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Schulz",
+                    "email": "info.slothsoft@gmail.com"
+                }
+            ],
+            "description": "A Farah module for Final Fantasy game data and save editing.",
+            "keywords": [
+                "farah-module",
+                "final-fantasy",
+                "savegame",
+                "slothsoft"
+            ],
+            "support": {
+                "source": "https://github.com/Faulo/slothsoft-final-fantasy/tree/main",
+                "issues": "https://github.com/Faulo/slothsoft-final-fantasy/issues"
+            },
+            "time": "2026-11-07T14:34:32+00:00"
+        },
+        {
             "name": "slothsoft/minecraft",
             "version": "1.0.9",
             "source": {
@@ -1645,7 +1727,7 @@
         },
         {
             "name": "slothsoft/savegame",
-            "version": "dev-main",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-savegame.git",
@@ -1672,7 +1754,6 @@
             "suggest": {
                 "ext-ds": "*"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1706,10 +1787,10 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-savegame/issues",
-                "source": "https://github.com/Faulo/slothsoft-savegame/tree/main"
+                "source": "https://github.com/Faulo/slothsoft-savegame/tree/1.5.0"
             },
             "time": "2026-11-07T13:53:35+00:00",
-            "published-time": "2026-11-07T13:53:41+00:00"
+            "published-time": "2026-11-07T14:05:32+00:00"
         },
         {
             "name": "slothsoft/sse",
@@ -5709,7 +5790,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "slothsoft/savegame": 20
+        "slothsoft/final-fantasy": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

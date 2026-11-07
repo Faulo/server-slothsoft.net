@@ -9,7 +9,10 @@ use Slothsoft\Core\ServerEnvironment;
 use Slothsoft\Farah\Dictionary;
 use Slothsoft\Farah\Kernel;
 use Slothsoft\Farah\Module\Module;
+use Slothsoft\FinalFantasy\Configuration;
 $root = dirname(__DIR__);
+
+Configuration::setRomPath('i', getenv('FF1_ROM_PATH') ?: $root . '/Final Fantasy (USA).nes');
 
 ServerEnvironment::setRootDirectory($root);
 ServerEnvironment::setCacheDirectory($root . DIRECTORY_SEPARATOR . 'cache');

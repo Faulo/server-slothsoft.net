@@ -17,11 +17,13 @@
         }
     },
     "require": {
+        "ext-dom": "*",
         "slothsoft/amber": "1.1.17",
         "slothsoft/chat": "^1.1.7",
         "slothsoft/core": "^1.15.1",
         "slothsoft/farah": "^1.29.7",
         "slothsoft/minecraft": "^1.0.9",
+        "slothsoft/savegame": "dev-main",
         "slothsoft/sse": "^1.11.3"
     },
     "require-dev": {

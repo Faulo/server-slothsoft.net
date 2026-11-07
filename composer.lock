@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea9e420eae752a639f1199c1c16112c8",
+    "content-hash": "0836a777a2d8f3ab2b5c4ab05d30b96f",
     "packages": [
         {
             "name": "guzzlehttp/psr7",
@@ -1645,16 +1645,16 @@
         },
         {
             "name": "slothsoft/savegame",
-            "version": "1.4.0",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-savegame.git",
-                "reference": "f1823c3c5716192c2b3841236e1bcbd331f4fabd"
+                "reference": "d081204b1ff667214aea04f90d3cb3d2f82a194b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-savegame/zipball/f1823c3c5716192c2b3841236e1bcbd331f4fabd",
-                "reference": "f1823c3c5716192c2b3841236e1bcbd331f4fabd",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-savegame/zipball/d081204b1ff667214aea04f90d3cb3d2f82a194b",
+                "reference": "d081204b1ff667214aea04f90d3cb3d2f82a194b",
                 "shasum": ""
             },
             "require": {
@@ -1672,10 +1672,11 @@
             "suggest": {
                 "ext-ds": "*"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.4.x-dev"
+                    "dev-main": "1.5.x-dev"
                 }
             },
             "autoload": {
@@ -1705,10 +1706,10 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-savegame/issues",
-                "source": "https://github.com/Faulo/slothsoft-savegame/tree/1.4.0"
+                "source": "https://github.com/Faulo/slothsoft-savegame/tree/main"
             },
-            "time": "2026-11-07T11:36:15+00:00",
-            "published-time": "2026-11-07T11:44:16+00:00"
+            "time": "2026-11-07T13:53:35+00:00",
+            "published-time": "2026-11-07T13:53:41+00:00"
         },
         {
             "name": "slothsoft/sse",
@@ -5707,10 +5708,14 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "slothsoft/savegame": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {},
+    "platform": {
+        "ext-dom": "*"
+    },
     "platform-dev": {},
     "platform-overrides": {
         "php": "8.2"

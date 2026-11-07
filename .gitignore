@@ -18,3 +18,7 @@ $RECYCLE.BIN/
 /data/
 /cache/
 /log/
+
+# Local game inputs (never distributed with the application)
+/*.nes
+/*.sav

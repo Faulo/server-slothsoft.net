@@ -3,10 +3,10 @@ slothsoft.net
 
 ## Final Fantasy (NES, US)
 
-The `/FinalFantasy/` section embeds the reusable
+The `/FinalFantasy/I/` section embeds the reusable
 [`slothsoft/final-fantasy`](https://github.com/Faulo/slothsoft-final-fantasy)
-Farah module. It provides `/FinalFantasy/SaveEditor/`, `/FinalFantasy/Weapons/`,
-`/FinalFantasy/Armor/` and `/FinalFantasy/Spells/`. The editor currently edits
+Farah module. It provides `/FinalFantasy/I/SaveEditor/`, `/FinalFantasy/I/Weapons/`,
+`/FinalFantasy/I/Armor/` and `/FinalFantasy/I/Spells/`. The editor currently edits
 weapons, armor and equipped flags; reference pages read names, stats and class
 permissions from the original US ROM through savegame XML specifications.
 

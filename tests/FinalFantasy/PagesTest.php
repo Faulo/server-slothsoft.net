@@ -26,15 +26,17 @@ final class PagesTest extends TestCase {
         self::assertStringContainsString($expected, $document->textContent);
         self::assertSame((float) $rows, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:tbody/h:tr)'));
         self::assertSame(5.0, $xpath->evaluate('count(//h:nav[@aria-label="Final Fantasy"]/h:a)'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:a[not(starts-with(@href, "/FinalFantasy/I/"))])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:form[@action!="/FinalFantasy/I/SaveEditor/"])'));
     }
     
     public function pages(): array {
         return [
-            ['/FinalFantasy/', 'The equipment and magic', 0],
-            ['/FinalFantasy/SaveEditor/', 'NES battery save', 0],
-            ['/FinalFantasy/Weapons/', 'Falchon', 40],
-            ['/FinalFantasy/Armor/', 'Ribbon', 40],
-            ['/FinalFantasy/Spells/', 'NUKE', 64]
+            ['/FinalFantasy/I/', 'The equipment and magic', 0],
+            ['/FinalFantasy/I/SaveEditor/', 'NES battery save', 0],
+            ['/FinalFantasy/I/Weapons/', 'Falchon', 40],
+            ['/FinalFantasy/I/Armor/', 'Ribbon', 40],
+            ['/FinalFantasy/I/Spells/', 'NUKE', 64]
         ];
     }
     
@@ -43,7 +45,7 @@ final class PagesTest extends TestCase {
         $source = $this->source();
         $_SERVER['REQUEST_METHOD'] = 'POST';
         $_POST = ['ff-action' => 'download', 'ff-source' => base64_encode($source), 'equipment' => $this->emptyEquipment()];
-        $request = (new ServerRequest('POST', 'https://slothsoft.net/FinalFantasy/SaveEditor/'))->withParsedBody($_POST);
+        $request = (new ServerRequest('POST', 'https://slothsoft.net/FinalFantasy/I/SaveEditor/'))->withParsedBody($_POST);
         $response = (new LookupPageStrategy())->process($request);
         self::assertSame(200, $response->getStatusCode());
         self::assertStringContainsString('attachment;', $response->getHeaderLine('content-disposition'));
@@ -58,7 +60,7 @@ final class PagesTest extends TestCase {
         $equipment[0]['weapons'][0]['id'] = '41';
         $_SERVER['REQUEST_METHOD'] = 'POST';
         $_POST = ['ff-action' => 'download', 'ff-source' => base64_encode($this->source()), 'equipment' => $equipment];
-        $response = (new LookupPageStrategy())->process((new ServerRequest('POST', 'https://slothsoft.net/FinalFantasy/SaveEditor/'))->withParsedBody($_POST));
+        $response = (new LookupPageStrategy())->process((new ServerRequest('POST', 'https://slothsoft.net/FinalFantasy/I/SaveEditor/'))->withParsedBody($_POST));
         $document = new DOMDocument();
         self::assertTrue($document->loadXML((string) $response->getBody()));
         $xpath = new DOMXPath($document);
@@ -71,7 +73,7 @@ final class PagesTest extends TestCase {
     public function testMissingRomStillProvidesOverviewAndUsefulMessage(): void {
         Configuration::setRomPath('i', '/nonexistent/final-fantasy.nes');
         $_SERVER['REQUEST_METHOD'] = 'GET';
-        $response = (new LookupPageStrategy())->process(new ServerRequest('GET', 'https://slothsoft.net/FinalFantasy/Weapons/'));
+        $response = (new LookupPageStrategy())->process(new ServerRequest('GET', 'https://slothsoft.net/FinalFantasy/I/Weapons/'));
         self::assertSame(200, $response->getStatusCode());
         self::assertStringContainsString('Game data is currently unavailable.', (string) $response->getBody());
         self::assertStringNotContainsString('/nonexistent/', (string) $response->getBody());

@@ -112,9 +112,9 @@ final class PagesTest extends TestCase {
         self::assertStringContainsString("\u{1F962}", $xpath->evaluate('string(//h:select[@id="ff-0-weapons-0"]/h:option[@value="1"])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:script[contains(@src, "equipment-picker")])'));
         self::assertSame(1312.0, $xpath->evaluate('count(//h:select/h:option)'));
-        self::assertSame(32.0, $xpath->evaluate('count(//h:span[contains(@class, "ff-selected-icon")])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:span[contains(@class, "ff-selected-icon")])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:select/h:option[contains(., "[")])'));
-        self::assertSame('217', $xpath->evaluate('string(//h:select[@id="ff-0-weapons-0"]/h:option[@value="1"]/@data-icon)'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:script[contains(@src, "item-icons")])'));
     }
     
     public function testMissingRomStillProvidesOverviewAndUsefulMessage(): void {

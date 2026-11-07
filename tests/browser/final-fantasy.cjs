@@ -20,14 +20,17 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         await loadSave(page);
         assert.equal(await page.locator('.ff-combobox, .ff-choice').count(), 0);
         assert.equal(await page.locator('.ff-item-picker select:visible').count(), 32);
+        assert.equal(await page.locator('.ff-selected-icon, script[src*="item-icons"]').count(), 0);
         assert.equal(await page.locator('.ff-character legend .ff-class-sprite[aria-label]').count(), 4);
         assert.equal(await page.locator('.ff-slot > label').count(), 0);
         const gridShapes = await page.locator('.ff-equipment').evaluateAll(grids => grids.map(grid => {
             const slots = [...grid.children].map(slot => slot.getBoundingClientRect());
-            return [slots.length, new Set(slots.map(slot => slot.left)).size, new Set(slots.map(slot => slot.top)).size];
+            return [slots.length, new Set(slots.map(slot => slot.left)).size, new Set(slots.map(slot => slot.top)).size,
+                slots.every(slot => slot.height === 24), slots[2].top - slots[0].top,
+                [...grid.querySelectorAll('select')].every(select => select.getBoundingClientRect().height === 24)];
         }));
         assert.equal(gridShapes.length, 8);
-        gridShapes.forEach(shape => assert.deepEqual(shape, [4, 2, 2]));
+        gridShapes.forEach(shape => assert.deepEqual(shape, [4, 2, 2, true, 24, true]));
         const legendStyles = await page.locator('.ff-character').evaluateAll(characters => characters.map(character => {
             const legend = character.querySelector('legend');
             const css = getComputedStyle(legend);

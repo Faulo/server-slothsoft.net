@@ -215,23 +215,6 @@
     <xsl:template match="sf1:icon" mode="item-text">
         <xsl:value-of select="substring($item-glyphs, @glyph - 211, 1)" />
     </xsl:template>
-    <xsl:template name="item-icon">
-        <xsl:param name="glyph" />
-        <xsl:param name="label" />
-        <xsl:param name="class" select="'ff-item-icon'" />
-        <span class="{$class}" data-glyph="{$glyph}" role="img" aria-label="{$label}" title="{$label}">
-            <xsl:choose>
-                <xsl:when test="string($glyph) != ''">
-                    <xsl:attribute name="style">
-                        <xsl:value-of select="concat('--ff-icon-index: ', $glyph - 212)" />
-                    </xsl:attribute>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:attribute name="hidden">hidden</xsl:attribute>
-                </xsl:otherwise>
-            </xsl:choose>
-        </span>
-    </xsl:template>
     <xsl:template name="classes">
         <xsl:variable name="allowed" select="sf1:class-ref/@id" />
         <xsl:variable name="verb">
@@ -374,7 +357,6 @@
         <xsl:variable name="kind" select="local-name(..)" />
         <xsl:variable name="character" select="../../@index" />
         <xsl:variable name="selected" select="@id" />
-        <xsl:variable name="selected-icon" select="ancestor::sf1:final-fantasy/*[local-name()=$kind]/*[@id=$selected]/sf1:label/sf1:icon[1]" />
         <xsl:variable name="field" select="concat('equipment[', $character, '][', $kind, '][', @index, ']')" />
         <xsl:variable name="id" select="concat('ff-', $character, '-', $kind, '-', @index)" />
         <div class="ff-slot">
@@ -393,7 +375,7 @@
                         Empty
                     </option>
                     <xsl:for-each select="ancestor::sf1:final-fantasy/*[local-name()=$kind]/*">
-                        <option aria-label="{@name}" class="ff-text" value="{@id}" data-icon="{sf1:label/sf1:icon[1]/@glyph}" data-icon-label="{sf1:label/sf1:icon[1]/@label}">
+                        <option aria-label="{@name}" class="ff-text" value="{@id}">
                             <xsl:if test="@id=$selected">
                                 <xsl:attribute name="selected">selected</xsl:attribute>
                             </xsl:if>
@@ -411,11 +393,6 @@
                         </option>
                     </xsl:for-each>
                 </select>
-                <xsl:call-template name="item-icon">
-                    <xsl:with-param name="glyph" select="$selected-icon/@glyph" />
-                    <xsl:with-param name="label" select="$selected-icon/@label" />
-                    <xsl:with-param name="class" select="'ff-item-icon ff-selected-icon'" />
-                </xsl:call-template>
             </span>
         </div>
     </xsl:template>

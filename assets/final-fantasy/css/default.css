@@ -120,7 +120,7 @@
 .final-fantasy .ff-equipment {
     display: grid;
     grid-template-columns: repeat(2, minmax(12em, 1fr));
-    gap: .5em 1em;
+    gap: 0 1em;
 }
 
 .final-fantasy .ff-slot {
@@ -131,10 +131,14 @@
 }
 
 .final-fantasy .ff-item-picker {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 1em;
-    align-items: center;
-    gap: .5em;
+    min-width: 0;
+}
+
+.final-fantasy .ff-item-picker select {
+    box-sizing: border-box;
+    height: 1.5em;
+    padding: 0 .5em;
+    line-height: 1;
 }
 
 .final-fantasy .ff-ui input.ff-equipped {

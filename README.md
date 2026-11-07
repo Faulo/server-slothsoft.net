@@ -13,14 +13,15 @@ permissions from the original US ROM through savegame XML specifications.
 The editor gives each character a framed name-and-class-sprite legend. Weapons
 and armor each use a 2×2 grid, with native checkboxes rendered as E markers that
 dim when unequipped. Slot numbers remain in accessible control names only.
+Equipment rows are 24px tall at 2×, including the select borders, with no vertical
+gap between rows. Item glyphs appear only within the option text.
 Narrow screens scroll each equipment grid horizontally to keep item names legible.
 
 Reference tables show every class sprite, dimming classes without equip/learn
 permission. The package generates transparent eight-pose PNG sheets from the ROM
 at `/slothsoft@final-fantasy/i/gfx/class?class=0` (class IDs 0–11); CSS selects the
 standing pose. No extracted graphics are bundled with either project.
-Item names are plain Unicode text. Standalone selected-item previews use
-`/slothsoft@final-fantasy/i/gfx/items`.
+Item names are plain Unicode text; the editor does not add separate icon previews.
 ROM/save names use the original menu font, generated as TrueType at
 `/slothsoft@final-fantasy/i/font`. This includes equipment options, character and
 class names, spells and cast links. All text and controls inside FF panels use
@@ -30,7 +31,7 @@ the site styling.
 The package owns the extraction specifications, domain schema, save editing,
 PHP classes, utility CSS and standalone HTML examples. This project owns the
 actual HTML in `assets/final-fantasy/xsl/page.xsl`, its links and form actions,
-page layout CSS, preview JavaScript and private ROM configuration. Its manifest
+page layout CSS and private ROM configuration. Its manifest
 transforms the package's XML data API directly; no package HTML pages are embedded.
 The package CSS uses base sizes of 8px for text and 24px for sprite height; the
 site sets `--ff-scale: 2` on each panel for 16px text and 48px sprite height.

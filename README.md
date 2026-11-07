@@ -16,6 +16,9 @@ at `/slothsoft@final-fantasy/i/gfx/class?class=0` (class IDs 0–11); CSS select
 standing pose. No extracted graphics are bundled with either project.
 Item-name glyphs are served by `/slothsoft@final-fantasy/i/gfx/items` and rendered
 inline in reference tables, with a selected-item icon beside each equipment picker.
+ROM/save names use the original menu font, generated as TrueType at
+`/slothsoft@final-fantasy/i/font`. This includes equipment options, character and
+class names, spells and cast links. Interface labels retain the site typography.
 
 The package owns the extraction specifications, domain schema, save editing,
 PHP classes and presentation assets. This project owns routing, site layout

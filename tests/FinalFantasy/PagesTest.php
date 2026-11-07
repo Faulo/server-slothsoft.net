@@ -86,6 +86,7 @@ final class PagesTest extends TestCase {
         self::assertSame(1280.0, $xpath->evaluate('count(//h:select/h:option[@class="ff-text"][@aria-label])'));
         self::assertSame(8.0, $xpath->evaluate('count(//h:legend/h:span[@class="ff-text"])'));
         self::assertStringContainsString("\u{E0D9}", $xpath->evaluate('string(//h:select[@id="ff-0-weapons-0"]/h:option[@value="1"])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:script[contains(@src, "equipment-picker")])'));
         self::assertSame(1312.0, $xpath->evaluate('count(//h:select/h:option)'));
         self::assertSame(32.0, $xpath->evaluate('count(//h:span[contains(@class, "ff-selected-icon")])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:select/h:option[contains(., "[")])'));

@@ -39,7 +39,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
             const aliases = [[0x1F5E1, 0xD4], [0x1F528, 0xD5], [0x1F52A, 0xD6],
                 [0x1FA93, 0xD7], [0x1FA84, 0xD8], [0x1F962, 0xD9],
                 [0x1F9BA, 0xDA], [0x26E8, 0xDB], [0x1FA96, 0xDC],
-                [0x1F9E4, 0xDD], [0x1F48D, 0xDE], [0x1F455, 0xDF], [0x1F9F4, 0xE1]];
+                [0x1F9E4, 0xDD], [0x1F48D, 0xDE], [0x1F455, 0xDF], [0x1F9F4, 0xE1], [0x2E, 0xC0]];
             const canvas = document.createElement('canvas');
             canvas.width = canvas.height = 64;
             const context = canvas.getContext('2d');
@@ -93,37 +93,88 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         for (const route of ['Weapons', 'Armor', 'Spells']) {
             await references.goto(new URL(`../${route}/`, url).href);
             await references.evaluate(() => document.fonts.ready);
-            const panel = references.locator('.ff-ui.ff-table');
-            const metrics = await panel.evaluate(node => {
-                const css = getComputedStyle(node);
-                const sprite = getComputedStyle(node.querySelector('.ff-class-sprite'));
-                const cells = [...node.querySelectorAll('th, td, caption, a')];
-                return {
-                    size: css.fontSize, line: css.lineHeight, border: css.borderTopWidth,
-                    spriteWidth: sprite.width, spriteHeight: sprite.height,
-                    themedCells: cells.every(cell => {
-                        const style = getComputedStyle(cell);
-                        return style.fontFamily.includes('Final Fantasy I') && style.color === 'rgb(252, 252, 252)';
-                    }),
-                    outsideFont: getComputedStyle(node.closest('article')).fontFamily,
-                    outsideBackground: getComputedStyle(node.closest('article')).backgroundColor
-                };
-            });
-            assert.deepEqual([metrics.size, metrics.line, metrics.border, metrics.spriteWidth, metrics.spriteHeight],
-                ['16px', '24px', '2px', '32px', '48px']);
-            assert.equal(metrics.themedCells, true);
-            assert.doesNotMatch(metrics.outsideFont, /Final Fantasy I/);
-            assert.notEqual(metrics.outsideBackground, 'rgb(0, 0, 252)');
-            assert.equal(await references.locator('article.final-fantasy > header').count(), 0);
-            assert.equal(await references.locator('tbody th > *').count(), 0);
-            // Verify that changing the multiplier scales font, sprite and borders together.
-            await panel.evaluate(node => node.style.setProperty('--ff-scale', '1'));
-            const scaled = await panel.evaluate(node => {
-                const css = getComputedStyle(node);
-                const sprite = getComputedStyle(node.querySelector('.ff-class-sprite'));
-                return [css.fontSize, css.lineHeight, css.borderTopWidth, sprite.width, sprite.height];
-            });
-            assert.deepEqual(scaled, ['8px', '12px', '1px', '16px', '24px']);
+            assert.equal(await references.evaluate(() => document.body.scrollWidth <= innerWidth), true);
+            const panels = references.locator('.ff-ui.ff-table, .ff-ui.ff-reference');
+            const legends = await references.locator('.ff-reference > legend').allTextContents();
+            assert.deepEqual(legends, route === 'Armor' ? ['Body', 'Shield', 'Helmet', 'Gloves'] : route === 'Spells' ? ['White Magic', 'Black Magic'] : []);
+            if (process.env.FF_REFERENCE_SCREENSHOT) {
+                await references.screenshot({path: process.env.FF_REFERENCE_SCREENSHOT.replace(/\.png$/, `-${route}.png`), fullPage: true});
+            }
+            for (const panel of await panels.all()) {
+                const metrics = await panel.evaluate(node => {
+                    const css = getComputedStyle(node);
+                    const sprite = getComputedStyle(node.querySelector('.ff-class-sprite'));
+                    const cells = [...node.querySelectorAll('th, td, caption, a')];
+                    const table = node.querySelector('table');
+                    const tableStyle = getComputedStyle(table);
+                    const portraits = [...node.querySelector('.ff-classes').children];
+                    return {
+                        size: css.fontSize, line: css.lineHeight, border: css.borderTopWidth,
+                        spriteWidth: sprite.width, spriteHeight: sprite.height,
+                        spriteBackground: sprite.backgroundSize,
+                        classesHeight: node.querySelector('.ff-classes').getBoundingClientRect().height,
+                        portraitRows: new Set(portraits.map(face => face.getBoundingClientRect().top)).size,
+                        portraitCount: portraits.length,
+                        cellPadding: [...table.querySelectorAll('th, td')].every(cell => {
+                            const style = getComputedStyle(cell);
+                            return style.paddingTop === '0px' && style.paddingBottom === '0px' && style.paddingLeft === '0px'
+                                && style.paddingRight === (cell.matches(':last-child') ? '0px' : '32px');
+                        }),
+                        classOrder: portraits.map(face => Number(face.dataset.class)),
+                        borderCollapse: tableStyle.borderCollapse,
+                        numberAlignment: [...table.querySelectorAll('td.ff-number')].map(cell => getComputedStyle(cell).textAlign),
+                        headerStyles: [...table.querySelectorAll('th')].map(cell => {
+                            const style = getComputedStyle(cell);
+                            return [style.fontSize, style.lineHeight, style.textAlign];
+                        }),
+                        columnGap: tableStyle.borderSpacing,
+                        legendOffset: node.querySelector('legend') ? node.querySelector('legend').getBoundingClientRect().left - node.getBoundingClientRect().left : 0,
+                        fieldsetWidth: node.matches('fieldset') ? css.width : null,
+                        tableWidth: table.getBoundingClientRect().width,
+                        fieldsetInset: parseFloat(css.paddingLeft) + parseFloat(css.paddingRight) + parseFloat(css.borderLeftWidth) + parseFloat(css.borderRightWidth),
+                        inlineResists: [...node.querySelectorAll('.ff-resists li')].every(item => getComputedStyle(item).display === 'inline'),
+                        themedCells: cells.every(cell => {
+                            const style = getComputedStyle(cell);
+                            return style.fontFamily.includes('Final Fantasy I') && style.color === 'rgb(252, 252, 252)';
+                        }),
+                        outsideFont: getComputedStyle(node.closest('article')).fontFamily,
+                        outsideBackground: getComputedStyle(node.closest('article')).backgroundColor
+                    };
+                });
+                assert.deepEqual([metrics.size, metrics.line, metrics.border, metrics.spriteWidth, metrics.spriteHeight],
+                    ['16px', '24px', '2px', '32px', '24px']);
+                assert.equal(metrics.spriteBackground, '256px 48px');
+                assert.equal(metrics.classesHeight, 24);
+                assert.equal(metrics.portraitRows, 1);
+                assert.equal(metrics.portraitCount, 12);
+                assert.equal(metrics.cellPadding, true);
+                assert.deepEqual(metrics.classOrder, [0, 6, 1, 7, 2, 8, 3, 9, 4, 10, 5, 11]);
+                assert.ok(metrics.numberAlignment.length > 0 && metrics.numberAlignment.every(alignment => alignment === 'right'));
+                for (const header of metrics.headerStyles) {
+                    assert.deepEqual(header, ['24px', '36px', 'center']);
+                }
+                assert.equal(metrics.columnGap, '0px');
+                assert.equal(metrics.borderCollapse, 'collapse');
+                assert.equal(metrics.legendOffset, 0);
+                if (metrics.fieldsetWidth !== null) {
+                    assert.ok(parseFloat(metrics.fieldsetWidth) <= metrics.tableWidth + metrics.fieldsetInset + 1);
+                }
+                assert.equal(metrics.inlineResists, true);
+                assert.equal(metrics.themedCells, true);
+                assert.doesNotMatch(metrics.outsideFont, /Final Fantasy I/);
+                assert.notEqual(metrics.outsideBackground, 'rgb(0, 0, 252)');
+                assert.equal(await references.locator('article.final-fantasy > header').count(), 0);
+                assert.equal(await references.locator('.ff-class-tooltip, .ff-classes [tabindex]').count(), 0);
+                assert.equal(await references.locator('tbody th > *').count(), 0);
+                // Panel typography, cropped portraits and borders scale together.
+                await panel.evaluate(node => node.style.setProperty('--ff-scale', '1'));
+                const scaled = await panel.evaluate(node => {
+                    const css = getComputedStyle(node);
+                    const sprite = getComputedStyle(node.querySelector('.ff-class-sprite'));
+                    return [css.fontSize, css.lineHeight, css.borderTopWidth, sprite.width, sprite.height];
+                });
+                assert.deepEqual(scaled, ['8px', '12px', '1px', '16px', '12px']);
+            }
         }
         if (process.env.FF_REFERENCE_SCREENSHOT) {
             await references.goto(new URL('../Weapons/', url).href);

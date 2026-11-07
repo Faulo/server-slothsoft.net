@@ -29,6 +29,16 @@ page layout CSS, preview JavaScript and private ROM configuration. Its manifest
 transforms the package's XML data API directly; no package HTML pages are embedded.
 The package CSS uses base sizes of 8px for text and 24px for sprite height; the
 site sets `--ff-scale: 2` on each panel for 16px text and 48px sprite height.
+Table header cells use 3× (24px) text and centered alignment.
+The Classes column uses 2× sprites cropped to their top half, arranged in one
+24px row of all 12 faces to match the text's line height, pairing each class with
+its upgrade. Tables fit their content, with no vertical cell padding, 2ch spacing
+between columns, continuous row borders, and right-aligned numbers. Spells are
+grouped into White Magic and Black Magic fieldsets; armor into Body, Shield,
+Helmet, and Gloves fieldsets. Each group fits its table and has an aligned bordered
+label like the game menu. Class portraits have accessible labels without tooltips.
+Multiword column headings wrap at spaces. Resistances appear inline, separated by
+the ROM font's comma glyph; the combined resistance reads "Poison, Stone".
 Borders and spacing scale with the font, and line height is 150%. The domain namespace is
 `http://schema.slothsoft.net/final-fantasy/i`; the schema is published at
 `farah://slothsoft@final-fantasy/schema/i/1.0`.

@@ -1,6 +1,7 @@
 .final-fantasy {
     min-width: 0;
     max-width: 100%;
+    contain: inline-size;
 }
 
 .final-fantasy .ff-cards {
@@ -17,6 +18,74 @@
 .final-fantasy .ff-ui {
     --ff-scale: 2;
     margin-block: 1em;
+}
+
+.final-fantasy .ff-ui table {
+    width: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.final-fantasy .ff-ui th, .final-fantasy .ff-ui td {
+    padding: 0;
+}
+
+.final-fantasy .ff-ui th:not(:last-child), .final-fantasy .ff-ui td:not(:last-child) {
+    padding-inline-end: calc(var(--ff-unit) * 2);
+}
+
+.final-fantasy .ff-ui th {
+    font-size: calc(var(--ff-font-size) * 3);
+    line-height: 150%;
+    text-align: center;
+}
+
+.final-fantasy .ff-reference {
+    min-inline-size: 0;
+    width: fit-content;
+    margin-inline: 0;
+}
+
+.final-fantasy .ff-reference > legend {
+    border: var(--ff-border) solid var(--ff-white);
+    border-radius: calc(var(--ff-border) * 2);
+    box-shadow: inset 0 0 0 var(--ff-border) var(--ff-gray),
+    0 0 0 var(--ff-border) var(--ff-gray),
+    0 0 0 calc(var(--ff-border) * 2) var(--ff-black);
+    padding: .5em;
+    margin-inline-start: calc(-1em - var(--ff-border));
+}
+
+.final-fantasy .ff-reference .ff-table {
+    overflow-x: auto;
+}
+
+.final-fantasy .ff-resists {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.final-fantasy .ff-resists li {
+    display: inline;
+}
+
+.final-fantasy .ff-resists li + li::before {
+    content: ', ';
+}
+
+.final-fantasy .ff-ui td.ff-number {
+    text-align: right;
+}
+
+.final-fantasy .ff-classes {
+    grid-template-columns: repeat(12, var(--ff-sprite-width));
+    row-gap: 0;
+    vertical-align: top;
+}
+
+.final-fantasy .ff-classes .ff-class-sprite {
+    height: calc(var(--ff-sprite-height) / 2);
 }
 
 .final-fantasy .ff-upload {

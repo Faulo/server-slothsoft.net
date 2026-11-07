@@ -13,7 +13,7 @@ use Slothsoft\FinalFantasy\Configuration;
 /** @runTestsInSeparateProcesses */
 final class PagesTest extends TestCase {
     /** @dataProvider pages */
-    public function testPublicPage(string $path, string $expected, int $rows): void {
+    public function testPublicPage(string $path, string $expected, int $rows, int $tables): void {
         $this->requireRom();
         $_SERVER['REQUEST_METHOD'] = 'GET';
         $response = (new LookupPageStrategy())->process(new ServerRequest('GET', 'https://slothsoft.net' . $path));
@@ -28,7 +28,7 @@ final class PagesTest extends TestCase {
         self::assertSame((float) ($rows * 12), $xpath->evaluate('count(//h:span[@class="ff-class-sprite"])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:span[@class="ff-classes"][count(h:span) != 12])'));
         self::assertSame((float) $rows, $xpath->evaluate('count(//h:tbody/h:tr/h:th[@class="ff-text"])'));
-        self::assertSame((float) ($rows * 12), $xpath->evaluate('count(//h:span[@class="ff-class-tooltip"]/h:span[@class="ff-text"])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:span[@class="ff-class-tooltip"] | //h:span[@class="ff-classes"]//*[@tabindex])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:tbody//h:a[contains(@href, "#spell-")][@class!="ff-text"])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:tbody/h:tr/h:th/*)'));
         if ($path === '/FinalFantasy/I/Weapons/') {
@@ -40,9 +40,25 @@ final class PagesTest extends TestCase {
         if ($path === '/FinalFantasy/I/Armor/') {
             self::assertStringContainsString("\u{1F9BA}", $document->textContent);
             self::assertStringNotContainsString('[armor]', $document->textContent);
+            foreach (['Body', 'Shield', 'Helmet', 'Gloves'] as $label) {
+                self::assertSame(1.0, $xpath->evaluate('count(//h:fieldset[h:legend="' . $label . '"]/h:div/h:table)'));
+            }
+        }
+        if ($path === '/FinalFantasy/I/Spells/') {
+            foreach (['White Magic', 'Black Magic'] as $label) {
+                self::assertSame(32.0, $xpath->evaluate('count(//h:fieldset[h:legend="' . $label . '"]//h:tbody/h:tr)'));
+            }
+            self::assertSame('CURE', $xpath->evaluate('string(//h:fieldset[h:legend="White Magic"]//h:tbody/h:tr[1]/h:th)'));
+            self::assertSame('FIRE', $xpath->evaluate('string(//h:fieldset[h:legend="Black Magic"]//h:tbody/h:tr[1]/h:th)'));
+        }
+        if ($rows) {
+            $classes = $xpath->query('(//h:span[@class="ff-classes"])[1]/h:span[@data-class]/@data-class');
+            self::assertSame(['0', '6', '1', '7', '2', '8', '3', '9', '4', '10', '5', '11'], array_map(static function ($node): string {
+                return $node->nodeValue;
+            }, iterator_to_array($classes)));
         }
         self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]/h:header | //h:nav[@aria-label="Final Fantasy"])'));
-        self::assertSame($rows ? 1.0 : 0.0, $xpath->evaluate('count(//h:div[contains(@class, "ff-ui")]/h:table)'));
+        self::assertSame((float) $tables, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:table[ancestor::*[contains(@class, "ff-ui")]])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:article[contains(@class, "ff-ui")])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:form[not(contains(@class, "ff-ui"))])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:a[not(starts-with(@href, "/FinalFantasy/I/"))])'));
@@ -51,11 +67,11 @@ final class PagesTest extends TestCase {
     
     public function pages(): array {
         return [
-            ['/FinalFantasy/I/', 'The equipment and magic', 0],
-            ['/FinalFantasy/I/SaveEditor/', 'NES battery save', 0],
-            ['/FinalFantasy/I/Weapons/', 'Falchon', 40],
-            ['/FinalFantasy/I/Armor/', 'Ribbon', 40],
-            ['/FinalFantasy/I/Spells/', 'NUKE', 64]
+            ['/FinalFantasy/I/', 'The equipment and magic', 0, 0],
+            ['/FinalFantasy/I/SaveEditor/', 'NES battery save', 0, 0],
+            ['/FinalFantasy/I/Weapons/', 'Falchon', 40, 1],
+            ['/FinalFantasy/I/Armor/', 'Ribbon', 40, 4],
+            ['/FinalFantasy/I/Spells/', 'NUKE', 64, 2]
         ];
     }
     

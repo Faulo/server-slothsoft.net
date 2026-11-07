@@ -24,11 +24,12 @@
         "slothsoft/farah": "^1.29.7",
         "slothsoft/minecraft": "^1.0.9",
         "slothsoft/final-fantasy": "dev-main",
+        "slothsoft/savegame": "dev-main",
         "slothsoft/sse": "^1.11.3"
     },
     "repositories": [
         {
-            "type": "vcs",
+            "type": "git",
             "url": "https://github.com/Faulo/slothsoft-final-fantasy"
         }
     ],

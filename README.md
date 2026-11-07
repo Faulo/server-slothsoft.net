@@ -26,7 +26,8 @@ them in public document roots or assets. Without a readable ROM the overview
 remains accessible and reference/editor pages display an unavailable message.
 
 The new package is required as `dev-main` through its Git repository until a
-release is published; it requires stable `slothsoft/savegame ^1.5.0`.
+release is published. The site also explicitly allows `slothsoft/savegame:dev-main`
+while the scoped variable-resolution support is prepared as savegame 1.6.0.
 
 Run `ddev exec vendor/bin/phpunit` for site and public-page integration checks,
 and `ddev exec vendor/bin/phpstan analyse --configuration=phpstan.neon.dist --no-progress --error-format=json`

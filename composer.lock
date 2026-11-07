@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aba3924c602aea734f63ba8f722d6b56",
+    "content-hash": "87604b79c18cbc95778922dba490fafb",
     "packages": [
         {
             "name": "guzzlehttp/psr7",
@@ -1591,14 +1591,8 @@
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/Faulo/slothsoft-final-fantasy.git",
-                "reference": "45271ea5412307d007559f7005d4ad4b5f025010"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-final-fantasy/zipball/45271ea5412307d007559f7005d4ad4b5f025010",
-                "reference": "45271ea5412307d007559f7005d4ad4b5f025010",
-                "shasum": ""
+                "url": "https://github.com/Faulo/slothsoft-final-fantasy",
+                "reference": "8ce30b061d094265d5543e01502d6ee578c76a7d"
             },
             "require": {
                 "ext-dom": "*",
@@ -1606,7 +1600,7 @@
                 "php": "^8.2",
                 "slothsoft/core": "^1.15.1",
                 "slothsoft/farah": "^1.29.7",
-                "slothsoft/savegame": "^1.5.0"
+                "slothsoft/savegame": "dev-main"
             },
             "require-dev": {
                 "phpstan/phpstan": "^2.3.4",
@@ -1662,11 +1656,7 @@
                 "savegame",
                 "slothsoft"
             ],
-            "support": {
-                "source": "https://github.com/Faulo/slothsoft-final-fantasy/tree/main",
-                "issues": "https://github.com/Faulo/slothsoft-final-fantasy/issues"
-            },
-            "time": "2026-11-07T14:34:32+00:00"
+            "time": "2026-11-07T15:15:31+00:00"
         },
         {
             "name": "slothsoft/minecraft",
@@ -1727,16 +1717,16 @@
         },
         {
             "name": "slothsoft/savegame",
-            "version": "1.5.0",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-savegame.git",
-                "reference": "d081204b1ff667214aea04f90d3cb3d2f82a194b"
+                "reference": "9e32b0b41af18000d1db557beeb59c296b72b3bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Faulo/slothsoft-savegame/zipball/d081204b1ff667214aea04f90d3cb3d2f82a194b",
-                "reference": "d081204b1ff667214aea04f90d3cb3d2f82a194b",
+                "url": "https://api.github.com/repos/Faulo/slothsoft-savegame/zipball/9e32b0b41af18000d1db557beeb59c296b72b3bf",
+                "reference": "9e32b0b41af18000d1db557beeb59c296b72b3bf",
                 "shasum": ""
             },
             "require": {
@@ -1754,10 +1744,11 @@
             "suggest": {
                 "ext-ds": "*"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.5.x-dev"
+                    "dev-main": "1.6.x-dev"
                 }
             },
             "autoload": {
@@ -1787,10 +1778,10 @@
             ],
             "support": {
                 "issues": "https://github.com/Faulo/slothsoft-savegame/issues",
-                "source": "https://github.com/Faulo/slothsoft-savegame/tree/1.5.0"
+                "source": "https://github.com/Faulo/slothsoft-savegame/tree/main"
             },
-            "time": "2026-11-07T13:53:35+00:00",
-            "published-time": "2026-11-07T14:05:32+00:00"
+            "time": "2026-11-07T15:12:40+00:00",
+            "published-time": "2026-11-07T15:12:45+00:00"
         },
         {
             "name": "slothsoft/sse",
@@ -5790,7 +5781,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "slothsoft/final-fantasy": 20
+        "slothsoft/final-fantasy": 20,
+        "slothsoft/savegame": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

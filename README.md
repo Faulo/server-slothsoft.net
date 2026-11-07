@@ -83,3 +83,5 @@ DDEV with Playwright's Firefox installed (`ddev exec npx --yes --package=playwri
 and optionally `FF_EDITOR_URL` and `FF_SCREENSHOT`. It checks the native editor,
 Unicode ROM glyphs, panel boundaries, palette and scaling. Screenshots omit
 native dropdown popups; those still require visual confirmation in Firefox.
+The check also supports production's XHTML output and verifies unchanged saves
+round-trip byte for byte, and equipment changes survive download and re-upload.

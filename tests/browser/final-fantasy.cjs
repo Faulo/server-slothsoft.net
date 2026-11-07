@@ -10,10 +10,40 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         const errors = [];
         page.on('pageerror', error => errors.push(error.message));
         const url = process.env.FF_EDITOR_URL || 'https://slothsoft.ddev.site/FinalFantasy/I/SaveEditor/';
+        // Playwright's input helpers compare tagName, which rejects prefixed XHTML
+        // elements even though Firefox correctly exposes native HTML controls.
+        const uploadSave = async (target, buffer) => {
+            const input = target.locator('#ff-save');
+            if (await input.evaluate(node => Boolean(node.prefix))) {
+                await input.evaluate((node, bytes) => {
+                    const transfer = new DataTransfer();
+                    transfer.items.add(new File([new Uint8Array(bytes)], 'test.sav', {type: 'application/octet-stream'}));
+                    node.files = transfer.files;
+                    node.dispatchEvent(new Event('change', {bubbles: true}));
+                }, [...buffer]);
+            } else {
+                await input.setInputFiles({name: 'test.sav', mimeType: 'application/octet-stream', buffer});
+            }
+            await Promise.all([target.waitForNavigation(), target.locator('.ff-upload button').click()]);
+        };
+        const selectItem = async (select, value) => {
+            const index = await select.evaluate((node, value) => [...node.options].findIndex(option => option.value === value), value);
+            assert.ok(index >= 0);
+            await select.focus();
+            await select.press('Home');
+            for (let i = 0; i < index; i++) {
+                await select.press('ArrowDown');
+            }
+            await select.press('Enter');
+        };
+        const setEquipped = async (checkbox, checked) => {
+            if (await checkbox.evaluate(node => node.checked) !== checked) {
+                await checkbox.click();
+            }
+        };
         const loadSave = async (target, waitForFont = true) => {
             await target.goto(url);
-            await target.locator('#ff-save').setInputFiles(process.env.FF_SAVE_PATH);
-            await Promise.all([target.waitForNavigation(), target.getByRole('button', {name: 'Load save'}).click()]);
+            await uploadSave(target, await readFile(process.env.FF_SAVE_PATH));
             if (waitForFont) {
                 await target.evaluate(() => document.fonts.ready);
             }
@@ -22,7 +52,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         const downloadSave = async () => {
             const [download] = await Promise.all([
                 page.waitForEvent('download'),
-                page.getByRole('button', {name: 'Download edited save'}).click()
+                page.locator('.ff-editor button').click()
             ]);
             const chunks = [];
             for await (const chunk of await download.createReadStream()) {
@@ -31,13 +61,12 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
             return Buffer.concat(chunks);
         };
         assert.deepEqual(await downloadSave(), await readFile(process.env.FF_SAVE_PATH), 'An unchanged save must round-trip byte for byte');
-        const originalItem = await page.locator('#ff-0-weapons-0').inputValue();
+        const originalItem = await page.locator('#ff-0-weapons-0').evaluate(node => node.value);
         const changedItem = originalItem === '40' ? '1' : '40';
-        await page.locator('#ff-0-weapons-0').selectOption(changedItem);
+        await selectItem(page.locator('#ff-0-weapons-0'), changedItem);
         const editedSave = await downloadSave();
-        await page.locator('#ff-save').setInputFiles({name: 'edited.sav', mimeType: 'application/octet-stream', buffer: editedSave});
-        await Promise.all([page.waitForNavigation(), page.getByRole('button', {name: 'Load save'}).click()]);
-        assert.equal(await page.locator('#ff-0-weapons-0').inputValue(), changedItem, 'Downloaded equipment changes must survive re-upload');
+        await uploadSave(page, editedSave);
+        assert.equal(await page.locator('#ff-0-weapons-0').evaluate(node => node.value), changedItem, 'Downloaded equipment changes must survive re-upload');
         await loadSave(page);
         assert.equal(await page.locator('.ff-combobox, .ff-choice').count(), 0);
         assert.equal(await page.locator('.ff-item-picker select:visible').count(), 32);
@@ -67,8 +96,8 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         }));
         legendStyles.forEach(style => assert.deepEqual(style, [0, '2px', 'solid']));
         const equipped = page.locator('.ff-equipped').first();
-        const originallyEquipped = await equipped.isChecked();
-        await equipped.uncheck();
+        const originallyEquipped = await equipped.evaluate(node => node.checked);
+        await setEquipped(equipped, false);
         const markerStyle = () => equipped.evaluate(node => {
             const css = getComputedStyle(node, '::after');
             return [css.content, css.opacity, new FormData(node.form).get(node.name)];
@@ -77,10 +106,10 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         await equipped.focus();
         await equipped.press('Space');
         assert.deepEqual(await markerStyle(), ['"E"', '1', '1']);
-        await equipped.setChecked(originallyEquipped);
+        await setEquipped(equipped, originallyEquipped);
         const select = page.locator('#ff-0-weapons-0');
         assert.equal(await select.locator('option').count(), 41);
-        await select.selectOption('1');
+        await selectItem(select, '1');
         const font = await select.locator('option[value="1"]').evaluate(node => ({
             family: getComputedStyle(node).fontFamily,
             background: getComputedStyle(node).backgroundColor,
@@ -119,21 +148,21 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
             await page.screenshot({path: process.env.FF_SCREENSHOT});
         }
         await select.press('Escape');
-        await select.selectOption('4');
-        assert.equal(await select.inputValue(), '4');
+        await selectItem(select, '4');
+        assert.equal(await select.evaluate(node => node.value), '4');
         assert.equal(await select.evaluate(node => new FormData(node.form).get(node.name)), '4');
         await select.focus();
         await select.press('End');
         await select.press('Enter');
-        assert.equal(await select.inputValue(), '40');
+        assert.equal(await select.evaluate(node => node.value), '40');
         const fallback = await browser.newPage({ignoreHTTPSErrors: true, javaScriptEnabled: false});
         await loadSave(fallback, false);
         assert.equal(await fallback.locator('#ff-0-weapons-0').isVisible(), true);
         assert.equal(await fallback.locator('#ff-0-weapons-0 option[value="1"]').textContent(), 'Wooden\u{1F962}');
         const fallbackEquipped = fallback.locator('.ff-equipped').first();
-        await fallbackEquipped.uncheck();
+        await setEquipped(fallbackEquipped, false);
         await fallbackEquipped.press('Space');
-        assert.equal(await fallbackEquipped.isChecked(), true);
+        assert.equal(await fallbackEquipped.evaluate(node => node.checked), true);
         // Site copy must stay outside the themed panels; every panel control uses FF typography.
         assert.equal(await page.locator('article.final-fantasy > header').count(), 0);
         const controlStyles = await page.locator('.ff-ui').first().evaluate(panel => {
@@ -285,7 +314,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
             await references.screenshot({path: process.env.FF_REFERENCE_SCREENSHOT});
         }
         assert.deepEqual(errors, []);
-        console.log('Firefox: native editor, ROM glyphs, form values, no-JavaScript behavior, panel boundaries, palette and scaling passed.');
+        console.log('Firefox: save round-trips, native editor, ROM glyphs, form values, no-JavaScript behavior, panel boundaries, palette and scaling passed.');
     } finally {
         await browser.close();
     }

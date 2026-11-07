@@ -32,7 +32,7 @@ final class PagesTest extends TestCase {
         self::assertSame(0.0, $xpath->evaluate('count(//h:tbody//h:a[contains(@href, "#spell-")][@class!="ff-text"])'));
         if ($path === '/FinalFantasy/I/Weapons/') {
             self::assertSame('217', $xpath->evaluate('string(//h:tr[@id="weapon-1"]/h:th/h:span[@class="ff-item-icon"]/@data-glyph)'));
-            self::assertSame("\u{E0D9}", $xpath->evaluate('string(//h:tr[@id="weapon-1"]/h:th/h:span[@class="ff-item-icon"])'));
+            self::assertSame("\u{1F962}", $xpath->evaluate('string(//h:tr[@id="weapon-1"]/h:th/h:span[@class="ff-item-icon"])'));
             self::assertStringNotContainsString('[nunchuck]', $document->textContent);
             self::assertSame('false', $xpath->evaluate('string(//h:tr[h:th[contains(., "Rapier")]]//h:span[@data-class="4"]/@data-allowed)'));
             self::assertSame('true', $xpath->evaluate('string(//h:tr[h:th[contains(., "Rapier")]]//h:span[@data-class="0"]/@data-allowed)'));
@@ -85,7 +85,7 @@ final class PagesTest extends TestCase {
         self::assertSame(32.0, $xpath->evaluate('count(//h:select[@class="ff-text"])'));
         self::assertSame(1280.0, $xpath->evaluate('count(//h:select/h:option[@class="ff-text"][@aria-label])'));
         self::assertSame(8.0, $xpath->evaluate('count(//h:legend/h:span[@class="ff-text"])'));
-        self::assertStringContainsString("\u{E0D9}", $xpath->evaluate('string(//h:select[@id="ff-0-weapons-0"]/h:option[@value="1"])'));
+        self::assertStringContainsString("\u{1F962}", $xpath->evaluate('string(//h:select[@id="ff-0-weapons-0"]/h:option[@value="1"])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:script[contains(@src, "equipment-picker")])'));
         self::assertSame(1312.0, $xpath->evaluate('count(//h:select/h:option)'));
         self::assertSame(32.0, $xpath->evaluate('count(//h:span[contains(@class, "ff-selected-icon")])'));

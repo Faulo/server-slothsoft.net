@@ -7,31 +7,27 @@
         <fragment name="home">
             <use-template ref="/final-fantasy/xsl/page" />
             <use-document ref="//slothsoft@final-fantasy/i/api/data?view=home" name="data" />
-            <link-stylesheet ref="/final-fantasy/css/default" />
+            <link-stylesheet ref="//slothsoft@final-fantasy/i/css/default" />
         </fragment>
         <fragment name="editor">
             <use-template ref="/final-fantasy/xsl/page" />
             <use-document ref="//slothsoft@final-fantasy/i/api/data?view=editor" name="data" />
             <link-stylesheet ref="//slothsoft@final-fantasy/i/css/default" />
-            <link-stylesheet ref="/final-fantasy/css/default" />
         </fragment>
         <fragment name="weapons">
             <use-template ref="/final-fantasy/xsl/page" />
             <use-document ref="//slothsoft@final-fantasy/i/api/data?view=weapons" name="data" />
             <link-stylesheet ref="//slothsoft@final-fantasy/i/css/default" />
-            <link-stylesheet ref="/final-fantasy/css/default" />
         </fragment>
         <fragment name="armor">
             <use-template ref="/final-fantasy/xsl/page" />
             <use-document ref="//slothsoft@final-fantasy/i/api/data?view=armor" name="data" />
             <link-stylesheet ref="//slothsoft@final-fantasy/i/css/default" />
-            <link-stylesheet ref="/final-fantasy/css/default" />
         </fragment>
         <fragment name="spells">
             <use-template ref="/final-fantasy/xsl/page" />
             <use-document ref="//slothsoft@final-fantasy/i/api/data?view=spells" name="data" />
             <link-stylesheet ref="//slothsoft@final-fantasy/i/css/default" />
-            <link-stylesheet ref="/final-fantasy/css/default" />
         </fragment>
     </fragment>
 </assets>

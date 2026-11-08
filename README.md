@@ -19,6 +19,7 @@ gap between rows. Item glyphs appear only within the option text. Select widths
 use the longest rendered option in ch, plus padding, borders and space for the
 native dropdown arrow. The empty equipment option has no text.
 Narrow screens scroll each equipment grid horizontally to keep item names legible.
+Scroll containers reserve .25em for native control focus outlines.
 
 Equipment tables show every class sprite, dimming classes without equip
 permission. Magic tables show only class/upgrade pairs with at least one learner
@@ -37,8 +38,15 @@ the site styling.
 The package owns the extraction specifications, domain schema, save editing,
 PHP classes, utility CSS and standalone HTML examples. This project owns the
 actual HTML in `assets/final-fantasy/xsl/page.xsl`, its links and form actions,
-page layout CSS and private ROM configuration. Its manifest
+layout composition and private ROM configuration. Its manifest
 transforms the package's XML data API directly; no package HTML pages are embedded.
+All FF presentation comes from the package's fourteen public utilities and
+semantic HTML defaults. Templates supply documented custom properties for
+scale, grid tracks, gaps, sprite URLs and option widths. No site-specific FF
+stylesheet is loaded. The retired `/final-fantasy/css/default` asset remains as
+an empty compatibility resource. See the package's `doc/design-system.md` for
+the contract. `ff-contain` bounds the outer article without theming it.
+
 The package CSS uses base sizes of 8px for text and 24px for sprite height; the
 site sets `--ff-scale: 2` on each panel for 16px text and 48px sprite height.
 Column headings keep the panel's 2× (16px) text, centered horizontally and

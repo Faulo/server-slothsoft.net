@@ -7,7 +7,7 @@
     <xsl:key name="spell-schools" match="sf1:spells/sf1:spell" use="@school" />
     <xsl:key name="spells" match="sf1:spells/sf1:spell" use="@id" />
     <xsl:template match="/*">
-        <article class="final-fantasy">
+        <article class="ff-contain">
             <xsl:apply-templates select=".//sf1:final-fantasy" />
         </article>
     </xsl:template>
@@ -28,55 +28,57 @@
             </xsl:when>
             <xsl:when test="@view = 'weapons'">
 
-                <fieldset class="ff-ui ff-panel ff-reference">
+                <fieldset class="ff-ui ff-panel ff-fit" style="--ff-scale: 2">
                     <legend>Weapons</legend>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th scope="col">Weapon</th>
-                                <th scope="col" class="ff-number">Price</th>
-                                <th scope="col" class="ff-number">Damage</th>
-                                <th scope="col" class="ff-number">Hit<br />bonus
-                                </th>
-                                <th scope="col" class="ff-number">Critical</th>
-                                <th scope="col">Casts</th>
-                                <th scope="col">Classes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <xsl:for-each select="sf1:weapons/sf1:weapon">
-                                <tr id="weapon-{@id}">
-                                    <th scope="row" class="ff-text">
-                                        <xsl:call-template name="item-name" />
+                    <div class="ff-scroll">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Weapon</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Damage</th>
+                                    <th scope="col">Hit<br />bonus
                                     </th>
-                                    <td class="ff-number">
-                                        <xsl:value-of select="@price" />
-                                    </td>
-                                    <td class="ff-number">
-                                        <xsl:value-of select="@damage" />
-                                    </td>
-                                    <td class="ff-number">
-                                        <xsl:value-of select="@hit" />
-                                    </td>
-                                    <td class="ff-number">
-                                        <xsl:value-of select="@critical" />
-                                    </td>
-                                    <td>
-                                        <xsl:call-template name="cast" />
-                                    </td>
-                                    <td>
-                                        <xsl:call-template name="classes" />
-                                    </td>
+                                    <th scope="col">Critical</th>
+                                    <th scope="col">Casts</th>
+                                    <th scope="col">Classes</th>
                                 </tr>
-                            </xsl:for-each>
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                <xsl:for-each select="sf1:weapons/sf1:weapon">
+                                    <tr id="weapon-{@id}">
+                                        <th scope="row">
+                                            <xsl:call-template name="item-name" />
+                                        </th>
+                                        <td class="ff-number">
+                                            <xsl:value-of select="@price" />
+                                        </td>
+                                        <td class="ff-number">
+                                            <xsl:value-of select="@damage" />
+                                        </td>
+                                        <td class="ff-number">
+                                            <xsl:value-of select="@hit" />
+                                        </td>
+                                        <td class="ff-number">
+                                            <xsl:value-of select="@critical" />
+                                        </td>
+                                        <td>
+                                            <xsl:call-template name="cast" />
+                                        </td>
+                                        <td>
+                                            <xsl:call-template name="classes" />
+                                        </td>
+                                    </tr>
+                                </xsl:for-each>
+                            </tbody>
+                        </table>
+                    </div>
                 </fieldset>
             </xsl:when>
             <xsl:when test="@view = 'armor'">
                 <xsl:for-each select="sf1:armor/sf1:item[generate-id() = generate-id(key('armor-categories', @category)[1])]">
                     <xsl:sort select="@category" data-type="number" />
-                    <fieldset class="ff-ui ff-panel ff-reference">
+                    <fieldset class="ff-ui ff-panel ff-fit" style="--ff-scale: 2">
                         <legend>
                             <xsl:choose>
                                 <xsl:when test="@category=0">Body</xsl:when>
@@ -85,14 +87,14 @@
                                 <xsl:otherwise>Gloves</xsl:otherwise>
                             </xsl:choose>
                         </legend>
-                        <div class="ff-table">
+                        <div class="ff-scroll">
                             <table>
                                 <thead>
                                     <tr>
                                         <th scope="col">Armor</th>
-                                        <th scope="col" class="ff-number">Price</th>
-                                        <th scope="col" class="ff-number">Absorb</th>
-                                        <th scope="col" class="ff-number">Evade<br />penalty
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Absorb</th>
+                                        <th scope="col">Evade<br />penalty
                                         </th>
                                         <th scope="col">Casts</th>
                                         <th scope="col">Classes</th>
@@ -102,7 +104,7 @@
                                 <tbody>
                                     <xsl:for-each select="key('armor-categories', @category)">
                                         <tr id="armor-{@id}">
-                                            <th scope="row" class="ff-text">
+                                            <th scope="row">
                                                 <xsl:call-template name="item-name" />
                                             </th>
                                             <td class="ff-number">
@@ -134,30 +136,30 @@
             <xsl:when test="@view = 'spells'">
                 <xsl:for-each select="sf1:spells/sf1:spell[generate-id() = generate-id(key('spell-schools', @school)[1])]">
                     <xsl:sort select="@school" order="descending" />
-                    <fieldset class="ff-ui ff-panel ff-reference">
+                    <fieldset class="ff-ui ff-panel ff-fit" style="--ff-scale: 2">
                         <legend>
                             <xsl:choose>
                                 <xsl:when test="@school = 'white'">White Magic</xsl:when>
                                 <xsl:otherwise>Black Magic</xsl:otherwise>
                             </xsl:choose>
                         </legend>
-                        <div class="ff-table">
+                        <div class="ff-scroll">
                             <table>
                                 <thead>
                                     <tr>
                                         <th scope="col">Spell</th>
-                                        <th scope="col" class="ff-number">Level</th>
-                                        <th scope="col" class="ff-number">Price</th>
+                                        <th scope="col">Level</th>
+                                        <th scope="col">Price</th>
                                         <th scope="col">Classes</th>
                                         <th scope="col">Effect</th>
-                                        <th scope="col" class="ff-number">Accuracy</th>
+                                        <th scope="col">Accuracy</th>
                                         <th scope="col">Element</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <xsl:for-each select="key('spell-schools', @school)">
                                         <tr id="spell-{@id}">
-                                            <th scope="row" class="ff-text">
+                                            <th scope="row">
                                                 <xsl:value-of select="@name" />
                                             </th>
                                             <td class="ff-number">
@@ -169,7 +171,7 @@
                                             <td>
                                                 <xsl:call-template name="classes" />
                                             </td>
-                                            <td class="ff-spell-effect">
+                                            <td class="ff-prose">
                                                 <xsl:for-each select="sf1:effect-description/sf1:line">
                                                     <p>
                                                         <xsl:value-of select="." />
@@ -224,7 +226,7 @@
                 <xsl:otherwise>equip</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
-        <span class="ff-classes">
+        <span class="ff-row" style="--ff-gap: .25em">
             <xsl:for-each select="$classes">
                 <xsl:sort select="@id mod 6" data-type="number" />
                 <xsl:sort select="@id" data-type="number" />
@@ -240,10 +242,10 @@
                     </xsl:choose>
                     <xsl:value-of select="$verb" />
                 </xsl:variable>
-                <span class="ff-class-sprite" data-class="{@id}" data-allowed="{@id = $allowed}"
+                <span class="ff-class-sprite ff-portrait" data-class="{@id}" data-allowed="{@id = $allowed}"
                       role="img" aria-label="{$label}">
                     <xsl:attribute name="style">
-                        <xsl:text>background-image: url('/slothsoft@final-fantasy/i/gfx/class?class=</xsl:text>
+                        <xsl:text>--ff-sprite: url('/slothsoft@final-fantasy/i/gfx/class?class=</xsl:text>
                         <xsl:value-of select="@id" />
                         <xsl:text>')</xsl:text>
                     </xsl:attribute>
@@ -254,7 +256,7 @@
     <xsl:template name="cast">
         <xsl:choose>
             <xsl:when test="@spell != 0">
-                <a href="/FinalFantasy/I/Spells/#spell-{@spell}" class="ff-text">
+                <a href="/FinalFantasy/I/Spells/#spell-{@spell}">
                     <xsl:value-of select="key('spells', @spell)/@name" />
                 </a>
             </xsl:when>
@@ -266,7 +268,7 @@
         <xsl:choose>
             <xsl:when test="$mask=0">-</xsl:when>
             <xsl:otherwise>
-                <ul class="ff-resists">
+                <ul class="ff-inline-list">
                     <xsl:if test="$mask mod 2 &gt;=1">
                         <li>Status</li>
                     </xsl:if>
@@ -303,11 +305,13 @@
             to return to it later. Anyone with this link can edit it.
         </p>
         <xsl:if test="sf1:error">
-            <p class="ff-error" role="alert">
-                <xsl:value-of select="sf1:error" />
+            <p role="alert">
+                <strong>
+                    <xsl:value-of select="sf1:error" />
+                </strong>
             </p>
         </xsl:if>
-        <form action="/FinalFantasy/I/SaveEditor/?user={ancestor-or-self::sf1:final-fantasy/@user}" method="post" enctype="multipart/form-data" class="ff-ui ff-panel ff-upload">
+        <form action="/FinalFantasy/I/SaveEditor/?user={ancestor-or-self::sf1:final-fantasy/@user}" method="post" enctype="multipart/form-data" id="ff-upload" class="ff-ui ff-panel ff-row" style="--ff-scale: 2; --ff-gap: 1em; --ff-wrap: wrap">
             <input type="hidden" name="ff-action" value="upload" />
             <input type="hidden" name="MAX_FILE_SIZE" value="8192" />
             <label for="ff-save">.sav File (8 KiB)</label>
@@ -315,21 +319,21 @@
             <button type="submit">Load save</button>
         </form>
         <xsl:for-each select="sf1:editor">
-            <form action="/FinalFantasy/I/SaveEditor/?user={ancestor-or-self::sf1:final-fantasy/@user}" method="post" class="ff-ui ff-panel ff-editor">
+            <form action="/FinalFantasy/I/SaveEditor/?user={ancestor-or-self::sf1:final-fantasy/@user}" method="post" id="ff-editor" class="ff-ui ff-panel" style="--ff-scale: 2">
 
                 <input type="hidden" name="ff-source" value="{@source}" />
-                <div class="ff-party">
+                <div class="ff-grid" style="--ff-columns: repeat(auto-fit, minmax(min(100%, 32em), 1fr))">
                     <xsl:for-each select="sf1:character">
-                        <fieldset class="ff-panel ff-character">
+                        <fieldset class="ff-panel">
                             <legend>
-                                <span class="ff-character-heading">
-                                    <span class="ff-text">
+                                <span class="ff-row">
+                                    <span>
                                         <xsl:value-of select="@name" />
                                     </span>
                                     <span class="ff-class-sprite" data-class="{@class}" role="img"
                                           aria-label="{key('classes', @class)/@name}">
                                         <xsl:attribute name="style">
-                                            <xsl:text>background-image: url('/slothsoft@final-fantasy/i/gfx/class?class=</xsl:text>
+                                            <xsl:text>--ff-sprite: url('/slothsoft@final-fantasy/i/gfx/class?class=</xsl:text>
                                             <xsl:value-of select="@class" />
                                             <xsl:text>')</xsl:text>
                                         </xsl:attribute>
@@ -343,8 +347,8 @@
                                         <xsl:otherwise>Armor</xsl:otherwise>
                                     </xsl:choose>
                                 </h3>
-                                <div class="ff-equipment-scroll">
-                                    <div class="ff-equipment">
+                                <div class="ff-scroll" style="--ff-scroll-padding: .25em">
+                                    <div class="ff-grid" style="--ff-row-gap: 0">
                                         <xsl:apply-templates select="sf1:slot" />
                                     </div>
                                 </div>
@@ -370,7 +374,7 @@
                 </xsl:if>
             </option>
             <xsl:for-each select="ancestor::sf1:final-fantasy/*[local-name()=$kind]/*">
-                <option aria-label="{@name}" class="ff-text" value="{@id}">
+                <option aria-label="{@name}" value="{@id}">
                     <xsl:if test="@id=$selected">
                         <xsl:attribute name="selected">selected</xsl:attribute>
                     </xsl:if>
@@ -396,23 +400,21 @@
                 </xsl:if>
             </xsl:for-each>
         </xsl:variable>
-        <div class="ff-slot">
+        <div class="ff-grid" style="--ff-columns: 1em minmax(0, 1fr); --ff-gap: .5em">
             <input type="checkbox" class="ff-equipped" name="{$field}[equipped]" value="1"
                    aria-label="Equip {../../@name} {$kind} slot {@index+1}">
                 <xsl:if test="@equipped=1">
                     <xsl:attribute name="checked">checked</xsl:attribute>
                 </xsl:if>
             </input>
-            <span class="ff-item-picker">
-                <select name="{$field}[id]" id="{$id}" class="ff-text" aria-label="{../../@name} {$kind} slot {@index+1}">
-                    <xsl:attribute name="style">
-                        <xsl:text>--ff-option-width: </xsl:text>
-                        <xsl:value-of select="$option-width" />
-                        <xsl:text>ch</xsl:text>
-                    </xsl:attribute>
-                    <xsl:copy-of select="$options" />
-                </select>
-            </span>
+            <select class="ff-select" name="{$field}[id]" id="{$id}" aria-label="{../../@name} {$kind} slot {@index+1}">
+                <xsl:attribute name="style">
+                    <xsl:text>--ff-option-width: </xsl:text>
+                    <xsl:value-of select="$option-width" />
+                    <xsl:text>ch</xsl:text>
+                </xsl:attribute>
+                <xsl:copy-of select="$options" />
+            </select>
         </div>
     </xsl:template>
 </xsl:stylesheet>

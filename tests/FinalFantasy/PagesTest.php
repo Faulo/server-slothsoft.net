@@ -24,14 +24,23 @@ final class PagesTest extends TestCase {
         $xpath = new DOMXPath($document);
         $xpath->registerNamespace('h', 'http://www.w3.org/1999/xhtml');
         self::assertStringContainsString($expected, $document->textContent);
-        self::assertSame((float) $rows, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:tbody/h:tr)'));
+        self::assertSame((float) $rows, $xpath->evaluate('count(//h:article[@class="ff-contain"]//h:tbody/h:tr)'));
         $classCount = $path === '/FinalFantasy/I/Spells/' ? 6 : 12;
-        self::assertSame((float) ($path === '/FinalFantasy/I/SaveEditor/' ? 4 : $rows * $classCount), $xpath->evaluate('count(//h:span[@class="ff-class-sprite"])'));
-        self::assertSame(0.0, $xpath->evaluate('count(//h:span[@class="ff-classes"][count(h:span) != ' . $classCount . '])'));
-        self::assertSame((float) $rows, $xpath->evaluate('count(//h:tbody/h:tr/h:th[@class="ff-text"])'));
-        self::assertSame(0.0, $xpath->evaluate('count(//h:span[@class="ff-class-tooltip"] | //h:span[@class="ff-classes"]//*[@tabindex])'));
-        self::assertSame(0.0, $xpath->evaluate('count(//h:tbody//h:a[contains(@href, "#spell-")][@class!="ff-text"])'));
+        self::assertSame((float) ($path === '/FinalFantasy/I/SaveEditor/' ? 4 : $rows * $classCount), $xpath->evaluate('count(//h:span[contains(concat(" ", @class, " "), " ff-class-sprite ")])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:span[@class="ff-row"][h:span[@data-allowed]][count(h:span) != ' . $classCount . '])'));
+        self::assertSame((float) $rows, $xpath->evaluate('count(//h:tbody/h:tr/h:th[@scope="row"])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:span[@class="ff-class-tooltip"] | //h:span[@class="ff-row"][h:span[@data-allowed]]//*[@tabindex])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:tbody//h:a[contains(@href, "#spell-")][not(ancestor::*[contains(@class,"ff-ui")])])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:tbody/h:tr/h:th/*)'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:link[contains(@href,"/final-fantasy/css/")])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:article//h:style)'));
+        foreach ($xpath->query('//h:article[@class="ff-contain"]//*[@style]/@style') as $style) {
+            foreach (explode(';', $style->nodeValue) as $declaration) {
+                if (trim($declaration) !== '') {
+                    self::assertStringStartsWith('--ff-', trim($declaration));
+                }
+            }
+        }
         if ($path === '/FinalFantasy/I/Weapons/') {
             self::assertSame("Wooden\u{1F962}", $xpath->evaluate('string(//h:tr[@id="weapon-1"]/h:th)'));
             self::assertStringNotContainsString('[nunchuck]', $document->textContent);
@@ -40,7 +49,7 @@ final class PagesTest extends TestCase {
         }
         if ($path === '/FinalFantasy/I/Armor/') {
             self::assertSame(4.0, $xpath->evaluate('count(//h:thead/h:tr/h:th[last()][.="Resists"][preceding-sibling::h:th[1]="Classes"])'));
-            self::assertSame(0.0, $xpath->evaluate('count(//h:ul[@class="ff-resists"]/parent::h:td[following-sibling::h:td])'));
+            self::assertSame(0.0, $xpath->evaluate('count(//h:ul[@class="ff-inline-list"]/parent::h:td[following-sibling::h:td])'));
             self::assertStringContainsString("\u{1F9BA}", $document->textContent);
             self::assertStringNotContainsString('[armor]', $document->textContent);
             foreach (['Body', 'Shield', 'Helmet', 'Gloves'] as $label) {
@@ -49,14 +58,14 @@ final class PagesTest extends TestCase {
         }
         if ($path === '/FinalFantasy/I/Spells/') {
             self::assertSame(2.0, $xpath->evaluate('count(//h:thead/h:tr/h:th[last()][.="Element"][preceding-sibling::h:th[1]="Accuracy"][preceding-sibling::h:th[2]="Effect"])'));
-            self::assertSame(64.0, $xpath->evaluate('count(//h:tbody/h:tr/h:td[@class="ff-spell-effect"][h:p[string-length(.) > 0]])'));
-            self::assertStringNotContainsString('33-66 HP', $xpath->evaluate('string(//h:tr[@id="spell-17"]/h:td[@class="ff-spell-effect"])'));
-            self::assertStringContainsString('32-63 HP', $xpath->evaluate('string(//h:tr[@id="spell-17"]/h:td[@class="ff-spell-effect"])'));
-            self::assertStringContainsString('Always misses', $xpath->evaluate('string(//h:tr[@id="spell-7"]/h:td[@class="ff-spell-effect"])'));
-            self::assertSame(0.0, $xpath->evaluate('count(//h:td[@class="ff-spell-effect"]/h:p[contains(., "Cancels ")])'));
-            self::assertSame('Deals 10-20 Fire damage to one enemy.', $xpath->evaluate('normalize-space(//h:tr[@id="spell-5"]/h:td[@class="ff-spell-effect"])'));
-            self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-2"]/h:td[@class="ff-spell-effect"]/h:p[.="Only affects undead enemies."])'));
-            self::assertSame(0.0, $xpath->evaluate('count(//h:td[@class="ff-spell-effect"]/h:p[contains(., " element.")])'));
+            self::assertSame(64.0, $xpath->evaluate('count(//h:tbody/h:tr/h:td[@class="ff-prose"][h:p[string-length(.) > 0]])'));
+            self::assertStringNotContainsString('33-66 HP', $xpath->evaluate('string(//h:tr[@id="spell-17"]/h:td[@class="ff-prose"])'));
+            self::assertStringContainsString('32-63 HP', $xpath->evaluate('string(//h:tr[@id="spell-17"]/h:td[@class="ff-prose"])'));
+            self::assertStringContainsString('Always misses', $xpath->evaluate('string(//h:tr[@id="spell-7"]/h:td[@class="ff-prose"])'));
+            self::assertSame(0.0, $xpath->evaluate('count(//h:td[@class="ff-prose"]/h:p[contains(., "Cancels ")])'));
+            self::assertSame('Deals 10-20 Fire damage to one enemy.', $xpath->evaluate('normalize-space(//h:tr[@id="spell-5"]/h:td[@class="ff-prose"])'));
+            self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-2"]/h:td[@class="ff-prose"]/h:p[.="Only affects undead enemies."])'));
+            self::assertSame(0.0, $xpath->evaluate('count(//h:td[@class="ff-prose"]/h:p[contains(., " element.")])'));
             foreach ([1 => '-', 2 => '24', 5 => '24', 6 => '24', 7 => '-', 14 => '24', 16 => '64', 38 => '40', 45 => '24', 48 => '-', 52 => '-', 61 => '107', 62 => '48', 64 => '-'] as $id => $accuracy) {
                 self::assertSame($accuracy, $xpath->evaluate('string(//h:tr[@id="spell-' . $id . '"]/h:td[last()-1])'));
             }
@@ -64,11 +73,11 @@ final class PagesTest extends TestCase {
             self::assertSame('Status', $xpath->evaluate('normalize-space(//h:tr[@id="spell-16"]/h:td[last()])'));
             self::assertSame('Poison, Stone', $xpath->evaluate('normalize-space(//h:tr[@id="spell-38"]/h:td[last()])'));
             self::assertSame('-', $xpath->evaluate('normalize-space(//h:tr[@id="spell-1"]/h:td[last()])'));
-            self::assertSame(0.0, $xpath->evaluate('count(//h:td[@class="ff-spell-effect"][contains(., "Magic Defense")])'));
+            self::assertSame(0.0, $xpath->evaluate('count(//h:td[@class="ff-prose"][contains(., "Magic Defense")])'));
             
             foreach (['White Magic' => ['0', '6', '3', '9', '4', '10'], 'Black Magic' => ['1', '7', '3', '9', '5', '11']] as $label => $expectedClasses) {
                 self::assertSame(32.0, $xpath->evaluate('count(//h:fieldset[h:legend="' . $label . '"]//h:tbody/h:tr)'));
-                foreach ($xpath->query('//h:fieldset[h:legend="' . $label . '"]//h:span[@class="ff-classes"]') as $classList) {
+                foreach ($xpath->query('//h:fieldset[h:legend="' . $label . '"]//h:span[@class="ff-row"][h:span[@data-allowed]]') as $classList) {
                     $classes = $xpath->query('h:span/@data-class', $classList);
                     self::assertSame($expectedClasses, array_map(static function ($node): string {
                         return $node->nodeValue;
@@ -79,17 +88,17 @@ final class PagesTest extends TestCase {
             self::assertSame('FIRE', $xpath->evaluate('string(//h:fieldset[h:legend="Black Magic"]//h:tbody/h:tr[1]/h:th)'));
         }
         if ($rows && $path !== '/FinalFantasy/I/Spells/') {
-            $classes = $xpath->query('(//h:span[@class="ff-classes"])[1]/h:span[@data-class]/@data-class');
+            $classes = $xpath->query('(//h:span[@class="ff-row"][h:span[@data-allowed]])[1]/h:span[@data-class]/@data-class');
             self::assertSame(['0', '6', '1', '7', '2', '8', '3', '9', '4', '10', '5', '11'], array_map(static function ($node): string {
                 return $node->nodeValue;
             }, iterator_to_array($classes)));
         }
-        self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]/h:header | //h:nav[@aria-label="Final Fantasy"])'));
-        self::assertSame((float) $tables, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:table[ancestor::*[contains(@class, "ff-ui")]])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="ff-contain"]/h:header | //h:nav[@aria-label="Final Fantasy"])'));
+        self::assertSame((float) $tables, $xpath->evaluate('count(//h:article[@class="ff-contain"]//h:table[ancestor::*[contains(@class, "ff-ui")]])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:article[contains(@class, "ff-ui")])'));
-        self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:form[not(contains(@class, "ff-ui"))])'));
-        self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:a[not(starts-with(@href, "/FinalFantasy/I/"))])'));
-        self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:form[not(starts-with(@action, "/FinalFantasy/I/SaveEditor/?user="))])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="ff-contain"]//h:form[not(contains(@class, "ff-ui"))])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="ff-contain"]//h:a[not(starts-with(@href, "/FinalFantasy/I/"))])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="ff-contain"]//h:form[not(starts-with(@action, "/FinalFantasy/I/SaveEditor/?user="))])'));
     }
     
     public function testNewGameProvidesPersistentUrl(): string {
@@ -101,7 +110,7 @@ final class PagesTest extends TestCase {
         self::assertTrue($document->loadXML((string) $response->getBody()));
         $xpath = new DOMXPath($document);
         $xpath->registerNamespace('h', 'http://www.w3.org/1999/xhtml');
-        $action = $xpath->evaluate('string(//h:form[contains(@class,"ff-editor")]/@action)');
+        $action = $xpath->evaluate('string(//h:form[@id="ff-editor"]/@action)');
         self::assertMatchesRegularExpression('~^/FinalFantasy/I/SaveEditor/\?user=[a-f0-9]{32}$~', $action);
         return $action;
     }
@@ -129,7 +138,7 @@ final class PagesTest extends TestCase {
         $xpath = new DOMXPath($document);
         $xpath->registerNamespace('h', 'http://www.w3.org/1999/xhtml');
         self::assertSame('1', $xpath->evaluate('string(//h:select[@id="ff-0-weapons-0"]/h:option[@selected]/@value)'));
-        self::assertSame($action, $xpath->evaluate('string(//h:form[contains(@class,"ff-editor")]/@action)'));
+        self::assertSame($action, $xpath->evaluate('string(//h:form[@id="ff-editor"]/@action)'));
         return $action;
     }
     
@@ -181,14 +190,14 @@ final class PagesTest extends TestCase {
         $xpath = new DOMXPath($document);
         $xpath->registerNamespace('h', 'http://www.w3.org/1999/xhtml');
         self::assertSame(1.0, $xpath->evaluate('count(//h:p[@role="alert"])'));
-        self::assertSame(32.0, $xpath->evaluate('count(//h:select[@class="ff-text"])'));
-        self::assertSame(1280.0, $xpath->evaluate('count(//h:select/h:option[@class="ff-text"][@aria-label])'));
-        self::assertSame(4.0, $xpath->evaluate('count(//h:legend//h:span[@class="ff-text"])'));
-        self::assertSame(4.0, $xpath->evaluate('count(//h:legend//h:span[@class="ff-class-sprite"][@role="img"][@aria-label])'));
-        self::assertSame(8.0, $xpath->evaluate('count(//h:div[@class="ff-equipment"][count(h:div[@class="ff-slot"])=4])'));
+        self::assertSame(32.0, $xpath->evaluate('count(//h:select[@class="ff-select"])'));
+        self::assertSame(1280.0, $xpath->evaluate('count(//h:select/h:option[@aria-label])'));
+        self::assertSame(4.0, $xpath->evaluate('count(//h:legend/h:span/h:span[not(@role)])'));
+        self::assertSame(4.0, $xpath->evaluate('count(//h:legend//h:span[contains(concat(" ", @class, " "), " ff-class-sprite ")][@role="img"][@aria-label])'));
+        self::assertSame(8.0, $xpath->evaluate('count(//h:div[@class="ff-scroll"]/h:div[@class="ff-grid"][count(h:div[h:select])=4])'));
         self::assertSame(32.0, $xpath->evaluate('count(//h:input[@class="ff-equipped"][@type="checkbox"][@aria-label])'));
-        self::assertSame(0.0, $xpath->evaluate('count(//h:div[@class="ff-slot"]/h:label)'));
-        self::assertSame(32.0, $xpath->evaluate('count(//h:select[@class="ff-text"][@aria-label])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:div[h:select]/h:label)'));
+        self::assertSame(32.0, $xpath->evaluate('count(//h:select[@class="ff-select"][@aria-label])'));
         self::assertStringContainsString("\u{1F962}", $xpath->evaluate('string(//h:select[@id="ff-0-weapons-0"]/h:option[@value="1"])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:script[contains(@src, "equipment-picker")])'));
         self::assertSame(1312.0, $xpath->evaluate('count(//h:select/h:option)'));

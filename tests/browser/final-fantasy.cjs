@@ -24,7 +24,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
             } else {
                 await input.setInputFiles({name: 'test.sav', mimeType: 'application/octet-stream', buffer});
             }
-            await Promise.all([target.waitForNavigation(), target.locator('.ff-upload button').click()]);
+            await Promise.all([target.waitForNavigation(), target.locator('#ff-upload button').click()]);
         };
         const selectItem = async (select, value) => {
             const index = await select.evaluate((node, value) => [...node.options].findIndex(option => option.value === value), value);
@@ -49,10 +49,20 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
             }
         };
         await loadSave(page);
+        assert.equal(await page.locator('link[href*="/final-fantasy/css/"]').count(), 0);
+        const publicClasses = new Set(['ff-contain', 'ff-ui', 'ff-panel', 'ff-fit', 'ff-row', 'ff-grid',
+            'ff-scroll', 'ff-number', 'ff-prose', 'ff-inline-list', 'ff-class-sprite', 'ff-portrait', 'ff-select', 'ff-equipped']);
+        const checkContract = async target => {
+            const classes = await target.locator('article.ff-contain, article.ff-contain [class]').evaluateAll(nodes => nodes.flatMap(node => [...node.classList]));
+            classes.forEach(name => assert.ok(publicClasses.has(name), `Undocumented class ${name}`));
+            const declarations = await target.locator('article.ff-contain [style]').evaluateAll(nodes => nodes.flatMap(node => [...node.style]));
+            declarations.forEach(name => assert.ok(name.startsWith('--ff-'), `Non-utility styling ${name}`));
+        };
+        await checkContract(page);
         const downloadSave = async () => {
             const [download] = await Promise.all([
                 page.waitForEvent('download'),
-                page.locator('.ff-editor button[value=download]').click()
+                page.locator('#ff-editor button[value=download]').click()
             ]);
             const chunks = [];
             for await (const chunk of await download.createReadStream()) {
@@ -69,11 +79,11 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         assert.equal(await page.locator('#ff-0-weapons-0').evaluate(node => node.value), changedItem, 'Downloaded equipment changes must survive re-upload');
         await loadSave(page);
         assert.equal(await page.locator('.ff-combobox, .ff-choice').count(), 0);
-        assert.equal(await page.locator('.ff-item-picker select:visible').count(), 32);
+        assert.equal(await page.locator('select.ff-select:visible').count(), 32);
         assert.equal(await page.locator('.ff-selected-icon, script[src*="item-icons"]').count(), 0);
-        assert.equal(await page.locator('.ff-character legend .ff-class-sprite[aria-label]').count(), 4);
-        assert.equal(await page.locator('.ff-slot > label').count(), 0);
-        const optionWidths = await page.locator('.ff-item-picker select').evaluateAll(selects => selects.map(select => {
+        assert.equal(await page.locator('fieldset.ff-panel:not(.ff-ui) legend .ff-class-sprite[aria-label]').count(), 4);
+        assert.equal(await page.locator('.ff-grid:has(> select) > label').count(), 0);
+        const optionWidths = await page.locator('select.ff-select').evaluateAll(selects => selects.map(select => {
             const longest = Math.max(...[...select.options].map(option => [...option.text].length));
             return [select.style.getPropertyValue('--ff-option-width'), `${longest}ch`, select.options[0].text];
         }));
@@ -81,7 +91,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
             assert.equal(actual, expected);
             assert.equal(empty, '');
         });
-        const gridShapes = await page.locator('.ff-equipment').evaluateAll(grids => grids.map(grid => {
+        const gridShapes = await page.locator('.ff-scroll > .ff-grid').evaluateAll(grids => grids.map(grid => {
             const slots = [...grid.children].map(slot => slot.getBoundingClientRect());
             return [slots.length, new Set(slots.map(slot => slot.left)).size, new Set(slots.map(slot => slot.top)).size,
                 slots.every(slot => slot.height === 24), slots[2].top - slots[0].top,
@@ -89,7 +99,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         }));
         assert.equal(gridShapes.length, 8);
         gridShapes.forEach(shape => assert.deepEqual(shape, [4, 2, 2, true, 24, true]));
-        const legendStyles = await page.locator('.ff-character').evaluateAll(characters => characters.map(character => {
+        const legendStyles = await page.locator('fieldset.ff-panel:not(.ff-ui)').evaluateAll(characters => characters.map(character => {
             const legend = character.querySelector('legend');
             const css = getComputedStyle(legend);
             return [legend.getBoundingClientRect().left - character.getBoundingClientRect().left, css.borderTopWidth, css.borderTopStyle];
@@ -164,7 +174,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         await fallbackEquipped.press('Space');
         assert.equal(await fallbackEquipped.evaluate(node => node.checked), true);
         // Site copy must stay outside the themed panels; every panel control uses FF typography.
-        assert.equal(await page.locator('article.final-fantasy > header').count(), 0);
+        assert.equal(await page.locator('article.ff-contain > header').count(), 0);
         const controlStyles = await page.locator('.ff-ui').first().evaluate(panel => {
             const nodes = [panel, ...panel.querySelectorAll('label, input, button, select, option')];
             return nodes.map(node => {
@@ -181,20 +191,21 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         await page.setViewportSize({width: 390, height: 1000});
         assert.ok((await select.boundingBox()).width >= 128, 'The narrow editor must leave room for item names');
         assert.equal(await page.evaluate(() => document.body.scrollWidth <= innerWidth), true);
-        assert.equal(await page.locator('.ff-equipment').first().evaluate(grid => {
+        assert.equal(await page.locator('.ff-scroll > .ff-grid').first().evaluate(grid => {
             const slots = [...grid.children].map(slot => slot.getBoundingClientRect());
             return new Set(slots.map(slot => slot.left)).size === 2 && new Set(slots.map(slot => slot.top)).size === 2;
         }), true);
         if (process.env.FF_MOBILE_SCREENSHOT) {
-            await page.locator('.ff-editor').screenshot({path: process.env.FF_MOBILE_SCREENSHOT});
+            await page.locator('#ff-editor').screenshot({path: process.env.FF_MOBILE_SCREENSHOT});
         }
         const references = await browser.newPage({ignoreHTTPSErrors: true, viewport: {width: 1500, height: 1000}});
         for (const route of ['Weapons', 'Armor', 'Spells']) {
             await references.goto(new URL(`../${route}/`, url).href);
             await references.evaluate(() => document.fonts.ready);
+            await checkContract(references);
             assert.equal(await references.evaluate(() => document.body.scrollWidth <= innerWidth), true);
-            const panels = references.locator('.ff-ui.ff-table, .ff-ui.ff-reference');
-            const legends = await references.locator('.ff-reference > legend').allTextContents();
+            const panels = references.locator('fieldset.ff-ui.ff-fit');
+            const legends = await references.locator('fieldset.ff-ui.ff-fit > legend').allTextContents();
             assert.deepEqual(legends, route === 'Armor' ? ['Body', 'Shield', 'Helmet', 'Gloves'] : route === 'Spells' ? ['White Magic', 'Black Magic'] : ['Weapons']);
             if (process.env.FF_REFERENCE_SCREENSHOT) {
                 await references.screenshot({path: process.env.FF_REFERENCE_SCREENSHOT.replace(/\.png$/, `-${route}.png`), fullPage: true});
@@ -209,12 +220,12 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
                     const cells = [...node.querySelectorAll('th, td, caption, a')];
                     const table = node.querySelector('table');
                     const tableStyle = getComputedStyle(table);
-                    const portraits = [...node.querySelector('.ff-classes').children];
+                    const portraits = [...node.querySelector('.ff-row:has(> .ff-portrait)').children];
                     return {
                         size: css.fontSize, line: css.lineHeight, border: css.borderTopWidth,
                         spriteWidth: sprite.width, spriteHeight: sprite.height,
                         spriteBackground: sprite.backgroundSize,
-                        classesHeight: node.querySelector('.ff-classes').getBoundingClientRect().height,
+                        classesHeight: node.querySelector('.ff-row:has(> .ff-portrait)').getBoundingClientRect().height,
                         portraitRows: new Set(portraits.map(face => face.getBoundingClientRect().top)).size,
                         portraitCount: portraits.length,
                         cellPadding: [...table.querySelectorAll('th, td')].every(cell => {
@@ -238,7 +249,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
                         fieldsetWidth: node.matches('fieldset') ? css.width : null,
                         tableWidth: table.getBoundingClientRect().width,
                         fieldsetInset: parseFloat(css.paddingLeft) + parseFloat(css.paddingRight) + parseFloat(css.borderLeftWidth) + parseFloat(css.borderRightWidth),
-                        inlineResists: [...node.querySelectorAll('.ff-resists li')].every(item => getComputedStyle(item).display === 'inline'),
+                        inlineResists: [...node.querySelectorAll('.ff-inline-list li')].every(item => getComputedStyle(item).display === 'inline'),
                         themedCells: cells.every(cell => {
                             const style = getComputedStyle(cell);
                             const color = cell.matches('thead th') ? 'rgb(164, 228, 252)' : cell.matches('a') ? 'rgb(248, 184, 0)' : 'rgb(252, 252, 252)';
@@ -274,8 +285,8 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
                 assert.equal(metrics.themedCells, true, JSON.stringify(metrics.unexpectedShadows));
                 assert.doesNotMatch(metrics.outsideFont, /Final Fantasy I/);
                 assert.notEqual(metrics.outsideBackground, 'rgb(0, 0, 252)');
-                assert.equal(await references.locator('article.final-fantasy > header').count(), 0);
-                assert.equal(await references.locator('.ff-class-tooltip, .ff-classes [tabindex]').count(), 0);
+                assert.equal(await references.locator('article.ff-contain > header').count(), 0);
+                assert.equal(await references.locator('.ff-class-tooltip, .ff-row:has(> .ff-portrait) [tabindex]').count(), 0);
                 assert.equal(await references.locator('tbody th > *').count(), 0);
                 // Panel typography, cropped portraits and borders scale together.
                 await panel.evaluate(node => node.style.setProperty('--ff-scale', '1'));
@@ -302,7 +313,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
                 assert.equal(focused.color, 'rgb(0, 252, 252)');
                 assert.equal(focused.outline, 'solid');
                 assert.equal(focused.decoration, 'none');
-                await references.locator('.ff-reference > legend').first().click();
+                await references.locator('fieldset.ff-ui.ff-fit > legend').first().click();
                 await link.hover();
                 assert.equal((await linkStyle()).color, 'rgb(0, 252, 252)');
                 await references.mouse.down();

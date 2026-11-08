@@ -28,7 +28,7 @@
             </xsl:when>
             <xsl:when test="@view = 'weapons'">
 
-                <fieldset class="ff-ui ff-panel ff-fit" style="--ff-scale: 2">
+                <fieldset class="ff-ui ff-panel" style="--ff-scale: 2">
                     <legend>Weapons</legend>
                     <div class="ff-scroll">
                         <table>
@@ -78,7 +78,7 @@
             <xsl:when test="@view = 'armor'">
                 <xsl:for-each select="sf1:armor/sf1:item[generate-id() = generate-id(key('armor-categories', @category)[1])]">
                     <xsl:sort select="@category" data-type="number" />
-                    <fieldset class="ff-ui ff-panel ff-fit" style="--ff-scale: 2">
+                    <fieldset class="ff-ui ff-panel" style="--ff-scale: 2">
                         <legend>
                             <xsl:choose>
                                 <xsl:when test="@category=0">Body</xsl:when>
@@ -136,7 +136,7 @@
             <xsl:when test="@view = 'spells'">
                 <xsl:for-each select="sf1:spells/sf1:spell[generate-id() = generate-id(key('spell-schools', @school)[1])]">
                     <xsl:sort select="@school" order="descending" />
-                    <fieldset class="ff-ui ff-panel ff-fit" style="--ff-scale: 2">
+                    <fieldset class="ff-ui ff-panel" style="--ff-scale: 2">
                         <legend>
                             <xsl:choose>
                                 <xsl:when test="@school = 'white'">White Magic</xsl:when>

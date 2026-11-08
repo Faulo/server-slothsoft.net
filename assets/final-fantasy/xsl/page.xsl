@@ -178,9 +178,9 @@
                                             </td>
                                             <td class="ff-number">
                                                 <xsl:choose>
-                                                    <!-- Only these effects use accuracy to determine whether they apply.
-                                                         Damage always connects; its hit roll doubles damage instead. -->
-                                                    <xsl:when test="@effect = 3 or @effect = 4 or @effect = 5">
+                                                    <!-- Damage uses accuracy for double damage; status, slow and morale
+                                                         effects use it to determine whether they apply. -->
+                                                    <xsl:when test="@effect = 1 or @effect = 2 or @effect = 3 or @effect = 4 or @effect = 5">
                                                         <xsl:value-of select="@hit" />
                                                     </xsl:when>
                                                     <xsl:otherwise>-</xsl:otherwise>

@@ -53,11 +53,11 @@ final class PagesTest extends TestCase {
             self::assertStringNotContainsString('33-66 HP', $xpath->evaluate('string(//h:tr[@id="spell-17"]/h:td[@class="ff-spell-effect"])'));
             self::assertStringContainsString('32-63 HP', $xpath->evaluate('string(//h:tr[@id="spell-17"]/h:td[@class="ff-spell-effect"])'));
             self::assertStringContainsString('Always misses', $xpath->evaluate('string(//h:tr[@id="spell-7"]/h:td[@class="ff-spell-effect"])'));
-            self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-30"]/h:td[@class="ff-spell-effect"]/h:p[.="Cancels SLOW."])'));
-            self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-16"]/h:td[@class="ff-spell-effect"]/h:p[.="Cancels FAST."])'));
+            self::assertSame(0.0, $xpath->evaluate('count(//h:td[@class="ff-spell-effect"]/h:p[contains(., "Cancels ")])'));
+            self::assertSame('Deals 10-20 Fire damage to one enemy.', $xpath->evaluate('normalize-space(//h:tr[@id="spell-5"]/h:td[@class="ff-spell-effect"])'));
             self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-2"]/h:td[@class="ff-spell-effect"]/h:p[.="Only affects undead enemies."])'));
             self::assertSame(0.0, $xpath->evaluate('count(//h:td[@class="ff-spell-effect"]/h:p[contains(., " element.")])'));
-            foreach ([1 => '-', 5 => '-', 6 => '24', 7 => '-', 14 => '24', 16 => '64', 38 => '40', 45 => '-', 48 => '-', 52 => '-', 62 => '48', 64 => '-'] as $id => $accuracy) {
+            foreach ([1 => '-', 2 => '24', 5 => '24', 6 => '24', 7 => '-', 14 => '24', 16 => '64', 38 => '40', 45 => '24', 48 => '-', 52 => '-', 61 => '107', 62 => '48', 64 => '-'] as $id => $accuracy) {
                 self::assertSame($accuracy, $xpath->evaluate('string(//h:tr[@id="spell-' . $id . '"]/h:td[last()-1])'));
             }
             self::assertSame('Fire', $xpath->evaluate('normalize-space(//h:tr[@id="spell-5"]/h:td[last()])'));

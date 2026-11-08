@@ -54,10 +54,10 @@ column follows Classes at the right edge. Each group fits its table and has an a
 label like the game menu. Class portraits have accessible labels without tooltips.
 Spell tables include an Effect column from the package's ROM-derived descriptions,
 including damage ranges, field-healing ranges, targets, buffs, debuffs and utility
-spells. Cancellation and target restrictions each get their own paragraph.
+spells. Target restrictions get their own paragraph; cancellation notes are omitted.
 Accuracy and Element follow Effect. Accuracy shows the raw ROM hit bonus for
-status, slow and morale effects; spells without a success roll display "-".
-Damage always connects, so its double-damage roll is not shown as Accuracy.
+damage, status, slow and morale effects; spells that ignore accuracy display "-".
+For damage spells, Accuracy affects the double-damage roll.
 Element decodes the ROM element mask, displaying "-" for non-elemental spells.
 Ineffective US-version spells remain identified as such in Effect.
 Multiword column headings wrap at spaces. Resistances appear inline, separated by

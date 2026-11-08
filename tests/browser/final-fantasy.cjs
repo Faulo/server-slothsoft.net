@@ -89,11 +89,23 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         await selectItem(page.locator('#ff-0-weapons-0'), '0');
         await page.waitForFunction(() => document.querySelector('[data-stats]').getAttribute('aria-busy') === 'false');
         assert.equal(await page.locator('#ff-preview-error').isVisible(), true);
+        const errorPanel = await page.locator('#ff-errors').evaluate(node => ({
+            previous: node.previousElementSibling.id,
+            background: getComputedStyle(node).backgroundColor,
+            foreground: getComputedStyle(node).color,
+            below: node.getBoundingClientRect().top >= node.previousElementSibling.getBoundingClientRect().bottom
+        }));
+        assert.deepEqual(errorPanel, {previous: 'ff-commands', background: 'rgb(168, 16, 0)', foreground: 'rgb(252, 252, 252)', below: true});
+        if (process.env.FF_ERROR_SCREENSHOT) {
+            await page.locator('#ff-editor').screenshot({path: process.env.FF_ERROR_SCREENSHOT});
+        }
         assert.deepEqual(await page.locator('[data-character="0"] [data-stat]').allTextContents(), ['-', '-', '-', '-']);
         await page.locator('#ff-editor').evaluate(form => form.reset());
         await page.waitForTimeout(200);
         await waitForStats();
         assert.deepEqual(await readStats(), initialStats, 'Reset restores the saved combat stats');
+        assert.equal(await page.locator('#ff-errors').isVisible(), false);
+        assert.ok(await page.locator('[data-character] h3').evaluateAll(nodes => nodes.every(node => getComputedStyle(node).marginBottom === '0px')));
         // Hold an older preview until a newer selection has already been sent.
         await page.route('**/slothsoft@final-fantasy/i/api/data?*', async route => {
             const response = await route.fetch();

@@ -302,14 +302,6 @@
         <h2>About</h2>
         <p>A savegame editor for Final Fantasy I. Upload an NES battery save, make changes, then download.</p>
         <p>The bookmark URL can be used to return to the save.</p>
-        <xsl:if test="sf1:error">
-            <p role="alert">
-                <strong>
-                    <xsl:value-of select="sf1:error" />
-                </strong>
-            </p>
-        </xsl:if>
-        <p id="ff-preview-error" role="status" hidden="hidden" />
         <form action="/FinalFantasy/I/SaveEditor/?user={@user}" data-preview-url="/slothsoft@final-fantasy/i/api/data?view=editor&amp;user={@user}" method="post" enctype="multipart/form-data" id="ff-editor" class="ff-ui ff-row ff-scroll" style="--ff-scale: 2; --ff-background: transparent; --ff-wrap: wrap; --ff-align: start; --ff-gap: 1em; --ff-scroll-padding: .5em">
             <div class="ff-grid ff-fit" style="--ff-columns: minmax(0, 1fr); --ff-max-width: 25em">
                 <div id="ff-metadata" class="ff-panel" style="--ff-background: var(--ff-blue)">
@@ -331,6 +323,17 @@
                         <button type="submit" name="ff-action" value="save">Save changes</button>
                         <button type="submit" name="ff-action" value="download">Download save</button>
                     </xsl:if>
+                </div>
+                <div id="ff-errors" class="ff-panel ff-prose" style="--ff-background: var(--ff-dark-red); --ff-measure: 25em">
+                    <xsl:if test="not(sf1:error)">
+                        <xsl:attribute name="hidden">hidden</xsl:attribute>
+                    </xsl:if>
+                    <xsl:if test="sf1:error">
+                        <p role="alert">
+                            <xsl:value-of select="sf1:error" />
+                        </p>
+                    </xsl:if>
+                    <p id="ff-preview-error" role="status" hidden="hidden" />
                 </div>
             </div>
             <xsl:for-each select="sf1:editor">

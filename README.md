@@ -27,6 +27,9 @@ after saving. Below Armor, Casts lists distinct spells
 from all carried equipment, including unequipped items, with links to the spell
 reference page and the standard comma separator. The list updates immediately
 when inventory selections change, and also renders without JavaScript.
+Section headings have no bottom margin. Save and preview errors appear in a
+separate FF panel below the commands, with white text on the NES dark-red
+background. The panel is hidden when there are no errors.
 Equipment rows are 24px tall at 2×, including the select borders, with no vertical
 gap between rows. Item glyphs appear only within the option text. Select widths
 use the longest rendered option in ch, plus padding, borders and space for the

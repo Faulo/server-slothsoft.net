@@ -193,6 +193,7 @@ final class PagesTest extends TestCase {
         $xpath = new DOMXPath($document);
         $xpath->registerNamespace('h', 'http://www.w3.org/1999/xhtml');
         self::assertSame(1.0, $xpath->evaluate('count(//h:p[@role="alert"])'));
+        self::assertSame(1.0, $xpath->evaluate('count(//h:div[@id="ff-errors"][not(@hidden)][preceding-sibling::*[1][@id="ff-commands"]]/h:p[@role="alert"])'));
         self::assertSame(32.0, $xpath->evaluate('count(//h:select[@class="ff-select"])'));
         self::assertSame(1280.0, $xpath->evaluate('count(//h:select/h:option[@aria-label])'));
         self::assertSame(4.0, $xpath->evaluate('count(//h:legend/h:span/h:span[not(@role)])'));

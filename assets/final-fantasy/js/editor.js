@@ -7,6 +7,10 @@ function initializeEditor() {
     const commands = form.querySelectorAll('button[name="ff-action"]');
     const stats = form.querySelectorAll('[data-stats]');
     const previewError = document.getElementById('ff-preview-error');
+    const errorPanel = document.getElementById('ff-errors');
+    const updateErrorPanel = () => {
+        errorPanel.hidden = ![...errorPanel.children].some(node => !node.hidden);
+    };
     let previewTimer;
     let previewController;
     let previewVersion = 0;
@@ -54,6 +58,7 @@ function initializeEditor() {
         }
         stats.forEach(node => node.setAttribute('aria-busy', 'true'));
         previewError.hidden = true;
+        updateErrorPanel();
         previewTimer = setTimeout(async () => {
             previewController = new AbortController();
             const body = new FormData(form);
@@ -75,6 +80,7 @@ function initializeEditor() {
                 form.querySelectorAll('[data-stat]').forEach(node => node.textContent = '-');
                 previewError.textContent = error.message;
                 previewError.hidden = false;
+                updateErrorPanel();
             } finally {
                 if (version === previewVersion) {
                     stats.forEach(node => node.setAttribute('aria-busy', 'false'));

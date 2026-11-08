@@ -171,3 +171,16 @@
     margin-top: 1em;
 }
 
+.final-fantasy .ff-ui td.ff-spell-effect {
+    max-width: 44ch;
+    white-space: normal;
+}
+
+.final-fantasy .ff-spell-effect p {
+    margin: 0;
+}
+
+.final-fantasy .ff-spell-notes {
+    max-width: 70ch;
+}
+

@@ -53,9 +53,9 @@ Helmet, and Gloves fieldsets; weapons into a Weapons fieldset. Armor's Resists
 column follows Classes at the right edge. Each group fits its table and has an aligned bordered
 label like the game menu. Class portraits have accessible labels without tooltips.
 Spell tables end with an Effect column from the package's ROM-derived descriptions,
-including damage/healing ranges, targets, status effects, success-roll thresholds,
-utility spells and actual US-version bugs. Notes explain Magic Defense and elemental
-modifiers; menu healing is listed separately where it differs from battle healing.
+including damage ranges, field-healing ranges, targets, buffs, debuffs and utility
+spells. Cancellation, target restrictions and element notes each get their own
+paragraph. Ineffective US-version spells remain identified as such.
 Multiword column headings wrap at spaces. Resistances appear inline, separated by
 the ROM font's comma glyph; the combined resistance reads "Poison, Stone".
 Borders and spacing scale with the font, and line height is 150%. The domain namespace is

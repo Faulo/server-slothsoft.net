@@ -50,9 +50,15 @@ final class PagesTest extends TestCase {
         if ($path === '/FinalFantasy/I/Spells/') {
             self::assertSame(2.0, $xpath->evaluate('count(//h:thead/h:tr/h:th[last()][.="Effect"][preceding-sibling::h:th[1]="Classes"])'));
             self::assertSame(64.0, $xpath->evaluate('count(//h:tbody/h:tr/h:td[last()][@class="ff-spell-effect"][h:p[string-length(.) > 0]])'));
-            self::assertStringContainsString('33-66 HP', $xpath->evaluate('string(//h:tr[@id="spell-17"]/h:td[last()])'));
+            self::assertStringNotContainsString('33-66 HP', $xpath->evaluate('string(//h:tr[@id="spell-17"]/h:td[last()])'));
             self::assertStringContainsString('32-63 HP', $xpath->evaluate('string(//h:tr[@id="spell-17"]/h:td[last()])'));
             self::assertStringContainsString('Always misses', $xpath->evaluate('string(//h:tr[@id="spell-7"]/h:td[last()])'));
+            self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-30"]/h:td[last()]/h:p[.="Cancels SLOW."])'));
+            self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-16"]/h:td[last()]/h:p[.="Cancels FAST."])'));
+            self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-2"]/h:td[last()]/h:p[.="Only affects undead enemies."])'));
+            self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-16"]/h:td[last()]/h:p[.="Status element."])'));
+            self::assertSame(0.0, $xpath->evaluate('count(//h:td[@class="ff-spell-effect"][contains(., "Magic Defense")])'));
+            
             foreach (['White Magic' => ['0', '6', '3', '9', '4', '10'], 'Black Magic' => ['1', '7', '3', '9', '5', '11']] as $label => $expectedClasses) {
                 self::assertSame(32.0, $xpath->evaluate('count(//h:fieldset[h:legend="' . $label . '"]//h:tbody/h:tr)'));
                 foreach ($xpath->query('//h:fieldset[h:legend="' . $label . '"]//h:span[@class="ff-classes"]') as $classList) {

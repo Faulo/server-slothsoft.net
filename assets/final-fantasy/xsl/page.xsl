@@ -181,17 +181,6 @@
                         </div>
                     </fieldset>
                 </xsl:for-each>
-                <div class="ff-ui ff-panel ff-spell-notes">
-                    <p>Damage ranges are before elemental modifiers. Healing cannot exceed maximum HP. Buffs and debuffs last for the battle.</p>
-                    <p>For a success or double damage threshold, subtract the target's Magic Defense, with a minimum of 0. The spell succeeds when its roll from 0 to
-                        <xsl:value-of select="sf1:spell-rules/@roll-max" /> is at most that threshold. A roll of
-                        <xsl:value-of select="sf1:spell-rules/@roll-max" /> always fails. Damage spells still deal their normal damage when this roll fails.
-                    </p>
-                    <p>Elemental resistance replaces the base threshold of
-                        <xsl:value-of select="sf1:spell-rules/@base-hit" /> with 0 and halves base damage. Weakness adds
-                        <xsl:value-of select="sf1:spell-rules/@weakness-hit" /> to the threshold and increases base damage by half, rounded down. Undead damage ignores these modifiers. Resistance completely blocks the HP-limited status spells.
-                    </p>
-                </div>
             </xsl:when>
         </xsl:choose>
     </xsl:template>

@@ -311,18 +311,20 @@
                 </strong>
             </p>
         </xsl:if>
-        <form action="/FinalFantasy/I/SaveEditor/?user={ancestor-or-self::sf1:final-fantasy/@user}" method="post" enctype="multipart/form-data" id="ff-upload" class="ff-ui ff-panel ff-row" style="--ff-scale: 2; --ff-gap: 1em; --ff-wrap: wrap">
+        <form action="/FinalFantasy/I/SaveEditor/?user={ancestor-or-self::sf1:final-fantasy/@user}" method="post" enctype="multipart/form-data" id="ff-upload" class="ff-ui ff-panel ff-grid" style="--ff-scale: 2; --ff-columns: minmax(0, 1fr); --ff-gap: 0">
             <input type="hidden" name="ff-action" value="upload" />
             <input type="hidden" name="MAX_FILE_SIZE" value="8192" />
-            <label for="ff-save">.sav File (8 KiB)</label>
-            <input id="ff-save" name="ff-save" type="file" accept=".sav,.srm" required="required" />
+            <div class="ff-row" style="--ff-wrap: wrap; --ff-gap: 1em">
+                <input id="ff-save" name="ff-save" type="file" accept=".sav,.srm" required="required" />
+                <label for="ff-save">.sav File (8 KiB)</label>
+            </div>
             <button type="submit">Load save</button>
         </form>
         <xsl:for-each select="sf1:editor">
-            <form action="/FinalFantasy/I/SaveEditor/?user={ancestor-or-self::sf1:final-fantasy/@user}" method="post" id="ff-editor" class="ff-ui ff-panel" style="--ff-scale: 2">
+            <form action="/FinalFantasy/I/SaveEditor/?user={ancestor-or-self::sf1:final-fantasy/@user}" method="post" id="ff-editor" class="ff-ui ff-panel ff-grid" style="--ff-scale: 2; --ff-columns: minmax(0, 1fr)">
 
                 <input type="hidden" name="ff-source" value="{@source}" />
-                <div class="ff-grid" style="--ff-columns: repeat(auto-fit, minmax(min(100%, 32em), 1fr))">
+                <div class="ff-row" style="--ff-wrap: wrap; --ff-gap: 1em">
                     <xsl:for-each select="sf1:character">
                         <fieldset class="ff-panel">
                             <legend>
@@ -356,8 +358,10 @@
                         </fieldset>
                     </xsl:for-each>
                 </div>
-                <button type="submit" name="ff-action" value="save">Save changes</button>
-                <button type="submit" name="ff-action" value="download">Download edited save</button>
+                <div class="ff-grid" style="--ff-columns: minmax(0, 1fr); --ff-gap: 0">
+                    <button type="submit" name="ff-action" value="save">Save changes</button>
+                    <button type="submit" name="ff-action" value="download">Download edited save</button>
+                </div>
             </form>
         </xsl:for-each>
     </xsl:template>

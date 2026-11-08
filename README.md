@@ -18,6 +18,9 @@ Equipment rows are 24px tall at 2×, including the select borders, with no verti
 gap between rows. Item glyphs appear only within the option text. Select widths
 use the longest rendered option in ch, plus padding, borders and space for the
 native dropdown arrow. The empty equipment option has no text.
+Character fieldsets fill each horizontal row before wrapping. Commands form a
+vertical menu with the ROM hand marking hover/focus, including the native file
+chooser; its .sav label follows the input on the right when space permits.
 Narrow screens scroll each equipment grid horizontally to keep item names legible.
 Scroll containers reserve .25em for native control focus outlines.
 

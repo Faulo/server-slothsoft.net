@@ -6,6 +6,10 @@
         <domain name="slothsoft.net" vendor="slothsoft" module="slothsoft.net" ref="home" status-active="" status-public="" sfd:languages="de-de en-us" version="1.1">
 
             <page name="AboutUs" ref="about-us" title="About us" status-active="" status-public="" />
+            <page name="Shoutboxes" ref="chat-list" title="Shoutboxes" status-active="" status-public="" />
+            <xsl:apply-templates select="*[@name='minecraft']" />
+            <xsl:apply-templates select="*[@name='tales']" />
+            <xsl:apply-templates select="*[@name='fire-emblem']" />
             <page name="FinalFantasy" ref="/pages/final-fantasy/home" title="Final Fantasy" status-active="" status-public="">
                 <page name="I" redirect="SaveEditor" title="Final Fantasy I" status-active="" status-public="">
                     <page name="SaveEditor" ref="/pages/final-fantasy/editor" title="Save Editor" status-active="" status-public="" />
@@ -14,10 +18,6 @@
                     <page name="Spells" ref="/pages/final-fantasy/spells" title="Spells" status-active="" status-public="" />
                 </page>
             </page>
-            <page name="Shoutboxes" ref="chat-list" title="Shoutboxes" status-active="" status-public="" />
-            <xsl:apply-templates select="*[@name='minecraft']" />
-            <xsl:apply-templates select="*[@name='tales']" />
-            <xsl:apply-templates select="*[@name='fire-emblem']" />
             <xsl:apply-templates select="*[@name='dragon-age']" />
             <xsl:apply-templates select="*[@name='amber']" />
             <xsl:apply-templates select="*[@name='vocab']" />

@@ -11,6 +11,11 @@ to the editor. It provides `/FinalFantasy/I/SaveEditor/`, `/FinalFantasy/I/Weapo
 weapons, armor and equipped flags; reference pages read names, stats and class
 permissions from the original US ROM through savegame XML specifications.
 
+Weapons and armor show a **Loot** column after Price: `**` when any placed shop
+sells the item, otherwise the number of distinct chest and NPC rewards per
+playthrough. Shared chest flags count once. The package supplies the counts;
+asterisks use the font fallback. Spells have no Loot column.
+
 Maps are available at `/FinalFantasy/I/WorldMap/`, `/FinalFantasy/I/Settlements/`
 and `/FinalFantasy/I/Dungeons/`. Every location has one page with a separate FF
 panel for each floor; Temple of Fiends has separate `Present/` and `Past/` pages.
@@ -23,8 +28,8 @@ reference lists use the editor's .5em outer inset and 1em panel gap.
 the shared catalog for the sitemap, indexes and floor panels, covering all 61
 standard map IDs once. Cardia includes the shared Dragon Caves map and both
 Bahamut floors. Map images come from the package's `i/gfx/map` asset; the site
-only supplies names and grouping. Composer currently locks the package's
-`dev-main` map implementation until its next stable release.
+only supplies names and grouping. Composer uses the stable `slothsoft/final-fantasy`
+1.1 release for map rendering and acquisition counts.
 
 The editor gives each character a framed legend with the name above `L` and the
 level, and the class sprite to their right. Weapons

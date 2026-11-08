@@ -46,6 +46,7 @@
                                 <tr>
                                     <th scope="col">Weapon</th>
                                     <th scope="col">Price</th>
+                                    <th scope="col">Loot</th>
                                     <th scope="col">Damage</th>
                                     <th scope="col">Hit<br />bonus
                                     </th>
@@ -63,6 +64,7 @@
                                         <td class="ff-number">
                                             <xsl:value-of select="@price" />
                                         </td>
+                                        <xsl:call-template name="loot" />
                                         <td class="ff-number">
                                             <xsl:value-of select="@damage" />
                                         </td>
@@ -103,6 +105,7 @@
                                     <tr>
                                         <th scope="col">Armor</th>
                                         <th scope="col">Price</th>
+                                        <th scope="col">Loot</th>
                                         <th scope="col">Absorb</th>
                                         <th scope="col">Evade<br />penalty
                                         </th>
@@ -120,6 +123,7 @@
                                             <td class="ff-number">
                                                 <xsl:value-of select="@price" />
                                             </td>
+                                            <xsl:call-template name="loot" />
                                             <td class="ff-number">
                                                 <xsl:value-of select="@absorb" />
                                             </td>
@@ -262,6 +266,23 @@
                 </span>
             </xsl:for-each>
         </span>
+    </xsl:template>
+    <xsl:template name="loot">
+        <td class="ff-number">
+            <xsl:choose>
+                <xsl:when test="@shop-count &gt; 0">
+                    <span aria-label="Unlimited, available in shops">
+                        <xsl:text>**</xsl:text>
+                    </span>
+                </xsl:when>
+                <xsl:when test="@chest-count and @npc-count">
+                    <xsl:value-of select="number(@chest-count) + number(@npc-count)" />
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:text>-</xsl:text>
+                </xsl:otherwise>
+            </xsl:choose>
+        </td>
     </xsl:template>
     <xsl:template name="cast">
         <xsl:choose>

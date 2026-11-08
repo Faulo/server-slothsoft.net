@@ -42,12 +42,18 @@ final class PagesTest extends TestCase {
             }
         }
         if ($path === '/FinalFantasy/I/Weapons/') {
+            self::assertSame(1.0, $xpath->evaluate('count(//h:thead/h:tr/h:th[.="Loot"])'));
+            self::assertSame('**', $xpath->evaluate('string(//h:tr[@id="weapon-1"]/h:td[2])'));
+            self::assertSame('1', $xpath->evaluate('string(//h:tr[@id="weapon-39"]/h:td[2])'));
+            self::assertSame('1', $xpath->evaluate('string(//h:tr[@id="weapon-40"]/h:td[2])'));
             self::assertSame("Wooden\u{1F962}", $xpath->evaluate('string(//h:tr[@id="weapon-1"]/h:th)'));
             self::assertStringNotContainsString('[nunchuck]', $document->textContent);
             self::assertSame('false', $xpath->evaluate('string(//h:tr[h:th[contains(., "Rapier")]]//h:span[@data-class="4"]/@data-allowed)'));
             self::assertSame('true', $xpath->evaluate('string(//h:tr[h:th[contains(., "Rapier")]]//h:span[@data-class="0"]/@data-allowed)'));
         }
         if ($path === '/FinalFantasy/I/Armor/') {
+            self::assertSame(4.0, $xpath->evaluate('count(//h:thead/h:tr/h:th[.="Loot"])'));
+            self::assertSame('**', $xpath->evaluate('string(//h:tr[@id="armor-1"]/h:td[2])'));
             self::assertSame(4.0, $xpath->evaluate('count(//h:thead/h:tr/h:th[last()][.="Resists"][preceding-sibling::h:th[1]="Classes"])'));
             self::assertSame(0.0, $xpath->evaluate('count(//h:ul[@class="ff-inline-list"]/parent::h:td[following-sibling::h:td])'));
             self::assertStringContainsString("\u{1F9BA}", $document->textContent);
@@ -57,6 +63,7 @@ final class PagesTest extends TestCase {
             }
         }
         if ($path === '/FinalFantasy/I/Spells/') {
+            self::assertSame(0.0, $xpath->evaluate('count(//h:thead/h:tr/h:th[.="Loot"])'));
             self::assertSame(2.0, $xpath->evaluate('count(//h:thead/h:tr/h:th[last()][.="Element"][preceding-sibling::h:th[1]="Accuracy"][preceding-sibling::h:th[2]="Effect"])'));
             self::assertSame(64.0, $xpath->evaluate('count(//h:tbody/h:tr/h:td[@class="ff-prose"][h:p[string-length(.) > 0]])'));
             self::assertStringNotContainsString('33-66 HP', $xpath->evaluate('string(//h:tr[@id="spell-17"]/h:td[@class="ff-prose"])'));

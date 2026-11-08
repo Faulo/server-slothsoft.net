@@ -62,7 +62,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         const downloadSave = async () => {
             const [download] = await Promise.all([
                 page.waitForEvent('download'),
-                page.locator('#ff-editor button[value=download]').click()
+                page.locator('#ff-commands button[value=download]').click()
             ]);
             const chunks = [];
             for await (const chunk of await download.createReadStream()) {
@@ -91,7 +91,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
             assert.equal(actual, expected);
             assert.equal(empty, '');
         });
-        const gridShapes = await page.locator('.ff-scroll > .ff-grid').evaluateAll(grids => grids.map(grid => {
+        const gridShapes = await page.locator('fieldset .ff-scroll > .ff-grid').evaluateAll(grids => grids.map(grid => {
             const slots = [...grid.children].map(slot => slot.getBoundingClientRect());
             return [slots.length, new Set(slots.map(slot => slot.left)).size, new Set(slots.map(slot => slot.top)).size,
                 slots.every(slot => slot.height === 24), slots[2].top - slots[0].top,
@@ -108,11 +108,33 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         const party = await page.locator('#ff-editor fieldset').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().toJSON()));
         assert.equal(party[0].top, party[1].top, 'Character fieldsets should fill each row before wrapping');
         assert.ok(party[1].left >= party[0].right);
-        const commands = await page.locator('#ff-editor button').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().toJSON()));
+        const commands = await page.locator('#ff-commands button').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().toJSON()));
         assert.equal(commands[0].left, commands[1].left);
         assert.ok(commands[1].top >= commands[0].bottom, 'Menu commands should stack vertically');
         const uploadRow = await page.locator('#ff-save, label[for="ff-save"]').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().toJSON()));
         assert.ok(uploadRow[1].left >= uploadRow[0].right, 'File label should follow the input on the right');
+        const panels = await page.locator('#ff-upload, #ff-bookmark, #ff-commands, #ff-editor').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().toJSON()));
+        assert.equal(panels[0].left, panels[1].left);
+        assert.equal(panels[0].left, panels[2].left);
+        assert.ok(panels[1].top >= panels[0].bottom);
+        assert.ok(panels[2].top >= panels[1].bottom);
+        assert.ok(panels[3].left >= panels[0].right, 'Party should appear to the right of the sidebar');
+        assert.equal(panels[3].top, panels[0].top);
+        const bookmark = page.locator('#ff-bookmark a');
+        const action = await page.locator('#ff-editor').getAttribute('action');
+        assert.equal(await bookmark.getAttribute('href'), action);
+        assert.equal(await bookmark.textContent(), new URL(action, url).searchParams.get('user'));
+        assert.equal(await page.locator('[name=ff-source]').count(), 0);
+        assert.deepEqual(await page.locator('#ff-commands button').evaluateAll(nodes => nodes.map(node => node.form.id)), ['ff-editor', 'ff-editor']);
+        // The detached Save command must submit equipment and persist it at the same URL.
+        const savedItem = await page.locator('#ff-0-weapons-0').evaluate(node => node.value);
+        await setEquipped(page.locator('.ff-equipped').first(), false);
+        await selectItem(page.locator('#ff-0-weapons-0'), savedItem === '1' ? '2' : '1');
+        const expectedItem = await page.locator('#ff-0-weapons-0').evaluate(node => node.value);
+        await Promise.all([page.waitForNavigation(), page.locator('#ff-commands button[value=save]').click()]);
+        await page.goto(new URL(action, url).href);
+        assert.equal(await page.locator('#ff-0-weapons-0').evaluate(node => node.value), expectedItem);
+        await loadSave(page);
         const equipped = page.locator('.ff-equipped').first();
         const originallyEquipped = await equipped.evaluate(node => node.checked);
         await setEquipped(equipped, false);
@@ -182,6 +204,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         await fallbackEquipped.press('Space');
         assert.equal(await fallbackEquipped.evaluate(node => node.checked), true);
         // Site copy must stay outside the themed panels; every panel control uses FF typography.
+        await page.locator('article.ff-contain > h2').click();
         assert.equal(await page.locator('article.ff-contain > header').count(), 0);
         const controlStyles = await page.locator('.ff-ui').first().evaluate(panel => {
             const nodes = [panel, ...panel.querySelectorAll('label, input, button, select, option')];
@@ -199,7 +222,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         await page.setViewportSize({width: 390, height: 1000});
         assert.ok((await select.boundingBox()).width >= 128, 'The narrow editor must leave room for item names');
         assert.equal(await page.evaluate(() => document.body.scrollWidth <= innerWidth), true);
-        assert.equal(await page.locator('.ff-scroll > .ff-grid').first().evaluate(grid => {
+        assert.equal(await page.locator('fieldset .ff-scroll > .ff-grid').first().evaluate(grid => {
             const slots = [...grid.children].map(slot => slot.getBoundingClientRect());
             return new Set(slots.map(slot => slot.left)).size === 2 && new Set(slots.map(slot => slot.top)).size === 2;
         }), true);

@@ -300,10 +300,7 @@
     <xsl:template name="editor">
         <h2>About</h2>
         <p>Edit a new game immediately, or upload an NES battery save to replace it.</p>
-        <p>
-            <a href="/FinalFantasy/I/SaveEditor/?user={@user}">Bookmark this save</a>
-            to return to it later. Anyone with this link can edit it.
-        </p>
+        <p>Bookmark the user ID to return to this save. Anyone with this link can edit it.</p>
         <xsl:if test="sf1:error">
             <p role="alert">
                 <strong>
@@ -311,21 +308,37 @@
                 </strong>
             </p>
         </xsl:if>
-        <form action="/FinalFantasy/I/SaveEditor/?user={ancestor-or-self::sf1:final-fantasy/@user}" method="post" enctype="multipart/form-data" id="ff-upload" class="ff-ui ff-panel ff-grid" style="--ff-scale: 2; --ff-columns: minmax(0, 1fr); --ff-gap: 0">
-            <input type="hidden" name="ff-action" value="upload" />
-            <input type="hidden" name="MAX_FILE_SIZE" value="8192" />
-            <div class="ff-row" style="--ff-wrap: wrap; --ff-gap: 1em">
-                <input id="ff-save" name="ff-save" type="file" accept=".sav,.srm" required="required" />
-                <label for="ff-save">.sav File (8 KiB)</label>
+        <div id="ff-menu" class="ff-ui ff-row ff-scroll" style="--ff-scale: 2; --ff-background: var(--ff-black); --ff-wrap: wrap; --ff-align: start; --ff-gap: 1em; --ff-scroll-padding: .25em">
+            <div class="ff-grid ff-fit" style="--ff-columns: minmax(0, 1fr); --ff-max-width: 25em">
+                <form action="/FinalFantasy/I/SaveEditor/?user={@user}" method="post" enctype="multipart/form-data" id="ff-upload" class="ff-ui ff-panel ff-grid" style="--ff-scale: 2; --ff-columns: minmax(0, 1fr); --ff-gap: 0">
+                    <input type="hidden" name="ff-action" value="upload" />
+                    <input type="hidden" name="MAX_FILE_SIZE" value="8192" />
+                    <div class="ff-row" style="--ff-wrap: wrap; --ff-gap: 1em">
+                        <span class="ff-fit" style="--ff-max-width: 12ch">
+                            <input id="ff-save" name="ff-save" type="file" accept=".sav,.srm" required="required" />
+                        </span>
+                        <label for="ff-save">.sav File</label>
+                    </div>
+                    <button type="submit">Load save</button>
+                </form>
+                <div id="ff-bookmark" class="ff-panel" style="--ff-background: var(--ff-blue)">
+                    <a href="/FinalFantasy/I/SaveEditor/?user={@user}" aria-label="Bookmark save {@user}">
+                        <xsl:value-of select="substring(@user, 1, 16)" />
+                        <wbr />
+                        <xsl:value-of select="substring(@user, 17)" />
+                    </a>
+                </div>
+                <xsl:if test="sf1:editor">
+                    <div id="ff-commands" class="ff-panel ff-grid" style="--ff-background: var(--ff-blue); --ff-columns: minmax(0, 1fr); --ff-gap: 0">
+                        <button type="submit" form="ff-editor" name="ff-action" value="save">Save changes</button>
+                        <button type="submit" form="ff-editor" name="ff-action" value="download">Download save</button>
+                    </div>
+                </xsl:if>
             </div>
-            <button type="submit">Load save</button>
-        </form>
-        <xsl:for-each select="sf1:editor">
-            <form action="/FinalFantasy/I/SaveEditor/?user={ancestor-or-self::sf1:final-fantasy/@user}" method="post" id="ff-editor" class="ff-ui ff-panel ff-grid" style="--ff-scale: 2; --ff-columns: minmax(0, 1fr)">
-
-                <div class="ff-row" style="--ff-wrap: wrap; --ff-gap: 1em">
+            <xsl:for-each select="sf1:editor">
+                <form action="/FinalFantasy/I/SaveEditor/?user={ancestor-or-self::sf1:final-fantasy/@user}" method="post" id="ff-editor" class="ff-ui ff-row ff-fit" style="--ff-scale: 2; --ff-background: var(--ff-black); --ff-wrap: wrap; --ff-align: start; --ff-gap: 1em; --ff-max-width: 56em">
                     <xsl:for-each select="sf1:character">
-                        <fieldset class="ff-panel">
+                        <fieldset class="ff-panel" style="--ff-background: var(--ff-blue)">
                             <legend>
                                 <span class="ff-row">
                                     <span>
@@ -356,13 +369,9 @@
                             </xsl:for-each>
                         </fieldset>
                     </xsl:for-each>
-                </div>
-                <div class="ff-grid" style="--ff-columns: minmax(0, 1fr); --ff-gap: 0">
-                    <button type="submit" name="ff-action" value="save">Save changes</button>
-                    <button type="submit" name="ff-action" value="download">Download edited save</button>
-                </div>
-            </form>
-        </xsl:for-each>
+                </form>
+            </xsl:for-each>
+        </div>
     </xsl:template>
     <xsl:template match="sf1:slot">
         <xsl:variable name="kind" select="local-name(..)" />

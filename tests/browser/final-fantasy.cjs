@@ -60,6 +60,33 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
             }
         };
         await loadSave(page);
+        assert.equal(await page.locator('[data-stats]').count(), 4);
+        const castCheck = await page.locator('[data-character="0"]').evaluate(character => {
+            const selects = [...character.querySelectorAll('select')];
+            const original = selects.map(select => select.value);
+            const change = (select, value) => {
+                select.value = value;
+                select.dispatchEvent(new Event('change', {bubbles: true}));
+            };
+            selects.forEach(select => change(select, '0'));
+            const empty = character.querySelector('[data-casts]').textContent;
+            const weapon = selects[0].querySelector('option[data-spell]');
+            const armor = selects[4].querySelector('option[data-spell]');
+            change(selects[0], weapon.value);
+            change(selects[1], weapon.value);
+            change(selects[4], armor.value);
+            const actual = [...character.querySelectorAll('[data-casts] a')].map(link => [link.getAttribute('href'), link.textContent]);
+            const expected = [...new Map([weapon, armor].map(option => [Number(option.dataset.spell), [option.dataset.spellUrl, option.dataset.spellName]])).entries()]
+                .sort(([a], [b]) => a - b).map(([, spell]) => spell);
+            const separator = getComputedStyle(character.querySelector('[data-casts] li'), '::after').content;
+            selects.forEach((select, index) => change(select, original[index]));
+            return {empty, actual, expected, separator};
+        });
+        assert.equal(castCheck.empty, '-');
+        assert.deepEqual(castCheck.actual, castCheck.expected);
+        if (castCheck.actual.length > 1) {
+            assert.equal(castCheck.separator, '", "');
+        }
         assert.equal(await page.locator('link[href*="/final-fantasy/css/"]').count(), 0);
         const publicClasses = new Set(['ff-contain', 'ff-ui', 'ff-panel', 'ff-fit', 'ff-row', 'ff-grid',
             'ff-scroll', 'ff-number', 'ff-prose', 'ff-inline-list', 'ff-class-sprite', 'ff-portrait', 'ff-select', 'ff-equipped']);

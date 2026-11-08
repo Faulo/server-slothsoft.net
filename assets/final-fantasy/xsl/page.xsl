@@ -335,7 +335,7 @@
             <xsl:for-each select="sf1:editor">
                 <div id="ff-party" class="ff-row ff-fit" style="--ff-wrap: wrap; --ff-align: start; --ff-gap: 1em; --ff-max-width: 56em">
                     <xsl:for-each select="sf1:character">
-                        <fieldset class="ff-panel" style="--ff-background: var(--ff-blue)">
+                        <fieldset class="ff-panel" data-character="{@index}" style="--ff-background: var(--ff-blue)">
                             <legend>
                                 <span class="ff-row">
                                     <span>
@@ -351,6 +351,7 @@
                                     </span>
                                 </span>
                             </legend>
+                            <xsl:apply-templates select="sf1:stats" />
                             <xsl:for-each select="sf1:weapons | sf1:armor">
                                 <h3>
                                     <xsl:choose>
@@ -364,11 +365,77 @@
                                     </div>
                                 </div>
                             </xsl:for-each>
+                            <h3>Casts</h3>
+                            <xsl:variable name="weapons" select="sf1:weapons/sf1:slot/@id" />
+                            <xsl:variable name="armor" select="sf1:armor/sf1:slot/@id" />
+                            <xsl:variable name="spells" select="ancestor::sf1:final-fantasy/sf1:weapons/sf1:weapon[@id=$weapons]/@spell | ancestor::sf1:final-fantasy/sf1:armor/sf1:item[@id=$armor]/@spell" />
+                            <ul class="ff-inline-list ff-prose" data-casts="" aria-live="polite" style="--ff-measure: 25ch">
+                                <xsl:for-each select="key('spells', $spells)">
+                                    <li>
+                                        <a href="/FinalFantasy/I/Spells/#spell-{@id}">
+                                            <xsl:value-of select="@name" />
+                                        </a>
+                                    </li>
+                                </xsl:for-each>
+                                <xsl:if test="not(key('spells', $spells))">
+                                    <li>-</li>
+                                </xsl:if>
+                            </ul>
                         </fieldset>
                     </xsl:for-each>
                 </div>
             </xsl:for-each>
         </form>
+    </xsl:template>
+    <xsl:template match="sf1:stats">
+        <h3>Stats</h3>
+        <div class="ff-grid" data-stats="" style="--ff-columns: repeat(auto-fit, minmax(min(100%, 12ch), 1fr)); --ff-row-gap: 0; --ff-column-gap: 1ch">
+            <span>
+                <xsl:text>HP </xsl:text><xsl:value-of select="@hp" />
+            </span>
+            <span>
+                <xsl:text>Max HP </xsl:text><xsl:value-of select="@max-hp" />
+            </span>
+            <span>
+                <xsl:text>Level </xsl:text><xsl:value-of select="@level" />
+            </span>
+            <span aria-label="Magic defense {@magic-defense}">
+                <xsl:text>M.Def </xsl:text><xsl:value-of select="@magic-defense" />
+            </span>
+            <span>
+                <xsl:text>Attack </xsl:text><xsl:value-of select="@damage" />
+            </span>
+            <span>
+                <xsl:text>Strength </xsl:text><xsl:value-of select="@strength" />
+            </span>
+            <span>
+                <xsl:text>Accuracy </xsl:text><xsl:value-of select="@hit" />
+            </span>
+            <span>
+                <xsl:text>Agility </xsl:text><xsl:value-of select="@agility" />
+            </span>
+            <span>
+                <xsl:text>Defense </xsl:text><xsl:value-of select="@absorb" />
+            </span>
+            <span>
+                <xsl:text>Vitality </xsl:text><xsl:value-of select="@vitality" />
+            </span>
+            <span>
+                <xsl:text>Evasion </xsl:text><xsl:value-of select="@evade" />
+            </span>
+            <span>
+                <xsl:text>Luck </xsl:text><xsl:value-of select="@luck" />
+            </span>
+            <span>
+                <xsl:text>Intellect </xsl:text><xsl:value-of select="@intelligence" />
+            </span>
+        </div>
+        <div class="ff-row ff-prose" style="--ff-wrap: wrap; --ff-measure: 25ch; --ff-gap: 1ch">
+            <span>Resists</span>
+            <xsl:call-template name="resistance">
+                <xsl:with-param name="mask" select="number(@resistance)" />
+            </xsl:call-template>
+        </div>
     </xsl:template>
     <xsl:template match="sf1:slot">
         <xsl:variable name="kind" select="local-name(..)" />
@@ -384,6 +451,17 @@
             </option>
             <xsl:for-each select="ancestor::sf1:final-fantasy/*[local-name()=$kind]/*">
                 <option aria-label="{@name}" value="{@id}">
+                    <xsl:if test="@spell != 0">
+                        <xsl:attribute name="data-spell">
+                            <xsl:value-of select="@spell" />
+                        </xsl:attribute>
+                        <xsl:attribute name="data-spell-name">
+                            <xsl:value-of select="key('spells', @spell)/@name" />
+                        </xsl:attribute>
+                        <xsl:attribute name="data-spell-url">
+                            <xsl:text>/FinalFantasy/I/Spells/#spell-</xsl:text><xsl:value-of select="@spell" />
+                        </xsl:attribute>
+                    </xsl:if>
                     <xsl:if test="@id=$selected">
                         <xsl:attribute name="selected">selected</xsl:attribute>
                     </xsl:if>

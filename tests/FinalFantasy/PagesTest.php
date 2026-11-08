@@ -216,6 +216,46 @@ final class PagesTest extends TestCase {
         self::assertStringNotContainsString('/nonexistent/', (string) $response->getBody());
     }
     
+    public function testCharacterStatsAndInventorySpells(): void {
+        $this->requireRom();
+        $rom = \Slothsoft\FinalFantasy\I\GameData::fromFile(\Slothsoft\FinalFantasy\Configuration::getRomPath('i'));
+        $weapons = array_filter($rom->getWeapons(), static fn(array $item): bool => $item['spell'] > 0);
+        $armor = array_filter($rom->getArmor(), static fn(array $item): bool => $item['spell'] > 0);
+        $weapon = reset($weapons);
+        $item = reset($armor);
+        $save = new \Slothsoft\FinalFantasy\I\Save($this->source());
+        $contents = $save->withEquipment([0 => [
+            'weapons' => [0 => ['id' => $weapon['id']], 1 => ['id' => $weapon['id']]],
+            'armor' => [0 => ['id' => $item['id']]]
+        ]], $rom);
+        $repository = new \Slothsoft\FinalFantasy\I\SaveRepository(\Slothsoft\Core\ServerEnvironment::getDataDirectory() . '/slothsoft/final-fantasy/i/users');
+        $user = \Slothsoft\FinalFantasy\I\SaveRepository::userId('');
+        $repository->store($user, $contents);
+        $_SERVER['REQUEST_METHOD'] = 'GET';
+        $_GET = ['user' => $user];
+        $response = (new LookupPageStrategy())->process(new ServerRequest('GET', 'https://slothsoft.net/FinalFantasy/I/SaveEditor/?user=' . $user));
+        $document = new DOMDocument();
+        self::assertTrue($document->loadXML((string) $response->getBody()));
+        $xpath = new DOMXPath($document);
+        $xpath->registerNamespace('h', 'http://www.w3.org/1999/xhtml');
+        self::assertSame(4.0, $xpath->evaluate('count(//h:div[@data-stats])'));
+        self::assertSame(4.0, $xpath->evaluate('count(//h:div[@data-stats]/h:span[.="HP 0"])'));
+        self::assertSame(4.0, $xpath->evaluate('count(//h:div[@data-stats]/h:span[.="Max HP 0"])'));
+        self::assertSame(4.0, $xpath->evaluate('count(//h:div[@data-stats]/h:span[.="Level 1"])'));
+        self::assertSame(4.0, $xpath->evaluate('count(//h:div[@data-stats][following-sibling::h:h3[1]="Weapons"])'));
+        $expected = array_unique([$weapon['spell'], $item['spell']]);
+        sort($expected);
+        $links = $xpath->query('//h:fieldset[@data-character="0"]//h:ul[@data-casts]/h:li/h:a');
+        self::assertCount(count($expected), $links);
+        $spells = $rom->getSpells();
+        foreach ($links as $index => $link) {
+            self::assertSame('/FinalFantasy/I/Spells/#spell-' . $expected[$index], $link->getAttribute('href'));
+            self::assertSame($spells[$expected[$index]]['name'], $link->textContent);
+        }
+        self::assertSame(3.0, $xpath->evaluate('count(//h:ul[@data-casts]/h:li[.="-"])'));
+        self::assertSame(4.0, $xpath->evaluate('count(//h:ul[@data-casts][preceding-sibling::h:h3[1]="Casts"])'));
+    }
+    
     private function requireRom(): void {
         $path = getenv('FF1_ROM_PATH') ?: dirname(__DIR__, 2) . '/Final Fantasy (USA).nes';
         if (! is_file($path)) {

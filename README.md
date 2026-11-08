@@ -14,6 +14,12 @@ permissions from the original US ROM through savegame XML specifications.
 The editor gives each character a framed name-and-class-sprite legend. Weapons
 and armor each use a 2×2 grid, with native checkboxes rendered as E markers that
 dim when unequipped. Slot numbers remain in accessible control names only.
+Above Weapons, a read-only Stats band displays HP, level, base attributes and
+saved combat values, including magic defense and resistances. These values
+refresh after saving equipment changes. Below Armor, Casts lists distinct spells
+from all carried equipment, including unequipped items, with links to the spell
+reference page and the standard comma separator. The list updates immediately
+when inventory selections change, and also renders without JavaScript.
 Equipment rows are 24px tall at 2×, including the select borders, with no vertical
 gap between rows. Item glyphs appear only within the option text. Select widths
 use the longest rendered option in ch, plus padding, borders and space for the

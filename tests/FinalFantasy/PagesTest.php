@@ -48,15 +48,22 @@ final class PagesTest extends TestCase {
             }
         }
         if ($path === '/FinalFantasy/I/Spells/') {
-            self::assertSame(2.0, $xpath->evaluate('count(//h:thead/h:tr/h:th[last()][.="Effect"][preceding-sibling::h:th[1]="Classes"])'));
-            self::assertSame(64.0, $xpath->evaluate('count(//h:tbody/h:tr/h:td[last()][@class="ff-spell-effect"][h:p[string-length(.) > 0]])'));
-            self::assertStringNotContainsString('33-66 HP', $xpath->evaluate('string(//h:tr[@id="spell-17"]/h:td[last()])'));
-            self::assertStringContainsString('32-63 HP', $xpath->evaluate('string(//h:tr[@id="spell-17"]/h:td[last()])'));
-            self::assertStringContainsString('Always misses', $xpath->evaluate('string(//h:tr[@id="spell-7"]/h:td[last()])'));
-            self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-30"]/h:td[last()]/h:p[.="Cancels SLOW."])'));
-            self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-16"]/h:td[last()]/h:p[.="Cancels FAST."])'));
-            self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-2"]/h:td[last()]/h:p[.="Only affects undead enemies."])'));
-            self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-16"]/h:td[last()]/h:p[.="Status element."])'));
+            self::assertSame(2.0, $xpath->evaluate('count(//h:thead/h:tr/h:th[last()][.="Element"][preceding-sibling::h:th[1]="Accuracy"][preceding-sibling::h:th[2]="Effect"])'));
+            self::assertSame(64.0, $xpath->evaluate('count(//h:tbody/h:tr/h:td[@class="ff-spell-effect"][h:p[string-length(.) > 0]])'));
+            self::assertStringNotContainsString('33-66 HP', $xpath->evaluate('string(//h:tr[@id="spell-17"]/h:td[@class="ff-spell-effect"])'));
+            self::assertStringContainsString('32-63 HP', $xpath->evaluate('string(//h:tr[@id="spell-17"]/h:td[@class="ff-spell-effect"])'));
+            self::assertStringContainsString('Always misses', $xpath->evaluate('string(//h:tr[@id="spell-7"]/h:td[@class="ff-spell-effect"])'));
+            self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-30"]/h:td[@class="ff-spell-effect"]/h:p[.="Cancels SLOW."])'));
+            self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-16"]/h:td[@class="ff-spell-effect"]/h:p[.="Cancels FAST."])'));
+            self::assertSame(1.0, $xpath->evaluate('count(//h:tr[@id="spell-2"]/h:td[@class="ff-spell-effect"]/h:p[.="Only affects undead enemies."])'));
+            self::assertSame(0.0, $xpath->evaluate('count(//h:td[@class="ff-spell-effect"]/h:p[contains(., " element.")])'));
+            foreach ([1 => '-', 5 => '-', 6 => '24', 7 => '-', 14 => '24', 16 => '64', 38 => '40', 45 => '-', 48 => '-', 52 => '-', 62 => '48', 64 => '-'] as $id => $accuracy) {
+                self::assertSame($accuracy, $xpath->evaluate('string(//h:tr[@id="spell-' . $id . '"]/h:td[last()-1])'));
+            }
+            self::assertSame('Fire', $xpath->evaluate('normalize-space(//h:tr[@id="spell-5"]/h:td[last()])'));
+            self::assertSame('Status', $xpath->evaluate('normalize-space(//h:tr[@id="spell-16"]/h:td[last()])'));
+            self::assertSame('Poison, Stone', $xpath->evaluate('normalize-space(//h:tr[@id="spell-38"]/h:td[last()])'));
+            self::assertSame('-', $xpath->evaluate('normalize-space(//h:tr[@id="spell-1"]/h:td[last()])'));
             self::assertSame(0.0, $xpath->evaluate('count(//h:td[@class="ff-spell-effect"][contains(., "Magic Defense")])'));
             
             foreach (['White Magic' => ['0', '6', '3', '9', '4', '10'], 'Black Magic' => ['1', '7', '3', '9', '5', '11']] as $label => $expectedClasses) {

@@ -52,10 +52,14 @@ grouped into White Magic and Black Magic fieldsets; armor into Body, Shield,
 Helmet, and Gloves fieldsets; weapons into a Weapons fieldset. Armor's Resists
 column follows Classes at the right edge. Each group fits its table and has an aligned bordered
 label like the game menu. Class portraits have accessible labels without tooltips.
-Spell tables end with an Effect column from the package's ROM-derived descriptions,
+Spell tables include an Effect column from the package's ROM-derived descriptions,
 including damage ranges, field-healing ranges, targets, buffs, debuffs and utility
-spells. Cancellation, target restrictions and element notes each get their own
-paragraph. Ineffective US-version spells remain identified as such.
+spells. Cancellation and target restrictions each get their own paragraph.
+Accuracy and Element follow Effect. Accuracy shows the raw ROM hit bonus for
+status, slow and morale effects; spells without a success roll display "-".
+Damage always connects, so its double-damage roll is not shown as Accuracy.
+Element decodes the ROM element mask, displaying "-" for non-elemental spells.
+Ineffective US-version spells remain identified as such in Effect.
 Multiword column headings wrap at spaces. Resistances appear inline, separated by
 the ROM font's comma glyph; the combined resistance reads "Poison, Stone".
 Borders and spacing scale with the font, and line height is 150%. The domain namespace is

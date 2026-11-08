@@ -150,6 +150,8 @@
                                         <th scope="col" class="ff-number">Price</th>
                                         <th scope="col">Classes</th>
                                         <th scope="col">Effect</th>
+                                        <th scope="col" class="ff-number">Accuracy</th>
+                                        <th scope="col">Element</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -173,6 +175,21 @@
                                                         <xsl:value-of select="." />
                                                     </p>
                                                 </xsl:for-each>
+                                            </td>
+                                            <td class="ff-number">
+                                                <xsl:choose>
+                                                    <!-- Only these effects use accuracy to determine whether they apply.
+                                                         Damage always connects; its hit roll doubles damage instead. -->
+                                                    <xsl:when test="@effect = 3 or @effect = 4 or @effect = 5">
+                                                        <xsl:value-of select="@hit" />
+                                                    </xsl:when>
+                                                    <xsl:otherwise>-</xsl:otherwise>
+                                                </xsl:choose>
+                                            </td>
+                                            <td>
+                                                <xsl:call-template name="resistance">
+                                                    <xsl:with-param name="mask" select="number(@element-mask)" />
+                                                </xsl:call-template>
                                             </td>
                                         </tr>
                                     </xsl:for-each>
@@ -245,7 +262,7 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template name="resistance">
-        <xsl:variable name="mask" select="number(@resistance-mask)" />
+        <xsl:param name="mask" select="number(@resistance-mask)" />
         <xsl:choose>
             <xsl:when test="$mask=0">-</xsl:when>
             <xsl:otherwise>

@@ -52,7 +52,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         const downloadSave = async () => {
             const [download] = await Promise.all([
                 page.waitForEvent('download'),
-                page.locator('.ff-editor button').click()
+                page.locator('.ff-editor button[value=download]').click()
             ]);
             const chunks = [];
             for await (const chunk of await download.createReadStream()) {

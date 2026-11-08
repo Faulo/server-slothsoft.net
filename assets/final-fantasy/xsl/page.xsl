@@ -297,13 +297,17 @@
     </xsl:template>
     <xsl:template name="editor">
         <h2>About</h2>
-        <p>This editor can change the equipment of an NES battery save.</p>
+        <p>Edit a new game immediately, or upload an NES battery save to replace it.</p>
+        <p>
+            <a href="/FinalFantasy/I/SaveEditor/?user={@user}">Bookmark this save</a>
+            to return to it later. Anyone with this link can edit it.
+        </p>
         <xsl:if test="sf1:error">
             <p class="ff-error" role="alert">
                 <xsl:value-of select="sf1:error" />
             </p>
         </xsl:if>
-        <form action="/FinalFantasy/I/SaveEditor/" method="post" enctype="multipart/form-data" class="ff-ui ff-panel ff-upload">
+        <form action="/FinalFantasy/I/SaveEditor/?user={ancestor-or-self::sf1:final-fantasy/@user}" method="post" enctype="multipart/form-data" class="ff-ui ff-panel ff-upload">
             <input type="hidden" name="ff-action" value="upload" />
             <input type="hidden" name="MAX_FILE_SIZE" value="8192" />
             <label for="ff-save">.sav File (8 KiB)</label>
@@ -311,8 +315,8 @@
             <button type="submit">Load save</button>
         </form>
         <xsl:for-each select="sf1:editor">
-            <form action="/FinalFantasy/I/SaveEditor/" method="post" class="ff-ui ff-panel ff-editor">
-                <input type="hidden" name="ff-action" value="download" />
+            <form action="/FinalFantasy/I/SaveEditor/?user={ancestor-or-self::sf1:final-fantasy/@user}" method="post" class="ff-ui ff-panel ff-editor">
+
                 <input type="hidden" name="ff-source" value="{@source}" />
                 <div class="ff-party">
                     <xsl:for-each select="sf1:character">
@@ -348,7 +352,8 @@
                         </fieldset>
                     </xsl:for-each>
                 </div>
-                <button type="submit">Download edited save</button>
+                <button type="submit" name="ff-action" value="save">Save changes</button>
+                <button type="submit" name="ff-action" value="download">Download edited save</button>
             </form>
         </xsl:for-each>
     </xsl:template>

@@ -26,7 +26,7 @@ final class PagesTest extends TestCase {
         self::assertStringContainsString($expected, $document->textContent);
         self::assertSame((float) $rows, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:tbody/h:tr)'));
         $classCount = $path === '/FinalFantasy/I/Spells/' ? 6 : 12;
-        self::assertSame((float) ($rows * $classCount), $xpath->evaluate('count(//h:span[@class="ff-class-sprite"])'));
+        self::assertSame((float) ($path === '/FinalFantasy/I/SaveEditor/' ? 4 : $rows * $classCount), $xpath->evaluate('count(//h:span[@class="ff-class-sprite"])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:span[@class="ff-classes"][count(h:span) != ' . $classCount . '])'));
         self::assertSame((float) $rows, $xpath->evaluate('count(//h:tbody/h:tr/h:th[@class="ff-text"])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:span[@class="ff-class-tooltip"] | //h:span[@class="ff-classes"]//*[@tabindex])'));
@@ -89,7 +89,60 @@ final class PagesTest extends TestCase {
         self::assertSame(0.0, $xpath->evaluate('count(//h:article[contains(@class, "ff-ui")])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:form[not(contains(@class, "ff-ui"))])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:a[not(starts-with(@href, "/FinalFantasy/I/"))])'));
-        self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:form[@action!="/FinalFantasy/I/SaveEditor/"])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:form[not(starts-with(@action, "/FinalFantasy/I/SaveEditor/?user="))])'));
+    }
+    
+    public function testNewGameProvidesPersistentUrl(): string {
+        $this->requireRom();
+        $_SERVER['REQUEST_METHOD'] = 'GET';
+        $_GET = [];
+        $response = (new LookupPageStrategy())->process(new ServerRequest('GET', 'https://slothsoft.net/FinalFantasy/I/SaveEditor/'));
+        $document = new DOMDocument();
+        self::assertTrue($document->loadXML((string) $response->getBody()));
+        $xpath = new DOMXPath($document);
+        $xpath->registerNamespace('h', 'http://www.w3.org/1999/xhtml');
+        $action = $xpath->evaluate('string(//h:form[contains(@class,"ff-editor")]/@action)');
+        self::assertMatchesRegularExpression('~^/FinalFantasy/I/SaveEditor/\?user=[a-f0-9]{32}$~', $action);
+        return $action;
+    }
+    
+    /** @depends testNewGameProvidesPersistentUrl */
+    public function testSaveNewGameWithoutUploading(string $action): string {
+        parse_str(parse_url($action, PHP_URL_QUERY), $_GET);
+        $_SERVER['REQUEST_METHOD'] = 'POST';
+        $equipment = $this->emptyEquipment();
+        $equipment[0]['weapons'][0]['id'] = '1';
+        $_POST = ['ff-action' => 'save', 'equipment' => $equipment];
+        $response = (new LookupPageStrategy())->process((new ServerRequest('POST', 'https://slothsoft.net' . $action))->withParsedBody($_POST));
+        self::assertStringContainsString('ff-editor', (string) $response->getBody());
+        self::assertSame(200, $response->getStatusCode());
+        return $action;
+    }
+    
+    /** @depends testSaveNewGameWithoutUploading */
+    public function testReopenSavedNewGame(string $action): string {
+        parse_str(parse_url($action, PHP_URL_QUERY), $_GET);
+        $_SERVER['REQUEST_METHOD'] = 'GET';
+        $response = (new LookupPageStrategy())->process(new ServerRequest('GET', 'https://slothsoft.net' . $action));
+        $document = new DOMDocument();
+        self::assertTrue($document->loadXML((string) $response->getBody()));
+        $xpath = new DOMXPath($document);
+        $xpath->registerNamespace('h', 'http://www.w3.org/1999/xhtml');
+        self::assertSame('1', $xpath->evaluate('string(//h:select[@id="ff-0-weapons-0"]/h:option[@selected]/@value)'));
+        self::assertSame($action, $xpath->evaluate('string(//h:form[contains(@class,"ff-editor")]/@action)'));
+        return $action;
+    }
+    
+    /** @depends testReopenSavedNewGame */
+    public function testDownloadSavedNewGame(string $action): void {
+        parse_str(parse_url($action, PHP_URL_QUERY), $_GET);
+        $_SERVER['REQUEST_METHOD'] = 'POST';
+        $equipment = $this->emptyEquipment();
+        $equipment[0]['weapons'][0]['id'] = '1';
+        $_POST = ['ff-action' => 'download', 'equipment' => $equipment];
+        $response = (new LookupPageStrategy())->process((new ServerRequest('POST', 'https://slothsoft.net' . $action))->withParsedBody($_POST));
+        $save = new \Slothsoft\FinalFantasy\I\Save((string) $response->getBody());
+        self::assertSame(1, $save->getCharacters()[0]['weapons'][0]['id']);
     }
     
     public function pages(): array {

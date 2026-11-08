@@ -98,3 +98,12 @@ Unicode ROM glyphs, panel boundaries, palette and scaling. Screenshots omit
 native dropdown popups; those still require visual confirmation in Firefox.
 The check also supports production's XHTML output and verifies unchanged saves
 round-trip byte for byte, and equipment changes survive download and re-upload.
+
+The FF editor creates a random user ID on opening a fresh page. Its form actions
+and bookmark link retain `?user=...`; revisiting that URL loads the stored save.
+Save changes and downloads persist edits, while uploads replace that user's save.
+Files live privately under `ServerEnvironment::getDataDirectory()` at
+`slothsoft/final-fantasy/i/users`. The URL is the access key; no account is required.
+A fresh editor starts with the ROM's default party (Fighter, Thief, Black Belt,
+Red Mage), blank names, initial stats, flags, gold and empty inventory. These
+initial tables are extracted through the savegame manifest; no save is bundled.

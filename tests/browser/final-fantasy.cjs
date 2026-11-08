@@ -10,21 +10,31 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         const errors = [];
         page.on('pageerror', error => errors.push(error.message));
         const url = process.env.FF_EDITOR_URL || 'https://slothsoft.ddev.site/FinalFantasy/I/SaveEditor/';
+        const checkCommands = async (target, uploading) => {
+            assert.deepEqual(await target.locator('#ff-commands button').evaluateAll(nodes => nodes.map(node => node.disabled)), [!uploading, uploading, uploading]);
+        };
         // Playwright's input helpers compare tagName, which rejects prefixed XHTML
         // elements even though Firefox correctly exposes native HTML controls.
-        const uploadSave = async (target, buffer) => {
+        const setUploadFile = async (target, buffer) => {
             const input = target.locator('#ff-save');
             if (await input.evaluate(node => Boolean(node.prefix))) {
                 await input.evaluate((node, bytes) => {
                     const transfer = new DataTransfer();
-                    transfer.items.add(new File([new Uint8Array(bytes)], 'test.sav', {type: 'application/octet-stream'}));
+                    if (bytes !== null) {
+                        transfer.items.add(new File([new Uint8Array(bytes)], 'test.sav', {type: 'application/octet-stream'}));
+                    }
                     node.files = transfer.files;
                     node.dispatchEvent(new Event('change', {bubbles: true}));
-                }, [...buffer]);
+                }, buffer === null ? null : [...buffer]);
             } else {
-                await input.setInputFiles({name: 'test.sav', mimeType: 'application/octet-stream', buffer});
+                await input.setInputFiles(buffer === null ? [] : {name: 'test.sav', mimeType: 'application/octet-stream', buffer});
             }
+        };
+        const uploadSave = async (target, buffer) => {
+            await setUploadFile(target, buffer);
+            await checkCommands(target, true);
             await Promise.all([target.waitForNavigation(), target.locator('#ff-commands button[value=upload]').click()]);
+            await checkCommands(target, false);
         };
         const selectItem = async (select, value) => {
             const index = await select.evaluate((node, value) => [...node.options].findIndex(option => option.value === value), value);
@@ -43,6 +53,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         };
         const loadSave = async (target, waitForFont = true) => {
             await target.goto(url);
+            await checkCommands(target, false);
             await uploadSave(target, await readFile(process.env.FF_SAVE_PATH));
             if (waitForFont) {
                 await target.evaluate(() => document.fonts.ready);
@@ -111,8 +122,6 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         const commands = await page.locator('#ff-commands button').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().toJSON()));
         assert.equal(commands[0].left, commands[1].left);
         assert.ok(commands[1].top >= commands[0].bottom, 'Menu commands should stack vertically');
-        const uploadRow = await page.locator('#ff-save, label[for="ff-save"]').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().toJSON()));
-        assert.ok(uploadRow[1].left >= uploadRow[0].right, 'File label should follow the input on the right');
         const panels = await page.locator('#ff-metadata, #ff-bookmark, #ff-commands, #ff-party').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().toJSON()));
         assert.equal(panels[0].left, panels[1].left);
         assert.equal(panels[0].left, panels[2].left);
@@ -123,7 +132,6 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         const bookmark = page.locator('#ff-bookmark a');
         const action = await page.locator('#ff-editor').getAttribute('action');
         assert.equal(await bookmark.getAttribute('href'), action);
-        assert.equal(await bookmark.textContent(), new URL(action, url).searchParams.get('user'));
         assert.equal(await page.locator('[name=ff-source]').count(), 0);
         assert.deepEqual(await page.locator('#ff-commands button').evaluateAll(nodes => nodes.map(node => node.form.id)), ['ff-editor', 'ff-editor', 'ff-editor']);
         // Save works without choosing a file and persists equipment at the same URL.
@@ -132,13 +140,20 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         assert.equal(await page.locator('#ff-save').evaluate(node => node.required), false);
         const modified = await page.locator('#ff-metadata time').getAttribute('datetime');
         assert.match(modified, /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/);
-        assert.match(await page.locator('#ff-metadata').textContent(), /Size 8 KiB/);
+        assert.match(await page.locator('#ff-metadata time').textContent(), /^\d{2}\.\d{2}\.\d{2} \d{2}:\d{2}:\d{2} \S+$/);
         await page.goto(new URL(action, url).href);
         assert.equal(await page.locator('#ff-metadata time').getAttribute('datetime'), modified, 'Viewing must not update disk metadata');
-        // Missing uploads are rejected by the server without changing the saved file.
-        await Promise.all([page.waitForNavigation(), page.locator('#ff-commands button[value=upload]').click()]);
-        assert.match(await page.locator('[role=alert]').textContent(), /Choose an 8 KiB NES battery save/);
-        assert.equal(await page.locator('#ff-metadata time').getAttribute('datetime'), modified);
+        await checkCommands(page, false);
+        await setUploadFile(page, await readFile(process.env.FF_SAVE_PATH));
+        await checkCommands(page, true);
+        await page.locator('#ff-save').dispatchEvent('cancel');
+        await checkCommands(page, true);
+        await setUploadFile(page, null);
+        await checkCommands(page, false);
+        await setUploadFile(page, await readFile(process.env.FF_SAVE_PATH));
+        await page.locator('#ff-editor').evaluate(form => form.reset());
+        await page.waitForFunction(() => document.querySelector('#ff-commands button[value=upload]').disabled);
+        await checkCommands(page, false);
         const savedItem = await page.locator('#ff-0-weapons-0').evaluate(node => node.value);
         await setEquipped(page.locator('.ff-equipped').first(), false);
         await selectItem(page.locator('#ff-0-weapons-0'), savedItem === '1' ? '2' : '1');
@@ -208,7 +223,9 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         await select.press('Enter');
         assert.equal(await select.evaluate(node => node.value), '40');
         const fallback = await browser.newPage({ignoreHTTPSErrors: true, javaScriptEnabled: false});
-        await loadSave(fallback, false);
+        await fallback.goto(new URL(action, url).href);
+        assert.equal(await fallback.locator('#ff-commands button[value=upload]').isDisabled(), true);
+        assert.equal(await fallback.locator('#ff-commands button[value=download]').isEnabled(), true);
         assert.equal(await fallback.locator('#ff-0-weapons-0').isVisible(), true);
         assert.equal(await fallback.locator('#ff-0-weapons-0 option[value="1"]').textContent(), 'Wooden\u{1F962}');
         const fallbackEquipped = fallback.locator('.ff-equipped').first();

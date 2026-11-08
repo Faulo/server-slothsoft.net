@@ -323,7 +323,7 @@
                 </div>
                 <div id="ff-commands" class="ff-panel ff-grid" style="--ff-background: var(--ff-blue); --ff-columns: minmax(0, 1fr); --ff-gap: 0">
                     <input id="ff-save" name="ff-save" type="file" accept=".sav,.srm" />
-                    <button type="submit" name="ff-action" value="upload">Upload save</button>
+                    <button type="submit" name="ff-action" value="upload" disabled="disabled">Upload save</button>
                     <xsl:if test="sf1:editor">
                         <button type="submit" name="ff-action" value="save">Save changes</button>
                         <button type="submit" name="ff-action" value="download">Download save</button>

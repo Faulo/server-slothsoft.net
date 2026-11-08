@@ -13,6 +13,7 @@
             <use-template ref="/final-fantasy/xsl/page" />
             <use-document ref="//slothsoft@final-fantasy/i/api/data?view=editor" name="data" />
             <link-stylesheet ref="//slothsoft@final-fantasy/i/css/default" />
+            <link-module ref="/final-fantasy/js/editor" />
         </fragment>
         <fragment name="weapons">
             <use-template ref="/final-fantasy/xsl/page" />

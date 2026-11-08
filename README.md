@@ -24,7 +24,10 @@ block on the right. Metadata shows the actual disk modification time, formatted
 by Farah's `lio:date_format` as `d.m.y H:i:s T` in PHP's configured timezone.
 The `time` element retains the original ISO timestamp in its `datetime` attribute.
 The chooser, Load, Save and Download share the bottom-left panel.
-Uploading is optional; only Load consumes the selected file. The columns and
+Uploading is optional; only Upload consumes the selected file. Upload starts
+disabled. Selecting a file enables Upload and disables Save/Download; clearing
+the selection restores them. The editor's script also synchronizes these states
+after form resets and history restoration. The columns and
 character panels wrap on narrow screens.
 The ROM hand marks hover/focus, including the file chooser; its .sav label follows
 the input on the right when space permits.

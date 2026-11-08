@@ -23,8 +23,8 @@
         "slothsoft/core": "^1.15.1",
         "slothsoft/farah": "^1.29.7",
         "slothsoft/minecraft": "^1.0.9",
-        "slothsoft/final-fantasy": "dev-main",
-        "slothsoft/savegame": "dev-main",
+        "slothsoft/final-fantasy": "^1.0.0",
+        "slothsoft/savegame": "^1.6.0",
         "slothsoft/sse": "^1.11.3"
     },
     "repositories": [

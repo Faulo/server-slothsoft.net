@@ -119,9 +119,9 @@ in the persistent `slothsoft_farah-data` volume. Set `FF1_ROM_PATH` on the
 The web document root is `/var/www/html`; the ROM is outside it and is not part
 of the application image or Jenkins publication.
 
-The new package is required as `dev-main` through its Git repository until a
-release is published. The site also explicitly allows `slothsoft/savegame:dev-main`
-while the scoped variable-resolution support is prepared as savegame 1.6.0.
+The site requires the stable `slothsoft/final-fantasy` 1.0 and
+`slothsoft/savegame` 1.6 releases. The Final Fantasy package is resolved through
+its Git repository, and `composer.lock` records the deployed release revisions.
 
 Run `ddev exec vendor/bin/phpunit` for site and public-page integration checks,
 and `ddev exec vendor/bin/phpstan analyse --configuration=phpstan.neon.dist --no-progress --error-format=json`

@@ -20,8 +20,10 @@ use the longest rendered option in ch, plus padding, borders and space for the
 native dropdown arrow. The empty equipment option has no text.
 The editor uses one multipart form. Server-file metadata, a full user-ID bookmark
 link, and all commands form the left column; character panels form a two-by-two
-block on the right. Metadata shows the actual disk modification time in UTC and
-the save size. The chooser, Load, Save and Download share the bottom-left panel.
+block on the right. Metadata shows the actual disk modification time, formatted
+by Farah's `lio:date_format` as `d.m.y H:i:s T` in PHP's configured timezone.
+The `time` element retains the original ISO timestamp in its `datetime` attribute.
+The chooser, Load, Save and Download share the bottom-left panel.
 Uploading is optional; only Load consumes the selected file. The columns and
 character panels wrap on narrow screens.
 The ROM hand marks hover/focus, including the file chooser; its .sav label follows

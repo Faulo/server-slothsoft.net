@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sf1="http://schema.slothsoft.net/final-fantasy/i" xmlns:exsl="http://exslt.org/common" exclude-result-prefixes="sf1 exsl">
+<xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sf1="http://schema.slothsoft.net/final-fantasy/i" xmlns:exsl="http://exslt.org/common" xmlns:lio="http://schema.slothsoft.net/xslt" exclude-result-prefixes="sf1 exsl lio">
+    <xsl:import href="farah://slothsoft@farah/xsl/date.functions" />
     <!-- D4-E1, retaining the unused E0 tile in the private-use area. -->
     <xsl:variable name="item-glyphs" select="'&#x1F5E1;&#x1F528;&#x1F52A;&#x1FA93;&#x1FA84;&#x1F962;&#x1F9BA;&#x26E8;&#x1FA96;&#x1F9E4;&#x1F48D;&#x1F455;&#xE0E0;&#x1F9F4;'" />
     <xsl:key name="classes" match="sf1:classes/sf1:class" use="@id" />
@@ -311,10 +312,11 @@
         <form action="/FinalFantasy/I/SaveEditor/?user={@user}" method="post" enctype="multipart/form-data" id="ff-editor" class="ff-ui ff-row ff-scroll" style="--ff-scale: 2; --ff-background: transparent; --ff-wrap: wrap; --ff-align: start; --ff-gap: 1em; --ff-scroll-padding: .25em">
             <div class="ff-grid ff-fit" style="--ff-columns: minmax(0, 1fr); --ff-max-width: 25em">
                 <div id="ff-metadata" class="ff-panel" style="--ff-background: var(--ff-blue)">
-                    <time datetime="{sf1:editor/@modified}">
-                        <xsl:value-of select="substring(sf1:editor/@modified, 1, 10)" />
-                        <xsl:value-of select="substring(sf1:editor/@modified, 12, 8)" /><xsl:text> UTC</xsl:text>
-                    </time>
+                    <xsl:if test="sf1:editor/@modified">
+                        <time datetime="{sf1:editor/@modified}">
+                            <xsl:value-of select="lio:date_format(string(sf1:editor/@modified), 'd.m.y H:i:s T')" />
+                        </time>
+                    </xsl:if>
                 </div>
                 <div id="ff-bookmark" class="ff-panel" style="--ff-background: var(--ff-blue)">
                     <a href="/FinalFantasy/I/SaveEditor/?user={@user}" aria-label="Bookmark save {@user}">Bookmark-URL</a>

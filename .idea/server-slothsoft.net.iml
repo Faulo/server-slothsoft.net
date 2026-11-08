@@ -3,6 +3,11 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" packagePrefix="Slothsoft\Server\Slothsoft\" />
+      <sourceFolder url="file://$MODULE_DIR$/data/ff-vendor-before-spell-effects/src" isTestSource="false" packagePrefix="Slothsoft\FinalFantasy\" />
+      <sourceFolder url="file://$MODULE_DIR$/data/ff-vendor-before-spell-effects/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/data/ff-vendor-before-spell-effects/tests" isTestSource="true" packagePrefix="Slothsoft\FinalFantasy\" />
+      <sourceFolder url="file://$MODULE_DIR$/data/ff-vendor-runtime-before-spell-effects/src" isTestSource="false" packagePrefix="Slothsoft\FinalFantasy\" />
+      <sourceFolder url="file://$MODULE_DIR$/data/ff-vendor-runtime-before-spell-effects/tests" isTestSource="true" packagePrefix="Slothsoft\FinalFantasy\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Slothsoft\Server\Slothsoft\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />

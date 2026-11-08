@@ -499,4 +499,17 @@
     <p key="chat/description/archive">Feel free to comment on what you see. :3</p>
     <p key="chat/title/vct">Video Chat Thing Shoutbox</p>
     <p key="chat/description/vct">Feedback/Bugs of the Video Chat Thing /o/</p>
+
+    <p key="amber/home">
+        <h2>Server-Umzug</h2>
+        <p>
+            Hallo!<br/>Ich habe den Editor die letzten Monate intensiv überarbeitet, und auf eine eigene Domain verfrachtet:
+        </p>
+        <p>
+            <a href="https://amber.slothsoft.net" rel="external">amber.slothsoft.net</a>
+        </p>
+        <p>
+            Die Shoutbox wird demnächst auch noch dorthin umziehen, bis dahin könnt ihr weiterhin hier Feedback hinterlassen.
+        </p>
+    </p>
 </html>

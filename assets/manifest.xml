@@ -154,7 +154,9 @@
         <fragment name="ambermoon">
             <fragment name="description">
                 <import ref="/api/default" />
-                <use-document ref="//amber/html/description" name="content" />
+                <fragment name="content" use="document">
+                    <use-template ref="/xsl/amber" />
+                </fragment>
                 <use-document ref="/shoutboxes/amber" name="chat" />
             </fragment>
         </fragment>

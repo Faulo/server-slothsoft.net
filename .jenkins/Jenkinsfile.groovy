@@ -15,6 +15,8 @@ pipeline {
                         docker.image("faulo/farah:${PHP_VERSION}").inside('-v ${STACK_NAME}_farah-data:${WORKSPACE}/data -v ${STACK_NAME}_farah-app:${WORKSPACE}/.deploy') {
                             stage ('Composer setup') {
                                 exec 'composer install --no-interaction --optimize-autoloader --classmap-authoritative'
+                                exec 'if [ -e vendor/slothsoft/final-fantasy/.git ]; then composer reinstall slothsoft/final-fantasy --prefer-dist --no-interaction --no-progress --no-autoloader; fi'
+                                exec 'test ! -e vendor/slothsoft/final-fantasy/test-files/ff1-us.zip'
                                 exec 'composer exec server-clean cache logs'
                             }
                             stage ('Run tests') {
@@ -32,6 +34,8 @@ pipeline {
 
                                     dir('.deploy') {
                                         exec 'composer install --no-interaction --optimize-autoloader --classmap-authoritative --no-dev'
+                                        exec 'if [ -e vendor/slothsoft/final-fantasy/.git ]; then composer reinstall slothsoft/final-fantasy --prefer-dist --no-interaction --no-progress --no-autoloader; fi'
+                                        exec 'test ! -e vendor/slothsoft/final-fantasy/test-files/ff1-us.zip'
                                         exec 'composer exec server-clean cache logs'
                                     }
                                 } else {

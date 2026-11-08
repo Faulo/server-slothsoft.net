@@ -58,6 +58,9 @@
     ],
     "homepage": "https://slothsoft.net",
     "config": {
+        "preferred-install": {
+            "slothsoft/final-fantasy": "dist"
+        },
         "platform": {
             "php": "8.2"
         }

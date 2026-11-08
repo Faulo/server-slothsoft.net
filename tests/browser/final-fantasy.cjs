@@ -24,7 +24,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
             } else {
                 await input.setInputFiles({name: 'test.sav', mimeType: 'application/octet-stream', buffer});
             }
-            await Promise.all([target.waitForNavigation(), target.locator('#ff-upload button').click()]);
+            await Promise.all([target.waitForNavigation(), target.locator('#ff-commands button[value=upload]').click()]);
         };
         const selectItem = async (select, value) => {
             const index = await select.evaluate((node, value) => [...node.options].findIndex(option => option.value === value), value);
@@ -113,7 +113,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         assert.ok(commands[1].top >= commands[0].bottom, 'Menu commands should stack vertically');
         const uploadRow = await page.locator('#ff-save, label[for="ff-save"]').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().toJSON()));
         assert.ok(uploadRow[1].left >= uploadRow[0].right, 'File label should follow the input on the right');
-        const panels = await page.locator('#ff-upload, #ff-bookmark, #ff-commands, #ff-editor').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().toJSON()));
+        const panels = await page.locator('#ff-metadata, #ff-bookmark, #ff-commands, #ff-party').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().toJSON()));
         assert.equal(panels[0].left, panels[1].left);
         assert.equal(panels[0].left, panels[2].left);
         assert.ok(panels[1].top >= panels[0].bottom);
@@ -125,8 +125,20 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         assert.equal(await bookmark.getAttribute('href'), action);
         assert.equal(await bookmark.textContent(), new URL(action, url).searchParams.get('user'));
         assert.equal(await page.locator('[name=ff-source]').count(), 0);
-        assert.deepEqual(await page.locator('#ff-commands button').evaluateAll(nodes => nodes.map(node => node.form.id)), ['ff-editor', 'ff-editor']);
-        // The detached Save command must submit equipment and persist it at the same URL.
+        assert.deepEqual(await page.locator('#ff-commands button').evaluateAll(nodes => nodes.map(node => node.form.id)), ['ff-editor', 'ff-editor', 'ff-editor']);
+        // Save works without choosing a file and persists equipment at the same URL.
+        assert.equal(await page.locator('article.ff-contain form').count(), 1);
+        assert.equal(await page.locator('#ff-editor').getAttribute('enctype'), 'multipart/form-data');
+        assert.equal(await page.locator('#ff-save').evaluate(node => node.required), false);
+        const modified = await page.locator('#ff-metadata time').getAttribute('datetime');
+        assert.match(modified, /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/);
+        assert.match(await page.locator('#ff-metadata').textContent(), /Size 8 KiB/);
+        await page.goto(new URL(action, url).href);
+        assert.equal(await page.locator('#ff-metadata time').getAttribute('datetime'), modified, 'Viewing must not update disk metadata');
+        // Missing uploads are rejected by the server without changing the saved file.
+        await Promise.all([page.waitForNavigation(), page.locator('#ff-commands button[value=upload]').click()]);
+        assert.match(await page.locator('[role=alert]').textContent(), /Choose an 8 KiB NES battery save/);
+        assert.equal(await page.locator('#ff-metadata time').getAttribute('datetime'), modified);
         const savedItem = await page.locator('#ff-0-weapons-0').evaluate(node => node.value);
         await setEquipped(page.locator('.ff-equipped').first(), false);
         await selectItem(page.locator('#ff-0-weapons-0'), savedItem === '1' ? '2' : '1');

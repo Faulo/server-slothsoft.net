@@ -18,10 +18,12 @@ Equipment rows are 24px tall at 2×, including the select borders, with no verti
 gap between rows. Item glyphs appear only within the option text. Select widths
 use the longest rendered option in ch, plus padding, borders and space for the
 native dropdown arrow. The empty equipment option has no text.
-The editor follows the game menu: upload, a full user-ID bookmark link, and
-Save/Download commands form the left column; character panels form a two-by-two
-block on the right. The columns and character panels wrap on narrow screens.
-Commands use native form association to submit the equipment from the left menu.
+The editor uses one multipart form. Server-file metadata, a full user-ID bookmark
+link, and all commands form the left column; character panels form a two-by-two
+block on the right. Metadata shows the actual disk modification time in UTC and
+the save size. The chooser, Load, Save and Download share the bottom-left panel.
+Uploading is optional; only Load consumes the selected file. The columns and
+character panels wrap on narrow screens.
 The ROM hand marks hover/focus, including the file chooser; its .sav label follows
 the input on the right when space permits.
 Narrow screens scroll each equipment grid horizontally to keep item names legible.

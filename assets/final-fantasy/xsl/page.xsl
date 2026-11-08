@@ -309,7 +309,8 @@
                 </strong>
             </p>
         </xsl:if>
-        <form action="/FinalFantasy/I/SaveEditor/?user={@user}" method="post" enctype="multipart/form-data" id="ff-editor" class="ff-ui ff-row ff-scroll" style="--ff-scale: 2; --ff-background: transparent; --ff-wrap: wrap; --ff-align: start; --ff-gap: 1em; --ff-scroll-padding: .5em">
+        <p id="ff-preview-error" role="status" hidden="hidden" />
+        <form action="/FinalFantasy/I/SaveEditor/?user={@user}" data-preview-url="/slothsoft@final-fantasy/i/api/data?view=editor&amp;user={@user}" method="post" enctype="multipart/form-data" id="ff-editor" class="ff-ui ff-row ff-scroll" style="--ff-scale: 2; --ff-background: transparent; --ff-wrap: wrap; --ff-align: start; --ff-gap: 1em; --ff-scroll-padding: .5em">
             <div class="ff-grid ff-fit" style="--ff-columns: minmax(0, 1fr); --ff-max-width: 25em">
                 <div id="ff-metadata" class="ff-panel" style="--ff-background: var(--ff-blue)">
                     <xsl:if test="sf1:editor/@modified">
@@ -406,19 +407,19 @@
         <div class="ff-scroll" style="--ff-scroll-padding: .25em">
             <div class="ff-grid" data-stats="" style="--ff-columns: max-content 3ch max-content 3ch; --ff-column-gap: 1ch; --ff-row-gap: 0">
                 <span>Attack</span>
-                <span class="ff-number">
+                <span class="ff-number" data-stat="damage">
                     <xsl:value-of select="@damage" />
                 </span>
                 <span>Defense</span>
-                <span class="ff-number">
+                <span class="ff-number" data-stat="absorb">
                     <xsl:value-of select="@absorb" />
                 </span>
                 <span>Accuracy</span>
-                <span class="ff-number">
+                <span class="ff-number" data-stat="hit">
                     <xsl:value-of select="@hit" />
                 </span>
                 <span>Evasion</span>
-                <span class="ff-number">
+                <span class="ff-number" data-stat="evade">
                     <xsl:value-of select="@evade" />
                 </span>
             </div>

@@ -18,8 +18,12 @@ dim when unequipped. Slot numbers remain in accessible control names only.
 Above Weapons, a read-only Stats band displays Attack/Defense on the first row
 and Accuracy/Evasion on the second, with shared label columns and right-aligned
 3ch value columns. Empty names use a nonbreaking space to preserve the name row.
-Stats and Casts use the same .25em inset as the equipment rows. These combat values
-refresh after saving equipment changes. Below Armor, Casts lists distinct spells
+Stats and Casts use the same .25em inset as the equipment rows. Combat values
+update live after dropdown or equipped-checkbox changes through the package's
+read-only preview action. Requests are debounced and superseded results ignored;
+the preview never saves or updates the disk timestamp. Invalid equipment displays
+an error and unavailable stats until corrected. Without JavaScript, stats refresh
+after saving. Below Armor, Casts lists distinct spells
 from all carried equipment, including unequipped items, with links to the spell
 reference page and the standard comma separator. The list updates immediately
 when inventory selections change, and also renders without JavaScript.

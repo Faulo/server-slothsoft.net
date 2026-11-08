@@ -299,8 +299,8 @@
     </xsl:template>
     <xsl:template name="editor">
         <h2>About</h2>
-        <p>Edit a new game immediately, or upload an NES battery save to replace it.</p>
-        <p>Bookmark the user ID to return to this save. Anyone with this link can edit it.</p>
+        <p>A savegame editor for Final Fantasy I. Upload an NES battery save, make changes, then download.</p>
+        <p>The bookmark URL can be used to return to the save.</p>
         <xsl:if test="sf1:error">
             <p role="alert">
                 <strong>
@@ -308,44 +308,20 @@
                 </strong>
             </p>
         </xsl:if>
-        <form action="/FinalFantasy/I/SaveEditor/?user={@user}" method="post" enctype="multipart/form-data" id="ff-editor" class="ff-ui ff-row ff-scroll" style="--ff-scale: 2; --ff-background: var(--ff-black); --ff-wrap: wrap; --ff-align: start; --ff-gap: 1em; --ff-scroll-padding: .25em">
+        <form action="/FinalFantasy/I/SaveEditor/?user={@user}" method="post" enctype="multipart/form-data" id="ff-editor" class="ff-ui ff-row ff-scroll" style="--ff-scale: 2; --ff-background: transparent; --ff-wrap: wrap; --ff-align: start; --ff-gap: 1em; --ff-scroll-padding: .25em">
             <div class="ff-grid ff-fit" style="--ff-columns: minmax(0, 1fr); --ff-max-width: 25em">
                 <div id="ff-metadata" class="ff-panel" style="--ff-background: var(--ff-blue)">
-                    <p>Last change</p>
-                    <xsl:choose>
-                        <xsl:when test="sf1:editor/@modified">
-                            <time datetime="{sf1:editor/@modified}">
-                                <xsl:value-of select="substring(sf1:editor/@modified, 1, 10)" />
-                                <br />
-                                <xsl:value-of select="substring(sf1:editor/@modified, 12, 8)" /><xsl:text> UTC</xsl:text>
-                            </time>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <p>Not saved</p>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <xsl:if test="sf1:editor/@size">
-                        <p>
-                            <xsl:text>Size </xsl:text><xsl:value-of select="sf1:editor/@size div 1024" /><xsl:text> KiB</xsl:text>
-                        </p>
-                    </xsl:if>
+                    <time datetime="{sf1:editor/@modified}">
+                        <xsl:value-of select="substring(sf1:editor/@modified, 1, 10)" />
+                        <xsl:value-of select="substring(sf1:editor/@modified, 12, 8)" /><xsl:text> UTC</xsl:text>
+                    </time>
                 </div>
                 <div id="ff-bookmark" class="ff-panel" style="--ff-background: var(--ff-blue)">
-                    <a href="/FinalFantasy/I/SaveEditor/?user={@user}" aria-label="Bookmark save {@user}">
-                        <xsl:value-of select="substring(@user, 1, 16)" />
-                        <wbr />
-                        <xsl:value-of select="substring(@user, 17)" />
-                    </a>
+                    <a href="/FinalFantasy/I/SaveEditor/?user={@user}" aria-label="Bookmark save {@user}">Bookmark-URL</a>
                 </div>
                 <div id="ff-commands" class="ff-panel ff-grid" style="--ff-background: var(--ff-blue); --ff-columns: minmax(0, 1fr); --ff-gap: 0">
-                    <input type="hidden" name="MAX_FILE_SIZE" value="8192" />
-                    <div class="ff-row" style="--ff-wrap: wrap; --ff-gap: 1em">
-                        <span class="ff-fit" style="--ff-max-width: 12ch">
-                            <input id="ff-save" name="ff-save" type="file" accept=".sav,.srm" />
-                        </span>
-                        <label for="ff-save">.sav File</label>
-                    </div>
-                    <button type="submit" name="ff-action" value="upload">Load save</button>
+                    <input id="ff-save" name="ff-save" type="file" accept=".sav,.srm" />
+                    <button type="submit" name="ff-action" value="upload">Upload save</button>
                     <xsl:if test="sf1:editor">
                         <button type="submit" name="ff-action" value="save">Save changes</button>
                         <button type="submit" name="ff-action" value="download">Download save</button>

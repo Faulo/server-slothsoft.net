@@ -8,7 +8,7 @@
             <page name="AboutUs" ref="about-us" title="About us" status-active="" status-public="" />
             <page name="FinalFantasy" ref="/pages/final-fantasy/home" title="Final Fantasy" status-active="" status-public="">
                 <page name="I" redirect="SaveEditor" title="Final Fantasy I" status-active="" status-public="">
-                    <page name="SaveEditor" ref="/pages/final-fantasy/editor" title="Equipment editor" status-active="" status-public="" />
+                    <page name="SaveEditor" ref="/pages/final-fantasy/editor" title="Save Editor" status-active="" status-public="" />
                     <page name="Weapons" ref="/pages/final-fantasy/weapons" title="Weapons" status-active="" status-public="" />
                     <page name="Armor" ref="/pages/final-fantasy/armor" title="Armor" status-active="" status-public="" />
                     <page name="Spells" ref="/pages/final-fantasy/spells" title="Spells" status-active="" status-public="" />

@@ -61,6 +61,22 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         };
         await loadSave(page);
         assert.equal(await page.locator('[data-stats]').count(), 4);
+        const statLayouts = await page.locator('[data-character]').evaluateAll(characters => characters.map(character => {
+            const stats = character.querySelector('[data-stats]');
+            const cells = [...stats.children].map(node => node.getBoundingClientRect().toJSON());
+            const equipment = character.querySelector('.ff-grid:has(select)');
+            const casts = character.querySelector('[data-casts]');
+            return {cells, inset: [stats, equipment, casts].map(node => node.getBoundingClientRect().left)};
+        }));
+        for (const {cells, inset} of statLayouts) {
+            assert.equal(cells.length, 8);
+            assert.equal(cells[0].top, cells[3].top);
+            assert.equal(cells[4].top, cells[7].top);
+            for (let column = 0; column < 4; column++) {
+                assert.equal(cells[column].left, cells[column + 4].left);
+            }
+            assert.deepEqual(inset, [inset[0], inset[0], inset[0]]);
+        }
         const castCheck = await page.locator('[data-character="0"]').evaluate(character => {
             const selects = [...character.querySelectorAll('select')];
             const original = selects.map(select => select.value);
@@ -129,7 +145,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
             assert.equal(actual, expected);
             assert.equal(empty, '');
         });
-        const gridShapes = await page.locator('fieldset .ff-scroll > .ff-grid').evaluateAll(grids => grids.map(grid => {
+        const gridShapes = await page.locator('fieldset .ff-scroll > .ff-grid:has(select)').evaluateAll(grids => grids.map(grid => {
             const slots = [...grid.children].map(slot => slot.getBoundingClientRect());
             return [slots.length, new Set(slots.map(slot => slot.left)).size, new Set(slots.map(slot => slot.top)).size,
                 slots.every(slot => slot.height === 24), slots[2].top - slots[0].top,
@@ -278,7 +294,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         await page.setViewportSize({width: 390, height: 1000});
         assert.ok((await select.boundingBox()).width >= 128, 'The narrow editor must leave room for item names');
         assert.equal(await page.evaluate(() => document.body.scrollWidth <= innerWidth), true);
-        assert.equal(await page.locator('fieldset .ff-scroll > .ff-grid').first().evaluate(grid => {
+        assert.equal(await page.locator('fieldset .ff-scroll > .ff-grid:has(select)').first().evaluate(grid => {
             const slots = [...grid.children].map(slot => slot.getBoundingClientRect());
             return new Set(slots.map(slot => slot.left)).size === 2 && new Set(slots.map(slot => slot.top)).size === 2;
         }), true);

@@ -11,11 +11,13 @@ to the editor. It provides `/FinalFantasy/I/SaveEditor/`, `/FinalFantasy/I/Weapo
 weapons, armor and equipped flags; reference pages read names, stats and class
 permissions from the original US ROM through savegame XML specifications.
 
-The editor gives each character a framed name-and-class-sprite legend. Weapons
+The editor gives each character a framed legend with the name above `L` and the
+level, and the class sprite to their right. Weapons
 and armor each use a 2×2 grid, with native checkboxes rendered as E markers that
 dim when unequipped. Slot numbers remain in accessible control names only.
-Above Weapons, a read-only Stats band displays HP, level, base attributes and
-saved combat values, including magic defense and resistances. These values
+Above Weapons, a read-only Stats band displays Attack/Defense on the first row
+and Accuracy/Evasion on the second, with shared label and value grid columns.
+Stats and Casts use the same .25em inset as the equipment rows. These combat values
 refresh after saving equipment changes. Below Armor, Casts lists distinct spells
 from all carried equipment, including unequipped items, with links to the spell
 reference page and the standard comma separator. The list updates immediately

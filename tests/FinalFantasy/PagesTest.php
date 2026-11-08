@@ -239,10 +239,11 @@ final class PagesTest extends TestCase {
         $xpath = new DOMXPath($document);
         $xpath->registerNamespace('h', 'http://www.w3.org/1999/xhtml');
         self::assertSame(4.0, $xpath->evaluate('count(//h:div[@data-stats])'));
-        self::assertSame(4.0, $xpath->evaluate('count(//h:div[@data-stats]/h:span[.="HP 0"])'));
-        self::assertSame(4.0, $xpath->evaluate('count(//h:div[@data-stats]/h:span[.="Max HP 0"])'));
-        self::assertSame(4.0, $xpath->evaluate('count(//h:div[@data-stats]/h:span[.="Level 1"])'));
-        self::assertSame(4.0, $xpath->evaluate('count(//h:div[@data-stats][following-sibling::h:h3[1]="Weapons"])'));
+        foreach ($xpath->query('//h:div[@data-stats]') as $stats) {
+            self::assertSame(['Attack', '0', 'Defense', '0', 'Accuracy', '0', 'Evasion', '0'], array_map(static fn($node): string => $node->textContent, iterator_to_array($xpath->query('h:span', $stats))));
+        }
+        self::assertSame(4.0, $xpath->evaluate('count(//h:legend//h:span[@aria-label="Level 1"][.="L1"][preceding-sibling::h:span])'));
+        self::assertSame(4.0, $xpath->evaluate('count(//h:div[h:div[@data-stats]][following-sibling::h:h3[1]="Weapons"])'));
         $expected = array_unique([$weapon['spell'], $item['spell']]);
         sort($expected);
         $links = $xpath->query('//h:fieldset[@data-character="0"]//h:ul[@data-casts]/h:li/h:a');
@@ -253,7 +254,7 @@ final class PagesTest extends TestCase {
             self::assertSame($spells[$expected[$index]]['name'], $link->textContent);
         }
         self::assertSame(3.0, $xpath->evaluate('count(//h:ul[@data-casts]/h:li[.="-"])'));
-        self::assertSame(4.0, $xpath->evaluate('count(//h:ul[@data-casts][preceding-sibling::h:h3[1]="Casts"])'));
+        self::assertSame(4.0, $xpath->evaluate('count(//h:div[h:ul[@data-casts]][preceding-sibling::h:h3[1]="Casts"])'));
     }
     
     private function requireRom(): void {

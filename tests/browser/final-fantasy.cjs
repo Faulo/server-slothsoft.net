@@ -64,6 +64,12 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
         const statLayouts = await page.locator('[data-character]').evaluateAll(characters => characters.map(character => {
             const stats = character.querySelector('[data-stats]');
             const cells = [...stats.children].map(node => node.getBoundingClientRect().toJSON());
+            for (const number of stats.querySelectorAll('.ff-number')) {
+                const css = getComputedStyle(number);
+                if (css.textAlign !== 'right' || number.getBoundingClientRect().width !== 3 * parseFloat(css.fontSize)) {
+                    throw new Error('Stats require right-aligned 3ch values');
+                }
+            }
             const equipment = character.querySelector('.ff-grid:has(select)');
             const casts = character.querySelector('[data-casts]');
             return {cells, inset: [stats, equipment, casts].map(node => node.getBoundingClientRect().left)};

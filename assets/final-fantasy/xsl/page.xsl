@@ -340,7 +340,14 @@
                                 <span class="ff-row">
                                     <span class="ff-grid" style="--ff-columns: 1fr; --ff-gap: 0">
                                         <span>
-                                            <xsl:value-of select="@name" />
+                                            <xsl:choose>
+                                                <xsl:when test="string-length(@name) &gt; 0">
+                                                    <xsl:value-of select="@name" />
+                                                </xsl:when>
+                                                <xsl:otherwise>
+                                                    <xsl:text>&#160;</xsl:text>
+                                                </xsl:otherwise>
+                                            </xsl:choose>
                                         </span>
                                         <span aria-label="Level {sf1:stats/@level}">
                                             <xsl:text>L</xsl:text><xsl:value-of select="sf1:stats/@level" />
@@ -399,19 +406,19 @@
         <div class="ff-scroll" style="--ff-scroll-padding: .25em">
             <div class="ff-grid" data-stats="" style="--ff-columns: max-content 3ch max-content 3ch; --ff-column-gap: 1ch; --ff-row-gap: 0">
                 <span>Attack</span>
-                <span>
+                <span class="ff-number">
                     <xsl:value-of select="@damage" />
                 </span>
                 <span>Defense</span>
-                <span>
+                <span class="ff-number">
                     <xsl:value-of select="@absorb" />
                 </span>
                 <span>Accuracy</span>
-                <span>
+                <span class="ff-number">
                     <xsl:value-of select="@hit" />
                 </span>
                 <span>Evasion</span>
-                <span>
+                <span class="ff-number">
                     <xsl:value-of select="@evade" />
                 </span>
             </div>

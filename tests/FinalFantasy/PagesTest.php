@@ -112,6 +112,9 @@ final class PagesTest extends TestCase {
         $xpath->registerNamespace('h', 'http://www.w3.org/1999/xhtml');
         $action = $xpath->evaluate('string(//h:form[@id="ff-editor"]/@action)');
         self::assertMatchesRegularExpression('~^/FinalFantasy/I/SaveEditor/\?user=[a-f0-9]{32}$~', $action);
+        foreach ($xpath->query('//h:fieldset[@data-character]/h:legend/h:span/h:span[1]/h:span[1]') as $name) {
+            self::assertSame("\u{00A0}", $name->textContent);
+        }
         return $action;
     }
     

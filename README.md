@@ -16,7 +16,8 @@ level, and the class sprite to their right. Weapons
 and armor each use a 2×2 grid, with native checkboxes rendered as E markers that
 dim when unequipped. Slot numbers remain in accessible control names only.
 Above Weapons, a read-only Stats band displays Attack/Defense on the first row
-and Accuracy/Evasion on the second, with shared label and value grid columns.
+and Accuracy/Evasion on the second, with shared label columns and right-aligned
+3ch value columns. Empty names use a nonbreaking space to preserve the name row.
 Stats and Casts use the same .25em inset as the equipment rows. These combat values
 refresh after saving equipment changes. Below Armor, Casts lists distinct spells
 from all carried equipment, including unequipped items, with links to the spell

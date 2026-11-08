@@ -348,9 +348,7 @@
                         </fieldset>
                     </xsl:for-each>
                 </div>
-                <p>Equip one weapon and at most one piece of each armor category. Class restrictions apply to equipped items.</p>
                 <button type="submit">Download edited save</button>
-                <p class="ff-note">The download is a new save file. Keep your original as a backup.</p>
             </form>
         </xsl:for-each>
     </xsl:template>

@@ -1592,7 +1592,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-final-fantasy",
-                "reference": "84acc5b8a3637df02be53644efb24e235f76476a"
+                "reference": "1470a9f5b961ae64276a9f2d2afc55f7ec2f50df"
             },
             "require": {
                 "ext-dom": "*",
@@ -1646,7 +1646,7 @@
                 "savegame",
                 "slothsoft"
             ],
-            "time": "2026-11-08T10:22:07+00:00"
+            "time": "2026-11-08T10:57:18+00:00"
         },
         {
             "name": "slothsoft/minecraft",

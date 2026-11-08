@@ -14,26 +14,9 @@
     <xsl:template match="sf1:final-fantasy">
         <xsl:choose>
             <xsl:when test="@view = 'home'">
-                <h2>The equipment and magic of Final Fantasy</h2>
-                <p>Explore the original US game's weapons, armor, and spells, with names and properties read directly from the game ROM.</p>
-                <div class="ff-cards">
-                    <a href="/FinalFantasy/I/SaveEditor/">
-                        <h3>Equipment editor</h3>
-                        <p>Load your NES battery save, change your party's equipment, and download the edited save.</p>
-                    </a>
-                    <a href="/FinalFantasy/I/Weapons/">
-                        <h3>40 weapons</h3>
-                        <p>Damage, hit bonuses, critical rates, usable spells, and class permissions.</p>
-                    </a>
-                    <a href="/FinalFantasy/I/Armor/">
-                        <h3>40 pieces of armor</h3>
-                        <p>Protection, evasion penalties, resistances, usable spells, and class permissions.</p>
-                    </a>
-                    <a href="/FinalFantasy/I/Spells/">
-                        <h3>64 spells</h3>
-                        <p>White and black magic by level, price, and the classes that can learn each spell.</p>
-                    </a>
-                </div>
+                <h2>About</h2>
+                <p>This is a savegame editor for the NES version of Final Fantasy (Square 1987).</p>
+                <p>There's also a few pages with helpful info about the game's items and spells.</p>
             </xsl:when>
             <xsl:when test="sf1:unavailable">
                 <p role="status">
@@ -43,29 +26,82 @@
             <xsl:when test="@view = 'editor'">
                 <xsl:call-template name="editor" />
             </xsl:when>
-            <xsl:otherwise>
-                <xsl:choose>
-                    <xsl:when test="@view = 'weapons'">
-                        <h2>Weapons</h2>
-                        <p>Critical values are the thresholds used by the original US game against a roll from 0 to 200, capped by the attack's hit chance. Weapon element and enemy-type bonuses have no effect in this version.</p>
-                        <div class="ff-ui ff-panel ff-table">
+            <xsl:when test="@view = 'weapons'">
+
+                <fieldset class="ff-ui ff-panel ff-reference">
+                    <legend>Weapons</legend>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Weapon</th>
+                                <th scope="col" class="ff-number">Price</th>
+                                <th scope="col" class="ff-number">Damage</th>
+                                <th scope="col" class="ff-number">Hit<br />bonus
+                                </th>
+                                <th scope="col" class="ff-number">Critical</th>
+                                <th scope="col">Casts</th>
+                                <th scope="col">Classes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <xsl:for-each select="sf1:weapons/sf1:weapon">
+                                <tr id="weapon-{@id}">
+                                    <th scope="row" class="ff-text">
+                                        <xsl:call-template name="item-name" />
+                                    </th>
+                                    <td class="ff-number">
+                                        <xsl:value-of select="@price" />
+                                    </td>
+                                    <td class="ff-number">
+                                        <xsl:value-of select="@damage" />
+                                    </td>
+                                    <td class="ff-number">
+                                        <xsl:value-of select="@hit" />
+                                    </td>
+                                    <td class="ff-number">
+                                        <xsl:value-of select="@critical" />
+                                    </td>
+                                    <td>
+                                        <xsl:call-template name="cast" />
+                                    </td>
+                                    <td>
+                                        <xsl:call-template name="classes" />
+                                    </td>
+                                </tr>
+                            </xsl:for-each>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </xsl:when>
+            <xsl:when test="@view = 'armor'">
+                <xsl:for-each select="sf1:armor/sf1:item[generate-id() = generate-id(key('armor-categories', @category)[1])]">
+                    <xsl:sort select="@category" data-type="number" />
+                    <fieldset class="ff-ui ff-panel ff-reference">
+                        <legend>
+                            <xsl:choose>
+                                <xsl:when test="@category=0">Body</xsl:when>
+                                <xsl:when test="@category=1">Shield</xsl:when>
+                                <xsl:when test="@category=2">Helmet</xsl:when>
+                                <xsl:otherwise>Gloves</xsl:otherwise>
+                            </xsl:choose>
+                        </legend>
+                        <div class="ff-table">
                             <table>
-                                <caption>Weapon properties and equip permissions</caption>
                                 <thead>
                                     <tr>
-                                        <th scope="col">Weapon</th>
+                                        <th scope="col">Armor</th>
                                         <th scope="col" class="ff-number">Price</th>
-                                        <th scope="col" class="ff-number">Damage</th>
-                                        <th scope="col" class="ff-number">Hit<br />bonus
+                                        <th scope="col" class="ff-number">Absorb</th>
+                                        <th scope="col" class="ff-number">Evade<br />penalty
                                         </th>
-                                        <th scope="col" class="ff-number">Critical</th>
                                         <th scope="col">Casts</th>
                                         <th scope="col">Classes</th>
+                                        <th scope="col">Resists</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <xsl:for-each select="sf1:weapons/sf1:weapon">
-                                        <tr id="weapon-{@id}">
+                                    <xsl:for-each select="key('armor-categories', @category)">
+                                        <tr id="armor-{@id}">
                                             <th scope="row" class="ff-text">
                                                 <xsl:call-template name="item-name" />
                                             </th>
@@ -73,16 +109,59 @@
                                                 <xsl:value-of select="@price" />
                                             </td>
                                             <td class="ff-number">
-                                                <xsl:value-of select="@damage" />
+                                                <xsl:value-of select="@absorb" />
                                             </td>
                                             <td class="ff-number">
-                                                <xsl:value-of select="@hit" />
-                                            </td>
-                                            <td class="ff-number">
-                                                <xsl:value-of select="@critical" />
+                                                <xsl:value-of select="@evade-penalty" />
                                             </td>
                                             <td>
                                                 <xsl:call-template name="cast" />
+                                            </td>
+                                            <td>
+                                                <xsl:call-template name="classes" />
+                                            </td>
+                                            <td>
+                                                <xsl:call-template name="resistance" />
+                                            </td>
+                                        </tr>
+                                    </xsl:for-each>
+                                </tbody>
+                            </table>
+                        </div>
+                    </fieldset>
+                </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="@view = 'spells'">
+                <xsl:for-each select="sf1:spells/sf1:spell[generate-id() = generate-id(key('spell-schools', @school)[1])]">
+                    <xsl:sort select="@school" order="descending" />
+                    <fieldset class="ff-ui ff-panel ff-reference">
+                        <legend>
+                            <xsl:choose>
+                                <xsl:when test="@school = 'white'">White Magic</xsl:when>
+                                <xsl:otherwise>Black Magic</xsl:otherwise>
+                            </xsl:choose>
+                        </legend>
+                        <div class="ff-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Spell</th>
+                                        <th scope="col" class="ff-number">Level</th>
+                                        <th scope="col" class="ff-number">Price</th>
+                                        <th scope="col">Classes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <xsl:for-each select="key('spell-schools', @school)">
+                                        <tr id="spell-{@id}">
+                                            <th scope="row" class="ff-text">
+                                                <xsl:value-of select="@name" />
+                                            </th>
+                                            <td class="ff-number">
+                                                <xsl:value-of select="@level" />
+                                            </td>
+                                            <td class="ff-number">
+                                                <xsl:value-of select="@price" />
                                             </td>
                                             <td>
                                                 <xsl:call-template name="classes" />
@@ -92,114 +171,9 @@
                                 </tbody>
                             </table>
                         </div>
-                    </xsl:when>
-                    <xsl:when test="@view = 'armor'">
-                        <h2>Armor</h2>
-                        <xsl:for-each select="sf1:armor/sf1:item[generate-id() = generate-id(key('armor-categories', @category)[1])]">
-                            <xsl:sort select="@category" data-type="number" />
-                            <fieldset class="ff-ui ff-panel ff-reference">
-                                <legend>
-                                    <xsl:choose>
-                                        <xsl:when test="@category=0">Body</xsl:when>
-                                        <xsl:when test="@category=1">Shield</xsl:when>
-                                        <xsl:when test="@category=2">Helmet</xsl:when>
-                                        <xsl:otherwise>Gloves</xsl:otherwise>
-                                    </xsl:choose>
-                                </legend>
-                                <div class="ff-table">
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Armor</th>
-                                                <th scope="col" class="ff-number">Price</th>
-                                                <th scope="col" class="ff-number">Absorb</th>
-                                                <th scope="col" class="ff-number">Evade<br />penalty
-                                                </th>
-                                                <th scope="col">Resists</th>
-                                                <th scope="col">Casts</th>
-                                                <th scope="col">Classes</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <xsl:for-each select="key('armor-categories', @category)">
-                                                <tr id="armor-{@id}">
-                                                    <th scope="row" class="ff-text">
-                                                        <xsl:call-template name="item-name" />
-                                                    </th>
-                                                    <td class="ff-number">
-                                                        <xsl:value-of select="@price" />
-                                                    </td>
-                                                    <td class="ff-number">
-                                                        <xsl:value-of select="@absorb" />
-                                                    </td>
-                                                    <td class="ff-number">
-                                                        <xsl:value-of select="@evade-penalty" />
-                                                    </td>
-                                                    <td>
-                                                        <xsl:call-template name="resistance" />
-                                                    </td>
-                                                    <td>
-                                                        <xsl:call-template name="cast" />
-                                                    </td>
-                                                    <td>
-                                                        <xsl:call-template name="classes" />
-                                                    </td>
-                                                </tr>
-                                            </xsl:for-each>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </fieldset>
-                        </xsl:for-each>
-                    </xsl:when>
-                    <xsl:when test="@view = 'spells'">
-                        <h2>Spells</h2>
-                        <p>Class permissions describe which spells can be learned. Equipment can cast its listed spell independently of these learning permissions.</p>
-                        <xsl:for-each select="sf1:spells/sf1:spell[generate-id() = generate-id(key('spell-schools', @school)[1])]">
-                            <xsl:sort select="@school" order="descending" />
-                            <fieldset class="ff-ui ff-panel ff-reference">
-                                <legend>
-                                    <xsl:choose>
-                                        <xsl:when test="@school = 'white'">White Magic</xsl:when>
-                                        <xsl:otherwise>Black Magic</xsl:otherwise>
-                                    </xsl:choose>
-                                </legend>
-                                <div class="ff-table">
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Spell</th>
-                                                <th scope="col" class="ff-number">Level</th>
-                                                <th scope="col" class="ff-number">Price</th>
-                                                <th scope="col">Classes</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <xsl:for-each select="key('spell-schools', @school)">
-                                                <tr id="spell-{@id}">
-                                                    <th scope="row" class="ff-text">
-                                                        <xsl:value-of select="@name" />
-                                                    </th>
-                                                    <td class="ff-number">
-                                                        <xsl:value-of select="@level" />
-                                                    </td>
-                                                    <td class="ff-number">
-                                                        <xsl:value-of select="@price" />
-                                                    </td>
-                                                    <td>
-                                                        <xsl:call-template name="classes" />
-                                                    </td>
-                                                </tr>
-                                            </xsl:for-each>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </fieldset>
-                        </xsl:for-each>
-                    </xsl:when>
-                </xsl:choose>
-                <p class="ff-note">Names and their typeface come from the ROM. Prices are in gold.</p>
-            </xsl:otherwise>
+                    </fieldset>
+                </xsl:for-each>
+            </xsl:when>
         </xsl:choose>
     </xsl:template>
     <xsl:template name="item-name">
@@ -217,6 +191,8 @@
     </xsl:template>
     <xsl:template name="classes">
         <xsl:variable name="allowed" select="sf1:class-ref/@id" />
+        <xsl:variable name="school-classes" select="key('spell-schools', @school)/sf1:class-ref/@id" />
+        <xsl:variable name="classes" select="ancestor::sf1:final-fantasy/sf1:classes/sf1:class[not($school-classes) or @id = $school-classes or $school-classes = @id + 6 or $school-classes = @id - 6]" />
         <xsl:variable name="verb">
             <xsl:choose>
                 <xsl:when test="self::sf1:spell">learn</xsl:when>
@@ -224,7 +200,7 @@
             </xsl:choose>
         </xsl:variable>
         <span class="ff-classes">
-            <xsl:for-each select="ancestor::sf1:final-fantasy/sf1:classes/sf1:class">
+            <xsl:for-each select="$classes">
                 <xsl:sort select="@id mod 6" data-type="number" />
                 <xsl:sort select="@id" data-type="number" />
                 <xsl:variable name="label">
@@ -295,8 +271,8 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template name="editor">
-        <h2>Equipment editor</h2>
-        <p>Edit the four weapon and armor slots of each party member. Toggle E to equip an item; a dim E means it is only being carried.</p>
+        <h2>About</h2>
+        <p>This editor can change the equipment of an NES battery save.</p>
         <xsl:if test="sf1:error">
             <p class="ff-error" role="alert">
                 <xsl:value-of select="sf1:error" />
@@ -305,7 +281,7 @@
         <form action="/FinalFantasy/I/SaveEditor/" method="post" enctype="multipart/form-data" class="ff-ui ff-panel ff-upload">
             <input type="hidden" name="ff-action" value="upload" />
             <input type="hidden" name="MAX_FILE_SIZE" value="8192" />
-            <label for="ff-save">NES battery save (.sav, 8 KiB)</label>
+            <label for="ff-save">.sav File (8 KiB)</label>
             <input id="ff-save" name="ff-save" type="file" accept=".sav,.srm" required="required" />
             <button type="submit">Load save</button>
         </form>

@@ -79,7 +79,9 @@
 }
 
 .final-fantasy .ff-classes {
-    grid-template-columns: repeat(12, var(--ff-sprite-width));
+    grid-auto-flow: column;
+    grid-auto-columns: var(--ff-sprite-width);
+    grid-template-columns: none;
     row-gap: 0;
     vertical-align: top;
 }

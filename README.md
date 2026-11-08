@@ -5,7 +5,8 @@ slothsoft.net
 
 The `/FinalFantasy/I/` section consumes XML and assets from the reusable
 [`slothsoft/final-fantasy`](https://github.com/Faulo/slothsoft-final-fantasy)
-Farah module. It provides `/FinalFantasy/I/SaveEditor/`, `/FinalFantasy/I/Weapons/`,
+Farah module. The overview is at `/FinalFantasy/`, and `/FinalFantasy/I/` redirects
+to the editor. It provides `/FinalFantasy/I/SaveEditor/`, `/FinalFantasy/I/Weapons/`,
 `/FinalFantasy/I/Armor/` and `/FinalFantasy/I/Spells/`. The editor currently edits
 weapons, armor and equipped flags; reference pages read names, stats and class
 permissions from the original US ROM through savegame XML specifications.
@@ -19,8 +20,11 @@ use the longest rendered option in ch, plus padding, borders and space for the
 native dropdown arrow. The empty equipment option has no text.
 Narrow screens scroll each equipment grid horizontally to keep item names legible.
 
-Reference tables show every class sprite, dimming classes without equip/learn
-permission. The package generates transparent eight-pose PNG sheets from the ROM
+Equipment tables show every class sprite, dimming classes without equip
+permission. Magic tables show only class/upgrade pairs with at least one learner
+in that school, determined from the ROM. This keeps Fighter/Knight for White Magic
+and Thief/Ninja for Black Magic; each row still dims classes unable to learn that
+particular spell. The package generates transparent eight-pose PNG sheets from the ROM
 at `/slothsoft@final-fantasy/i/gfx/class?class=0` (class IDs 0–11); CSS selects the
 standing pose. No extracted graphics are bundled with either project.
 Item names are plain Unicode text; the editor does not add separate icon previews.
@@ -41,11 +45,12 @@ Column headings keep the panel's 2× (16px) text, centered horizontally and
 vertically, in pale blue (NES $31) to distinguish them from gold links. Body name
 cells remain white and left-aligned.
 The Classes column uses 2× sprites cropped to their top half, arranged in one
-24px row of all 12 faces to match the text's line height, pairing each class with
+24px row of 12 faces (six for magic) to match the text's line height, pairing each class with
 its upgrade. Tables fit their content, with no vertical cell padding, 2ch spacing
 between columns, continuous row borders, and right-aligned numbers. Spells are
 grouped into White Magic and Black Magic fieldsets; armor into Body, Shield,
-Helmet, and Gloves fieldsets. Each group fits its table and has an aligned bordered
+Helmet, and Gloves fieldsets; weapons into a Weapons fieldset. Armor's Resists
+column follows Classes at the right edge. Each group fits its table and has an aligned bordered
 label like the game menu. Class portraits have accessible labels without tooltips.
 Multiword column headings wrap at spaces. Resistances appear inline, separated by
 the ROM font's comma glyph; the combined resistance reads "Poison, Stone".

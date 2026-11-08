@@ -7,7 +7,6 @@
         <fragment name="home">
             <use-template ref="/final-fantasy/xsl/page" />
             <use-document ref="//slothsoft@final-fantasy/i/api/data?view=home" name="data" />
-            <link-stylesheet ref="//slothsoft@final-fantasy/i/css/default" />
             <link-stylesheet ref="/final-fantasy/css/default" />
         </fragment>
         <fragment name="editor">

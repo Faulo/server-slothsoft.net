@@ -195,11 +195,14 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
             assert.equal(await references.evaluate(() => document.body.scrollWidth <= innerWidth), true);
             const panels = references.locator('.ff-ui.ff-table, .ff-ui.ff-reference');
             const legends = await references.locator('.ff-reference > legend').allTextContents();
-            assert.deepEqual(legends, route === 'Armor' ? ['Body', 'Shield', 'Helmet', 'Gloves'] : route === 'Spells' ? ['White Magic', 'Black Magic'] : []);
+            assert.deepEqual(legends, route === 'Armor' ? ['Body', 'Shield', 'Helmet', 'Gloves'] : route === 'Spells' ? ['White Magic', 'Black Magic'] : ['Weapons']);
             if (process.env.FF_REFERENCE_SCREENSHOT) {
                 await references.screenshot({path: process.env.FF_REFERENCE_SCREENSHOT.replace(/\.png$/, `-${route}.png`), fullPage: true});
             }
             for (const panel of await panels.all()) {
+                const expectedClasses = route === 'Spells'
+                    ? (await panel.locator('legend').textContent()) === 'White Magic' ? [0, 6, 3, 9, 4, 10] : [1, 7, 3, 9, 5, 11]
+                    : [0, 6, 1, 7, 2, 8, 3, 9, 4, 10, 5, 11];
                 const metrics = await panel.evaluate(node => {
                     const css = getComputedStyle(node);
                     const sprite = getComputedStyle(node.querySelector('.ff-class-sprite'));
@@ -251,9 +254,9 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
                 assert.equal(metrics.spriteBackground, '256px 48px');
                 assert.equal(metrics.classesHeight, 24);
                 assert.equal(metrics.portraitRows, 1);
-                assert.equal(metrics.portraitCount, 12);
+                assert.equal(metrics.portraitCount, expectedClasses.length);
                 assert.equal(metrics.cellPadding, true);
-                assert.deepEqual(metrics.classOrder, [0, 6, 1, 7, 2, 8, 3, 9, 4, 10, 5, 11]);
+                assert.deepEqual(metrics.classOrder, expectedClasses);
                 assert.ok(metrics.numberAlignment.length > 0 && metrics.numberAlignment.every(alignment => alignment === 'right'));
                 for (const header of metrics.headerStyles) {
                     assert.deepEqual(header, ['16px', '24px', 'center', 'middle', 'rgb(164, 228, 252)']);
@@ -299,7 +302,7 @@ const {firefox} = require(process.env.FF_PLAYWRIGHT_MODULE || 'playwright');
                 assert.equal(focused.color, 'rgb(0, 252, 252)');
                 assert.equal(focused.outline, 'solid');
                 assert.equal(focused.decoration, 'none');
-                await references.locator('h2').first().click();
+                await references.locator('.ff-reference > legend').first().click();
                 await link.hover();
                 assert.equal((await linkStyle()).color, 'rgb(0, 252, 252)');
                 await references.mouse.down();

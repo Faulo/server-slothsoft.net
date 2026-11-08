@@ -25,8 +25,9 @@ final class PagesTest extends TestCase {
         $xpath->registerNamespace('h', 'http://www.w3.org/1999/xhtml');
         self::assertStringContainsString($expected, $document->textContent);
         self::assertSame((float) $rows, $xpath->evaluate('count(//h:article[@class="final-fantasy"]//h:tbody/h:tr)'));
-        self::assertSame((float) ($rows * 12), $xpath->evaluate('count(//h:span[@class="ff-class-sprite"])'));
-        self::assertSame(0.0, $xpath->evaluate('count(//h:span[@class="ff-classes"][count(h:span) != 12])'));
+        $classCount = $path === '/FinalFantasy/I/Spells/' ? 6 : 12;
+        self::assertSame((float) ($rows * $classCount), $xpath->evaluate('count(//h:span[@class="ff-class-sprite"])'));
+        self::assertSame(0.0, $xpath->evaluate('count(//h:span[@class="ff-classes"][count(h:span) != ' . $classCount . '])'));
         self::assertSame((float) $rows, $xpath->evaluate('count(//h:tbody/h:tr/h:th[@class="ff-text"])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:span[@class="ff-class-tooltip"] | //h:span[@class="ff-classes"]//*[@tabindex])'));
         self::assertSame(0.0, $xpath->evaluate('count(//h:tbody//h:a[contains(@href, "#spell-")][@class!="ff-text"])'));
@@ -38,6 +39,8 @@ final class PagesTest extends TestCase {
             self::assertSame('true', $xpath->evaluate('string(//h:tr[h:th[contains(., "Rapier")]]//h:span[@data-class="0"]/@data-allowed)'));
         }
         if ($path === '/FinalFantasy/I/Armor/') {
+            self::assertSame(4.0, $xpath->evaluate('count(//h:thead/h:tr/h:th[last()][.="Resists"][preceding-sibling::h:th[1]="Classes"])'));
+            self::assertSame(0.0, $xpath->evaluate('count(//h:ul[@class="ff-resists"]/parent::h:td[following-sibling::h:td])'));
             self::assertStringContainsString("\u{1F9BA}", $document->textContent);
             self::assertStringNotContainsString('[armor]', $document->textContent);
             foreach (['Body', 'Shield', 'Helmet', 'Gloves'] as $label) {
@@ -45,13 +48,19 @@ final class PagesTest extends TestCase {
             }
         }
         if ($path === '/FinalFantasy/I/Spells/') {
-            foreach (['White Magic', 'Black Magic'] as $label) {
+            foreach (['White Magic' => ['0', '6', '3', '9', '4', '10'], 'Black Magic' => ['1', '7', '3', '9', '5', '11']] as $label => $expectedClasses) {
                 self::assertSame(32.0, $xpath->evaluate('count(//h:fieldset[h:legend="' . $label . '"]//h:tbody/h:tr)'));
+                foreach ($xpath->query('//h:fieldset[h:legend="' . $label . '"]//h:span[@class="ff-classes"]') as $classList) {
+                    $classes = $xpath->query('h:span/@data-class', $classList);
+                    self::assertSame($expectedClasses, array_map(static function ($node): string {
+                        return $node->nodeValue;
+                    }, iterator_to_array($classes)));
+                }
             }
             self::assertSame('CURE', $xpath->evaluate('string(//h:fieldset[h:legend="White Magic"]//h:tbody/h:tr[1]/h:th)'));
             self::assertSame('FIRE', $xpath->evaluate('string(//h:fieldset[h:legend="Black Magic"]//h:tbody/h:tr[1]/h:th)'));
         }
-        if ($rows) {
+        if ($rows && $path !== '/FinalFantasy/I/Spells/') {
             $classes = $xpath->query('(//h:span[@class="ff-classes"])[1]/h:span[@data-class]/@data-class');
             self::assertSame(['0', '6', '1', '7', '2', '8', '3', '9', '4', '10', '5', '11'], array_map(static function ($node): string {
                 return $node->nodeValue;
@@ -67,7 +76,7 @@ final class PagesTest extends TestCase {
     
     public function pages(): array {
         return [
-            ['/FinalFantasy/I/', 'The equipment and magic', 0, 0],
+            ['/FinalFantasy/', 'savegame editor', 0, 0],
             ['/FinalFantasy/I/SaveEditor/', 'NES battery save', 0, 0],
             ['/FinalFantasy/I/Weapons/', 'Falchon', 40, 1],
             ['/FinalFantasy/I/Armor/', 'Ribbon', 40, 4],

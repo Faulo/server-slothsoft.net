@@ -6,8 +6,8 @@
         <domain name="slothsoft.net" vendor="slothsoft" module="slothsoft.net" ref="home" status-active="" status-public="" sfd:languages="de-de en-us" version="1.1">
 
             <page name="AboutUs" ref="about-us" title="About us" status-active="" status-public="" />
-            <page name="FinalFantasy" redirect="/FinalFantasy/I/" title="Final Fantasy" status-active="" status-public="">
-                <page name="I" ref="/pages/final-fantasy/home" title="Final Fantasy I" status-active="" status-public="">
+            <page name="FinalFantasy" ref="/pages/final-fantasy/home" title="Final Fantasy" status-active="" status-public="">
+                <page name="I" redirect="SaveEditor" title="Final Fantasy I" status-active="" status-public="">
                     <page name="SaveEditor" ref="/pages/final-fantasy/editor" title="Equipment editor" status-active="" status-public="" />
                     <page name="Weapons" ref="/pages/final-fantasy/weapons" title="Weapons" status-active="" status-public="" />
                     <page name="Armor" ref="/pages/final-fantasy/armor" title="Armor" status-active="" status-public="" />

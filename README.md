@@ -29,8 +29,9 @@ disabled. Selecting a file enables Upload and disables Save/Download; clearing
 the selection restores them. The editor's script also synchronizes these states
 after form resets and history restoration. The columns and
 character panels wrap on narrow screens.
-The ROM hand marks hover/focus, including the file chooser; its .sav label follows
-the input on the right when space permits.
+The ROM hand floats over the command panel border on hover/focus without
+indenting command text. The native file chooser uses a label wrapper for the
+same overlay. The outer menu reserves .5em to keep floating hands visible.
 Narrow screens scroll each equipment grid horizontally to keep item names legible.
 Scroll containers reserve .25em for native control focus outlines.
 

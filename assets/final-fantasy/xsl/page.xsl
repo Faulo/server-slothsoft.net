@@ -309,7 +309,7 @@
                 </strong>
             </p>
         </xsl:if>
-        <form action="/FinalFantasy/I/SaveEditor/?user={@user}" method="post" enctype="multipart/form-data" id="ff-editor" class="ff-ui ff-row ff-scroll" style="--ff-scale: 2; --ff-background: transparent; --ff-wrap: wrap; --ff-align: start; --ff-gap: 1em; --ff-scroll-padding: .25em">
+        <form action="/FinalFantasy/I/SaveEditor/?user={@user}" method="post" enctype="multipart/form-data" id="ff-editor" class="ff-ui ff-row ff-scroll" style="--ff-scale: 2; --ff-background: transparent; --ff-wrap: wrap; --ff-align: start; --ff-gap: 1em; --ff-scroll-padding: .5em">
             <div class="ff-grid ff-fit" style="--ff-columns: minmax(0, 1fr); --ff-max-width: 25em">
                 <div id="ff-metadata" class="ff-panel" style="--ff-background: var(--ff-blue)">
                     <xsl:if test="sf1:editor/@modified">
@@ -322,7 +322,9 @@
                     <a href="/FinalFantasy/I/SaveEditor/?user={@user}" aria-label="Bookmark save {@user}">Bookmark-URL</a>
                 </div>
                 <div id="ff-commands" class="ff-panel ff-grid" style="--ff-background: var(--ff-blue); --ff-columns: minmax(0, 1fr); --ff-gap: 0">
-                    <input id="ff-save" name="ff-save" type="file" accept=".sav,.srm" />
+                    <label>
+                        <input id="ff-save" name="ff-save" type="file" accept=".sav,.srm" aria-label="Save file" />
+                    </label>
                     <button type="submit" name="ff-action" value="upload" disabled="disabled">Upload save</button>
                     <xsl:if test="sf1:editor">
                         <button type="submit" name="ff-action" value="save">Save changes</button>

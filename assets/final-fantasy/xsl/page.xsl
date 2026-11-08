@@ -323,7 +323,6 @@
         <xsl:for-each select="sf1:editor">
             <form action="/FinalFantasy/I/SaveEditor/?user={ancestor-or-self::sf1:final-fantasy/@user}" method="post" id="ff-editor" class="ff-ui ff-panel ff-grid" style="--ff-scale: 2; --ff-columns: minmax(0, 1fr)">
 
-                <input type="hidden" name="ff-source" value="{@source}" />
                 <div class="ff-row" style="--ff-wrap: wrap; --ff-gap: 1em">
                     <xsl:for-each select="sf1:character">
                         <fieldset class="ff-panel">

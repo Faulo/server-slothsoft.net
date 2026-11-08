@@ -11,6 +11,21 @@ to the editor. It provides `/FinalFantasy/I/SaveEditor/`, `/FinalFantasy/I/Weapo
 weapons, armor and equipped flags; reference pages read names, stats and class
 permissions from the original US ROM through savegame XML specifications.
 
+Maps are available at `/FinalFantasy/I/WorldMap/`, `/FinalFantasy/I/Settlements/`
+and `/FinalFantasy/I/Dungeons/`. Every location has one page with a separate FF
+panel for each floor; Temple of Fiends has separate `Present/` and `Past/` pages.
+Pravoka and Northwest Castle belong to Settlements. Coneria and Elfland include
+their castle maps on the town's page. Single-floor legends use the location name;
+all map panels use 2x scale and show images without padding.
+Map panels wrap into rows at their natural width when space permits. Maps and
+reference lists use the editor's .5em outer inset and 1em panel gap.
+`assets/final-fantasy/maps.xml` is
+the shared catalog for the sitemap, indexes and floor panels, covering all 61
+standard map IDs once. Cardia includes the shared Dragon Caves map and both
+Bahamut floors. Map images come from the package's `i/gfx/map` asset; the site
+only supplies names and grouping. Composer currently locks the package's
+`dev-main` map implementation until its next stable release.
+
 The editor gives each character a framed legend with the name above `L` and the
 level, and the class sprite to their right. Weapons
 and armor each use a 2×2 grid, with native checkboxes rendered as E markers that
@@ -70,7 +85,7 @@ PHP classes, utility CSS and standalone HTML examples. This project owns the
 actual HTML in `assets/final-fantasy/xsl/page.xsl`, its links and form actions,
 layout composition and private ROM configuration. Its manifest
 transforms the package's XML data API directly; no package HTML pages are embedded.
-All FF presentation comes from the package's fourteen public utilities and
+All FF presentation comes from the package's sixteen public utilities and
 semantic HTML defaults. Templates supply documented custom properties for
 scale, grid tracks, gaps, sprite URLs and option widths. No site-specific FF
 stylesheet is loaded. The retired `/final-fantasy/css/default` asset remains as

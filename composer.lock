@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "28762cd529c2276c5ea540fdc5e050b1",
+    "content-hash": "66088dbb726b411a30b87ecbce1b55e6",
     "packages": [
         {
             "name": "guzzlehttp/psr7",
@@ -1588,11 +1588,11 @@
         },
         {
             "name": "slothsoft/final-fantasy",
-            "version": "1.0.0",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Faulo/slothsoft-final-fantasy",
-                "reference": "97e5e3c536810b24b1d22be83576d602fc4657ca"
+                "reference": "c527a3bbdd730478961f43ea70207f56eed03764"
             },
             "require": {
                 "ext-dom": "*",
@@ -1609,6 +1609,7 @@
                 "slothsoft/farah-testing": "^1.3.14",
                 "symfony/polyfill-php83": "^1.43.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1645,7 +1646,7 @@
                 "savegame",
                 "slothsoft"
             ],
-            "time": "2026-11-08T15:17:10+00:00"
+            "time": "2026-11-08T16:37:29+00:00"
         },
         {
             "name": "slothsoft/minecraft",
@@ -5768,7 +5769,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "slothsoft/final-fantasy": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

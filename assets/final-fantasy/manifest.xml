@@ -3,7 +3,14 @@
     <resource-directory name="xsl" type="application/xslt+xml" />
     <resource-directory name="css" type="text/css" />
     <resource-directory name="js" type="application/javascript" />
+    <resource name="maps" path="maps.xml" type="application/xml" />
     <fragment name="html">
+        <fragment name="maps">
+            <use-template ref="/final-fantasy/xsl/maps" />
+            <use-document ref="/final-fantasy/maps" name="maps" />
+            <use-document ref="//farah/current-sitemap" name="sites" />
+            <link-stylesheet ref="//slothsoft@final-fantasy/i/css/default" />
+        </fragment>
         <fragment name="home">
             <use-template ref="/final-fantasy/xsl/page" />
             <use-document ref="//slothsoft@final-fantasy/i/api/data?view=home" name="data" />

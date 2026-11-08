@@ -16,6 +16,7 @@
                     <page name="Weapons" ref="/pages/final-fantasy/weapons" title="Weapons" status-active="" status-public="" />
                     <page name="Armor" ref="/pages/final-fantasy/armor" title="Armor" status-active="" status-public="" />
                     <page name="Spells" ref="/pages/final-fantasy/spells" title="Spells" status-active="" status-public="" />
+                    <xsl:apply-templates select="*[@name='ff-maps']/maps/*" mode="ff-maps" />
                 </page>
             </page>
             <xsl:apply-templates select="*[@name='dragon-age']" />
@@ -44,5 +45,10 @@
 
     <xsl:template match="sfs:sitemap">
         <xsl:copy-of select="*" />
+    </xsl:template>
+    <xsl:template match="group | location" mode="ff-maps">
+        <page name="{@slug}" title="{@title}" ref="/pages/final-fantasy/maps" status-active="" status-public="">
+            <xsl:apply-templates select="location" mode="ff-maps" />
+        </page>
     </xsl:template>
 </xsl:stylesheet>

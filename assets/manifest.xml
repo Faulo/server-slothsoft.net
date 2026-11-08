@@ -15,6 +15,7 @@
     <resource-directory name="dictionary-new" type="application/xml" />
     <directory name="sitemap">
         <resource use="template" name="template" type="application/xslt+xml" />
+        <use-document ref="/final-fantasy/maps" name="ff-maps" />
 
         <directory use="document" name="minecraft">
             <resource use="template" name="template" type="application/xslt+xml" />
@@ -130,6 +131,10 @@
 
     <fragment name="pages">
         <fragment name="final-fantasy">
+            <fragment name="maps">
+                <import ref="/api/default" />
+                <use-document ref="/final-fantasy/html/maps" name="content" />
+            </fragment>
             <fragment name="home">
                 <import ref="/api/default" />
                 <use-document ref="/final-fantasy/html/home" name="content" />

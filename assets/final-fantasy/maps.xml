@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Site-owned names, routes and floor groupings. Map IDs are the original US ROM indices. -->
+<maps>
+    <location slug="WorldMap" title="World Map">
+        <floor map="world" title="World Map" />
+    </location>
+    <group slug="Settlements" title="Settlements">
+        <location slug="Coneria" title="Coneria">
+            <floor map="0" title="Coneria" />
+            <floor map="8" title="Castle F1" />
+            <floor map="24" title="Castle F2" />
+        </location>
+        <location slug="Pravoka" title="Pravoka">
+            <floor map="1" title="Pravoka" />
+        </location>
+        <location slug="Elfland" title="Elfland">
+            <floor map="2" title="Elfland" />
+            <floor map="9" title="Castle" />
+        </location>
+        <location slug="NorthwestCastle" title="Northwest Castle">
+            <floor map="10" title="Northwest Castle" />
+        </location>
+        <location slug="Melmond" title="Melmond">
+            <floor map="3" title="Melmond" />
+        </location>
+        <location slug="CrescentLake" title="Crescent Lake">
+            <floor map="4" title="Crescent Lake" />
+        </location>
+        <location slug="Gaia" title="Gaia">
+            <floor map="5" title="Gaia" />
+        </location>
+        <location slug="Onrac" title="Onrac">
+            <floor map="6" title="Onrac" />
+        </location>
+        <location slug="Lefein" title="Lefein">
+            <floor map="7" title="Lefein" />
+        </location>
+        <location slug="DwarfCave" title="Dwarf Cave">
+            <floor map="19" title="Dwarf Cave" />
+        </location>
+        <location slug="MatoyasCave" title="Matoya's Cave">
+            <floor map="20" title="Matoya's Cave" />
+        </location>
+        <location slug="SardasCave" title="Sarda's Cave">
+            <floor map="21" title="Sarda's Cave" />
+        </location>
+        <location slug="Cardia" title="Cardia">
+            <floor map="16" title="Dragon Caves" />
+            <floor map="17" title="Bahamut's Cave B1" />
+            <floor map="39" title="Bahamut's Cave B2" />
+        </location>
+    </group>
+    <group slug="Dungeons" title="Dungeons">
+        <location slug="TempleOfFiends" title="Temple of Fiends">
+            <location slug="Present" title="Present">
+                <floor map="12" title="Present" />
+            </location>
+            <location slug="Past" title="Past">
+                <floor map="52" title="F1" />
+                <floor map="53" title="F2" />
+                <floor map="54" title="F3" />
+                <floor map="55" title="B1" />
+                <floor map="56" title="B2" />
+                <floor map="57" title="B3" />
+                <floor map="58" title="B4" />
+                <floor map="59" title="B5" />
+            </location>
+        </location>
+        <location slug="MarshCave" title="Marsh Cave">
+            <floor map="22" title="B1" />
+            <floor map="27" title="B2" />
+            <floor map="28" title="B3" />
+        </location>
+        <location slug="EarthCave" title="Earth Cave">
+            <floor map="13" title="B1" />
+            <floor map="29" title="B2" />
+            <floor map="30" title="B3" />
+            <floor map="31" title="B4" />
+            <floor map="32" title="B5" />
+        </location>
+        <location slug="TitansTunnel" title="Titan's Tunnel">
+            <floor map="60" title="Titan's Tunnel" />
+        </location>
+        <location slug="GurguVolcano" title="Gurgu Volcano">
+            <floor map="14" title="B1" />
+            <floor map="33" title="B2" />
+            <floor map="34" title="B3" />
+            <floor map="35" title="B4" />
+            <floor map="36" title="B5" />
+        </location>
+        <location slug="IceCave" title="Ice Cave">
+            <floor map="15" title="B1" />
+            <floor map="37" title="B2" />
+            <floor map="38" title="B3" />
+        </location>
+        <location slug="CastleOfOrdeal" title="Castle of Ordeal">
+            <floor map="11" title="F1" />
+            <floor map="25" title="F2" />
+            <floor map="26" title="F3" />
+        </location>
+        <location slug="Waterfall" title="Waterfall">
+            <floor map="18" title="Waterfall" />
+        </location>
+        <location slug="SeaShrine" title="Sea Shrine">
+            <floor map="46" title="B1" />
+            <floor map="45" title="B2" />
+            <floor map="44" title="B3" />
+            <floor map="43" title="B4" />
+            <floor map="42" title="B5" />
+        </location>
+        <location slug="MirageTower" title="Mirage Tower">
+            <floor map="23" title="F1" />
+            <floor map="40" title="F2" />
+            <floor map="41" title="F3" />
+        </location>
+        <location slug="FloatingCastle" title="Floating Castle">
+            <floor map="47" title="F1" />
+            <floor map="48" title="F2" />
+            <floor map="49" title="F3" />
+            <floor map="50" title="F4" />
+            <floor map="51" title="F5" />
+        </location>
+    </group>
+</maps>

@@ -9,7 +9,16 @@
     <xsl:key name="spells" match="sf1:spells/sf1:spell" use="@id" />
     <xsl:template match="/*">
         <article class="ff-contain">
-            <xsl:apply-templates select=".//sf1:final-fantasy" />
+            <xsl:choose>
+                <xsl:when test=".//sf1:final-fantasy[@view = 'weapons' or @view = 'armor' or @view = 'spells'][not(sf1:unavailable)]">
+                    <div class="ff-ui ff-grid ff-scroll" style="--ff-scale: 2; --ff-background: transparent; --ff-columns: minmax(0, 1fr); --ff-gap: 1em; --ff-scroll-padding: .5em">
+                        <xsl:apply-templates select=".//sf1:final-fantasy" />
+                    </div>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:apply-templates select=".//sf1:final-fantasy" />
+                </xsl:otherwise>
+            </xsl:choose>
         </article>
     </xsl:template>
     <xsl:template match="sf1:final-fantasy">
